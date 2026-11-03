@@ -1,20 +1,26 @@
 # Checkpoint 1 status
 
-## Checkpoint submission requirement
+## Course requirement
 
-The Lab 3 page says to submit a permalink to a repository commit that holds the desk and the report on the partner's pick. A fallback report counts.
+The Lab 3 checkout asks for a Brightspace submission with a permalink to a repository commit that contains the desk and a report on the company selected by your partner. A fallback report counts.
 
-## In this staging folder
+## Verified in the repository
 
-- Desk code, requirements, reconstructed prompt, MSFT fallback report, its source files, and the human verification worksheet are included.
+- The partner selected MSFT. The user confirmed this on 2026-11-02.
+- The repository contains the desk code, requirements, reconstructed prompt, MSFT fallback report, and cited source files.
+- The report has the five required sections and is labeled as a fallback. The live Purdue GenAI Studio role run did not return a report.
+- Shachi Kaushik's two MSFT claim checks are recorded in `review/MSFT_human_verification.md`.
 - `.env` is not included. `.env.example` contains placeholders only.
-- The user confirmed MSFT is the partner's pick on 2026-11-02. Its earnings release is dated October 28, 2026, within the October 29 Checkpoint 1 course week.
+- Commit `0c4f4f505091ca47de4708474999300de6378fe5` contains the pushed submission package and partner review.
 
 ## Still needed for Checkpoint 1
 
-1. The partner must check two core claims by hand and record both marks in `review/MSFT_human_verification.md`.
-2. Submit the permalink to the commit that contains these materials in Brightspace.
+1. Submit this commit permalink in Brightspace: https://github.com/anahane-24/Aditi_MSF/commit/0c4f4f505091ca47de4708474999300de6378fe5
+
+## Partner hand-check condition
+
+The course says the partner must check two report claims against the filings by hand. The repository records Shachi's two checks. An earlier version in the branch history was labeled AI-assisted, so confirm with Shachi that she personally checked both claims against the cited filings. If she did, the partner-check requirement is recorded. If she did not, ask her to check the two claims by hand and update the worksheet.
 
 ## Other Lab 3 work
 
-The Lab 3 page also asks for a hand audit of the COST report. The current `known_answer_audit.md` says its marks are AI-assisted, and the saved COST run does not contain a five-part role report. It is not a hand audit and is not included in this submission package. Complete that course work by hand if it is required for your Lab 3 completion.
+The COST report audit is separate from Checkpoint 1. The saved COST worksheet still needs the student's own hand marks. The AI-assisted `Partner_Redo_Check.md` is not a replacement for that hand audit.

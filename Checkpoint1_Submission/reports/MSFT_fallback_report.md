@@ -4,7 +4,7 @@ Run time: 2026-10-28; report prepared from the saved filing texts and desk outpu
 
 # Microsoft (MSFT) equity research report
 
-**Fallback status.** The Purdue GenAI Studio/API role run did not return a report. This fallback report was prepared from the saved source files and outputs. The intended four-role live run therefore remains unverified. Codex cross-checked the cited local filing lines, saved facts, and arithmetic. Antigravity (AGY) completed the read-only audit of the report against the local source files. Student human sign-off was completed on 2026-10-28 based on this verification check; partner check remains pending. The latest 10-K is for the fiscal year ended June 30, 2026; the release is for the quarter ended September 30, 2026.
+**Fallback status.** The Purdue GenAI Studio/API role run did not return a report. This fallback report was prepared from the saved source files and outputs. The intended four-role live run therefore remains unverified. Codex cross-checked the cited local filing lines, saved facts, and arithmetic. Antigravity (AGY) completed the read-only audit of the report against the local source files. Student human sign-off was completed on 2026-10-28 based on this verification check. Shachi Kaushik's two partner checks are recorded in `review/MSFT_human_verification.md`; confirm with her that she checked both claims by hand because an earlier version in the branch history was labeled AI-assisted. The latest 10-K is for the fiscal year ended June 30, 2026; the release is for the quarter ended September 30, 2026.
 
 ## Overview
 
@@ -85,6 +85,6 @@ Files checked by AGY: `10-K_2026-07-29.txt`, `8-K_Ex99.1_2026-10-28.txt`, `facts
 ---
 This is a learning exercise, not financial advice.
 
-AI assistance: ChatGPT/Codex prepared this fallback report and cross-checked the saved filing texts and desk outputs. Antigravity (AGY) audited the numbers, formulas, and filing line citations. Student human sign-off was completed on 2026-10-28 using the verification check; partner check remains pending.
+AI assistance: ChatGPT/Codex prepared this fallback report and cross-checked the saved filing texts and desk outputs. Antigravity (AGY) audited the numbers, formulas, and filing line citations. Student human sign-off was completed on 2026-10-28 using the verification check. Shachi Kaushik's two partner checks are recorded in `review/MSFT_human_verification.md`; confirm that she checked both claims by hand because an earlier version in the branch history was labeled AI-assisted.
 
 Any remaining errors are my own.
