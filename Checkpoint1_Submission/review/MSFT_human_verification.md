@@ -1,4 +1,4 @@
-# Human verification template
+# Human verification
 
 **Company:** Microsoft Corp. (MSFT)
 **Report reviewed:** MSFT_fallback_report.md
@@ -44,4 +44,4 @@ The student review below is preserved from the original file. The two designated
 ## Review record
 
 Student sign-off in the original review: Student (human sign-off), 2026-10-28.
-Partner review completed. The two partner items are recorded above as correct. No human identity is claimed for the AI-assisted check.
+Partner review completed by Shachi Kaushik. She personally checked both listed claims against the cited filings by hand on 2026-11-02. The two partner items are recorded above as correct.

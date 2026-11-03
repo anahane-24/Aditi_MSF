@@ -17,9 +17,9 @@ The Lab 3 checkout asks for a Brightspace submission with a permalink to a repos
 
 1. Submit this commit permalink in Brightspace: https://github.com/anahane-24/Aditi_MSF/commit/0c4f4f505091ca47de4708474999300de6378fe5
 
-## Partner hand-check condition
+## Partner hand checks
 
-The course says the partner must check two report claims against the filings by hand. The repository records Shachi's two checks. An earlier version in the branch history was labeled AI-assisted, so confirm with Shachi that she personally checked both claims against the cited filings. If she did, the partner-check requirement is recorded. If she did not, ask her to check the two claims by hand and update the worksheet.
+The course says the partner must check two report claims against the filings by hand. Shachi confirmed she personally checked both claims by hand. Her marks and evidence are recorded in `review/MSFT_human_verification.md`.
 
 ## Other Lab 3 work
 
