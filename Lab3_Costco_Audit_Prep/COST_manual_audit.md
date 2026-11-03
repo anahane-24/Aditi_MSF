@@ -9,7 +9,7 @@
 **Errors (wrong + unsupported):** 0  
 **Missing claims:** 0
 
-The report and source map below were prepared with AI assistance. The mark column is blank. You must compare each claim with the filing by hand. Do not copy an AI mark. Use the course marks: correct, wrong, unsupported, missing, or not in filings.
+The report and source map below were prepared with AI assistance. The reviewer entered the marks after comparing each claim with the cited sources by hand. Do not copy an AI mark. Use the course marks: correct, wrong, unsupported, missing, or not in filings.
 
 ## Eleven core claims
 
