@@ -4,7 +4,7 @@ Prepared 2026-11-02 from the saved filings and desk data.
 
 # Costco Wholesale Corporation (COST) fallback equity research report
 
-**Fallback status:** The saved Costco run contains seven data steps, but no live four-role report. This report is an offline fallback based on the saved filings and facts. It is not a record of four separate SDK calls. The manual audit is still pending. Use `COST_manual_audit.md` to record your own marks by hand.
+**Fallback status:** The saved Costco run contains seven data steps, but no live four-role report. This report is an offline fallback based on the saved filings and facts. It is not a record of four separate SDK calls. The completed hand-audit worksheet is `COST_manual_audit.md`; it records 0 wrong or unsupported claims and 0 missing claims.
 
 ## Overview
 
@@ -69,5 +69,5 @@ Monitor comparable sales, membership fee revenue, member renewal rates, gross ma
 
 ---
 
-This fallback report is prepared with AI assistance. Human audit marks are not complete. This is a learning exercise, not financial advice.
+This fallback report was prepared with AI assistance. The reviewer completed the hand-audit worksheet after checking the claims against the cited sources. The worksheet records 0 wrong or unsupported claims and 0 missing claims. This is a learning exercise, not financial advice.
 
