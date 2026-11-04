@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "id": "C001",
+      "mark": "OK",
+      "reason": "The revenue growth calculation is correct: (303154000000.0 - 275235000000.0) / 275235000000.0 = 10.1437%.",
+      "correction": null
+    },
+    {
+      "id": "C002",
+      "mark": "OK",
+      "reason": "The operating margin calculation is correct: 11685000000.0 / 303154000000.0 = 3.8545%.",
+      "correction": null
+    },
+    {
+      "id": "C003",
+      "mark": "OK",
+      "reason": "The operating margin is correctly calculated as 11,685 / 303,154 = 3.8545%.",
+      "correction": null
+    },
+    {
+      "id": "C004",
+      "mark": "OK",
+      "reason": "The return on average equity calculation is correct: 9,226 / ((35,803 + 29,164) / 2) = 28.4021%.",
+      "correction": null
+    },
+    {
+      "id": "C005",
+      "mark": "OK",
+      "reason": "The debt to equity calculation is correct: (2,248 + 3,914) / 35,803 = 17.2108%.",
+      "correction": null
+    },
+    {
+      "id": "C006",
+      "mark": "OK",
+      "reason": "The free cash flow calculation is correct: 15,817 - 6,435 = $9,382 million.",
+      "correction": null
+    },
+    {
+      "id": "C007",
+      "mark": "OK",
+      "reason": "The P/E ratio calculation is correct: $992.13 / $20.76 = 47.7905.",
+      "correction": null
+    },
+    {
+      "id": "C008",
+      "mark": "OK",
+      "reason": "The revenue growth percentage for the fourth quarter is correctly calculated as (95,723 - 86,156) / 86,156 = 11.1043%.",
+      "correction": null
+    },
+    {
+      "id": "C009",
+      "mark": "OK",
+      "reason": "The diluted EPS growth percentage is correctly calculated as (6.75 - 5.87) / 5.87 = 14.9915%.",
+      "correction": null
+    },
+    {
+      "id": "C010",
+      "mark": "OK",
+      "reason": "The operating cash flow figures are consistent with the 10-K and 8-K filings, using the 10-K fact for annual free cash flow.",
+      "correction": null
+    },
+    {
+      "id": "C011",
+      "mark": "OK",
+      "reason": "The revenue growth percentage is correctly calculated as (303154000000.0 - 275235000000.0) / 275235000000.0 = 10.1437%.",
+      "correction": null
+    },
+    {
+      "id": "C012",
+      "mark": "OK",
+      "reason": "The operating margin calculation is correct: 11685000000.0 / 303154000000.0 = 3.8545%.",
+      "correction": null
+    },
+    {
+      "id": "C013",
+      "mark": "OK",
+      "reason": "The peer comparison for WMT is correctly calculated as 29,825 / 713,163 = 4.1821%.",
+      "correction": null
+    },
+    {
+      "id": "C014",
+      "mark": "OK",
+      "reason": "The peer comparison for TGT is correctly calculated as 5,117 / 104,780 = 4.8836%.",
+      "correction": null
+    },
+    {
+      "id": "C015",
+      "mark": "OK",
+      "reason": "The peer comparison for BJ is correctly calculated as 816.604 / 21,457.274 = 3.8057%.",
+      "correction": null
+    }
+  ]
+}

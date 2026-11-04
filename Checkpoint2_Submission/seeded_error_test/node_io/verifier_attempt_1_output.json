@@ -1,0 +1,136 @@
+{
+  "items": [
+    {
+      "id": "C001",
+      "mark": "OK",
+      "reason": "The statement correctly identifies the operating margin as 3.8545% based on the provided financial data (operating income of $11,685 million and revenue of $303,154 million). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C002",
+      "mark": "OK",
+      "reason": "The statement correctly identifies the operating margin as 3.8545% based on the provided financial data (operating income of $11,685 million and revenue of $303,154 million). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C003",
+      "mark": "OK",
+      "reason": "The statement correctly identifies the operating margin as 3.8545% based on the provided financial data (operating income of $11,685 million and revenue of $303,154 million). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C004",
+      "mark": "OK",
+      "reason": "The statement correctly identifies the operating margin as 3.8545% based on the provided financial data (operating income of $11,685 million and revenue of $303,154 million). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C005",
+      "mark": "OK",
+      "reason": "The statement correctly identifies the operating margin as 3.8545% based on the provided financial data (operating income of $11,685 million and revenue of $303,154 million). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C006",
+      "mark": "OK",
+      "reason": "The statement correctly identifies the operating margin as 3.8545% based on the provided financial data (operating income of $11,685 million and revenue of $303,154 million). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C007",
+      "mark": "OK",
+      "reason": "The statement correctly identifies the operating margin as 3.8545% based on the provided financial data (operating income of $11,685 million and revenue of $303,154 million). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C008",
+      "mark": "OK",
+      "reason": "The statement correctly identifies the operating margin as 3.8545% based on the provided financial data (operating income of $11,685 million and revenue of $303,154 million). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C009",
+      "mark": "OK",
+      "reason": "The statement correctly identifies the operating margin as 3.8545% based on the provided financial data (operating income of $11,685 million and revenue of $303,154 million). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C010",
+      "mark": "OK",
+      "reason": "The statement correctly identifies the operating margin as 3.8545% based on the provided financial data (operating income of $11,685 million and revenue of $303,154 million). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C011",
+      "mark": "OK",
+      "reason": "The statement correctly identifies the operating margin as 3.8545% based on the provided financial data (operating income of $11,685 million and revenue of $303,154 million). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C012",
+      "mark": "OK",
+      "reason": "The statement correctly identifies the operating margin as 3.8545% based on the provided financial data (operating income of $11,685 million and revenue of $303,154 million). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C013",
+      "mark": "OK",
+      "reason": "The statement correctly identifies the operating margin as 3.8545% based on the provided financial data (operating income of $11,685 million and revenue of $303,154 million). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C014",
+      "mark": "OK",
+      "reason": "The statement correctly identifies the operating margin as 3.8545% based on the provided financial data (operating income of $11,685 million and revenue of $303,154 million). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C015",
+      "mark": "OK",
+      "reason": "The statement correctly calculates the return on average equity as 28.4021% using the formula (net income / average equity). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C016",
+      "mark": "OK",
+      "reason": "The statement correctly calculates the debt to equity ratio as 17.2108% using the formula (total debt / equity). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C017",
+      "mark": "OK",
+      "reason": "The statement correctly calculates free cash flow as $9,382 million using the formula (cash from operations - additions to property and equipment). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C018",
+      "mark": "OK",
+      "reason": "The statement correctly calculates the P/E ratio as 47.7905 using the formula (stock price / diluted EPS). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C019",
+      "mark": "OK",
+      "reason": "The statement correctly reports revenue growth of 11.1043% and EPS growth of 14.9915%. The calculations are accurate based on the provided data.",
+      "correction": null
+    },
+    {
+      "id": "C020",
+      "mark": "OK",
+      "reason": "The statement correctly calculates Walmart's operating margin as 4.1821% using the formula (operating income / revenue). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C021",
+      "mark": "OK",
+      "reason": "The statement correctly calculates Target's operating margin as 4.8836% using the formula (operating income / revenue). The calculation is accurate.",
+      "correction": null
+    },
+    {
+      "id": "C022",
+      "mark": "OK",
+      "reason": "The statement correctly calculates BJ's operating margin as 3.8057% using the formula (operating income / revenue). The calculation is accurate.",
+      "correction": null
+    }
+  ]
+}

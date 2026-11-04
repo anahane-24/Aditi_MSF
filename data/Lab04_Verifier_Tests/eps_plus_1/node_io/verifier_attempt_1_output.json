@@ -1,0 +1,136 @@
+{
+  "items": [
+    {
+      "id": "C001",
+      "mark": "OK",
+      "reason": "The revenue growth calculation is correct: (303154000000.0 - 275235000000.0) / 275235000000.0 = 0.101437 or 10.1437%.",
+      "correction": null
+    },
+    {
+      "id": "C002",
+      "mark": "OK",
+      "reason": "The operating margin calculation is correct: 11685000000.0 / 303154000000.0 = 0.038545 or 3.8545%.",
+      "correction": null
+    },
+    {
+      "id": "C003",
+      "mark": "OK",
+      "reason": "The operating margin calculation is correct: 11685000000.0 / 303154000000.0 = 0.038545 or 3.8545%.",
+      "correction": null
+    },
+    {
+      "id": "C004",
+      "mark": "OK",
+      "reason": "The operating margin calculation is correct: 11685000000.0 / 303154000000.0 = 0.038545 or 3.8545%.",
+      "correction": null
+    },
+    {
+      "id": "C005",
+      "mark": "OK",
+      "reason": "The operating margin calculation is correct: 11685000000.0 / 303154000000.0 = 0.038545 or 3.8545%.",
+      "correction": null
+    },
+    {
+      "id": "C006",
+      "mark": "OK",
+      "reason": "The operating margin calculation is correct: 11685000000.0 / 303154000000.0 = 0.038545 or 3.8545%.",
+      "correction": null
+    },
+    {
+      "id": "C007",
+      "mark": "OK",
+      "reason": "The operating margin calculation is correct: 11685000000.0 / 303154000000.0 = 0.038545 or 3.8545%.",
+      "correction": null
+    },
+    {
+      "id": "C008",
+      "mark": "OK",
+      "reason": "The operating margin calculation is correct: 11685000000.0 / 303154000000.0 = 0.038545 or 3.8545%.",
+      "correction": null
+    },
+    {
+      "id": "C009",
+      "mark": "OK",
+      "reason": "The operating margin calculation is correct: 11685000000.0 / 303154000000.0 = 0.038545 or 3.8545%.",
+      "correction": null
+    },
+    {
+      "id": "C010",
+      "mark": "OK",
+      "reason": "The operating margin calculation is correct: 11685000000.0 / 303154000000.0 = 0.038545 or 3.8545%.",
+      "correction": null
+    },
+    {
+      "id": "C011",
+      "mark": "OK",
+      "reason": "The operating margin calculation is correct: 11685000000.0 / 303154000000.0 = 0.038545 or 3.8545%.",
+      "correction": null
+    },
+    {
+      "id": "C012",
+      "mark": "OK",
+      "reason": "The operating margin calculation is correct: 11685000000.0 / 303154000000.0 = 0.038545 or 3.8545%.",
+      "correction": null
+    },
+    {
+      "id": "C013",
+      "mark": "OK",
+      "reason": "The operating margin calculation is correct: 11685000000.0 / 303154000000.0 = 0.038545 or 3.8545%.",
+      "correction": null
+    },
+    {
+      "id": "C014",
+      "mark": "OK",
+      "reason": "The operating margin calculation is correct: 11685000000.0 / 303154000000.0 = 0.038545 or 3.8545%.",
+      "correction": null
+    },
+    {
+      "id": "C015",
+      "mark": "OK",
+      "reason": "The return on average equity calculation is correct: 9226000000.0 / ((35803000000.0 + 29164000000.0) / 2) = 0.284021 or 28.4021%.",
+      "correction": null
+    },
+    {
+      "id": "C016",
+      "mark": "OK",
+      "reason": "The debt to equity calculation is correct: (2248000000.0 + 3914000000.0) / 35803000000.0 = 0.172108 or 17.2108%.",
+      "correction": null
+    },
+    {
+      "id": "C017",
+      "mark": "OK",
+      "reason": "The free cash flow calculation is correct: 15817000000.0 - 6435000000.0 = 9382000000.0 or $9,382 million.",
+      "correction": null
+    },
+    {
+      "id": "C018",
+      "mark": "OK",
+      "reason": "The P/E calculation is correct: 992.13 / 20.76 = 47.7905.",
+      "correction": null
+    },
+    {
+      "id": "C019",
+      "mark": "OK",
+      "reason": "All calculations and statements are consistent with the provided data.",
+      "correction": null
+    },
+    {
+      "id": "C020",
+      "mark": "OK",
+      "reason": "The operating margin calculation for WMT is correct: 29825000000.0 / 713163000000.0 = 0.041821 or 4.1821%.",
+      "correction": null
+    },
+    {
+      "id": "C021",
+      "mark": "OK",
+      "reason": "The operating margin calculation for TGT is correct: 5117000000.0 / 104780000000.0 = 0.048836 or 4.8836%.",
+      "correction": null
+    },
+    {
+      "id": "C022",
+      "mark": "OK",
+      "reason": "The operating margin calculation for BJ is correct: 816604000.0 / 21457274000.0 = 0.038057 or 3.8057%.",
+      "correction": null
+    }
+  ]
+}

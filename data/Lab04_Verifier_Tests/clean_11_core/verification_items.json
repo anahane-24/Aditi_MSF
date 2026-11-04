@@ -1,0 +1,944 @@
+[
+  {
+    "id": "C001",
+    "text": "Costco reported fiscal 2026 total revenue of $303.154 billion, up 10.1437% from $275.235 billion in fiscal 2025. Membership fee revenue rose 11% to $5.907 billion. Costco reported U.S. and Canada renewal rates of 92.3% and worldwide renewal rates of 89.8% at fiscal year end (10-K_2026-10-07.txt, lines 638, 464-468; accession 0000909832-26-000093). These are historical company results. They do not establish that the growth or renewal rates will continue.",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          464,
+          465,
+          466,
+          467,
+          468,
+          638
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 464,
+            "text": "Membership fees | $ | 5,907 | $ | 5,323 | $ | 4,828 |"
+          },
+          {
+            "line": 465,
+            "text": "Membership fee revenue increased 11% in 2026, driven by new member sign-ups, membership fee increases, and upgrades to Executive memberships. At the end of 2026, member renewal rates were 92.3% in the U.S. and Canada and 89.8% worldwide."
+          },
+          {
+            "line": 466,
+            "text": "26"
+          },
+          {
+            "line": 467,
+            "text": "Table of Contents"
+          },
+          {
+            "line": 468,
+            "text": "As previously reported, we increased annual membership fees in the U.S. and Canada, effective September 1, 2024. We account for membership fee revenue on a deferred basis, recognized ratably over the one-year membership period. The fee income increase accounted for approximately 30% and 40% of membership income growth during 2026 and 2025."
+          },
+          {
+            "line": 638,
+            "text": "Total revenue | 303,154 | 275,235 | 254,453 |"
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C002",
+    "text": "Comparable sales for the 16-week fourth quarter rose 9.4%, or 6.7% after the company's stated adjustment for gasoline prices and foreign exchange. Digitally-enabled comparable sales rose 19.5% (8-K_Ex99.1_2026-09-24.txt, lines 20-23; accession 0000909832-26-000084). Costco reported 939 warehouses at the time of the release (same 8-K, line 25).",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 8-K_Ex99.1_2026-09-24.txt.",
+      "The cited line number exists in 8-K_Ex99.1_2026-09-24.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "8-K_Ex99.1_2026-09-24.txt",
+        "lines": [
+          20,
+          21,
+          22,
+          23
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 20,
+            "text": "Total Company | 9.4% | | 6.7% | | 8.4% | | 6.6% |"
+          },
+          {
+            "line": 21,
+            "text": "| | | | | | | |"
+          },
+          {
+            "line": 22,
+            "text": "Digitally-Enabled | 19.5% | | 19.8% | | 20.9% | | 20.7% |"
+          },
+          {
+            "line": 23,
+            "text": "*Excluding the impacts from changes in gasoline prices and foreign exchange."
+          }
+        ]
+      },
+      {
+        "filename": "8-K_Ex99.1_2026-09-24.txt",
+        "lines": [
+          25
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 25,
+            "text": "Costco currently operates 939 warehouses, including 647 in the United States and Puerto Rico, 115 in Canada, 43 in Mexico, 37 in Japan, 29 in the United Kingdom, 20 in Korea, 15 in Australia, 14 in Taiwan, seven in China, five in Spain, three in France, two in Sweden, and one each in Iceland, and New Zealand. Costco also operates e-commerce sites in the U.S., Canada, the U.K., Mexico, Korea, Taiwan, Japan, Australia, and China."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C003",
+    "text": "The company reported that gross margin percentage fell 3 basis points to 11.09% for fiscal 2026. It said tariff refunds, net of reinvestment in member value, increased gross margin by 3 basis points (10-K_2026-10-07.txt, lines 474-475). The 8-K says the fourth-quarter net income included a one-time benefit of $0.15 per diluted share from IEEPA tariff refunds, less partial reinvestment in member value (8-K_Ex99.1_2026-09-24.txt, line 24). Treat this as a non-recurring item, based on the company's wording.",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt.",
+      "The cited line number exists in 8-K_Ex99.1_2026-09-24.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          474,
+          475
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 474,
+            "text": "Gross margin percentage | 11.09 | % | 11.12 | % | 10.92 | % |"
+          },
+          {
+            "line": 475,
+            "text": "Gross margin percentage decreased three basis points. Excluding the impact of gasoline price inflation on net sales, gross margin percentage was 11.22%, an increase of 10 basis points. This increase was positively impacted by 19 basis points in warehouse ancillary and other businesses, primarily gasoline and pharmacy, offset by an 11 basis point decrease in core merchandise categories. The majority of the increase in warehouse ancillary and other businesses and the decrease in core merchandise categories was due to the change in sales mix as warehouse ancillary and other businesses sales grew at a faster rate than core merchandise categories. Core merchandise categories were also negatively impacted by our co-branded credit card program as a result of reward costs associated with higher gasoline sales. IEEPA tariff refunds, net of investment in price reductions for members, positively impacted gross margin by three basis points."
+          }
+        ]
+      },
+      {
+        "filename": "8-K_Ex99.1_2026-09-24.txt",
+        "lines": [
+          24
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 24,
+            "text": "Net income for the fourth quarter was $2.998 billion, $6.75 per diluted share, compared to $2.610 billion, $5.87 per diluted share, last year. This year's fourth quarter was positively impacted by a non-recurring benefit of $0.15 per diluted share from IEEPA tariff refunds received in the quarter, less partial reinvestment of those refunds in increased member values. Net income for the fiscal year was $9.226 billion, $20.76 per diluted share, compared to $8.099 billion, $18.21 per diluted share, last year."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C004",
+    "text": "| Financial fact | FY2026 | FY2025 | Tag | 10-K evidence |\n| Total revenue | $303.154B | $275.235B | `RevenueFromContractWithCustomerExcludingAssessedTax` | line 638 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          638
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 638,
+            "text": "Total revenue | 303,154 | 275,235 | 254,453 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "total_revenue",
+        "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "unit": "USD",
+        "start": "2025-09-01",
+        "end": "2026-08-30",
+        "val": 303154000000,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026",
+        "prior_val": 275235000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C005",
+    "text": "| Financial fact | FY2026 | FY2025 | Tag | 10-K evidence |\n| Operating income | $11.685B | $10.383B | `OperatingIncomeLoss` | line 642 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          642
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 642,
+            "text": "Operating income | 11,685 | 10,383 | 9,285 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "operating_income",
+        "tag": "OperatingIncomeLoss",
+        "unit": "USD",
+        "start": "2025-09-01",
+        "end": "2026-08-30",
+        "val": 11685000000,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026",
+        "prior_val": 10383000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C006",
+    "text": "| Financial fact | FY2026 | FY2025 | Tag | 10-K evidence |\n| Net income | $9.226B | $8.099B | `NetIncomeLoss` | line 648 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          648
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 648,
+            "text": "NET INCOME | $ | 9,226 | $ | 8,099 | $ | 7,367 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "net_income",
+        "tag": "NetIncomeLoss",
+        "unit": "USD",
+        "start": "2025-09-01",
+        "end": "2026-08-30",
+        "val": 9226000000,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026",
+        "prior_val": 8099000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C007",
+    "text": "| Financial fact | FY2026 | FY2025 | Tag | 10-K evidence |\n| Diluted EPS | $20.76 | $18.21 | `EarningsPerShareDiluted` | line 652 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          652
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 652,
+            "text": "Diluted | $ | 20.76 | $ | 18.21 | $ | 16.56 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "diluted_eps",
+        "tag": "EarningsPerShareDiluted",
+        "unit": "USD/shares",
+        "start": "2025-09-01",
+        "end": "2026-08-30",
+        "val": 20.76,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026",
+        "prior_val": 18.21
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C008",
+    "text": "| Financial fact | FY2026 | FY2025 | Tag | 10-K evidence |\n| Stockholders' equity | $35.803B | $29.164B | `StockholdersEquity` | line 718 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          718
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 718,
+            "text": "TOTAL EQUITY | 35,803 | 29,164 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "equity",
+        "tag": "StockholdersEquity",
+        "unit": "USD",
+        "end": "2026-08-30",
+        "val": 35803000000,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026Q3I",
+        "prior_val": 29164000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C009",
+    "text": "| Financial fact | FY2026 | FY2025 | Tag | 10-K evidence |\n| Current portion of long-term debt | $2.248B | $0.075B | `LongTermDebtCurrent` | line 701 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          701
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 701,
+            "text": "Current portion of long-term debt | 2,248 | 75 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "current_debt",
+        "tag": "LongTermDebtCurrent",
+        "unit": "USD",
+        "end": "2026-08-30",
+        "val": 2248000000,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026Q3I",
+        "prior_val": 75000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C010",
+    "text": "| Financial fact | FY2026 | FY2025 | Tag | 10-K evidence |\n| Long-term debt, noncurrent | $3.914B | $5.713B | `LongTermDebtNoncurrent` | line 705 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          705
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 705,
+            "text": "Long-term debt, excluding current portion | 3,914 | 5,713 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "long_term_debt",
+        "tag": "LongTermDebtNoncurrent",
+        "unit": "USD",
+        "end": "2026-08-30",
+        "val": 3914000000,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026Q3I",
+        "prior_val": 5713000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C011",
+    "text": "| Financial fact | FY2026 | FY2025 | Tag | 10-K evidence |\n| Cash from operations | $15.817B | $13.335B | `NetCashProvidedByUsedInOperatingActivities` | line 780 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          780
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 780,
+            "text": "Net cash provided by operating activities | 15,817 | 13,335 | 11,339 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "cash_from_operations",
+        "tag": "NetCashProvidedByUsedInOperatingActivities",
+        "unit": "USD",
+        "start": "2025-09-01",
+        "end": "2026-08-30",
+        "val": 15817000000,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026",
+        "prior_val": 13335000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C012",
+    "text": "| Financial fact | FY2026 | FY2025 | Tag | 10-K evidence |\n| Additions to property and equipment | $6.435B | $5.498B | `PaymentsToAcquirePropertyPlantAndEquipment` | line 782 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          782
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 782,
+            "text": "Additions to property and equipment | ( 6,435 ) | ( 5,498 ) | ( 4,710 ) |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "capex",
+        "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "unit": "USD",
+        "start": "2025-09-01",
+        "end": "2026-08-30",
+        "val": 6435000000,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026",
+        "prior_val": 5498000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C013",
+    "text": "- Revenue growth = (303,154 - 275,235) / 275,235 = **10.1437%**.",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Code recalculated 10.1437%; report prints 10.1437%.",
+      "Ratio definition is missing: prior."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Code recalculated 10.1437%; report prints 10.1437%.",
+    "ratio_definition_check": "Ratio definition is missing: prior."
+  },
+  {
+    "id": "C014",
+    "text": "- Operating margin = 11,685 / 303,154 = **3.8545%**.",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Code recalculated 3.8545%; report prints 3.8545%.",
+      "Ratio definition is missing: operating income, revenue."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Code recalculated 3.8545%; report prints 3.8545%.",
+    "ratio_definition_check": "Ratio definition is missing: operating income, revenue."
+  },
+  {
+    "id": "C015",
+    "text": "- Return on average equity = 9,226 / ((35,803 + 29,164) / 2) = **28.4021%**.",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Code recalculated 28.4021%; report prints 28.4021%.",
+      "Ratio definition is missing: net income."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Code recalculated 28.4021%; report prints 28.4021%.",
+    "ratio_definition_check": "Ratio definition is missing: net income."
+  },
+  {
+    "id": "C016",
+    "text": "- Debt to equity, with current debt included = (2,248 + 3,914) / 35,803 = **17.2108%**.",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Code recalculated 17.2108%; report prints 17.2108%.",
+      "Ratio definition states its inputs and arithmetic."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Code recalculated 17.2108%; report prints 17.2108%.",
+    "ratio_definition_check": "Ratio definition states its inputs and arithmetic."
+  },
+  {
+    "id": "C017",
+    "text": "- Free cash flow = cash from operations - additions to property and equipment = 15,817 - 6,435 = **$9,382 million**.",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Code recalculated 9382; report prints 9382.",
+      "Ratio definition states its inputs and arithmetic."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Code recalculated 9382; report prints 9382.",
+    "ratio_definition_check": "Ratio definition states its inputs and arithmetic."
+  },
+  {
+    "id": "C018",
+    "text": "- P/E = October 27, 2026 close of $992.13 / FY2026 diluted EPS of $20.76 = **47.7905**. The closing price is listed by [StockAnalysis historical data for COST](https://stockanalysis.com/stocks/cost/history/). P/E uses the closing price and annual GAAP diluted EPS; it is not a price target.",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Ratio definition states its inputs and arithmetic."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Could not safely recalculate the expression: invalid syntax (<unknown>, line 1)",
+    "ratio_definition_check": "Ratio definition states its inputs and arithmetic."
+  },
+  {
+    "id": "C019",
+    "text": "The 16-week fourth quarter ended August 30, 2026. The release's statement table reports total revenue of $95,723 million versus $86,156 million, an increase of **11.1043%**. This total includes membership fees. The release's prose reports net sales of $93.9 billion versus $84.4 billion, up 11.2%; net sales and total revenue are different lines (8-K_Ex99.1_2026-09-24.txt, lines 10-11 and 50). The statement table reports diluted EPS of $6.75 versus $5.87, an increase of **14.9915%** (same 8-K, lines 62-67). The 10-K statement reports operating cash flow of $15,817 million, while the 8-K table reports $15,825 million (10-K line 780; 8-K line 148). This report uses the 10-K fact for annual free cash flow. Check this difference during your audit.",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "The cited line number exists in 8-K_Ex99.1_2026-09-24.txt.",
+      "The cited line number exists in 8-K_Ex99.1_2026-09-24.txt.",
+      "The cited line is not present in 8-K_Ex99.1_2026-09-24.txt.",
+      "The cited line number exists in 8-K_Ex99.1_2026-09-24.txt.",
+      "Ratio definition is missing: cash from operations, property and equipment."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "8-K_Ex99.1_2026-09-24.txt",
+        "lines": [
+          10,
+          11,
+          50
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 10,
+            "text": "ISSAQUAH, Wash., September 24, 2026 - Costco Wholesale Corporation (“Costco” or the “Company”) (Nasdaq: COST) today announced its operating results for the 16-week fourth quarter and the 52-week fiscal year ended August 30, 2026."
+          },
+          {
+            "line": 11,
+            "text": "Net sales for the quarter increased 11.2 percent, to $93.9 billion, from $84.4 billion last year. Net sales for the fiscal year increased 10.1 percent, to $297.2 billion, from $269.9 billion last year."
+          },
+          {
+            "line": 50,
+            "text": "Total revenue | 95,723 | | | 86,156 | | | 303,154 | | | 275,235 | |"
+          }
+        ]
+      },
+      {
+        "filename": "8-K_Ex99.1_2026-09-24.txt",
+        "lines": [
+          62,
+          63,
+          64,
+          65,
+          66,
+          67
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 62,
+            "text": "NET INCOME | $ | 2,998 | | | $ | 2,610 | | | $ | 9,226 | | | $ | 8,099 | |"
+          },
+          {
+            "line": 63,
+            "text": "| | | | | | | |"
+          },
+          {
+            "line": 64,
+            "text": "NET INCOME PER COMMON SHARE:"
+          },
+          {
+            "line": 65,
+            "text": "| | | | | | | |"
+          },
+          {
+            "line": 66,
+            "text": "Basic | $ | 6.75 | | | $ | 5.88 | | | $ | 20.78 | | | $ | 18.24 | |"
+          },
+          {
+            "line": 67,
+            "text": "Diluted | $ | 6.75 | | | $ | 5.87 | | | $ | 20.76 | | | $ | 18.21 | |"
+          }
+        ]
+      },
+      {
+        "filename": "8-K_Ex99.1_2026-09-24.txt",
+        "lines": [
+          780
+        ],
+        "valid": false,
+        "excerpts": [
+          {
+            "line": 780,
+            "text": "",
+            "out_of_range": true
+          }
+        ]
+      },
+      {
+        "filename": "8-K_Ex99.1_2026-09-24.txt",
+        "lines": [
+          148
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 148,
+            "text": "Net cash provided by operating activities | 15,825 | | | 13,335 | |"
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "Ratio definition is missing: cash from operations, property and equipment."
+  },
+  {
+    "id": "C020",
+    "text": "| WMT | $713.163B (`Revenues`) | $29.825B (`OperatingIncomeLoss`) | 2026-01-31 | 10-K lines 993 and 997 | 29,825 / 713,163 = **4.1821%** |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          993,
+          997
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 993,
+            "text": "2026 | 2025 |"
+          },
+          {
+            "line": 997,
+            "text": "| 1,250 | 1,250 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "WMT_facts.json",
+        "concept": "total_revenue",
+        "tag": "Revenues",
+        "unit": "USD",
+        "start": "2025-02-01",
+        "end": "2026-01-31",
+        "val": 713163000000,
+        "accn": "0000104169-26-000055",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-03-13",
+        "frame": "CY2025",
+        "prior_val": 680985000000
+      },
+      {
+        "file": "WMT_facts.json",
+        "concept": "operating_income",
+        "tag": "OperatingIncomeLoss",
+        "unit": "USD",
+        "start": "2025-02-01",
+        "end": "2026-01-31",
+        "val": 29825000000,
+        "accn": "0000104169-26-000055",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-03-13",
+        "frame": "CY2025",
+        "prior_val": 29348000000
+      }
+    ],
+    "arithmetic_check": "Could not safely recalculate the expression: invalid decimal literal (<unknown>, line 1)",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C021",
+    "text": "| TGT | $104.780B (`RevenueFromContractWithCustomerExcludingAssessedTax`) | $5.117B (`OperatingIncomeLoss`) | 2026-01-31 | 10-K lines 1211 and 1216-1217 | 5,117 / 104,780 = **4.8836%** |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          1211,
+          1216,
+          1217
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 1211,
+            "text": "2026 | 2025 |"
+          },
+          {
+            "line": 1216,
+            "text": "Operating lease liabilities | 710 | 699 |"
+          },
+          {
+            "line": 1217,
+            "text": "Accrued liabilities and reserves | 1,041 | 917 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "TGT_facts.json",
+        "concept": "total_revenue",
+        "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "unit": "USD",
+        "start": "2025-02-02",
+        "end": "2026-01-31",
+        "val": 104780000000,
+        "accn": "0000027419-26-000016",
+        "fy": 2025,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-03-11",
+        "frame": "CY2025",
+        "prior_val": 106566000000
+      },
+      {
+        "file": "TGT_facts.json",
+        "concept": "operating_income",
+        "tag": "OperatingIncomeLoss",
+        "unit": "USD",
+        "start": "2025-02-02",
+        "end": "2026-01-31",
+        "val": 5117000000,
+        "accn": "0000027419-26-000016",
+        "fy": 2025,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-03-11",
+        "frame": "CY2025",
+        "prior_val": 5566000000
+      }
+    ],
+    "arithmetic_check": "Could not safely recalculate the expression: invalid decimal literal (<unknown>, line 1)",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C022",
+    "text": "| BJ | $21.457274B (`RevenueFromContractWithCustomerExcludingAssessedTax`) | $0.816604B (`OperatingIncomeLoss`) | 2026-01-31 | 10-K lines 905 and 909 | 816.604 / 21,457.274 = **3.8057%** |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          905,
+          909
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 905,
+            "text": "In most countries, the Company's Executive members qualify for an Executive reward, generally 2% on qualified purchases, subject to an annual maximum value, which does not expire and is redeemable at Costco warehouses. The Company accounts for this reward as a reduction in sales, net of the estimated impact of non-redemptions (breakage), with the corresponding liability classified as accrued member rewards in the consolidated balance sheets. Estimated breakage is computed based on redemption data. For 2026, 2025, and 2024, the net reduction in sales was $ 3,383 , $ 3,007 , and $ 2,804 ."
+          },
+          {
+            "line": 909,
+            "text": "Merchandise costs consist of the purchase price or manufacturing costs of inventory sold, inbound and outbound shipping charges, and all costs related to the Company’s depot, fulfillment, and manufacturing operations, and are reduced by vendor consideration. Merchandise costs also include salaries, benefits, depreciation, and utilities in fresh foods departments and certain ancillary businesses."
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "BJ_facts.json",
+        "concept": "total_revenue",
+        "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "unit": "USD",
+        "start": "2025-02-02",
+        "end": "2026-01-31",
+        "val": 21457274000,
+        "accn": "0001531152-26-000007",
+        "fy": 2025,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-03-12",
+        "frame": "CY2025",
+        "prior_val": 20501804000
+      },
+      {
+        "file": "BJ_facts.json",
+        "concept": "operating_income",
+        "tag": "OperatingIncomeLoss",
+        "unit": "USD",
+        "start": "2025-02-02",
+        "end": "2026-01-31",
+        "val": 816604000,
+        "accn": "0001531152-26-000007",
+        "fy": 2025,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-03-12",
+        "frame": "CY2025",
+        "prior_val": 772206000
+      }
+    ],
+    "arithmetic_check": "Could not safely recalculate the expression: invalid decimal literal (<unknown>, line 1)",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  }
+]

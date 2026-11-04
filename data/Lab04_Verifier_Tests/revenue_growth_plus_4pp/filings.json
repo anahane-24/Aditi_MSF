@@ -1,0 +1,51 @@
+{
+  "8-K": {
+    "form": "8-K",
+    "date": "2026-10-16",
+    "report_date": "2026-10-13",
+    "accession": "0000909832-26-000100",
+    "accession_nodash": "000090983226000100",
+    "primary_document": "cost-20261013.htm",
+    "primary_description": "8-K",
+    "accepted_datetime": "2026-10-16T20:52:57.000Z",
+    "cik": "0000909832",
+    "accepted": "2026-10-16 16:52:57 (SEC filing page local time)"
+  },
+  "10-K": {
+    "form": "10-K",
+    "date": "2026-10-07",
+    "report_date": "2026-08-30",
+    "accession": "0000909832-26-000093",
+    "accession_nodash": "000090983226000093",
+    "primary_document": "cost-20260830.htm",
+    "primary_description": "10-K",
+    "accepted_datetime": "2026-10-07T01:13:15.000Z",
+    "cik": "0000909832",
+    "accepted": "2026-10-06 21:13:15 (SEC filing page local time)"
+  },
+  "10-Q": {
+    "form": "10-Q",
+    "date": "2026-06-03",
+    "report_date": "2026-05-10",
+    "accession": "0000909832-26-000051",
+    "accession_nodash": "000090983226000051",
+    "primary_document": "cost-20260510.htm",
+    "primary_description": "10-Q",
+    "accepted_datetime": "2026-06-03T20:43:00.000Z",
+    "cik": "0000909832",
+    "accepted": "2026-06-03 16:43:00 (SEC filing page local time)"
+  },
+  "earnings_8k": {
+    "form": "8-K",
+    "date": "2026-09-24",
+    "report_date": "2026-09-24",
+    "accession": "0000909832-26-000084",
+    "accession_nodash": "000090983226000084",
+    "primary_document": "cost-20260924.htm",
+    "primary_description": "8-K",
+    "accepted_datetime": "2026-09-24T20:17:37.000Z",
+    "cik": "0000909832",
+    "exhibit_99_1": "costex9918-k92426.htm",
+    "accepted": "2026-09-24 16:17:37 (SEC filing page local time)"
+  }
+}

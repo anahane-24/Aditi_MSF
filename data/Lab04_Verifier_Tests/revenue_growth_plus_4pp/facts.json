@@ -1,0 +1,133 @@
+{
+  "total_revenue": {
+    "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "unit": "USD",
+    "start": "2025-09-01",
+    "end": "2026-08-30",
+    "val": 303154000000,
+    "accn": "0000909832-26-000093",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-10-07",
+    "frame": "CY2026",
+    "prior_val": 275235000000
+  },
+  "operating_income": {
+    "tag": "OperatingIncomeLoss",
+    "unit": "USD",
+    "start": "2025-09-01",
+    "end": "2026-08-30",
+    "val": 11685000000,
+    "accn": "0000909832-26-000093",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-10-07",
+    "frame": "CY2026",
+    "prior_val": 10383000000
+  },
+  "net_income": {
+    "tag": "NetIncomeLoss",
+    "unit": "USD",
+    "start": "2025-09-01",
+    "end": "2026-08-30",
+    "val": 9226000000,
+    "accn": "0000909832-26-000093",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-10-07",
+    "frame": "CY2026",
+    "prior_val": 8099000000
+  },
+  "diluted_eps": {
+    "tag": "EarningsPerShareDiluted",
+    "unit": "USD/shares",
+    "start": "2025-09-01",
+    "end": "2026-08-30",
+    "val": 20.76,
+    "accn": "0000909832-26-000093",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-10-07",
+    "frame": "CY2026",
+    "prior_val": 18.21
+  },
+  "equity": {
+    "tag": "StockholdersEquity",
+    "unit": "USD",
+    "end": "2026-08-30",
+    "val": 35803000000,
+    "accn": "0000909832-26-000093",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-10-07",
+    "frame": "CY2026Q3I",
+    "prior_val": 29164000000
+  },
+  "long_term_debt": {
+    "tag": "LongTermDebtNoncurrent",
+    "unit": "USD",
+    "end": "2026-08-30",
+    "val": 3914000000,
+    "accn": "0000909832-26-000093",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-10-07",
+    "frame": "CY2026Q3I",
+    "prior_val": 5713000000
+  },
+  "current_debt": {
+    "tag": "LongTermDebtCurrent",
+    "unit": "USD",
+    "end": "2026-08-30",
+    "val": 2248000000,
+    "accn": "0000909832-26-000093",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-10-07",
+    "frame": "CY2026Q3I",
+    "prior_val": 75000000
+  },
+  "cash_from_operations": {
+    "tag": "NetCashProvidedByUsedInOperatingActivities",
+    "unit": "USD",
+    "start": "2025-09-01",
+    "end": "2026-08-30",
+    "val": 15817000000,
+    "accn": "0000909832-26-000093",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-10-07",
+    "frame": "CY2026",
+    "prior_val": 13335000000
+  },
+  "capex": {
+    "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+    "unit": "USD",
+    "start": "2025-09-01",
+    "end": "2026-08-30",
+    "val": 6435000000,
+    "accn": "0000909832-26-000093",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-10-07",
+    "frame": "CY2026",
+    "prior_val": 5498000000
+  },
+  "debt_components": {
+    "LongTermDebtCurrent": 2248000000,
+    "LongTermDebtNoncurrent": 3914000000
+  },
+  "period_end": {
+    "end": "2026-08-30",
+    "prior_end": "2025-08-31"
+  }
+}

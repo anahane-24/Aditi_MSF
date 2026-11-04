@@ -1,0 +1,129 @@
+{
+  "total_revenue": {
+    "tag": "Revenues",
+    "unit": "USD",
+    "start": "2025-02-01",
+    "end": "2026-01-31",
+    "val": 713163000000,
+    "accn": "0000104169-26-000055",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-03-13",
+    "frame": "CY2025",
+    "prior_val": 680985000000
+  },
+  "operating_income": {
+    "tag": "OperatingIncomeLoss",
+    "unit": "USD",
+    "start": "2025-02-01",
+    "end": "2026-01-31",
+    "val": 29825000000,
+    "accn": "0000104169-26-000055",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-03-13",
+    "frame": "CY2025",
+    "prior_val": 29348000000
+  },
+  "net_income": {
+    "tag": "NetIncomeLoss",
+    "unit": "USD",
+    "start": "2025-02-01",
+    "end": "2026-01-31",
+    "val": 21893000000,
+    "accn": "0000104169-26-000055",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-03-13",
+    "prior_val": 19436000000
+  },
+  "diluted_eps": {
+    "tag": "EarningsPerShareDiluted",
+    "unit": "USD/shares",
+    "start": "2025-02-01",
+    "end": "2026-01-31",
+    "val": 2.73,
+    "accn": "0000104169-26-000055",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-03-13",
+    "frame": "CY2025",
+    "prior_val": 2.41
+  },
+  "equity": {
+    "tag": "StockholdersEquity",
+    "unit": "USD",
+    "end": "2026-01-31",
+    "val": 99617000000,
+    "accn": "0000104169-26-000055",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-03-13",
+    "prior_val": 91013000000
+  },
+  "long_term_debt": {
+    "tag": "LongTermDebtNoncurrent",
+    "unit": "USD",
+    "end": "2026-01-31",
+    "val": 34624000000,
+    "accn": "0000104169-26-000055",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-03-13",
+    "prior_val": 33401000000
+  },
+  "current_debt": {
+    "tag": "LongTermDebtCurrent",
+    "unit": "USD",
+    "end": "2026-01-31",
+    "val": 3542000000,
+    "accn": "0000104169-26-000055",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-03-13",
+    "prior_val": 2598000000
+  },
+  "cash_from_operations": {
+    "tag": "NetCashProvidedByUsedInOperatingActivities",
+    "unit": "USD",
+    "start": "2025-02-01",
+    "end": "2026-01-31",
+    "val": 41565000000,
+    "accn": "0000104169-26-000055",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-03-13",
+    "frame": "CY2025",
+    "prior_val": 36443000000
+  },
+  "capex": {
+    "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+    "unit": "USD",
+    "start": "2025-02-01",
+    "end": "2026-01-31",
+    "val": 26642000000,
+    "accn": "0000104169-26-000055",
+    "fy": 2026,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-03-13",
+    "frame": "CY2025",
+    "prior_val": 23783000000
+  },
+  "debt_components": {
+    "LongTermDebtCurrent": 3542000000,
+    "LongTermDebtNoncurrent": 34624000000
+  },
+  "period_end": {
+    "end": "2026-01-31",
+    "prior_end": "2025-01-31"
+  }
+}
