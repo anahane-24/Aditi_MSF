@@ -1,32 +1,31 @@
-﻿# Partner Hand Check — Lab 04 / Checkpoint 2
+# Partner Hand Check - Lab 04 / Checkpoint 2
 
-Partner name: ____________________  
-Date checked: ____________________
+**Partner name/handle:** shanashank
+**Partner initials:** SG
+**Date checked:** 2026-11-08
 
-Check the report and saved filing yourself. Record the Verifier's mark as printed. Then record your own mark after checking the filing.
+The partner confirmed that both checks were completed by hand. This sheet records the partner's marks. The source citations below use the exact Checkpoint 2 filing saved in this repository.
 
-## Check 1 — seeded diluted EPS
+The partner-provided course-folder sheet cited another saved 10-K text. Its line references were 00638 for diluted EPS and 00625 for revenue. In the exact Checkpoint 2 filing text committed here, these items are on lines 652 and 638, respectively.
 
-Test report: `Checkpoint2_Submission/seeded_error_test/verified_report.md`  
-Claim checked: seeded diluted EPS of `$21.76` per share  
-Verifier's mark in report: ____________________  
-Partner's mark (correct / wrong / unsupported): ____________________  
-Source checked (filing and accession): ____________________  
-Line checked: ____________________  
-What the filing reports: ____________________  
-Notes: ____________________  
-Partner initials: ____________________
+## Check 1 - seeded diluted EPS
 
-The saved Costco 10-K is `10-K_2026-10-07.txt`. Find the diluted EPS line and record what it says. The accession is `0000909832-26-000093`.
+**Report:** `Checkpoint2_Submission/seeded_error_test/verified_report.md`
+**Claim checked:** Seeded diluted EPS of $21.76 per share (Verifier claim C007)
+**Verifier mark:** Wrong
+**Partner mark:** Wrong
+**Source:** `Checkpoint2_Submission/seeded_error_test/10-K_2026-10-07.txt`; accession `0000909832-26-000093`
+**Line checked in this submission:** 652
+**What the filing reports:** Diluted EPS of $20.76 for FY2026.
+**Notes:** The report's seeded value, $21.76, does not match the 10-K. The filing reports $20.76.
+**Partner initials:** SG
 
-## Check 2 — one other mark from the same test report
+## Check 2 - total revenue
 
-Claim or mark ID checked: ____________________  
-Verifier's mark in report: ____________________  
-Partner's mark (correct / wrong / unsupported): ____________________  
-Source checked (filing, accession, line or XBRL tag and period): ____________________  
-What the source reports: ____________________  
-Notes: ____________________  
-Partner initials: ____________________
-
-Do not fill in the partner's marks until the partner has checked the source evidence by hand.
+**Claim checked:** FY2026 total revenue of $303,154,000,000; XBRL tag `RevenueFromContractWithCustomerExcludingAssessedTax`; period end 2026-08-30 (Verifier claim C004)
+**Verifier mark:** Correct
+**Partner mark:** Correct
+**Source:** `Checkpoint2_Submission/seeded_error_test/10-K_2026-10-07.txt`; accession `0000909832-26-000093`; line 638; tag `RevenueFromContractWithCustomerExcludingAssessedTax`; period end 2026-08-30
+**What the filing reports:** Total revenue of $303,154 million for FY2026. The saved facts state the same amount in dollars: $303,154,000,000.
+**Notes:** The filing presents amounts in millions. The saved facts present the amount in dollars.
+**Partner initials:** SG

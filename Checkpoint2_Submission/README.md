@@ -20,4 +20,4 @@ The seeded report states diluted EPS as `$21.76`. The saved facts and 10-K repor
 
 See `seeded_error_test/verified_report.md` for the full marks table and `seeded_error_test/verification_marks.json` for machine-readable marks. The filing text is included so a reader can inspect line `652`.
 
-The partner hand-check sheet is `partner_hand_check.md`. Its fields are blank and must be completed by the partner after they inspect the filing.
+The partner hand-check sheet is `partner_hand_check.md`. `shanashank` confirmed both checks by hand on November 8, 2026. The sheet records the partner marks and cites the exact report and filing lines in this submission.
