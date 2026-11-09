@@ -35,7 +35,7 @@ Run time: 2026-11-03T08:43:35-05:00
 
 # Costco Wholesale Corporation (COST) fallback equity research report
 
-**Fallback status:** The saved Costco run contains seven data steps, but no live four-role report. This report is an offline fallback based on the saved filings and facts. It is not a record of four separate SDK calls. The completed hand-audit worksheet is `COST_manual_audit.md`; it records 0 wrong or unsupported claims and 0 missing claims.
+**Fallback status:** This is an offline fallback based on the saved Costco filings and facts. It is not a record of four separate SDK calls.
 
 ## Overview
 
@@ -53,7 +53,7 @@ Costco lists competition, inflation or deflation, consumer spending, wage and he
 
 ## Valuation Insights
 
-The 10-K presents amounts in millions, except per-share data. XBRL facts below use fiscal 2026 period end August 30, 2026 and 10-K accession 0000909832-26-000093. Prior-year facts end August 31, 2025. Values and tags are in `sources/COST/facts.json` and the cited 10-K statement lines.
+The 10-K presents amounts in millions, except per-share data. XBRL facts below use fiscal 2026 period end August 30, 2026 and 10-K accession 0000909832-26-000093. Prior-year facts end August 31, 2025. Values and tags are in `facts.json` and the cited 10-K statement lines.
 
 | Financial fact | FY2026 | FY2025 | Tag | 10-K evidence |
 |---|---:|---:|---|---|
