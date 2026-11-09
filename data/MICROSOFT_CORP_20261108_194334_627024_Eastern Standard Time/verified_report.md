@@ -1,5 +1,7 @@
 Filings read: MSFT 10-K accession 0001193125-26-323660; MSFT 10-Q accession 0001193125-26-436133; MSFT 8-K Exhibit 99.1 accession 0001193125-26-436122; AAPL latest 10-K accession 0000320193-26-000026
 
+**Partner hand-check (shanashank; 2026-11-08): C001 Correct; C027 Correct.**
+
 ## Verifier table
 
 Verifier model status: complete
@@ -144,5 +146,3 @@ Key operational metrics include commercial remaining performance obligation, Mic
   - Shifts in AI talent retention or strategic partnerships with OpenAI.
 
 Insight: > "Our success is highly dependent on our ability to attract and retain qualified employees." [10-K_2026-07-29.txt, line 1551, accession: 0001193125-26-323660]
-
-

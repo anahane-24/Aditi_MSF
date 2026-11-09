@@ -1,6 +1,8 @@
 Filings read: MSFT 10-K accession 0001193125-26-323660; MSFT 10-Q accession 0001193125-26-436133; MSFT 8-K Exhibit 99.1 accession 0001193125-26-436122; AAPL latest 10-K accession 0000320193-26-000026
 Run time: 2026-11-08T19:43:38-05:00
 
+**Partner hand-check (shanashank; 2026-11-08): C001 Correct; C027 Correct.**
+
 ## Overview
 
 Microsoft operates as a technology company committed to making digital technology and artificial intelligence (AI) available broadly and responsibly, with a mission to empower every person and every organization on the planet to achieve more. The company develops and supports a broad portfolio of technology solutions for individuals and businesses, focusing on secure, trusted, and innovative platforms and applications that meet evolving customer needs across AI, cloud computing, productivity and collaboration, and personal computing.
@@ -107,5 +109,3 @@ Key operational metrics include commercial remaining performance obligation, Mic
   - Shifts in AI talent retention or strategic partnerships with OpenAI.
 
 Insight: > "Our success is highly dependent on our ability to attract and retain qualified employees." [10-K_2026-07-29.txt, line 1551, accession: 0001193125-26-323660]
-
-

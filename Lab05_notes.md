@@ -28,7 +28,7 @@ The first paragraph of Costco's release reports net sales growth of 11.2% for th
 
 ## Human and class actions still needed
 
-- Partner: check two MSFT claims by hand in the cited 10-K and fill `Lab05_MSFT_partner_check.md`.
+- Partner hand check: completed for MSFT claims C001 and C027 on November 8, 2026. The partner marked both claims correct; see `Lab05_MSFT_partner_check.md`.
 - Student: write the three analyst personas in the student's own words. The course says AI must not write these personas.
 - Student: complete the team-name and three-name check with the instructor. This is intentionally left for the in-class exchange.
 - Partner/team: run the page on the partner's pick in front of them and confirm that they can read the verified report without opening a terminal. The MSFT run above is saved; the partner should still confirm the page interaction.
