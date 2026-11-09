@@ -1,0 +1,44 @@
+
+=== MSFT ===
+STEP 1 � Resolve ticker to SEC CIK
+MSFT -> CIK 0000789019 (MICROSOFT CORP)
+
+STEP 2 � Select latest 10-K, 10-Q, and Item 2.02 earnings 8-K
+  Checking 8-K 2026-11-05 (0001193125-26-448357) for Item 2.02
+  Checking 8-K 2026-11-04 (0001193125-26-447173) for Item 2.02
+  Checking 8-K 2026-10-28 (0001193125-26-436149) for Item 2.02
+  Checking 8-K 2026-10-28 (0001193125-26-436122) for Item 2.02
+8-K: 8-K 0001193125-26-448357 | accepted 2026-11-05 06:01:52 (SEC filing page local time) | d177209d8k.htm
+10-Q: 10-Q 0001193125-26-436133 | accepted 2026-10-28 16:07:39 (SEC filing page local time) | msft-20260930.htm
+10-K: 10-K 0001193125-26-323660 | accepted 2026-07-29 16:08:01 (SEC filing page local time) | msft-20260630.htm
+earnings_8k: 8-K 0001193125-26-436122 | accepted 2026-10-28 16:04:44 (SEC filing page local time) | msft-20261028.htm
+
+STEP 3 � Download and save filing text and metadata: C:\Users\ahnah\orca\Aditi_MSF\data\MICROSOFT_CORP_20261108_194334_627024_Eastern Standard Time
+
+STEP 4 � XBRL facts for the latest fiscal year (prior year beside each)
+total_revenue: 331839000000 USD | tag=RevenueFromContractWithCustomerExcludingAssessedTax | period=2025-07-01 to 2026-06-30 | filing=0001193125-26-323660 | prior=281724000000
+operating_income: 155237000000 USD | tag=OperatingIncomeLoss | period=2025-07-01 to 2026-06-30 | filing=0001193125-26-323660 | prior=128528000000
+net_income: 133749000000 USD | tag=NetIncomeLoss | period=2025-07-01 to 2026-06-30 | filing=0001193125-26-323660 | prior=101832000000
+diluted_eps: 17.95 USD/shares | tag=EarningsPerShareDiluted | period=2025-07-01 to 2026-06-30 | filing=0001193125-26-323660 | prior=13.64
+equity: 442387000000 USD | tag=StockholdersEquity | period= to 2026-06-30 | filing=0001193125-26-323660 | prior=343479000000
+long_term_debt: 31067000000 USD | tag=LongTermDebtNoncurrent | period= to 2026-06-30 | filing=0001193125-26-323660 | prior=40152000000
+current_debt: 9227000000 USD | tag=LongTermDebtCurrent | period= to 2026-06-30 | filing=0001193125-26-323660 | prior=2999000000
+cash_from_operations: 182935000000 USD | tag=NetCashProvidedByUsedInOperatingActivities | period=2025-07-01 to 2026-06-30 | filing=0001193125-26-323660 | prior=136162000000
+capex: 115948000000 USD | tag=PaymentsToAcquirePropertyPlantAndEquipment | period=2025-07-01 to 2026-06-30 | filing=0001193125-26-323660 | prior=64551000000
+Long-term debt components (current + noncurrent): {'LongTermDebtCurrent': 9227000000, 'LongTermDebtNoncurrent': 31067000000}
+
+STEP 5 � Calculate ratios from the printed facts
+Revenue growth: (331839000000.0 - 281724000000.0) / 281724000000.0 = 17.7887%
+Operating margin: 155237000000.0 / 331839000000.0 = 46.7808%
+Return on average equity: 133749000000.0 / ((442387000000.0 + 343479000000.0) / 2) = 34.0386%
+Debt to equity (current + noncurrent long-term debt): 40294000000 / 442387000000.0 = 9.1083%
+Free cash flow: 182935000000.0 - 115948000000.0 = 66987000000.0
+
+STEP 6 � Earnings release lines: total revenue and diluted EPS
+Total revenue row: � Revenue was $92.3 billion and increased 19%
+Diluted EPS row: � Diluted earnings per share was $4.92 and increased 32% on a GAAP basis, and was $4.89 and increased 18% (up 19% in constant currency) on a non-GAAP basis
+
+STEP 7 � Peer facts and operating margin on the same revenue definition
+AAPL (Apple Inc.) revenue: 478834000000 | operating income: 158063000000 | margin: 33.0100% | period: 2026-09-26
+
+Saved primary-company filings and facts to: C:\Users\ahnah\orca\Aditi_MSF\data\MICROSOFT_CORP_20261108_194334_627024_Eastern Standard Time

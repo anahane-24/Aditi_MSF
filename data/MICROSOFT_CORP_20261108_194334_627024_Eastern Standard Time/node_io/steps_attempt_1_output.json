@@ -1,0 +1,20 @@
+{
+  "data_run_folder": "C:\\Users\\ahnah\\orca\\Aditi_MSF\\data\\MICROSOFT_CORP_20261108_194334_627024_Eastern Standard Time",
+  "saved_files": [
+    "10-K_2026-07-29.txt",
+    "10-Q_2026-10-28.txt",
+    "8-K_Ex99.1_2026-10-28.txt",
+    "AAPL_facts.json",
+    "facts.json",
+    "filings.json"
+  ],
+  "steps_completed": [
+    "STEP 1",
+    "STEP 2",
+    "STEP 3",
+    "STEP 4",
+    "STEP 5",
+    "STEP 6",
+    "STEP 7"
+  ]
+}

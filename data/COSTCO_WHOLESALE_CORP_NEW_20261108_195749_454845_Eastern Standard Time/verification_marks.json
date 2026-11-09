@@ -1,0 +1,233 @@
+[
+  {
+    "id": "C001",
+    "mark": "unsupported",
+    "claim": "The company's merchandise categories include Foods and Sundries, Non-Foods, Fresh Foods, Warehouse Ancillary (gasoline, pharmacy, food court, optical, hearing aids, tire installation), and Other Businesses (e-commerce, business centers, travel) (10-K Item 1, lines 148–154). Costco's membership model includes annual fees of $65 in the U.S., with variations in other countries (10-K Item 1, line 162). Membership counts at the end of 2026 included 84,100 paid members and 66,300 household cards, totaling 150,400 cardholders (10-K Item 1, lines 163–168).",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.; The cited line number exists in 10-K_2026-10-07.txt.; The cited line number exists in 10-K_2026-10-07.txt.",
+    "correction": ""
+  },
+  {
+    "id": "C002",
+    "mark": "unsupported",
+    "claim": "The company's strategy is to provide members with high-quality merchandise at consistently lower prices than elsewhere, limiting most items to fast-selling models, sizes, and colors. It carries fewer than 4,000 active SKUs per warehouse in its core warehouse business (10-K Item 1, line 146). The number of warehouses with gas stations varies significantly by country, with 774 gas stations operating at the end of 2026, representing 11% of total net sales in 2026 (10-K Item 1, lines 153–155).",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.; The cited line number exists in 10-K_2026-10-07.txt.",
+    "correction": ""
+  },
+  {
+    "id": "C003",
+    "mark": "unsupported",
+    "claim": "In 2026, comparable sales growth was driven by increases in average ticket and shopping frequency, as well as new warehouse openings. Digitally-enabled comparable sales increased 21% during 2026 (Item 7, line 458). The company's membership renewal rate was 92.3% in the U.S. and Canada and 89.8% worldwide at the end of 2026 (10-K Item 1, lines 172).",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.; The cited line number exists in 10-K_2026-10-07.txt.",
+    "correction": ""
+  },
+  {
+    "id": "C004",
+    "mark": "unsupported",
+    "claim": "Insight: Costco's business model relies on direct relationships with many producers of brand-name merchandise and does not obtain a significant portion of merchandise from any one supplier; however, when sources of supply become unavailable, the company seeks alternative sources or items, indicating a structural dependency on supplier diversity (10-K Item 1, line 159).",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.",
+    "correction": ""
+  },
+  {
+    "id": "C005",
+    "mark": "unsupported",
+    "claim": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Revenue                          | $303,154,000,000 | $275,235,000,000 | `RevenueFromContractWithCustomerExcludingAssessedTax` | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 638, accn 0000909832-26-000093 |",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.",
+    "correction": ""
+  },
+  {
+    "id": "C006",
+    "mark": "unsupported",
+    "claim": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Operating Income                 | $11,685,000,000  | $10,383,000,000  | `OperatingIncomeLoss`                  | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 642, accn 0000909832-26-000093 |",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.",
+    "correction": ""
+  },
+  {
+    "id": "C007",
+    "mark": "unsupported",
+    "claim": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Net Income                       | $9,226,000,000   | $8,099,000,000   | `NetIncomeLoss`                        | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 648, accn 0000909832-26-000093 |",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.",
+    "correction": ""
+  },
+  {
+    "id": "C008",
+    "mark": "unsupported",
+    "claim": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Diluted EPS                      | $20.76           | $18.21           | `EarningsPerShareDiluted`              | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 652, accn 0000909832-26-000093 |",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.",
+    "correction": ""
+  },
+  {
+    "id": "C009",
+    "mark": "unsupported",
+    "claim": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Stockholders' Equity             | $35,803,000,000  | $29,164,000,000  | `StockholdersEquity`                   | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 718, accn 0000909832-26-000093 |",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.",
+    "correction": ""
+  },
+  {
+    "id": "C010",
+    "mark": "unsupported",
+    "claim": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Current Debt                     | $2,248,000,000   | $75,000,000      | `LongTermDebtCurrent`                  | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 701, accn 0000909832-26-000093 |",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.",
+    "correction": ""
+  },
+  {
+    "id": "C011",
+    "mark": "unsupported",
+    "claim": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Noncurrent Debt                  | $3,914,000,000   | $5,713,000,000   | `LongTermDebtNoncurrent`               | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 705, accn 0000909832-26-000093 |",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.",
+    "correction": ""
+  },
+  {
+    "id": "C012",
+    "mark": "unsupported",
+    "claim": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Operating Cash Flow              | $15,817,000,000  | $13,335,000,000  | `NetCashProvidedByUsedInOperatingActivities` | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 505, accn 0000909832-26-000093 |",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.",
+    "correction": ""
+  },
+  {
+    "id": "C013",
+    "mark": "unsupported",
+    "claim": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Capex                            | $6,435,000,000   | $5,498,000,000   | `PaymentsToAcquirePropertyPlantAndEquipment` | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 515, accn 0000909832-26-000093 |",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.",
+    "correction": ""
+  },
+  {
+    "id": "C014",
+    "mark": "unsupported",
+    "claim": "- **Revenue growth**:  \n  $$\n  \\frac{303154000000.0 - 275235000000.0}{275235000000.0} = \\textbf{10.1437\\%}\n  $$  \n  Source: [STEP 5](file:///step_5_calculator_output.txt)",
+    "reason": "No filing line or XBRL tag was found in this claim block.; Ratio definition is missing: prior.",
+    "correction": ""
+  },
+  {
+    "id": "C015",
+    "mark": "unsupported",
+    "claim": "- **Operating margin**:  \n  $$\n  \\frac{11685000000.0}{303154000000.0} = \\textbf{3.8545\\%}\n  $$  \n  Source: [STEP 5](file:///step_5_calculator_output.txt)",
+    "reason": "No filing line or XBRL tag was found in this claim block.; Ratio definition is missing: operating income, revenue.",
+    "correction": ""
+  },
+  {
+    "id": "C016",
+    "mark": "unsupported",
+    "claim": "- **Return on average equity**:  \n  $$\n  \\frac{9226000000.0}{\\left(\\frac{35803000000.0 + 29164000000.0}{2}\\right)} = \\textbf{28.4021\\%}\n  $$  \n  Source: [STEP 5](file:///step_5_calculator_output.txt)",
+    "reason": "No filing line or XBRL tag was found in this claim block.; Ratio definition is missing: net income.",
+    "correction": ""
+  },
+  {
+    "id": "C017",
+    "mark": "unsupported",
+    "claim": "- **Debt to equity (current + noncurrent long-term debt)**:  \n  $$\n  \\frac{6162000000}{35803000000.0} = \\textbf{17.2108\\%}\n  $$  \n  Source: [STEP 5](file:///step_5_calculator_output.txt)",
+    "reason": "No filing line or XBRL tag was found in this claim block.; Ratio definition states its inputs and arithmetic.",
+    "correction": ""
+  },
+  {
+    "id": "C018",
+    "mark": "unsupported",
+    "claim": "- **Free cash flow**:  \n  $$\n  15817000000.0 - 6435000000.0 = \\textbf{\\$9,382,000,000}\n  $$  \n  Source: [STEP 5](file:///step_5_calculator_output.txt)",
+    "reason": "No filing line or XBRL tag was found in this claim block.; Ratio definition is missing: cash from operations, property and equipment.",
+    "correction": ""
+  },
+  {
+    "id": "C019",
+    "mark": "unsupported",
+    "claim": "- **P/E ratio**:  \n  $$\n  \\frac{992.13}{20.76} = \\textbf{47.7905}\n  $$  \n  Source: [STEP 5](file:///step_5_calculator_output.txt)",
+    "reason": "No filing line or XBRL tag was found in this claim block.; Ratio definition is missing: price, diluted eps.",
+    "correction": ""
+  },
+  {
+    "id": "C020",
+    "mark": "unsupported",
+    "claim": "Costco reported fourth-quarter net sales of $93.9 billion, up 11.2% year-over-year, with GAAP diluted EPS of $6.75 per share, compared to $5.87 in the prior year. The fiscal year's total revenue was $297.2 billion, a 10.1% increase from $269.9 billion.",
+    "reason": "No filing line or XBRL tag was found in this claim block.",
+    "correction": ""
+  },
+  {
+    "id": "C021",
+    "mark": "unsupported",
+    "claim": "| Walmart Inc. (WMT) | 713,163,000,000     | 29,825,000,000         | 4.1821%          |",
+    "reason": "No filing line or XBRL tag was found in this claim block.",
+    "correction": ""
+  },
+  {
+    "id": "C022",
+    "mark": "unsupported",
+    "claim": "| Target Corp. (TGT) | 104,780,000,000     | 5,117,000,000          | 4.8836%          |",
+    "reason": "No filing line or XBRL tag was found in this claim block.",
+    "correction": ""
+  },
+  {
+    "id": "C023",
+    "mark": "unsupported",
+    "claim": "| BJ's Wholesale Club Holdings, Inc. (BJ) | 21,457,274,000      | 816,604,000            | 3.8057%          |",
+    "reason": "No filing line or XBRL tag was found in this claim block.",
+    "correction": ""
+  },
+  {
+    "id": "C024",
+    "mark": "unsupported",
+    "claim": "Costco’s operating margin of **3.8545%** is below the peer group average.",
+    "reason": "No filing line or XBRL tag was found in this claim block.; Ratio definition is missing: operating income, revenue.",
+    "correction": ""
+  },
+  {
+    "id": "C025",
+    "mark": "unsupported",
+    "claim": "$$",
+    "reason": "No filing line or XBRL tag was found in this claim block.",
+    "correction": ""
+  },
+  {
+    "id": "C026",
+    "mark": "unsupported",
+    "claim": "\\frac{\\text{Share Price } \\$992.13}{\\text{Diluted EPS } \\$20.76} = \\textbf{47.7905}",
+    "reason": "No filing line or XBRL tag was found in this claim block.",
+    "correction": ""
+  },
+  {
+    "id": "C027",
+    "mark": "unsupported",
+    "claim": "$$",
+    "reason": "No filing line or XBRL tag was found in this claim block.",
+    "correction": ""
+  },
+  {
+    "id": "C028",
+    "mark": "unsupported",
+    "claim": "Insight: Costco's SG&A expenses as a percentage of net sales decreased 10 basis points in 2026 compared with 2025, but increased one basis point after excluding gasoline price inflation (10-K, line 482).",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.",
+    "correction": ""
+  },
+  {
+    "id": "C029",
+    "mark": "unsupported",
+    "claim": "Costco plans to open up to 33 new warehouses in 2027, including five relocations, with capital expenditures expected to total approximately $7,500 during fiscal 2027 (Item 7, lines 518–519). The company's primary requirements for capital include acquiring land, buildings, and equipment for new and remodeled warehouses, information systems, and manufacturing and distribution facilities (Item 7, line 518).",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.; The cited line number exists in 10-K_2026-10-07.txt.",
+    "correction": ""
+  },
+  {
+    "id": "C030",
+    "mark": "unsupported",
+    "claim": "The company's cash flows from operations are primarily driven by net sales and membership fees. In 2026, net cash provided by operating activities totaled $15,817 million, compared to $13,335 million in 2025 (Item 7, line 505). Cash and cash equivalents were $21,301 million at the end of 2026, compared to $15,284 million at the end of 2025 (Item 7, line 508).",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.; The cited line number exists in 10-K_2026-10-07.txt.",
+    "correction": ""
+  },
+  {
+    "id": "C031",
+    "mark": "correct",
+    "claim": "Costco's membership fee revenue increased 11% in 2026, driven by new member sign-ups, fee increases, and upgrades to Executive memberships. At the end of 2026, member renewal rates were 92.3% in the U.S. and Canada and 89.8% worldwide (Item 7, line 465). The company also reported a 13% increase in quarterly cash dividend in April 2026 (Item 7, line 426).",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.; The cited line number exists in 10-K_2026-10-07.txt.; The statement accurately reflects the information provided in the 10-K filing, citing specific lines (465 and 426) that support the claims about membership fee revenue increase, renewal rates, and dividend increase.",
+    "correction": "None"
+  },
+  {
+    "id": "C032",
+    "mark": "correct",
+    "claim": "The gross margin percentage decreased three basis points in 2026, but increased 10 basis points excluding the impact of gasoline price inflation (Item 7, line 475). SG&A expenses as a percentage of net sales decreased 10 basis points, though it increased one basis point excluding the impact of gasoline price inflation (Item 7, line 482).",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.; The cited line number exists in 10-K_2026-10-07.txt.; The statement correctly summarizes the gross margin and SG&A expense information from the 10-K filing, referencing lines 475 and 482 to support the claims about margin changes and expense percentages.",
+    "correction": "None"
+  },
+  {
+    "id": "C033",
+    "mark": "correct",
+    "claim": "Insight: Costco's gross margin percentage decreased three basis points in 2026, but increased 10 basis points to 11.22% after excluding gasoline price inflation (10-K, line 475).",
+    "reason": "The cited line number exists in 10-K_2026-10-07.txt.; The statement correctly identifies that Costco's gross margin percentage decreased three basis points in 2026 but increased 10 basis points when excluding gasoline price inflation, as stated in line 475 of the 10-K filing.",
+    "correction": "None"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "ticker": "MSFT",
+  "peers": [
+    "AAPL"
+  ],
+  "price": null,
+  "price_date": null,
+  "price_source": null,
+  "run_time": "2026-11-08T19:43:38-05:00",
+  "step_output_file": "step_output.txt",
+  "framework": "CrewAI Flow"
+}

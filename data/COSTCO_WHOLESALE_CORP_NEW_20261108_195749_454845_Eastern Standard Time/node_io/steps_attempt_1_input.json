@@ -1,0 +1,11 @@
+{
+  "ticker": "COST",
+  "peers": [
+    "WMT",
+    "TGT",
+    "BJ"
+  ],
+  "price": 992.13,
+  "price_date": null,
+  "price_source": null
+}

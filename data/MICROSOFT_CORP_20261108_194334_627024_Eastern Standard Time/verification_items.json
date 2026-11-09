@@ -1,0 +1,824 @@
+[
+  {
+    "id": "C001",
+    "text": "Insight: Microsoft's datacenter operations are dependent on the availability of permitted and buildable land, predictable energy, networking supplies, and servers, including graphics processing units and other components. [10-K_2026-07-29.txt, line 747, accession: 0001193125-26-323660]",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          747
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 747,
+            "text": "In addition to our operations center, we also operate datacenters throughout each of these regions. We continue to align our datacenter locations and server capacity to meet the evolving needs of our customers, particularly given the growing demand for AI services. Our datacenters depend on the availability of permitted and buildable land, predictable energy, networking supplies, and servers, including graphics processing units and other components."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C002",
+    "text": "| Financial fact             | FY2026         | FY2025         | Tag                                    | 10-K evidence                                                                 |\n| Revenue                   | $331,839M      | $281,724M      | RevenueFromContractWithCustomerExcludingAssessedTax | 10-K_2026-07-29.txt, accession 0001193125-26-323660, line 4064                 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          4064
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 4064,
+            "text": "Total revenue"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "total_revenue",
+        "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "unit": "USD",
+        "start": "2025-07-01",
+        "end": "2026-06-30",
+        "val": 331839000000,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "frame": "CY2026",
+        "prior_val": 281724000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C003",
+    "text": "| Financial fact             | FY2026         | FY2025         | Tag                                    | 10-K evidence                                                                 |\n| Operating Income          | $155,237M      | $128,528M      | OperatingIncomeLoss                    | 10-K_2026-07-29.txt, accession 0001193125-26-323660, line 4294                 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          4294
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 4294,
+            "text": "Operating income"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "operating_income",
+        "tag": "OperatingIncomeLoss",
+        "unit": "USD",
+        "start": "2025-07-01",
+        "end": "2026-06-30",
+        "val": 155237000000,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "frame": "CY2026",
+        "prior_val": 128528000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C004",
+    "text": "| Financial fact             | FY2026         | FY2025         | Tag                                    | 10-K evidence                                                                 |\n| Net Income                | $133,749M      | $101,832M      | NetIncomeLoss                          | 10-K_2026-07-29.txt, accession 0001193125-26-323660, line 4404                 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          4404
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 4404,
+            "text": "Net income"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "net_income",
+        "tag": "NetIncomeLoss",
+        "unit": "USD",
+        "start": "2025-07-01",
+        "end": "2026-06-30",
+        "val": 133749000000,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "prior_val": 101832000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C005",
+    "text": "| Financial fact             | FY2026         | FY2025         | Tag                                    | 10-K evidence                                                                 |\n| Diluted EPS               | $17.95         | $13.64         | EarningsPerShareDiluted                | 10-K_2026-07-29.txt, accession 0001193125-26-323660, line 4599                 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          4599
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 4599,
+            "text": "Net income"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "diluted_eps",
+        "tag": "EarningsPerShareDiluted",
+        "unit": "USD/shares",
+        "start": "2025-07-01",
+        "end": "2026-06-30",
+        "val": 17.95,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "frame": "CY2026",
+        "prior_val": 13.64
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C006",
+    "text": "| Financial fact             | FY2026         | FY2025         | Tag                                    | 10-K evidence                                                                 |\n| Stockholders' Equity      | $442,387M      | $343,479M      | StockholdersEquity                     | 10-K_2026-07-29.txt, accession 0001193125-26-323660, line 5124                 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          5124
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 5124,
+            "text": "Current portion of long-term debt"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "equity",
+        "tag": "StockholdersEquity",
+        "unit": "USD",
+        "end": "2026-06-30",
+        "val": 442387000000,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "prior_val": 343479000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C007",
+    "text": "| Financial fact             | FY2026         | FY2025         | Tag                                    | 10-K evidence                                                                 |\n| Current Debt              | $9,227M        | $2,999M        | LongTermDebtCurrent                    | 10-K_2026-07-29.txt, accession 0001193125-26-323660, line 5124                 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          5124
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 5124,
+            "text": "Current portion of long-term debt"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "current_debt",
+        "tag": "LongTermDebtCurrent",
+        "unit": "USD",
+        "end": "2026-06-30",
+        "val": 9227000000,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "prior_val": 2999000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C008",
+    "text": "| Financial fact             | FY2026         | FY2025         | Tag                                    | 10-K evidence                                                                 |\n| Noncurrent Debt           | $31,067M       | $40,152M       | LongTermDebtNoncurrent                 | 10-K_2026-07-29.txt, accession 0001193125-26-323660, line 5487                 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          5487
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 5487,
+            "text": "Net income"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "long_term_debt",
+        "tag": "LongTermDebtNoncurrent",
+        "unit": "USD",
+        "end": "2026-06-30",
+        "val": 31067000000,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "prior_val": 40152000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C009",
+    "text": "| Financial fact             | FY2026         | FY2025         | Tag                                    | 10-K evidence                                                                 |\n| Operating Cash Flow       | $182,935M      | $136,162M      | NetCashProvidedByUsedInOperatingActivities | 10-K_2026-07-29.txt, accession 0001193125-26-323660, line 3452                 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          3452
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 3452,
+            "text": "Cash from operations increased $46.8 billion to $182.9 billion for fiscal year 2026, primarily due to an increase in cash received from customers and a decrease in cash used to pay income taxes, offset in part by an increase in cash paid to suppliers. Cash used in financing increased $847 million to $52.5 billion for fiscal year 2026, primarily due to a $6.0 billion decrease in cash used for repayments of debt, offset in part by a $3.9 billion increase in common stock repurchases and a $2.4 billion increase in dividends paid. Cash used in investing increased $66.9 billion to $139.5 billion for fiscal year 2026, primarily due to a $51.4 billion increase in additions to property and equipment and a $22.2 billion increase in cash used in other investing primarily to facilitate the purchase of components, offset in part by a $4.2 billion decrease in cash used in the acquisition of companies, net of cash acquired and divestitures, and purchases of intangible and other assets and a $2.4 billion decrease in cash used in net investment purchases, sales, and maturities."
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "cash_from_operations",
+        "tag": "NetCashProvidedByUsedInOperatingActivities",
+        "unit": "USD",
+        "start": "2025-07-01",
+        "end": "2026-06-30",
+        "val": 182935000000,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "frame": "CY2026",
+        "prior_val": 136162000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C010",
+    "text": "| Financial fact             | FY2026         | FY2025         | Tag                                    | 10-K evidence                                                                 |\n| Capex                     | $115,948M      | $64,551M       | PaymentsToAcquirePropertyPlantAndEquipment | 10-K_2026-07-29.txt, accession 0001193125-26-323660, line 6062                 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          6062
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 6062,
+            "text": "Additions to property and equipment"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "capex",
+        "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "unit": "USD",
+        "start": "2025-07-01",
+        "end": "2026-06-30",
+        "val": 115948000000,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "frame": "CY2026",
+        "prior_val": 64551000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C011",
+    "text": "- **Revenue growth**: `(331839000000.0 - 281724000000.0) / 281724000000.0 = 17.7887%`",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Ratio definition is missing: prior."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Could not safely recalculate the expression: invalid syntax (<unknown>, line 1)",
+    "ratio_definition_check": "Ratio definition is missing: prior."
+  },
+  {
+    "id": "C012",
+    "text": "- **Operating margin**: `155237000000.0 / 331839000000.0 = 46.7808%`",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Ratio definition is missing: operating income, revenue."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Could not safely recalculate the expression: invalid syntax (<unknown>, line 1)",
+    "ratio_definition_check": "Ratio definition is missing: operating income, revenue."
+  },
+  {
+    "id": "C013",
+    "text": "- **Return on average equity**: `133749000000.0 / ((442387000000.0 + 343479000000.0) / 2) = 34.0386%`",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Ratio definition is missing: net income."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Could not safely recalculate the expression: invalid syntax (<unknown>, line 1)",
+    "ratio_definition_check": "Ratio definition is missing: net income."
+  },
+  {
+    "id": "C014",
+    "text": "- **Debt to equity**: `40294000000 / 442387000000.0 = 9.1083%`",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Ratio definition is missing: current."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Could not safely recalculate the expression: invalid syntax (<unknown>, line 1)",
+    "ratio_definition_check": "Ratio definition is missing: current."
+  },
+  {
+    "id": "C015",
+    "text": "Microsoft reported total revenue of $92.3 billion and diluted EPS of $4.92 for the first quarter ended September 30, 2026 (from 8-K Exhibit 99.1). Year-over-year quarterly revenue growth was 19%, and GAAP diluted EPS increased 32%.",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Ratio definition is missing: prior."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "Ratio definition is missing: prior."
+  },
+  {
+    "id": "C016",
+    "text": "- **Apple Inc. (AAPL)**: Operating income of $158,063M / Total revenue of $478,834M = **33.0100%** (period end 2026-09-26, accession 0000320193-26-000026)",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Could not safely recalculate the expression: invalid decimal literal (<unknown>, line 1)",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C017",
+    "text": "Insight: Microsoft's operating cash flow of $182.9 billion exceeded its Capex of $115.9 billion by $66.9 billion, indicating strong free cash generation. This is supported by the 10-K statement line 3452 in document 10-K_2026-07-29.txt, accession 0001193125-26-323660, which reports cash from operations as $182.9 billion and additions to property and equipment as $115.9 billion.",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          3452
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 3452,
+            "text": "Cash from operations increased $46.8 billion to $182.9 billion for fiscal year 2026, primarily due to an increase in cash received from customers and a decrease in cash used to pay income taxes, offset in part by an increase in cash paid to suppliers. Cash used in financing increased $847 million to $52.5 billion for fiscal year 2026, primarily due to a $6.0 billion decrease in cash used for repayments of debt, offset in part by a $3.9 billion increase in common stock repurchases and a $2.4 billion increase in dividends paid. Cash used in investing increased $66.9 billion to $139.5 billion for fiscal year 2026, primarily due to a $51.4 billion increase in additions to property and equipment and a $22.2 billion increase in cash used in other investing primarily to facilitate the purchase of components, offset in part by a $4.2 billion decrease in cash used in the acquisition of companies, net of cash acquired and divestitures, and purchases of intangible and other assets and a $2.4 billion decrease in cash used in net investment purchases, sales, and maturities."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C018",
+    "text": "Key operational metrics include commercial remaining performance obligation, Microsoft Cloud revenue, and gross margin percentage. The company’s financial performance shows strong growth in Microsoft Cloud revenue (27% increase to $214.4 billion), with significant increases in Azure and other cloud services (41% growth) and Microsoft 365 Commercial cloud revenue (17% growth).",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C019",
+    "text": "> \"Microsoft Cloud revenue increased 27% to $214.4 billion.\" [Item 7, line 1532, 10-K_2026-07-29.txt, accession: 0001193125-26-323660]",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          10,
+          1532
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 10,
+            "text": "|"
+          },
+          {
+            "line": 1532,
+            "text": "• Microsoft Cloud revenue increased 27% to $214.4 billion."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C020",
+    "text": "> \"Azure and other cloud services revenue increased 41%.\" [Item 7, line 1538, 10-K_2026-07-29.txt, accession: 0001193125-26-323660]",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          10,
+          1538
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 10,
+            "text": "|"
+          },
+          {
+            "line": 1538,
+            "text": "• Azure and other cloud services revenue increased 41%."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C021",
+    "text": "> \"Microsoft 365 Commercial cloud revenue increased 17%.\" [Item 7, line 1534, 10-K_2026-07-29.txt, accession: 0001193125-26-323660]",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          10,
+          1534
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 10,
+            "text": "|"
+          },
+          {
+            "line": 1534,
+            "text": "• Microsoft 365 Commercial cloud revenue increased 17%."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C022",
+    "text": "> \"Microsoft 365 Consumer cloud revenue increased 28%.\" [Item 7, line 1535, 10-K_2026-07-29.txt, accession: 0001193125-26-323660]",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          10,
+          1535
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 10,
+            "text": "|"
+          },
+          {
+            "line": 1535,
+            "text": "• Microsoft 365 Consumer cloud revenue increased 28%."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C023",
+    "text": "> \"LinkedIn revenue increased 11%.\" [Item 7, line 1536, 10-K_2026-07-29.txt, accession: 0001193125-26-323660]",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          10,
+          1536
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 10,
+            "text": "|"
+          },
+          {
+            "line": 1536,
+            "text": "• LinkedIn revenue increased 11%."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C024",
+    "text": "> \"Dynamics 365 revenue increased 18%.\" [Item 7, line 1537, 10-K_2026-07-29.txt, accession: 0001193125-26-323660]",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          10,
+          1537
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 10,
+            "text": "|"
+          },
+          {
+            "line": 1537,
+            "text": "• Dynamics 365 revenue increased 18%."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C025",
+    "text": "> \"XBOX content and services revenue decreased 5%.\" [Item 7, line 1540, 10-K_2026-07-29.txt, accession: 0001193125-26-323660]",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          10,
+          1540
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 10,
+            "text": "|"
+          },
+          {
+            "line": 1540,
+            "text": "• XBOX content and services revenue decreased 5%."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C026",
+    "text": "> \"Search advertising (formerly Search and news advertising) revenue excluding traffic acquisition costs increased 12%.\" [Item 7, line 1541, 10-K_2026-07-29.txt, accession: 0001193125-26-323660]",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          10,
+          1541
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 10,
+            "text": "|"
+          },
+          {
+            "line": 1541,
+            "text": "• Search advertising (formerly Search and news advertising) revenue excluding traffic acquisition costs increased 12%."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C027",
+    "text": "Insight: > \"Our success is highly dependent on our ability to attract and retain qualified employees.\" [10-K_2026-07-29.txt, line 1551, accession: 0001193125-26-323660]",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          1551
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 1551,
+            "text": "Our success is highly dependent on our ability to attract and retain qualified employees. We hire a mix of university and industry talent worldwide. We compete for talented individuals globally by offering an exceptional working environment, broad customer reach, scale in resources, the ability to grow one’s career across many different products and businesses, and competitive compensation and benefits."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  }
+]

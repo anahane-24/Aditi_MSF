@@ -1,0 +1,522 @@
+{
+  "task": "Write the financial analysis from the supplied seven-step desk output.",
+  "context": {
+    "ticker": "MSFT",
+    "filings": {
+      "8-K": {
+        "form": "8-K",
+        "date": "2026-11-05",
+        "report_date": "2026-11-04",
+        "accession": "0001193125-26-448357",
+        "accession_nodash": "000119312526448357",
+        "primary_document": "d177209d8k.htm",
+        "primary_description": "8-K",
+        "accepted_datetime": "2026-11-05T11:01:52.000Z",
+        "cik": "0000789019",
+        "accepted": "2026-11-05 06:01:52 (SEC filing page local time)"
+      },
+      "10-Q": {
+        "form": "10-Q",
+        "date": "2026-10-28",
+        "report_date": "2026-09-30",
+        "accession": "0001193125-26-436133",
+        "accession_nodash": "000119312526436133",
+        "primary_document": "msft-20260930.htm",
+        "primary_description": "10-Q",
+        "accepted_datetime": "2026-10-28T20:07:39.000Z",
+        "cik": "0000789019",
+        "accepted": "2026-10-28 16:07:39 (SEC filing page local time)"
+      },
+      "10-K": {
+        "form": "10-K",
+        "date": "2026-07-29",
+        "report_date": "2026-06-30",
+        "accession": "0001193125-26-323660",
+        "accession_nodash": "000119312526323660",
+        "primary_document": "msft-20260630.htm",
+        "primary_description": "10-K",
+        "accepted_datetime": "2026-07-29T20:08:01.000Z",
+        "cik": "0000789019",
+        "accepted": "2026-07-29 16:08:01 (SEC filing page local time)"
+      },
+      "earnings_8k": {
+        "form": "8-K",
+        "date": "2026-10-28",
+        "report_date": "2026-10-28",
+        "accession": "0001193125-26-436122",
+        "accession_nodash": "000119312526436122",
+        "primary_document": "msft-20261028.htm",
+        "primary_description": "8-K",
+        "accepted_datetime": "2026-10-28T20:04:44.000Z",
+        "cik": "0000789019",
+        "exhibit_99_1": "msft-ex99_1.htm",
+        "accepted": "2026-10-28 16:04:44 (SEC filing page local time)"
+      }
+    },
+    "primary_company_facts": {
+      "total_revenue": {
+        "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "unit": "USD",
+        "start": "2025-07-01",
+        "end": "2026-06-30",
+        "val": 331839000000,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "frame": "CY2026",
+        "prior_val": 281724000000
+      },
+      "operating_income": {
+        "tag": "OperatingIncomeLoss",
+        "unit": "USD",
+        "start": "2025-07-01",
+        "end": "2026-06-30",
+        "val": 155237000000,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "frame": "CY2026",
+        "prior_val": 128528000000
+      },
+      "net_income": {
+        "tag": "NetIncomeLoss",
+        "unit": "USD",
+        "start": "2025-07-01",
+        "end": "2026-06-30",
+        "val": 133749000000,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "prior_val": 101832000000
+      },
+      "diluted_eps": {
+        "tag": "EarningsPerShareDiluted",
+        "unit": "USD/shares",
+        "start": "2025-07-01",
+        "end": "2026-06-30",
+        "val": 17.95,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "frame": "CY2026",
+        "prior_val": 13.64
+      },
+      "equity": {
+        "tag": "StockholdersEquity",
+        "unit": "USD",
+        "end": "2026-06-30",
+        "val": 442387000000,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "prior_val": 343479000000
+      },
+      "long_term_debt": {
+        "tag": "LongTermDebtNoncurrent",
+        "unit": "USD",
+        "end": "2026-06-30",
+        "val": 31067000000,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "prior_val": 40152000000
+      },
+      "current_debt": {
+        "tag": "LongTermDebtCurrent",
+        "unit": "USD",
+        "end": "2026-06-30",
+        "val": 9227000000,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "prior_val": 2999000000
+      },
+      "cash_from_operations": {
+        "tag": "NetCashProvidedByUsedInOperatingActivities",
+        "unit": "USD",
+        "start": "2025-07-01",
+        "end": "2026-06-30",
+        "val": 182935000000,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "frame": "CY2026",
+        "prior_val": 136162000000
+      },
+      "capex": {
+        "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "unit": "USD",
+        "start": "2025-07-01",
+        "end": "2026-06-30",
+        "val": 115948000000,
+        "accn": "0001193125-26-323660",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-07-29",
+        "frame": "CY2026",
+        "prior_val": 64551000000
+      },
+      "debt_components": {
+        "LongTermDebtCurrent": 9227000000,
+        "LongTermDebtNoncurrent": 31067000000
+      },
+      "period_end": {
+        "end": "2026-06-30",
+        "prior_end": "2025-06-30"
+      }
+    },
+    "primary_10k_statement_lines": {
+      "filename": "10-K_2026-07-29.txt",
+      "accession": "0001193125-26-323660",
+      "lines": [
+        {
+          "line": 1001,
+          "text": "We earn a significant amount of our operating income outside the U.S. A change in the mix of earnings and losses in countries with differing statutory tax rates, changes in our business or structure, or the expiration of or disputes about certain tax agreements in a particular country may result in higher effective tax rates for the company. In addition, changes in U.S. federal and state or international tax laws applicable to corporate multinationals, other global fundamental law changes currently being considered by many countries, including in the U.S., and changes in taxing jurisdictions’ administrative interpretations, decisions, policies, and positions could adversely affect our financial condition and results of operations."
+        },
+        {
+          "line": 1552,
+          "text": "Our international operations provide a significant portion of our total revenue and expenses. Many of these revenue and expenses are denominated in currencies other than the U.S. dollar. As a result, changes in foreign exchange rates may significantly affect revenue and expenses. Fluctuations in the U.S. dollar relative to certain foreign currencies increased reported revenue and did not have a material impact on reported expenses from our international operations in fiscal year 2026."
+        },
+        {
+          "line": 1734,
+          "text": "Operating income"
+        },
+        {
+          "line": 1751,
+          "text": "Net income"
+        },
+        {
+          "line": 1798,
+          "text": "Adjusted net income (non-GAAP)"
+        },
+        {
+          "line": 1858,
+          "text": "Adjusted net income and adjusted diluted earnings per share (“EPS”) are non-GAAP financial measures. These non-GAAP financial measures exclude net gains and losses from investments in OpenAI. Refer to the Non-GAAP Financial Measures section below for a reconciliation of our financial results reported in accordance with GAAP to non-GAAP financial results."
+        },
+        {
+          "line": 1866,
+          "text": "Operating income increased $26.7 billion or 21% driven by growth in Productivity and Business Processes and Intelligent Cloud."
+        },
+        {
+          "line": 1867,
+          "text": "Revenue and operating income both included a favorable foreign currency impact of 2%."
+        },
+        {
+          "line": 1871,
+          "text": "Current year net income and diluted EPS were positively impacted by net gains from investments in OpenAI, which resulted in an increase in net income and diluted EPS of $5.0 billion and $0.67, respectively. Prior year net income and diluted EPS were negatively impacted by net losses from investments in OpenAI, which resulted in a decrease in net income and diluted EPS of $3.6 billion and $0.49, respectively."
+        },
+        {
+          "line": 2008,
+          "text": "Operating income"
+        },
+        {
+          "line": 2150,
+          "text": "Operating income"
+        },
+        {
+          "line": 2301,
+          "text": "Operating income"
+        },
+        {
+          "line": 2452,
+          "text": "Operating income"
+        },
+        {
+          "line": 2495,
+          "text": "Operating income increased $14.1 billion or 20%."
+        },
+        {
+          "line": 2499,
+          "text": "Revenue, gross margin, and operating income included a favorable foreign currency impact of 2%, 3%, and 3%, respectively."
+        },
+        {
+          "line": 2504,
+          "text": "Operating income increased $12.4 billion or 28%."
+        },
+        {
+          "line": 2517,
+          "text": "Operating income increased $220 million or 2%."
+        },
+        {
+          "line": 2521,
+          "text": "Operating income included a favorable foreign currency impact of 2%."
+        },
+        {
+          "line": 2952,
+          "text": "Adjusted other income (expense), net, adjusted net income, and adjusted diluted EPS are non-GAAP financial measures which exclude net (gains) losses from investments in OpenAI. We believe these non-GAAP measures aid investors by providing additional insight into our financial performance and help clarify trends affecting our business. For comparability of reporting, management considers non-GAAP measures in conjunction with GAAP financial results in evaluating business performance. These non-GAAP financial measures presented should not be considered a substitute for, or superior to, the measures of financial performance prepared in accordance with GAAP."
+        },
+        {
+          "line": 3144,
+          "text": "Net income"
+        },
+        {
+          "line": 3236,
+          "text": "Adjusted net income (non-GAAP)"
+        },
+        {
+          "line": 3452,
+          "text": "Cash from operations increased $46.8 billion to $182.9 billion for fiscal year 2026, primarily due to an increase in cash received from customers and a decrease in cash used to pay income taxes, offset in part by an increase in cash paid to suppliers. Cash used in financing increased $847 million to $52.5 billion for fiscal year 2026, primarily due to a $6.0 billion decrease in cash used for repayments of debt, offset in part by a $3.9 billion increase in common stock repurchases and a $2.4 billion increase in dividends paid. Cash used in investing increased $66.9 billion to $139.5 billion for fiscal year 2026, primarily due to a $51.4 billion increase in additions to property and equipment and a $22.2 billion increase in cash used in other investing primarily to facilitate the purchase of components, offset in part by a $4.2 billion decrease in cash used in the acquisition of companies, net of cash acquired and divestitures, and purchases of intangible and other assets and a $2.4 billion decrease in cash used in net investment purchases, sales, and maturities."
+        },
+        {
+          "line": 3737,
+          "text": "We will continue to invest in sales, marketing, product support infrastructure, and existing and advanced areas of technology, as well as acquisitions that align with our business strategy. Additions to property and equipment will continue, including new facilities, datacenters, and computer systems for research and development, sales and marketing, support, and administrative staff. We will continue to invest in capital expenditures to support growth in our cloud offerings and our investments in AI training and other infrastructure. We have operating and finance leases for datacenters and related infrastructure, servers and network equipment, corporate offices, and research and development facilities. We have not engaged in any related party transactions or arrangements with unconsolidated entities or other persons that are reasonably likely to materially affect liquidity or the availability of capital resources."
+        },
+        {
+          "line": 4064,
+          "text": "Total revenue"
+        },
+        {
+          "line": 4294,
+          "text": "Operating income"
+        },
+        {
+          "line": 4404,
+          "text": "Net income"
+        },
+        {
+          "line": 4599,
+          "text": "Net income"
+        },
+        {
+          "line": 5124,
+          "text": "Current portion of long-term debt"
+        },
+        {
+          "line": 5487,
+          "text": "Net income"
+        },
+        {
+          "line": 5507,
+          "text": "Adjustments to reconcile net income to net cash from operations:"
+        },
+        {
+          "line": 6062,
+          "text": "Additions to property and equipment"
+        },
+        {
+          "line": 6607,
+          "text": "Net income"
+        },
+        {
+          "line": 7088,
+          "text": "Net income available for common shareholders (A)"
+        },
+        {
+          "line": 8691,
+          "text": "Changes in Fair Value Recorded in Net Income"
+        },
+        {
+          "line": 8906,
+          "text": "Total equity investments"
+        },
+        {
+          "line": 10096,
+          "text": "Changes in Fair Value Recorded in Net Income"
+        },
+        {
+          "line": 10311,
+          "text": "Total equity investments"
+        },
+        {
+          "line": 13621,
+          "text": "Net income"
+        },
+        {
+          "line": 15332,
+          "text": "Current portion of long-term debt"
+        },
+        {
+          "line": 20473,
+          "text": "In its operation of the business, management, including our chief operating decision maker (“CODM”), who is also our Chief Executive Officer , reviews certain financial information, including segmented internal profit and loss statements. The primary profitability measure used by the CODM to review segment operating results is operating income. The CODM uses operating income to allocate resources during our annual planning process and throughout the year, as well as to assess the performance of our segments, primarily by monitoring actual results compared to prior periods and expected results. During the periods presented, we reported our financial performance based on the following three segments: Productivity and Business Processes, Intelligent Cloud, and More Personal Computing."
+        },
+        {
+          "line": 20495,
+          "text": "Segment revenue, cost of revenue, operating expenses, and operating income were as follows during the periods presented:"
+        },
+        {
+          "line": 20648,
+          "text": "Operating income"
+        },
+        {
+          "line": 20798,
+          "text": "Operating income"
+        },
+        {
+          "line": 20951,
+          "text": "Operating income"
+        },
+        {
+          "line": 21104,
+          "text": "Operating income"
+        }
+      ]
+    },
+    "calculator_output_from_step_5": "STEP 5 � Calculate ratios from the printed facts\nRevenue growth: (331839000000.0 - 281724000000.0) / 281724000000.0 = 17.7887%\nOperating margin: 155237000000.0 / 331839000000.0 = 46.7808%\nReturn on average equity: 133749000000.0 / ((442387000000.0 + 343479000000.0) / 2) = 34.0386%\nDebt to equity (current + noncurrent long-term debt): 40294000000 / 442387000000.0 = 9.1083%\nFree cash flow: 182935000000.0 - 115948000000.0 = 66987000000.0\n",
+    "quarterly_release_output_from_step_6": "STEP 6 � Earnings release lines: total revenue and diluted EPS\nTotal revenue row: � Revenue was $92.3 billion and increased 19%\nDiluted EPS row: � Diluted earnings per share was $4.92 and increased 32% on a GAAP basis, and was $4.89 and increased 18% (up 19% in constant currency) on a non-GAAP basis\n",
+    "quarterly_release_line_numbered_source": {
+      "filename": "8-K_Ex99.1_2026-10-28.txt",
+      "accession": "0001193125-26-436122",
+      "lines": "00001: EX-99.1\n00002: 2\n00003: msft-ex99_1.htm\n00004: EX-99.1\n00005: EX-99.1\n00006: Exhibit 99.1\n00007: Microsoft Announces First Quarter Results\n00008: REDMOND, Wash. — October 28, 2026 — Microsoft Corp. today announced the following results for the quarter ended September 30, 2026, as compared to the corresponding period of last fiscal year:\n00009: • Revenue was $92.3 billion and increased 19%\n00010: • Operating income was $45.9 billion and increased 21% (up 22% in constant currency)\n00011: • Net income was $36.6 billion and increased 32% on a GAAP basis, and was $36.4 billion and increased 18% (up 19% in constant currency) on a non-GAAP basis\n00012: • Diluted earnings per share was $4.92 and increased 32% on a GAAP basis, and was $4.89 and increased 18% (up 19% in constant currency) on a non-GAAP basis\n00013: • Non-GAAP results exclude the impact from investments in OpenAI, explained in the Non-GAAP Definition section below\n00014: “We are delivering greater capability, choice, control, and cost efficiency for customers across our entire stack,” said Satya Nadella, chairman and chief executive officer of Microsoft. “By helping organizations build and own their own intelligence, and earning trust through agent safety and security, we are translating our innovation into growing adoption and real-world impact across every industry.”\n00015: “We delivered a strong start to the fiscal year with Microsoft Cloud revenue of $63.9 billion, with growth accelerating to 30% (up 31% in constant currency) year-over-year,” said Amy Hood, executive vice president and chief financial officer of Microsoft. “Results exceeded expectations across revenue, operating income, and earnings per share.”\n00016: The following table adjusts for the impact from investments in OpenAI and reconciles our financial results reported in accordance with generally accepted accounting principles (GAAP) to non-GAAP financial results. Additional information regarding our non-GAAP definition is provided below. All growth comparisons relate to the corresponding period in the last fiscal year.\n00017: |\n00018: |\n00019: |\n00020: |\n00021: |\n00022: |\n00023: |\n00024: |\n00025: |\n00026: |\n00027: |\n00028: |\n00029: |\n00030: |\n00031: Three Months Ended September 30,\n00032: |\n00033: |\n00034: 2026\n00035: |\n00036: |\n00037: 2025\n00038: |\n00039: |\n00040: Percentage Change Y/Y\n00041: |\n00042: |\n00043: Percentage Change Y/Y\n00044: |\n00045: ($ in millions, except per share amounts)\n00046: |\n00047: As Reported (GAAP)\n00048: |\n00049: Impact from OpenAI*\n00050: |\n00051: As Adjusted (non-GAAP)\n00052: |\n00053: |\n00054: As Reported (GAAP)\n00055: |\n00056: Impact from OpenAI*\n00057: |\n00058: As Adjusted (non-GAAP)\n00059: |\n00060: |\n00061: GAAP\n00062: |\n00063: Constant Currency\n00064: |\n00065: Net Impact from OpenAI*\n00066: |\n00067: Non-GAAP\n00068: |\n00069: Non-GAAP Constant Currency\n00070: |\n00071: Net income\n00072: |\n00073: $36,629\n00074: |\n00075: $(207)\n00076: |\n00077: $36,422\n00078: |\n00079: |\n00080: $27,747\n00081: |\n00082: $3,086\n00083: |\n00084: $30,833\n00085: |\n00086: |\n00087: 32%\n00088: |\n00089: 33%\n00090: |\n00091: $(3,293)\n00092: |\n00093: 18%\n00094: |\n00095: 19%\n00096: |\n00097: Diluted earnings per share\n00098: |\n00099: $4.92\n00100: |\n00101: $(0.03)\n00102: |\n00103: $4.89\n00104: |\n00105: |\n00106: $3.72\n00107: |\n00108: $0.41\n00109: |\n00110: $4.13\n00111: |\n00112: |\n00113: 32%\n00114: |\n00115: 33%\n00116: |\n00117: $(0.44)\n00118: |\n00119: 18%\n00120: |\n00121: 19%\n00122: |\n00123: *Impact from OpenAI adjusts for the impact from investments in OpenAI\n00124: Business Highlights\n00125: Revenue in Agents and Infra was $76.8 billion and increased 25%, with the following business highlights:\n00126: • Commercial remaining performance obligation increased 73% to $677 billion\n00127: • Microsoft Cloud revenue was $63.9 billion and increased 30% (up 31% in constant currency)\n00128: • Azure revenue increased 48%\n00129: • Microsoft 365 commercial cloud revenue increased 18% (up 19% in constant currency) on an adjusted basis, normalized for a 1-point benefit from in-period revenue recognition in the prior year, and increased 17% (up 18% in constant currency) on a reported basis\n00130: • Microsoft 365 consumer cloud revenue increased 17% (up 16% in constant currency)\n00131: • Industry solutions cloud revenue increased 10%\n00132: Revenue in Devices and Consumer was $15.5 billion and decreased 3%, with the following business highlights:\n00133: • Search and advertising revenue excluding traffic acquisition costs increased 12%\n00134: • XBOX content and services revenue decreased 2% (down 1% in constant currency)\n00135: • Windows OEM and Devices revenue decreased 22%\n00136: Microsoft returned $10.2 billion to shareholders in the form of dividends and share repurchases in the first quarter of fiscal year 2027.\n00137: Business Outlook\n00138: Microsoft will provide forward-looking guidance in connection with this quarterly earnings announcement on its earnings conference call and webcast.\n00139: Quarterly Highlights, Product Releases, and Customer Stories\n00140: Every quarter Microsoft delivers hundreds of products, services, and enhancements. These releases are driven by years of significant research and development investments, to empower customers with greater productivity, security, and differentiated value.\n00141: This momentum is reflected in stories that showcase how our technology is shaping industries and driving customer success . We share innovation updates on our product blogs across Azure , Microsoft 365 , and more on our Official Microsoft blog .\n00142: Webcast Details\n00143: Satya Nadella, chairman and chief executive officer, Amy Hood, executive vice president and chief financial officer, Alice Jolla, chief accounting officer, Brian DeFoe, deputy general counsel and corporate secretary, and Jonathan Neilson, vice president of investor relations, will host a conference call and webcast at 2:30 p.m. Pacific time (5:30 p.m. Eastern time) today to discuss details of the company’s performance for the quarter and certain forward-looking information. The session may be accessed at http://www.microsoft.com/en-us/investor . Participants can also dial into the conference call at (877) 407-0666 or +1 (201) 689-8023 for international, no password required. The webcast will be available for replay through the close of business on October 28, 2027.\n00144: Non-GAAP Definition\n00145: Impact from investments in OpenAI. In the first quarter of fiscal year 2027, net income and diluted earnings per share were impacted by net gains from investments in OpenAI, which resulted in an increase in net income and diluted earnings per share of $207 million and $0.03, respectively. In the first quarter of fiscal year 2026, net income and diluted earnings per share were impacted by net losses from investments in OpenAI, which resulted in a decrease in net income and diluted earnings per share of $3.1 billion and $0.41, respectively.\n00146: Microsoft has provided non-GAAP financial measures related to the impact from investments in OpenAI to aid investors in better understanding our performance. Microsoft believes these non-GAAP measures assist investors by providing additional insight into its operational performance and help clarify trends affecting its business. For comparability of reporting, management considers non-GAAP measures in conjunction with GAAP financial results in evaluating business performance. The non-GAAP financial measures presented in this release should not be considered as a substitute for, or superior to, the measures of financial performance prepared in accordance with GAAP.\n00147: Constant Currency\n00148: Microsoft presents constant currency information to provide a framework for assessing how our underlying businesses performed excluding the effect of foreign currency rate fluctuations. To present this information, current and comparative prior period results for entities reporting in currencies other than United States dollars are converted into United States dollars using the average exchange rates from the comparative period rather than the actual exchange rates in effect during the respective periods. All growth comparisons relate to the corresponding period in the last fiscal year. Microsoft has provided this non-GAAP financial information to aid investors in better understanding our performance. The non-GAAP financial measures presented in this release should not be considered as a substitute for, or superior to, the measures of financial performance prepared in accordance with GAAP.\n00149: Financial Performance Constant Currency Reconciliation\n00150: |\n00151: |\n00152: |\n00153: |\n00154: |\n00155: |\n00156: |\n00157: |\n00158: |\n00159: |\n00160: |\n00161: |\n00162: Three Months Ended September 30,\n00163: |\n00164: |\n00165: 2026\n00166: |\n00167: |\n00168: 2025\n00169: |\n00170: |\n00171: Percentage Change Y/Y\n00172: |\n00173: |\n00174: Percentage Change Y/Y\n00175: |\n00176: ($ in millions, except per share amounts)\n00177: |\n00178: As Reported (GAAP)\n00179: |\n00180: As Adjusted (non-GAAP)\n00181: |\n00182: |\n00183: As Reported (GAAP)\n00184: |\n00185: As Adjusted (non-GAAP)\n00186: |\n00187: |\n00188: GAAP\n00189: |\n00190: Non-GAAP\n00191: |\n00192: Constant Currency Impact\n00193: |\n00194: Constant Currency\n00195: |\n00196: Non-GAAP Constant Currency\n00197: |\n00198: Revenue\n00199: |\n00200: $92,279\n00201: |\n00202: -\n00203: |\n00204: |\n00205: $77,673\n00206: |\n00207: -\n00208: |\n00209: |\n00210: 19%\n00211: |\n00212: -\n00213: |\n00214: $(309)\n00215: |\n00216: 19%\n00217: |\n00218: -\n00219: |\n00220: Operating income\n00221: |\n00222: $45,915\n00223: |\n00224: -\n00225: |\n00226: |\n00227: $37,961\n00228: |\n00229: -\n00230: |\n00231: |\n00232: 21%\n00233: |\n00234: -\n00235: |\n00236: $(297)\n00237: |\n00238: 22%\n00239: |\n00240: -\n00241: |\n00242: Net income\n00243: |\n00244: $36,629\n00245: |\n00246: $36,422\n00247: |\n00248: |\n00249: $27,747\n00250: |\n00251: $30,833\n00252: |\n00253: |\n00254: 32%\n00255: |\n00256: 18%\n00257: |\n00258: $(242)\n00259: |\n00260: 33%\n00261: |\n00262: 19%\n00263: |\n00264: Diluted earnings per share\n00265: |\n00266: $4.92\n00267: |\n00268: $4.89\n00269: |\n00270: |\n00271: $3.72\n00272: |\n00273: $4.13\n00274: |\n00275: |\n00276: 32%\n00277: |\n00278: 18%\n00279: |\n00280: $(0.03)\n00281: |\n00282: 33%\n00283: |\n00284: 19%\n00285: |\n00286: Segment Revenue Constant Currency Reconciliation\n00287: |\n00288: |\n00289: |\n00290: |\n00291: |\n00292: |\n00293: |\n00294: |\n00295: Three Months Ended September 30,\n00296: |\n00297: |\n00298: |\n00299: |\n00300: 2026\n00301: |\n00302: |\n00303: 2025\n00304: |\n00305: |\n00306: Percentage Change Y/Y\n00307: |\n00308: |\n00309: Percentage Change Y/Y\n00310: |\n00311: ($ in millions)\n00312: |\n00313: As Reported (GAAP)\n00314: |\n00315: |\n00316: As Reported (GAAP)\n00317: |\n00318: |\n00319: GAAP\n00320: |\n00321: Constant Currency Impact\n00322: |\n00323: Constant Currency\n00324: |\n00325: Agents and Infra\n00326: |\n00327: $76,795\n00328: |\n00329: |\n00330: $61,672\n00331: |\n00332: |\n00333: 25%\n00334: |\n00335: $(290)\n00336: |\n00337: 25%\n00338: |\n00339: Devices and Consumer\n00340: |\n00341: $15,484\n00342: |\n00343: |\n00344: $16,001\n00345: |\n00346: |\n00347: (3)%\n00348: |\n00349: $(19)\n00350: |\n00351: (3)%\n00352: |\n00353: We have recast certain prior period amounts to conform to the way we internally manage and monitor our business, which reflects the fiscal year 2027 changes to our segments announced in September 2026.\n00354: Selected Product and Service Information Constant Currency Reconciliation\n00355: |\n00356: |\n00357: |\n00358: |\n00359: Three Months Ended September 30, 2026\n00360: |\n00361: |\n00362: |\n00363: |\n00364: |\n00365: Percentage Change Y/Y (GAAP)\n00366: |\n00367: Constant Currency Impact\n00368: |\n00369: Percentage Change Y/Y Constant Currency\n00370: |\n00371: Commercial remaining performance obligation\n00372: |\n00373: 73%\n00374: |\n00375: 0%\n00376: |\n00377: 73%\n00378: |\n00379: Microsoft Cloud revenue\n00380: |\n00381: 30%\n00382: |\n00383: 1%\n00384: |\n00385: 31%\n00386: |\n00387: Azure revenue\n00388: |\n00389: 48%\n00390: |\n00391: 0%\n00392: |\n00393: 48%\n00394: |\n00395: Microsoft 365 commercial cloud revenue\n00396: |\n00397: 17%\n00398: |\n00399: 1%\n00400: |\n00401: 18%\n00402: |\n00403: Microsoft 365 consumer cloud revenue\n00404: |\n00405: 17%\n00406: |\n00407: (1)%\n00408: |\n00409: 16%\n00410: |\n00411: Industry solutions cloud revenue\n00412: |\n00413: 10%\n00414: |\n00415: 0%\n00416: |\n00417: 10%\n00418: |\n00419: Search and advertising revenue excluding traffic acquisition costs\n00420: |\n00421: 12%\n00422: |\n00423: 0%\n00424: |\n00425: 12%\n00426: |\n00427: XBOX content and services revenue\n00428: |\n00429: (2)%\n00430: |\n00431: 1%\n00432: |\n00433: (1)%\n00434: |\n00435: Windows OEM and devices revenue\n00436: |\n00437: (22)%\n00438: |\n00439: 0%\n00440: |\n00441: (22)%\n00442: |\n00443: About Microsoft\n00444: Microsoft (Nasdaq “MSFT” @microsoft) creates platforms and tools powered by AI to deliver innovative solutions that meet the evolving needs of our customers. The technology company is committed to making AI available broadly and doing so responsibly, with a mission to empower every person and every organization on the planet to achieve more.\n00445: Forward-Looking Statements\n00446: Statements in this release that are “forward-looking statements” are based on current expectations and assumptions that are subject to risks and uncertainties. Actual results could differ materially because of factors such as:\n00447: • intense competition in all of our markets that could adversely affect our results of operations;\n00448: • substantial investments in cloud and AI strategy that depend on customer demand, technological developments, competitive dynamics, and regulatory condition;\n00449: • development, delivery, and maintenance of competitive cloud-based and AI products and services that achieve broad customer adoption and sustainable revenue growth;\n00450: • significant investments in products and services that may not achieve expected returns;\n00451: • acquisitions, joint ventures, and strategic alliances that could have an adverse effect on our business;\n00452: • cyberattacks and security vulnerabilities that could lead to reduced revenue, increased costs, liability claims, or harm to our reputation or competitive position;\n00453: • disclosure and misuse of personal data that could cause liability and harm to our reputation;\n00454: • the possibility that we may not be able to protect information in our products and services from use by others;\n00455: • abuse of our platforms that may harm our reputation or user engagement;\n00456: • products and services, how they are used by customers, and how third-party products and services interact with them, presenting security, privacy, and execution risks;\n00457: • issues about the development, deployment, and use of AI that may result in reputational or competitive harm, or liability;\n00458: • inability to develop and expand adequate infrastructure;\n00459: • supply or other quality problems;\n00460: • excessive outages, disruptions, or capacity constraints of our services if we fail to maintain an adequate operations infrastructure or secure resources necessary to support it;\n00461: • potential consequences of new, existing, and evolving legal and regulatory requirements;\n00462: • claims against us that could result in adverse outcomes in legal disputes;\n00463: • uncertainties relating to our business with government customers;\n00464: • additional tax liabilities;\n00465: • an inability to protect and utilize our intellectual property may harm our business and operating results;\n00466: • claims that Microsoft has infringed the intellectual property rights of others;\n00467: • damage to our reputation or our brands that may harm our business and results of operations;\n00468: • adverse economic or market conditions that could harm our business;\n00469: • catastrophic events or geopolitical conditions that could disrupt our business;\n00470: • exposure to increased economic and operational uncertainties from operating a global business, including the effects of foreign currency exchange; and\n00471: • the dependence of our business on our ability to attract and retain talented employees.\n00472: For more information about risks and uncertainties associated with Microsoft’s business, please refer to the “Management’s Discussion and Analysis of Financial Condition and Results of Operations” and “Risk Factors” sections of Microsoft’s SEC filings, including, but not limited to, its annual report on Form 10-K and quarterly reports on Form 10-Q, copies of which may be obtained by contacting Microsoft’s Investor Relations department at (800) 285-7772 or at Microsoft’s Investor Relations website at http://www.microsoft.com/en-us/investor .\n00473: All information in this release is as of September 30, 2026. The company undertakes no duty to update any forward-looking statement to conform the statement to actual results or changes in the company’s expectations.\n00474: For more information, press only:\n00475: Microsoft Media Relations, WE Communications for Microsoft, (425) 638-7777, rrt@we-worldwide.com\n00476: For more information, financial analysts and investors only:\n00477: Jonathan Neilson, Vice President, Investor Relations, (425) 706-4400\n00478: Note to editors: For more information, news and perspectives from Microsoft, please visit the Microsoft News Center at http://www.microsoft.com/news . Web links, telephone numbers, and titles were correct at time of publication, but may since have changed. Shareholder and financial information, as well as today’s 2:30 p.m. Pacific time conference call with investors and analysts, is available at http://www.microsoft.com/en-us/investor .\n00479: MICROSOFT CORPORATION\n00480: INCOME STATEMENTS\n00481: (In millions, except per share amounts) (Unaudited)\n00482: |\n00483: |\n00484: |\n00485: |\n00486: |\n00487: |\n00488: |\n00489: Three Months Ended\n00490: September 30,\n00491: |\n00492: |\n00493: |\n00494: 2026\n00495: |\n00496: |\n00497: 2025\n00498: |\n00499: |\n00500: |\n00501: |\n00502: |\n00503: |\n00504: |\n00505: |\n00506: |\n00507: |\n00508: |\n00509: Revenue:\n00510: |\n00511: |\n00512: |\n00513: |\n00514: |\n00515: Product\n00516: |\n00517: |\n00518: $14,631\n00519: |\n00520: |\n00521: $15,922\n00522: |\n00523: Service and other\n00524: |\n00525: |\n00526: 77,648\n00527: |\n00528: |\n00529: 61,751\n00530: |\n00531: |\n00532: |\n00533: |\n00534: |\n00535: |\n00536: |\n00537: |\n00538: |\n00539: |\n00540: |\n00541: Total revenue\n00542: |\n00543: |\n00544: 92,279\n00545: |\n00546: |\n00547: 77,673\n00548: |\n00549: |\n00550: |\n00551: |\n00552: |\n00553: |\n00554: |\n00555: |\n00556: |\n00557: |\n00558: |\n00559: Cost of revenue:\n00560: |\n00561: |\n00562: |\n00563: |\n00564: |\n00565: Product\n00566: |\n00567: |\n00568: 2,471\n00569: |\n00570: |\n00571: 2,922\n00572: |\n00573: Service and other\n00574: |\n00575: |\n00576: 27,249\n00577: |\n00578: |\n00579: 21,121\n00580: |\n00581: |\n00582: |\n00583: |\n00584: |\n00585: |\n00586: |\n00587: |\n00588: |\n00589: |\n00590: |\n00591: Total cost of revenue\n00592: |\n00593: |\n00594: 29,720\n00595: |\n00596: |\n00597: 24,043\n00598: |\n00599: |\n00600: |\n00601: |\n00602: |\n00603: |\n00604: |\n00605: |\n00606: |\n00607: |\n00608: |\n00609: Gross margin\n00610: |\n00611: |\n00612: 62,559\n00613: |\n00614: |\n00615: 53,630\n00616: |\n00617: Research and development\n00618: |\n00619: |\n00620: 9,047\n00621: |\n00622: |\n00623: 8,146\n00624: |\n00625: Sales and marketing\n00626: |\n00627: |\n00628: 5,716\n00629: |\n00630: |\n00631: 5,717\n00632: |\n00633: General and administrative\n00634: |\n00635: |\n00636: 1,881\n00637: |\n00638: |\n00639: 1,806\n00640: |\n00641: |\n00642: |\n00643: |\n00644: |\n00645: |\n00646: |\n00647: |\n00648: |\n00649: |\n00650: |\n00651: Operating income\n00652: |\n00653: |\n00654: 45,915\n00655: |\n00656: |\n00657: 37,961\n00658: |\n00659: Other income (expense), net\n00660: |\n00661: |\n00662: 38\n00663: |\n00664: |\n00665: (3,660)\n00666: |\n00667: |\n00668: |\n00669: |\n00670: |\n00671: |\n00672: |\n00673: |\n00674: |\n00675: |\n00676: |\n00677: Income before income taxes\n00678: |\n00679: |\n00680: 45,953\n00681: |\n00682: |\n00683: 34,301\n00684: |\n00685: Provision for income taxes\n00686: |\n00687: |\n00688: 9,324\n00689: |\n00690: |\n00691: 6,554\n00692: |\n00693: |\n00694: |\n00695: |\n00696: |\n00697: |\n00698: |\n00699: |\n00700: |\n00701: |\n00702: |\n00703: Net income\n00704: |\n00705: |\n00706: $36,629\n00707: |\n00708: |\n00709: $27,747\n00710: |\n00711: |\n00712: |\n00713: |\n00714: |\n00715: |\n00716: |\n00717: |\n00718: |\n00719: |\n00720: |\n00721: Earnings per share:\n00722: |\n00723: |\n00724: |\n00725: |\n00726: |\n00727: Basic\n00728: |\n00729: |\n00730: $4.93\n00731: |\n00732: |\n00733: $3.73\n00734: |\n00735: Diluted\n00736: |\n00737: |\n00738: $4.92\n00739: |\n00740: |\n00741: $3.72\n00742: |\n00743: |\n00744: |\n00745: |\n00746: |\n00747: |\n00748: Weighted average shares outstanding:\n00749: |\n00750: |\n00751: |\n00752: |\n00753: |\n00754: Basic\n00755: |\n00756: |\n00757: 7,426\n00758: |\n00759: |\n00760: 7,433\n00761: |\n00762: Diluted\n00763: |\n00764: |\n00765: 7,446\n00766: |\n00767: |\n00768: 7,466\n00769: |\n00770: |\n00771: |\n00772: |\n00773: |\n00774: |\n00775: COMPREHENSIVE INCOME STATEMENTS\n00776: (In millions) (Unaudited)\n00777: |\n00778: |\n00779: |\n00780: |\n00781: |\n00782: |\n00783: |\n00784: Three Months Ended\n00785: |\n00786: |\n00787: |\n00788: September 30,\n00789: |\n00790: |\n00791: |\n00792: 2026\n00793: |\n00794: |\n00795: 2025\n00796: |\n00797: |\n00798: |\n00799: |\n00800: |\n00801: |\n00802: |\n00803: |\n00804: |\n00805: |\n00806: |\n00807: Net income\n00808: |\n00809: |\n00810: $36,629\n00811: |\n00812: |\n00813: $27,747\n00814: |\n00815: |\n00816: |\n00817: |\n00818: |\n00819: |\n00820: |\n00821: |\n00822: |\n00823: |\n00824: |\n00825: Other comprehensive income (loss), net of tax:\n00826: |\n00827: |\n00828: |\n00829: |\n00830: |\n00831: Net change related to derivatives\n00832: |\n00833: |\n00834: 3\n00835: |\n00836: |\n00837: (3)\n00838: |\n00839: Net change related to investments\n00840: |\n00841: |\n00842: (559)\n00843: |\n00844: |\n00845: 687\n00846: |\n00847: Translation adjustments and other\n00848: |\n00849: |\n00850: (17)\n00851: |\n00852: |\n00853: (98)\n00854: |\n00855: |\n00856: |\n00857: |\n00858: |\n00859: |\n00860: |\n00861: |\n00862: |\n00863: |\n00864: |\n00865: Other comprehensive income (loss)\n00866: |\n00867: |\n00868: (573)\n00869: |\n00870: |\n00871: 586\n00872: |\n00873: |\n00874: |\n00875: |\n00876: |\n00877: |\n00878: |\n00879: |\n00880: |\n00881: |\n00882: |\n00883: Comprehensive income\n00884: |\n00885: |\n00886: $36,056\n00887: |\n00888: |\n00889: $28,333\n00890: |\n00891: |\n00892: |\n00893: |\n00894: |\n00895: |\n00896: BALANCE SHEETS\n00897: (In millions) (Unaudited)\n00898: |\n00899: |\n00900: |\n00901: |\n00902: |\n00903: |\n00904: |\n00905: September 30,\n00906: 2026\n00907: |\n00908: |\n00909: June 30,\n00910: 2026\n00911: |\n00912: |\n00913: |\n00914: |\n00915: |\n00916: |\n00917: |\n00918: |\n00919: |\n00920: |\n00921: |\n00922: Assets\n00923: |\n00924: |\n00925: |\n00926: |\n00927: |\n00928: Current assets:\n00929: |\n00930: |\n00931: |\n00932: |\n00933: |\n00934: Cash and cash equivalents\n00935: |\n00936: |\n00937: $20,281\n00938: |\n00939: |\n00940: $20,935\n00941: |\n00942: Short-term investments\n00943: |\n00944: |\n00945: 44,228\n00946: |\n00947: |\n00948: 55,908\n00949: |\n00950: |\n00951: |\n00952: |\n00953: |\n00954: |\n00955: |\n00956: |\n00957: |\n00958: |\n00959: |\n00960: Total cash, cash equivalents, and short-term investments\n00961: |\n00962: |\n00963: 64,509\n00964: |\n00965: |\n00966: 76,843\n00967: |\n00968: Accounts receivable, net of allowance for doubtful accounts of $728 and $1,040\n00969: |\n00970: |\n00971: 62,084\n00972: |\n00973: |\n00974: 80,876\n00975: |\n00976: Inventories\n00977: |\n00978: |\n00979: 1,835\n00980: |\n00981: |\n00982: 1,397\n00983: |\n00984: Other current assets\n00985: |\n00986: |\n00987: 57,709\n00988: |\n00989: |\n00990: 48,594\n00991: |\n00992: |\n00993: |\n00994: |\n00995: |\n00996: |\n00997: |\n00998: |\n00999: |\n01000: |\n01001: |\n01002: Total current assets\n01003: |\n01004: |\n01005: 186,137\n01006: |\n01007: |\n01008: 207,710\n01009: |\n01010: Property and equipment, net of accumulated depreciation of $127,208 and $118,691\n01011: |\n01012: |\n01013: 346,844\n01014: |\n01015: |\n01016: 313,076\n01017: |\n01018: Operating lease right-of-use assets\n01019: |\n01020: |\n01021: 30,178\n01022: |\n01023: |\n01024: 24,177\n01025: |\n01026: Equity and other investments\n01027: |\n01028: |\n01029: 37,808\n01030: |\n01031: |\n01032: 36,348\n01033: |\n01034: Goodwill\n01035: |\n01036: |\n01037: 119,646\n01038: |\n01039: |\n01040: 119,651\n01041: |\n01042: Intangible assets, net\n01043: |\n01044: |\n01045: 17,751\n01046: |\n01047: |\n01048: 18,609\n01049: |\n01050: Other long-term assets\n01051: |\n01052: |\n01053: 41,039\n01054: |\n01055: |\n01056: 38,805\n01057: |\n01058: |\n01059: |\n01060: |\n01061: |\n01062: |\n01063: |\n01064: |\n01065: |\n01066: |\n01067: |\n01068: Total assets\n01069: |\n01070: |\n01071: $779,403\n01072: |\n01073: |\n01074: $758,376\n01075: |\n01076: |\n01077: |\n01078: |\n01079: |\n01080: |\n01081: |\n01082: |\n01083: |\n01084: |\n01085: |\n01086: Liabilities and stockholders' equity\n01087: |\n01088: |\n01089: |\n01090: |\n01091: |\n01092: Current liabilities:\n01093: |\n01094: |\n01095: |\n01096: |\n01097: |\n01098: Accounts payable\n01099: |\n01100: |\n01101: $42,625\n01102: |\n01103: |\n01104: $42,416\n01105: |\n01106: Current portion of long-term debt\n01107: |\n01108: |\n01109: 4,391\n01110: |\n01111: |\n01112: 9,227\n01113: |\n01114: Accrued compensation\n01115: |\n01116: |\n01117: 10,156\n01118: |\n01119: |\n01120: 14,945\n01121: |\n01122: Short-term income taxes\n01123: |\n01124: |\n01125: 1,447\n01126: |\n01127: |\n01128: 2,534\n01129: |\n01130: Short-term unearned revenue\n01131: |\n01132: |\n01133: 66,866\n01134: |\n01135: |\n01136: 72,965\n01137: |\n01138: Other current liabilities\n01139: |\n01140: |\n01141: 26,483\n01142: |\n01143: |\n01144: 26,738\n01145: |\n01146: |\n01147: |\n01148: |\n01149: |\n01150: |\n01151: |\n01152: |\n01153: |\n01154: |\n01155: |\n01156: Total current liabilities\n01157: |\n01158: |\n01159: 151,968\n01160: |\n01161: |\n01162: 168,825\n01163: |\n01164: Long-term debt\n01165: |\n01166: |\n01167: 31,090\n01168: |\n01169: |\n01170: 31,067\n01171: |\n01172: Long-term income taxes\n01173: |\n01174: |\n01175: 29,235\n01176: |\n01177: |\n01178: 28,647\n01179: |\n01180: Long-term unearned revenue\n01181: |\n01182: |\n01183: 2,697\n01184: |\n01185: |\n01186: 2,747\n01187: |\n01188: Deferred income taxes\n01189: |\n01190: |\n01191: 3,174\n01192: |\n01193: |\n01194: 3,054\n01195: |\n01196: Operating lease liabilities\n01197: |\n01198: |\n01199: 21,719\n01200: |\n01201: |\n01202: 16,532\n01203: |\n01204: Other long-term liabilities\n01205: |\n01206: |\n01207: 69,011\n01208: |\n01209: |\n01210: 65,117\n01211: |\n01212: |\n01213: |\n01214: |\n01215: |\n01216: |\n01217: |\n01218: |\n01219: |\n01220: |\n01221: |\n01222: Total liabilities\n01223: |\n01224: |\n01225: 308,894\n01226: |\n01227: |\n01228: 315,989\n01229: |\n01230: |\n01231: |\n01232: |\n01233: |\n01234: |\n01235: |\n01236: |\n01237: |\n01238: |\n01239: |\n01240: Commitments and contingencies\n01241: |\n01242: |\n01243: |\n01244: |\n01245: |\n01246: Stockholders' equity:\n01247: |\n01248: |\n01249: |\n01250: |\n01251: |\n01252: Common stock and paid-in capital - shares authorized 24,000; outstanding 7,427 and 7,427\n01253: |\n01254: |\n01255: 119,571\n01256: |\n01257: |\n01258: 117,406\n01259: |\n01260: Retained earnings\n01261: |\n01262: |\n01263: 354,795\n01264: |\n01265: |\n01266: 328,265\n01267: |\n01268: Accumulated other comprehensive loss\n01269: |\n01270: |\n01271: (3,857)\n01272: |\n01273: |\n01274: (3,284)\n01275: |\n01276: |\n01277: |\n01278: |\n01279: |\n01280: |\n01281: |\n01282: |\n01283: |\n01284: |\n01285: |\n01286: Total stockholders' equity\n01287: |\n01288: |\n01289: 470,509\n01290: |\n01291: |\n01292: 442,387\n01293: |\n01294: |\n01295: |\n01296: |\n01297: |\n01298: |\n01299: |\n01300: |\n01301: |\n01302: |\n01303: |\n01304: Total liabilities and stockholders' equity\n01305: |\n01306: |\n01307: $779,403\n01308: |\n01309: |\n01310: $758,376\n01311: |\n01312: |\n01313: |\n01314: |\n01315: |\n01316: |\n01317: CASH FLOWS STATEMENTS\n01318: (In millions) (Unaudited)\n01319: |\n01320: |\n01321: |\n01322: |\n01323: |\n01324: |\n01325: |\n01326: Three Months Ended\n01327: |\n01328: |\n01329: |\n01330: September 30,\n01331: |\n01332: |\n01333: |\n01334: 2026\n01335: |\n01336: |\n01337: 2025\n01338: |\n01339: |\n01340: |\n01341: |\n01342: |\n01343: |\n01344: |\n01345: |\n01346: |\n01347: |\n01348: |\n01349: Operations\n01350: |\n01351: |\n01352: |\n01353: |\n01354: |\n01355: Net income\n01356: |\n01357: |\n01358: $36,629\n01359: |\n01360: |\n01361: $27,747\n01362: |\n01363: Adjustments to reconcile net income to net cash from operations:\n01364: |\n01365: |\n01366: |\n01367: |\n01368: |\n01369: Depreciation, amortization, and other\n01370: |\n01371: |\n01372: 11,744\n01373: |\n01374: |\n01375: 8,147\n01376: |\n01377: Stock-based compensation expense\n01378: |\n01379: |\n01380: 3,134\n01381: |\n01382: |\n01383: 2,983\n01384: |\n01385: Net recognized losses (gains) on investments and derivatives\n01386: |\n01387: |\n01388: (231)\n01389: |\n01390: |\n01391: 3,907\n01392: |\n01393: Deferred income taxes\n01394: |\n01395: |\n01396: 4,609\n01397: |\n01398: |\n01399: 2,491\n01400: |\n01401: Changes in operating assets and liabilities:\n01402: |\n01403: |\n01404: |\n01405: |\n01406: |\n01407: Accounts receivable\n01408: |\n01409: |\n01410: 17,104\n01411: |\n01412: |\n01413: 16,490\n01414: |\n01415: Inventories\n01416: |\n01417: |\n01418: (436)\n01419: |\n01420: |\n01421: (192)\n01422: |\n01423: Other current assets\n01424: |\n01425: |\n01426: (1,903)\n01427: |\n01428: |\n01429: (1,162)\n01430: |\n01431: Other long-term assets\n01432: |\n01433: |\n01434: (6,389)\n01435: |\n01436: |\n01437: (394)\n01438: |\n01439: Accounts payable\n01440: |\n01441: |\n01442: 525\n01443: |\n01444: |\n01445: (614)\n01446: |\n01447: Unearned revenue\n01448: |\n01449: |\n01450: (5,942)\n01451: |\n01452: |\n01453: (5,418)\n01454: |\n01455: Income taxes\n01456: |\n01457: |\n01458: (556)\n01459: |\n01460: |\n01461: (2,944)\n01462: |\n01463: Other current liabilities\n01464: |\n01465: |\n01466: (4,528)\n01467: |\n01468: |\n01469: (5,507)\n01470: |\n01471: Other long-term liabilities\n01472: |\n01473: |\n01474: 4,240\n01475: |\n01476: |\n01477: (477)\n01478: |\n01479: |\n01480: |\n01481: |\n01482: |\n01483: |\n01484: |\n01485: |\n01486: |\n01487: |\n01488: |\n01489: Net cash from operations\n01490: |\n01491: |\n01492: 58,000\n01493: |\n01494: |\n01495: 45,057\n01496: |\n01497: |\n01498: |\n01499: |\n01500: |\n01501: |\n01502: |\n01503: |\n01504: |\n01505: |\n01506: |\n01507: Financing\n01508: |\n01509: |\n01510: |\n01511: |\n01512: |\n01513: Repayments of debt\n01514: |\n01515: |\n01516: (4,850)\n01517: |\n01518: |\n01519: 0\n01520: |\n01521: Common stock issued\n01522: |\n01523: |\n01524: 598\n01525: |\n01526: |\n01527: 689\n01528: |\n01529: Common stock repurchased\n01530: |\n01531: |\n01532: (4,379)\n01533: |\n01534: |\n01535: (5,650)\n01536: |\n01537: Common stock cash dividends paid\n01538: |\n01539: |\n01540: (6,757)\n01541: |\n01542: |\n01543: (6,169)\n01544: |\n01545: Other, net\n01546: |\n01547: |\n01548: (1,252)\n01549: |\n01550: |\n01551: (669)\n01552: |\n01553: |\n01554: |\n01555: |\n01556: |\n01557: |\n01558: |\n01559: |\n01560: |\n01561: |\n01562: |\n01563: Net cash used in financing\n01564: |\n01565: |\n01566: (16,640)\n01567: |\n01568: |\n01569: (11,799)\n01570: |\n01571: |\n01572: |\n01573: |\n01574: |\n01575: |\n01576: |\n01577: |\n01578: |\n01579: |\n01580: |\n01581: Investing\n01582: |\n01583: |\n01584: |\n01585: |\n01586: |\n01587: Additions to property and equipment\n01588: |\n01589: |\n01590: (39,367)\n01591: |\n01592: |\n01593: (19,394)\n01594: |\n01595: Acquisition of companies, net of cash acquired and divestitures, and purchases of intangible and other assets\n01596: |\n01597: |\n01598: (397)\n01599: |\n01600: |\n01601: (578)\n01602: |\n01603: Purchases of investments\n01604: |\n01605: |\n01606: (5,394)\n01607: |\n01608: |\n01609: (17,671)\n01610: |\n01611: Maturities of investments\n01612: |\n01613: |\n01614: 5,672\n01615: |\n01616: |\n01617: 6,031\n01618: |\n01619: Sales of investments\n01620: |\n01621: |\n01622: 10,470\n01623: |\n01624: |\n01625: 3,262\n01626: |\n01627: Other, net\n01628: |\n01629: |\n01630: (12,949)\n01631: |\n01632: |\n01633: (6,209)\n01634: |\n01635: |\n01636: |\n01637: |\n01638: |\n01639: |\n01640: |\n01641: |\n01642: |\n01643: |\n01644: |\n01645: Net cash used in investing\n01646: |\n01647: |\n01648: (41,965)\n01649: |\n01650: |\n01651: (34,559)\n01652: |\n01653: |\n01654: |\n01655: |\n01656: |\n01657: |\n01658: |\n01659: |\n01660: |\n01661: |\n01662: |\n01663: Effect of foreign exchange rates on cash and cash equivalents\n01664: |\n01665: |\n01666: (49)\n01667: |\n01668: |\n01669: (92)\n01670: |\n01671: |\n01672: |\n01673: |\n01674: |\n01675: |\n01676: |\n01677: |\n01678: |\n01679: |\n01680: |\n01681: Net change in cash and cash equivalents\n01682: |\n01683: |\n01684: (654)\n01685: |\n01686: |\n01687: (1,393)\n01688: |\n01689: Cash and cash equivalents, beginning of period\n01690: |\n01691: |\n01692: 20,935\n01693: |\n01694: |\n01695: 30,242\n01696: |\n01697: |\n01698: |\n01699: |\n01700: |\n01701: |\n01702: |\n01703: |\n01704: |\n01705: |\n01706: |\n01707: Cash and cash equivalents, end of period\n01708: |\n01709: |\n01710: $20,281\n01711: |\n01712: |\n01713: $28,849\n01714: |\n01715: |\n01716: |\n01717: |\n01718: |\n01719: |\n01720: We have recast certain prior period amounts to conform to the current period presentation.\n01721: SEGMENT RESULTS\n01722: (In millions) (Unaudited)\n01723: |\n01724: |\n01725: |\n01726: |\n01727: |\n01728: |\n01729: |\n01730: Three Months Ended\n01731: |\n01732: |\n01733: |\n01734: September 30,\n01735: |\n01736: |\n01737: |\n01738: 2026\n01739: |\n01740: |\n01741: 2025\n01742: |\n01743: |\n01744: |\n01745: |\n01746: |\n01747: |\n01748: |\n01749: |\n01750: |\n01751: |\n01752: |\n01753: Agents and Infra\n01754: |\n01755: |\n01756: |\n01757: |\n01758: |\n01759: |\n01760: |\n01761: |\n01762: |\n01763: |\n01764: Revenue\n01765: |\n01766: |\n01767: $76,795\n01768: |\n01769: |\n01770: $61,672\n01771: |\n01772: Cost of revenue\n01773: |\n01774: |\n01775: 23,887\n01776: |\n01777: |\n01778: 17,701\n01779: |\n01780: Operating expenses\n01781: |\n01782: |\n01783: 12,350\n01784: |\n01785: |\n01786: 11,253\n01787: |\n01788: |\n01789: |\n01790: |\n01791: |\n01792: |\n01793: |\n01794: |\n01795: |\n01796: |\n01797: |\n01798: Operating income\n01799: |\n01800: |\n01801: $40,558\n01802: |\n01803: |\n01804: $32,718\n01805: |\n01806: |\n01807: |\n01808: |\n01809: |\n01810: |\n01811: |\n01812: |\n01813: |\n01814: |\n01815: |\n01816: Devices and Consumer\n01817: |\n01818: |\n01819: |\n01820: |\n01821: |\n01822: |\n01823: |\n01824: |\n01825: |\n01826: |\n01827: Revenue\n01828: |\n01829: |\n01830: $15,484\n01831: |\n01832: |\n01833: $16,001\n01834: |\n01835: Cost of revenue\n01836: |\n01837: |\n01838: 5,833\n01839: |\n01840: |\n01841: 6,342\n01842: |\n01843: Operating expenses\n01844: |\n01845: |\n01846: 4,294\n01847: |\n01848: |\n01849: 4,416\n01850: |\n01851: |\n01852: |\n01853: |\n01854: |\n01855: |\n01856: |\n01857: |\n01858: |\n01859: |\n01860: |\n01861: Operating income\n01862: |\n01863: |\n01864: $5,357\n01865: |\n01866: |\n01867: $5,243\n01868: |\n01869: |\n01870: |\n01871: |\n01872: |\n01873: |\n01874: |\n01875: |\n01876: |\n01877: |\n01878: |\n01879: Total\n01880: |\n01881: |\n01882: |\n01883: |\n01884: |\n01885: |\n01886: |\n01887: |\n01888: |\n01889: |\n01890: Revenue\n01891: |\n01892: |\n01893: $92,279\n01894: |\n01895: |\n01896: $77,673\n01897: |\n01898: Cost of revenue\n01899: |\n01900: |\n01901: 29,720\n01902: |\n01903: |\n01904: 24,043\n01905: |\n01906: Operating expenses\n01907: |\n01908: |\n01909: 16,644\n01910: |\n01911: |\n01912: 15,669\n01913: |\n01914: |\n01915: |\n01916: |\n01917: |\n01918: |\n01919: |\n01920: |\n01921: |\n01922: |\n01923: |\n01924: Operating income\n01925: |\n01926: |\n01927: $45,915\n01928: |\n01929: |\n01930: $37,961\n01931: |\n01932: |\n01933: |\n01934: |\n01935: |\n01936: |\n01937: |\n01938: |\n01939: |\n01940: |\n01941: |\n01942: We have recast certain prior period amounts to conform to the way we internally manage and monitor our business, which reflects the fiscal year 2027 changes to our segments announced in September 2026.\n01943: PRODUCT AND SERVICE OFFERINGS REVENUE\n01944: (In millions) (Unaudited)\n01945: |\n01946: |\n01947: |\n01948: |\n01949: |\n01950: |\n01951: |\n01952: Three Months Ended\n01953: |\n01954: |\n01955: |\n01956: September 30,\n01957: |\n01958: |\n01959: |\n01960: 2026\n01961: |\n01962: |\n01963: 2025\n01964: |\n01965: |\n01966: |\n01967: |\n01968: |\n01969: |\n01970: Azure\n01971: |\n01972: |\n01973: $33,165\n01974: |\n01975: |\n01976: $22,384\n01977: |\n01978: Microsoft 365 cloud\n01979: |\n01980: |\n01981: 27,778\n01982: |\n01983: |\n01984: 23,694\n01985: |\n01986: Productivity and server licensing\n01987: |\n01988: |\n01989: 8,407\n01990: |\n01991: |\n01992: 8,678\n01993: |\n01994: Search and advertising\n01995: |\n01996: |\n01997: 6,554\n01998: |\n01999: |\n02000: 5,942\n02001: |\n02002: XBOX\n02003: |\n02004: |\n02005: 5,379\n02006: |\n02007: |\n02008: 5,508\n02009: |\n02010: Industry solutions\n02011: |\n02012: |\n02013: 5,337\n02014: |\n02015: |\n02016: 4,894\n02017: |\n02018: Windows OEM and devices\n02019: |\n02020: |\n02021: 3,551\n02022: |\n02023: |\n02024: 4,551\n02025: |\n02026: Frontier and support services\n02027: |\n02028: |\n02029: 2,108\n02030: |\n02031: |\n02032: 2,022\n02033: |\n02034: Total revenue\n02035: |\n02036: |\n02037: $92,279\n02038: |\n02039: |\n02040: $77,673\n02041: |\n02042: |\n02043: |\n02044: |\n02045: |\n02046: |\n02047: We have recast certain prior period amounts to conform to the way we internally manage and monitor our business, which reflects the fiscal year 2027 changes to our segments announced in September 2026."
+    },
+    "peer_facts_from_step_7": {
+      "AAPL": {
+        "total_revenue": {
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD",
+          "start": "2025-09-28",
+          "end": "2026-09-26",
+          "val": 478834000000,
+          "accn": "0000320193-26-000026",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-11-03",
+          "frame": "CY2026",
+          "prior_val": 416161000000
+        },
+        "operating_income": {
+          "tag": "OperatingIncomeLoss",
+          "unit": "USD",
+          "start": "2025-09-28",
+          "end": "2026-09-26",
+          "val": 158063000000,
+          "accn": "0000320193-26-000026",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-11-03",
+          "frame": "CY2026",
+          "prior_val": 133050000000
+        },
+        "net_income": {
+          "tag": "NetIncomeLoss",
+          "unit": "USD",
+          "start": "2025-09-28",
+          "end": "2026-09-26",
+          "val": 132175000000,
+          "accn": "0000320193-26-000026",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-11-03",
+          "frame": "CY2026",
+          "prior_val": 112010000000
+        },
+        "diluted_eps": {
+          "tag": "EarningsPerShareDiluted",
+          "unit": "USD/shares",
+          "start": "2025-09-28",
+          "end": "2026-09-26",
+          "val": 8.98,
+          "accn": "0000320193-26-000026",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-11-03",
+          "frame": "CY2026",
+          "prior_val": 7.46
+        },
+        "equity": {
+          "tag": "StockholdersEquity",
+          "unit": "USD",
+          "end": "2026-09-26",
+          "val": 112093000000,
+          "accn": "0000320193-26-000026",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-11-03",
+          "frame": "CY2026Q3I",
+          "prior_val": 73733000000
+        },
+        "long_term_debt": {
+          "tag": "LongTermDebtNoncurrent",
+          "unit": "USD",
+          "end": "2026-09-26",
+          "val": 68208000000,
+          "accn": "0000320193-26-000026",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-11-03",
+          "frame": "CY2026Q3I",
+          "prior_val": 78328000000
+        },
+        "current_debt": {
+          "tag": "LongTermDebtCurrent",
+          "unit": "USD",
+          "end": "2026-09-26",
+          "val": 9906000000,
+          "accn": "0000320193-26-000026",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-11-03",
+          "frame": "CY2026Q3I",
+          "prior_val": 12350000000
+        },
+        "cash_from_operations": {
+          "tag": "NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD",
+          "start": "2025-09-28",
+          "end": "2026-09-26",
+          "val": 145097000000,
+          "accn": "0000320193-26-000026",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-11-03",
+          "frame": "CY2026",
+          "prior_val": 111482000000
+        },
+        "capex": {
+          "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "unit": "USD",
+          "start": "2025-09-28",
+          "end": "2026-09-26",
+          "val": 9041000000,
+          "accn": "0000320193-26-000026",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-11-03",
+          "frame": "CY2026",
+          "prior_val": 12715000000
+        },
+        "debt_components": {
+          "LongTermDebtCurrent": 9906000000,
+          "LongTermDebtNoncurrent": 68208000000
+        },
+        "period_end": {
+          "end": "2026-09-26",
+          "prior_end": "2025-09-27"
+        }
+      }
+    },
+    "peer_calculator_output_from_step_7": "STEP 7 � Peer facts and operating margin on the same revenue definition\nAAPL (Apple Inc.) revenue: 478834000000 | operating income: 158063000000 | margin: 33.0100% | period: 2026-09-26\n",
+    "price_input": {
+      "value": null,
+      "date": null,
+      "source": null
+    },
+    "instruction": "Use only these facts. Do not calculate. The values in calculator output were calculated by code."
+  },
+  "expected_output": "Concise Markdown. Include each source, period, unit, definition, and supplied arithmetic. End with exactly one standalone line that begins `Insight:`. Use one distinct annual financial fact or comparison from the 10-K. State its fiscal period, cite the filing filename, accession, and statement line, and give the arithmetic if it is a ratio. Do not repeat the Research Analyst's Insight or a figure from the earnings release's first paragraph."
+}

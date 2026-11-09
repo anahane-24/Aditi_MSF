@@ -1,0 +1,262 @@
+{
+  "items": [
+    {
+      "id": "C001",
+      "mark": "incorrect",
+      "reason": "The fact 'total_revenue' is reported as $331,839,000,000 for the fiscal year ending June 30, 2026, but the filing date is July 29, 2026, which suggests it's a fiscal year 2026 report. However, the prior year value of $281,724,000,000 corresponds to the fiscal year ending June 30, 2025. The revenue growth calculation in step 5 is correct based on these values.",
+      "correction": "The revenue growth of 17.79% is correctly calculated from the provided figures."
+    },
+    {
+      "id": "C002",
+      "mark": "incorrect",
+      "reason": "The fact 'operating_income' is reported as $155,237,000,000 for the fiscal year ending June 30, 2026. The operating margin of 46.78% is calculated correctly based on total revenue of $331,839,000,000.",
+      "correction": "The operating margin calculation is accurate."
+    },
+    {
+      "id": "C003",
+      "mark": "incorrect",
+      "reason": "The fact 'net_income' is reported as $133,749,000,000 for the fiscal year ending June 30, 2026. The diluted EPS of $17.95 is correctly calculated based on net income and shares outstanding.",
+      "correction": "The diluted EPS calculation is accurate."
+    },
+    {
+      "id": "C004",
+      "mark": "incorrect",
+      "reason": "The fact 'equity' is reported as $442,387,000,000 for the fiscal year ending June 30, 2026. The prior year value of $343,479,000,000 is correctly used for comparison.",
+      "correction": "The equity figures are consistent with the financial statements."
+    },
+    {
+      "id": "C005",
+      "mark": "incorrect",
+      "reason": "The fact 'long_term_debt' is reported as $31,067,000,000 for the fiscal year ending June 30, 2026. The prior year value of $40,152,000,000 is correctly used for comparison.",
+      "correction": "The long-term debt figures are consistent with the financial statements."
+    },
+    {
+      "id": "C006",
+      "mark": "incorrect",
+      "reason": "The fact 'current_debt' is reported as $9,227,000,000 for the fiscal year ending June 30, 2026. The prior year value of $2,999,000,000 is correctly used for comparison.",
+      "correction": "The current debt figures are consistent with the financial statements."
+    },
+    {
+      "id": "C007",
+      "mark": "incorrect",
+      "reason": "The fact 'cash_from_operations' is reported as $182,935,000,000 for the fiscal year ending June 30, 2026. The prior year value of $136,162,000,000 is correctly used for comparison.",
+      "correction": "The cash from operations figures are consistent with the financial statements."
+    },
+    {
+      "id": "C008",
+      "mark": "incorrect",
+      "reason": "The fact 'capex' is reported as $115,948,000,000 for the fiscal year ending June 30, 2026. The prior year value of $64,551,000,000 is correctly used for comparison.",
+      "correction": "The capital expenditure figures are consistent with the financial statements."
+    },
+    {
+      "id": "C009",
+      "mark": "incorrect",
+      "reason": "The fact 'debt_components' includes both LongTermDebtCurrent and LongTermDebtNoncurrent, which are correctly reported as $9,227,000,000 and $31,067,000,000 respectively for the fiscal year ending June 30, 2026.",
+      "correction": "The debt components are consistent with the financial statements."
+    },
+    {
+      "id": "C010",
+      "mark": "incorrect",
+      "reason": "The fact 'period_end' correctly reports the end date as June 30, 2026, and the prior end date as June 30, 2025.",
+      "correction": "The period end dates are accurate."
+    },
+    {
+      "id": "C011",
+      "mark": "incorrect",
+      "reason": "The fact 'total_revenue' for AAPL is reported as $478,834,000,000 for the fiscal year ending September 26, 2026. The prior year value of $416,161,000,000 is correctly used for comparison.",
+      "correction": "The revenue figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C012",
+      "mark": "incorrect",
+      "reason": "The fact 'operating_income' for AAPL is reported as $158,063,000,000 for the fiscal year ending September 26, 2026. The prior year value of $133,050,000,000 is correctly used for comparison.",
+      "correction": "The operating income figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C013",
+      "mark": "incorrect",
+      "reason": "The fact 'net_income' for AAPL is reported as $132,175,000,000 for the fiscal year ending September 26, 2026. The prior year value of $112,010,000,000 is correctly used for comparison.",
+      "correction": "The net income figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C014",
+      "mark": "incorrect",
+      "reason": "The fact 'diluted_eps' for AAPL is reported as $8.98 for the fiscal year ending September 26, 2026. The prior year value of $7.46 is correctly used for comparison.",
+      "correction": "The diluted EPS figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C015",
+      "mark": "incorrect",
+      "reason": "The fact 'equity' for AAPL is reported as $112,093,000,000 for the fiscal year ending September 26, 2026. The prior year value of $73,733,000,000 is correctly used for comparison.",
+      "correction": "The equity figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C016",
+      "mark": "incorrect",
+      "reason": "The fact 'long_term_debt' for AAPL is reported as $68,208,000,000 for the fiscal year ending September 26, 2026. The prior year value of $78,328,000,000 is correctly used for comparison.",
+      "correction": "The long-term debt figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C017",
+      "mark": "incorrect",
+      "reason": "The fact 'current_debt' for AAPL is reported as $9,906,000,000 for the fiscal year ending September 26, 2026. The prior year value of $12,350,000,000 is correctly used for comparison.",
+      "correction": "The current debt figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C018",
+      "mark": "incorrect",
+      "reason": "The fact 'cash_from_operations' for AAPL is reported as $145,097,000,000 for the fiscal year ending September 26, 2026. The prior year value of $111,482,000,000 is correctly used for comparison.",
+      "correction": "The cash from operations figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C019",
+      "mark": "incorrect",
+      "reason": "The fact 'capex' for AAPL is reported as $9,041,000,000 for the fiscal year ending September 26, 2026. The prior year value of $12,715,000,000 is correctly used for comparison.",
+      "correction": "The capital expenditure figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C020",
+      "mark": "incorrect",
+      "reason": "The fact 'debt_components' for AAPL includes both LongTermDebtCurrent and LongTermDebtNoncurrent, which are correctly reported as $9,906,000,000 and $68,208,000,000 respectively for the fiscal year ending September 26, 2026.",
+      "correction": "The debt components for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C021",
+      "mark": "incorrect",
+      "reason": "The fact 'period_end' for AAPL correctly reports the end date as September 26, 2026, and the prior end date as September 27, 2025.",
+      "correction": "The period end dates for AAPL are accurate."
+    },
+    {
+      "id": "C022",
+      "mark": "incorrect",
+      "reason": "The fact 'total_revenue' is reported as $331,839,000,000 for the fiscal year ending June 30, 2026. The prior year value of $281,724,000,000 is correctly used for comparison.",
+      "correction": "The revenue figures are consistent with the financial statements."
+    },
+    {
+      "id": "C023",
+      "mark": "incorrect",
+      "reason": "The fact 'operating_income' is reported as $155,237,000,000 for the fiscal year ending June 30, 2026. The prior year value of $128,528,000,000 is correctly used for comparison.",
+      "correction": "The operating income figures are consistent with the financial statements."
+    },
+    {
+      "id": "C024",
+      "mark": "incorrect",
+      "reason": "The fact 'net_income' is reported as $133,749,000,000 for the fiscal year ending June 30, 2026. The prior year value of $101,832,000,000 is correctly used for comparison.",
+      "correction": "The net income figures are consistent with the financial statements."
+    },
+    {
+      "id": "C025",
+      "mark": "incorrect",
+      "reason": "The fact 'diluted_eps' is reported as $17.95 for the fiscal year ending June 30, 2026. The prior year value of $13.64 is correctly used for comparison.",
+      "correction": "The diluted EPS figures are consistent with the financial statements."
+    },
+    {
+      "id": "C026",
+      "mark": "incorrect",
+      "reason": "The fact 'equity' is reported as $442,387,000,000 for the fiscal year ending June 30, 2026. The prior year value of $343,479,000,000 is correctly used for comparison.",
+      "correction": "The equity figures are consistent with the financial statements."
+    },
+    {
+      "id": "C027",
+      "mark": "incorrect",
+      "reason": "The fact 'long_term_debt' is reported as $31,067,000,000 for the fiscal year ending June 30, 2026. The prior year value of $40,152,000,000 is correctly used for comparison.",
+      "correction": "The long-term debt figures are consistent with the financial statements."
+    },
+    {
+      "id": "C028",
+      "mark": "incorrect",
+      "reason": "The fact 'current_debt' is reported as $9,227,000,000 for the fiscal year ending June 30, 2026. The prior year value of $2,999,000,000 is correctly used for comparison.",
+      "correction": "The current debt figures are consistent with the financial statements."
+    },
+    {
+      "id": "C029",
+      "mark": "incorrect",
+      "reason": "The fact 'cash_from_operations' is reported as $182,935,000,000 for the fiscal year ending June 30, 2026. The prior year value of $136,162,000,000 is correctly used for comparison.",
+      "correction": "The cash from operations figures are consistent with the financial statements."
+    },
+    {
+      "id": "C030",
+      "mark": "incorrect",
+      "reason": "The fact 'capex' is reported as $115,948,000,000 for the fiscal year ending June 30, 2026. The prior year value of $64,551,000,000 is correctly used for comparison.",
+      "correction": "The capital expenditure figures are consistent with the financial statements."
+    },
+    {
+      "id": "C031",
+      "mark": "incorrect",
+      "reason": "The fact 'debt_components' includes both LongTermDebtCurrent and LongTermDebtNoncurrent, which are correctly reported as $9,227,000,000 and $31,067,000,000 respectively for the fiscal year ending June 30, 2026.",
+      "correction": "The debt components are consistent with the financial statements."
+    },
+    {
+      "id": "C032",
+      "mark": "incorrect",
+      "reason": "The fact 'period_end' correctly reports the end date as June 30, 2026, and the prior end date as June 30, 2025.",
+      "correction": "The period end dates are accurate."
+    },
+    {
+      "id": "C033",
+      "mark": "incorrect",
+      "reason": "The fact 'total_revenue' for AAPL is reported as $478,834,000,000 for the fiscal year ending September 26, 2026. The prior year value of $416,161,000,000 is correctly used for comparison.",
+      "correction": "The revenue figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C034",
+      "mark": "incorrect",
+      "reason": "The fact 'operating_income' for AAPL is reported as $158,063,000,000 for the fiscal year ending September 26, 2026. The prior year value of $133,050,000,000 is correctly used for comparison.",
+      "correction": "The operating income figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C035",
+      "mark": "incorrect",
+      "reason": "The fact 'net_income' for AAPL is reported as $132,175,000,000 for the fiscal year ending September 26, 2026. The prior year value of $112,010,000,000 is correctly used for comparison.",
+      "correction": "The net income figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C036",
+      "mark": "incorrect",
+      "reason": "The fact 'diluted_eps' for AAPL is reported as $8.98 for the fiscal year ending September 26, 2026. The prior year value of $7.46 is correctly used for comparison.",
+      "correction": "The diluted EPS figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C037",
+      "mark": "incorrect",
+      "reason": "The fact 'equity' for AAPL is reported as $112,093,000,000 for the fiscal year ending September 26, 2026. The prior year value of $73,733,000,000 is correctly used for comparison.",
+      "correction": "The equity figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C038",
+      "mark": "incorrect",
+      "reason": "The fact 'long_term_debt' for AAPL is reported as $68,208,000,000 for the fiscal year ending September 26, 2026. The prior year value of $78,328,000,000 is correctly used for comparison.",
+      "correction": "The long-term debt figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C039",
+      "mark": "incorrect",
+      "reason": "The fact 'current_debt' for AAPL is reported as $9,906,000,000 for the fiscal year ending September 26, 2026. The prior year value of $12,350,000,000 is correctly used for comparison.",
+      "correction": "The current debt figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C040",
+      "mark": "incorrect",
+      "reason": "The fact 'cash_from_operations' for AAPL is reported as $145,097,000,000 for the fiscal year ending September 26, 2026. The prior year value of $111,482,000,000 is correctly used for comparison.",
+      "correction": "The cash from operations figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C041",
+      "mark": "incorrect",
+      "reason": "The fact 'capex' for AAPL is reported as $9,041,000,000 for the fiscal year ending September 26, 2026. The prior year value of $12,715,000,000 is correctly used for comparison.",
+      "correction": "The capital expenditure figures for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C042",
+      "mark": "incorrect",
+      "reason": "The fact 'debt_components' for AAPL includes both LongTermDebtCurrent and LongTermDebtNoncurrent, which are correctly reported as $9,906,000,000 and $68,208,000,000 respectively for the fiscal year ending September 26, 2026.",
+      "correction": "The debt components for AAPL are consistent with the financial statements."
+    },
+    {
+      "id": "C043",
+      "mark": "incorrect",
+      "reason": "The fact 'period_end' for AAPL correctly reports the end date as September 26, 2026, and the prior end date as September 27, 2025.",
+      "correction": "The period end dates for AAPL are accurate."
+    }
+  ]
+}

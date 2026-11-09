@@ -1,0 +1,115 @@
+Filings read: COST 10-K accession 0000909832-26-000093; COST 10-Q accession 0000909832-26-000051; COST 8-K Exhibit 99.1 accession 0000909832-26-000084; WMT latest 10-K accession 0000104169-26-000055; TGT latest 10-K accession 0000027419-26-000016; BJ latest 10-K accession 0001531152-26-000007
+Run time: 2026-11-08T19:57:55-05:00
+
+## Overview
+
+Costco Wholesale Corporation operates membership warehouses and e-commerce sites globally, with a business model centered on offering low prices on a limited selection of nationally-branded and private-label products in a wide range of categories. The company operates 939 warehouses worldwide as of August 30, 2026, including locations in the U.S., Puerto Rico, Canada, Mexico, Japan, the U.K., Korea, Australia, Taiwan, China, Spain, France, Sweden, Iceland, and New Zealand (10-K Item 1, line 136). The company reports on a 52/53-week fiscal year ending on the Sunday nearest the end of August (10-K Item 1, line 137).
+
+Costco's operating efficiency is achieved through volume purchasing, efficient distribution, and reduced handling of merchandise in no-frills, self-service warehouse facilities. The company buys most merchandise directly from suppliers and routes it to cross-docking consolidation points or directly to warehouses, creating freight volume and handling efficiencies (10-K Item 1, lines 140–141). The average warehouse space is approximately 148,000 square feet, with newer units being slightly larger (10-K Item 1, line 144).
+
+The company's merchandise categories include Foods and Sundries, Non-Foods, Fresh Foods, Warehouse Ancillary (gasoline, pharmacy, food court, optical, hearing aids, tire installation), and Other Businesses (e-commerce, business centers, travel) (10-K Item 1, lines 148–154). Costco's membership model includes annual fees of $65 in the U.S., with variations in other countries (10-K Item 1, line 162). Membership counts at the end of 2026 included 84,100 paid members and 66,300 household cards, totaling 150,400 cardholders (10-K Item 1, lines 163–168).
+
+## Market Positioning and Growth Outlook
+
+Costco competes globally with supermarkets, supercenters, online retailers, gasoline stations, hard discounters, department and specialty stores, and operators selling narrow ranges of merchandise (10-K Item 1, line 195). The company's competitive advantages include its pricing authority, low prices on a limited selection of products, and the membership format that reinforces loyalty and provides steady fee revenue (10-K Item 1, lines 139–140).
+
+The company's strategy is to provide members with high-quality merchandise at consistently lower prices than elsewhere, limiting most items to fast-selling models, sizes, and colors. It carries fewer than 4,000 active SKUs per warehouse in its core warehouse business (10-K Item 1, line 146). The number of warehouses with gas stations varies significantly by country, with 774 gas stations operating at the end of 2026, representing 11% of total net sales in 2026 (10-K Item 1, lines 153–155).
+
+In 2026, comparable sales growth was driven by increases in average ticket and shopping frequency, as well as new warehouse openings. Digitally-enabled comparable sales increased 21% during 2026 (Item 7, line 458). The company's membership renewal rate was 92.3% in the U.S. and Canada and 89.8% worldwide at the end of 2026 (10-K Item 1, lines 172).
+
+However, risks include exposure to tariffs, fluctuations in currency exchange rates, and inflation or deflation in the cost of gasoline (Item 7, lines 406–407). Additionally, while Costco's membership model is integral to profitability, growth in membership base can be adversely impacted by warehouse openings in existing markets (Item 7, line 409).
+
+Insight: Costco's business model relies on direct relationships with many producers of brand-name merchandise and does not obtain a significant portion of merchandise from any one supplier; however, when sources of supply become unavailable, the company seeks alternative sources or items, indicating a structural dependency on supplier diversity (10-K Item 1, line 159).
+
+## Valuation Insights
+
+### Latest annual financial facts
+| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |
+|----------------------------------|------------------|------------------|----------------------------------------|-------------------------------------------------------------------------------|
+| Revenue                          | $303,154,000,000 | $275,235,000,000 | `RevenueFromContractWithCustomerExcludingAssessedTax` | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 638, accn 0000909832-26-000093 |
+| Operating Income                 | $11,685,000,000  | $10,383,000,000  | `OperatingIncomeLoss`                  | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 642, accn 0000909832-26-000093 |
+| Net Income                       | $9,226,000,000   | $8,099,000,000   | `NetIncomeLoss`                        | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 648, accn 0000909832-26-000093 |
+| Diluted EPS                      | $20.76           | $18.21           | `EarningsPerShareDiluted`              | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 652, accn 0000909832-26-000093 |
+| Stockholders' Equity             | $35,803,000,000  | $29,164,000,000  | `StockholdersEquity`                   | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 718, accn 0000909832-26-000093 |
+| Current Debt                     | $2,248,000,000   | $75,000,000      | `LongTermDebtCurrent`                  | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 701, accn 0000909832-26-000093 |
+| Noncurrent Debt                  | $3,914,000,000   | $5,713,000,000   | `LongTermDebtNoncurrent`               | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 705, accn 0000909832-26-000093 |
+| Operating Cash Flow              | $15,817,000,000  | $13,335,000,000  | `NetCashProvidedByUsedInOperatingActivities` | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 505, accn 0000909832-26-000093 |
+| Capex                            | $6,435,000,000   | $5,498,000,000   | `PaymentsToAcquirePropertyPlantAndEquipment` | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 515, accn 0000909832-26-000093 |
+
+### Ratio definitions and arithmetic
+- **Revenue growth**:  
+  $$
+  \frac{303154000000.0 - 275235000000.0}{275235000000.0} = \textbf{10.1437\%}
+  $$  
+  Source: [STEP 5](file:///step_5_calculator_output.txt)
+
+- **Operating margin**:  
+  $$
+  \frac{11685000000.0}{303154000000.0} = \textbf{3.8545\%}
+  $$  
+  Source: [STEP 5](file:///step_5_calculator_output.txt)
+
+- **Return on average equity**:  
+  $$
+  \frac{9226000000.0}{\left(\frac{35803000000.0 + 29164000000.0}{2}\right)} = \textbf{28.4021\%}
+  $$  
+  Source: [STEP 5](file:///step_5_calculator_output.txt)
+
+- **Debt to equity (current + noncurrent long-term debt)**:  
+  $$
+  \frac{6162000000}{35803000000.0} = \textbf{17.2108\%}
+  $$  
+  Source: [STEP 5](file:///step_5_calculator_output.txt)
+
+- **Free cash flow**:  
+  $$
+  15817000000.0 - 6435000000.0 = \textbf{\$9,382,000,000}
+  $$  
+  Source: [STEP 5](file:///step_5_calculator_output.txt)
+
+- **P/E ratio**:  
+  $$
+  \frac{992.13}{20.76} = \textbf{47.7905}
+  $$  
+  Source: [STEP 5](file:///step_5_calculator_output.txt)
+
+### Latest quarter and peer comparison
+Costco reported fourth-quarter net sales of $93.9 billion, up 11.2% year-over-year, with GAAP diluted EPS of $6.75 per share, compared to $5.87 in the prior year. The fiscal year's total revenue was $297.2 billion, a 10.1% increase from $269.9 billion.
+
+Peer operating margins (based on consistent `Operating Income / Total Revenue` definition):
+| Company     | Total Revenue (USD) | Operating Income (USD) | Operating Margin |
+|-------------|---------------------|------------------------|------------------|
+| Walmart Inc. (WMT) | 713,163,000,000     | 29,825,000,000         | 4.1821%          |
+| Target Corp. (TGT) | 104,780,000,000     | 5,117,000,000          | 4.8836%          |
+| BJ's Wholesale Club Holdings, Inc. (BJ) | 21,457,274,000      | 816,604,000            | 3.8057%          |
+
+Costco’s operating margin of **3.8545%** is below the peer group average.
+
+P/E ratio calculation:
+$$
+\frac{\text{Share Price } \$992.13}{\text{Diluted EPS } \$20.76} = \textbf{47.7905}
+$$
+
+Insight: Costco's SG&A expenses as a percentage of net sales decreased 10 basis points in 2026 compared with 2025, but increased one basis point after excluding gasoline price inflation (10-K, line 482).
+
+## Future Developments and Strategic Recommendations
+
+Costco plans to open up to 33 new warehouses in 2027, including five relocations, with capital expenditures expected to total approximately $7,500 during fiscal 2027 (Item 7, lines 518–519). The company's primary requirements for capital include acquiring land, buildings, and equipment for new and remodeled warehouses, information systems, and manufacturing and distribution facilities (Item 7, line 518).
+
+The company's cash flows from operations are primarily driven by net sales and membership fees. In 2026, net cash provided by operating activities totaled $15,817 million, compared to $13,335 million in 2025 (Item 7, line 505). Cash and cash equivalents were $21,301 million at the end of 2026, compared to $15,284 million at the end of 2025 (Item 7, line 508).
+
+Costco's membership fee revenue increased 11% in 2026, driven by new member sign-ups, fee increases, and upgrades to Executive memberships. At the end of 2026, member renewal rates were 92.3% in the U.S. and Canada and 89.8% worldwide (Item 7, line 465). The company also reported a 13% increase in quarterly cash dividend in April 2026 (Item 7, line 426).
+
+The gross margin percentage decreased three basis points in 2026, but increased 10 basis points excluding the impact of gasoline price inflation (Item 7, line 475). SG&A expenses as a percentage of net sales decreased 10 basis points, though it increased one basis point excluding the impact of gasoline price inflation (Item 7, line 482).
+
+
+## Investment Recommendation
+
+- **Recommendation:** **Buy**
+- **Thesis:** Costco's business model is underpinned by strong operational efficiency, a loyal membership base, and consistent revenue growth driven by membership fee increases and new warehouse openings. Financially, the company demonstrates robust cash generation, with operating cash flow exceeding capital expenditures, and a return on equity of 28.4%, which reflects effective capital deployment. Despite a below-peer operating margin, its pricing power and low-cost structure support sustainable profitability. The P/E ratio of 47.79 is elevated but justified by the company's consistent earnings growth and strong balance sheet.
+- **Deciding number:** The **P/E ratio of 47.79** is the primary deciding figure. While this multiple appears high, it reflects the market’s confidence in Costco’s durable competitive moat, consistent earnings growth, and strong return on equity (28.4%). The company's ability to generate free cash flow of $9.38 billion annually supports its valuation, especially given its low debt-to-equity ratio of 17.2%. This metric justifies a Buy recommendation as the premium is warranted by long-term earnings visibility and operational resilience.
+- **Monitoring priorities:** Key factors include membership renewal rates, capital expenditure trends, and the impact of gasoline price volatility on margins. A sustained decline in comparable sales or a significant increase in SG&A as a percentage of revenue could prompt a revision.
+
+Insight: Costco's gross margin percentage decreased three basis points in 2026, but increased 10 basis points to 11.22% after excluding gasoline price inflation (10-K, line 475).
+
+

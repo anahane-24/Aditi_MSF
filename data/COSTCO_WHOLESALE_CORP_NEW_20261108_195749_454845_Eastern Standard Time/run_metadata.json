@@ -1,0 +1,14 @@
+{
+  "ticker": "COST",
+  "peers": [
+    "WMT",
+    "TGT",
+    "BJ"
+  ],
+  "price": 992.13,
+  "price_date": null,
+  "price_source": null,
+  "run_time": "2026-11-08T19:57:55-05:00",
+  "step_output_file": "step_output.txt",
+  "framework": "CrewAI Flow"
+}

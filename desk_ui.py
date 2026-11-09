@@ -84,7 +84,8 @@ with st.form("run_desk"):
     peers_input = st.text_input("Peer tickers (optional)", help="Comma-separated, for example AAPL,GOOGL")
     include_price = st.checkbox("Include a share price for P/E")
     price = st.number_input(
-        "Share price (USD)", min_value=0.01, value=500.0, step=0.01, disabled=not include_price
+        "Share price (USD)", min_value=0.01, value=500.0, step=0.01,
+        help="This value is used only when you select the share-price checkbox.",
     )
     submitted = st.form_submit_button("Run agent team", type="primary")
 

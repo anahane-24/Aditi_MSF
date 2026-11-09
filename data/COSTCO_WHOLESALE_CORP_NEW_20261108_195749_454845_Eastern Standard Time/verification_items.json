@@ -1,0 +1,1036 @@
+[
+  {
+    "id": "C001",
+    "text": "The company's merchandise categories include Foods and Sundries, Non-Foods, Fresh Foods, Warehouse Ancillary (gasoline, pharmacy, food court, optical, hearing aids, tire installation), and Other Businesses (e-commerce, business centers, travel) (10-K Item 1, lines 148–154). Costco's membership model includes annual fees of $65 in the U.S., with variations in other countries (10-K Item 1, line 162). Membership counts at the end of 2026 included 84,100 paid members and 66,300 household cards, totaling 150,400 cardholders (10-K Item 1, lines 163–168).",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt.",
+      "The cited line number exists in 10-K_2026-10-07.txt.",
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 148,
+            "text": "We offer merchandise and services in the following categories:"
+          },
+          {
+            "line": 149,
+            "text": "■ Core Merchandise Categories:"
+          },
+          {
+            "line": 150,
+            "text": "• Foods and Sundries (including sundries, dry grocery, candy, cooler, freezer, liquor, and tobacco)"
+          },
+          {
+            "line": 151,
+            "text": "• Non-Foods (including consumer electronics, appliances, small electrics, health and beauty aids, hardware, lawn and garden, sporting goods, tires, toys and seasonal, automotive, stamps, tickets, apparel, furniture, domestics, housewares, special order kiosk, and jewelry)"
+          },
+          {
+            "line": 152,
+            "text": "• Fresh Foods (including meat, produce, deli, and bakery)"
+          },
+          {
+            "line": 153,
+            "text": "■ Warehouse Ancillary (includes gasoline, pharmacy, food court, optical, hearing aids, and tire installation)"
+          },
+          {
+            "line": 154,
+            "text": "■ Other Businesses (includes e-commerce, business centers, travel, and other)"
+          }
+        ]
+      },
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          162
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 162,
+            "text": "Our members may utilize their memberships at all of our warehouses and e-commerce sites. Our annual fee for memberships is $65 in the U.S., varies in other countries and includes a free household card."
+          }
+        ]
+      },
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          163,
+          164,
+          165,
+          166,
+          167,
+          168
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 163,
+            "text": "Membership at the end of 2026, 2025, and 2024 was made up of the following (in thousands):"
+          },
+          {
+            "line": 164,
+            "text": "2026 | 2025 | 2024 |"
+          },
+          {
+            "line": 165,
+            "text": "Paid members 1"
+          },
+          {
+            "line": 166,
+            "text": "| 84,100 | 81,000 | 76,200 |"
+          },
+          {
+            "line": 167,
+            "text": "Household cards | 66,300 | 64,200 | 60,600 |"
+          },
+          {
+            "line": 168,
+            "text": "Total cardholders | 150,400 | 145,200 | 136,800 |"
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C002",
+    "text": "The company's strategy is to provide members with high-quality merchandise at consistently lower prices than elsewhere, limiting most items to fast-selling models, sizes, and colors. It carries fewer than 4,000 active SKUs per warehouse in its core warehouse business (10-K Item 1, line 146). The number of warehouses with gas stations varies significantly by country, with 774 gas stations operating at the end of 2026, representing 11% of total net sales in 2026 (10-K Item 1, lines 153–155).",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt.",
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          146
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 146,
+            "text": "Our strategy is to provide our members with a broad range of high-quality merchandise at prices we believe are consistently lower than elsewhere. We seek to limit most items to fast-selling models, sizes, and colors. We carry less than 4,000 active stock keeping units (SKUs) per warehouse in our core warehouse business, significantly less than other broadline retailers. We average from 9,000 to 11,000 SKUs online, some of which are available in our warehouses. Many consumable products are offered for sale in case, carton, or multiple-pack quantities only."
+          }
+        ]
+      },
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          153,
+          154,
+          155
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 153,
+            "text": "■ Warehouse Ancillary (includes gasoline, pharmacy, food court, optical, hearing aids, and tire installation)"
+          },
+          {
+            "line": 154,
+            "text": "■ Other Businesses (includes e-commerce, business centers, travel, and other)"
+          },
+          {
+            "line": 155,
+            "text": "Warehouse ancillary operate primarily within, next to or near our warehouses, encouraging more frequent shopping. The number of warehouses with gas stations varies significantly by country. We operated 774 gas stations at the end of 2026. Our gasoline business represented 11% of total net sales in 2026."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C003",
+    "text": "In 2026, comparable sales growth was driven by increases in average ticket and shopping frequency, as well as new warehouse openings. Digitally-enabled comparable sales increased 21% during 2026 (Item 7, line 458). The company's membership renewal rate was 92.3% in the U.S. and Canada and 89.8% worldwide at the end of 2026 (10-K Item 1, lines 172).",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt.",
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          458
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 458,
+            "text": "Digitally-enabled comparable sales increased 21% during 2026, both as reported and excluding the impact of changes in foreign currencies."
+          }
+        ]
+      },
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          172
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 172,
+            "text": "Our member renewal rate was 92.3% in the U.S. and Canada and 89.8% worldwide at the end of 2026. This rate is a trailing calculation that captures renewals during the period seven to eighteen months prior to the reporting date. Memberships that have an expiration date in the six months prior to the end of our reporting period are excluded from this calculation, regardless of whether or not they have been renewed. Although most members renew prior to expiration, the vast majority of those who renew late do so within six months of expiration. The timing of renewal after expiration is impacted by a variety of factors, such as warehouse openings and promotional activity."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C004",
+    "text": "Insight: Costco's business model relies on direct relationships with many producers of brand-name merchandise and does not obtain a significant portion of merchandise from any one supplier; however, when sources of supply become unavailable, the company seeks alternative sources or items, indicating a structural dependency on supplier diversity (10-K Item 1, line 159).",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          159
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 159,
+            "text": "We have direct relationships with many producers of brand-name merchandise. We do not obtain a significant portion of merchandise from any one supplier. When sources of supply become unavailable, we seek alternative sources or items. We pursue diversification in our supply-chain and seek to expand in-country production. We also purchase and manufacture private-label merchandise, where quality and member demand are high and the value to our members is significant."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C005",
+    "text": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Revenue                          | $303,154,000,000 | $275,235,000,000 | `RevenueFromContractWithCustomerExcludingAssessedTax` | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 638, accn 0000909832-26-000093 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          638
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 638,
+            "text": "Total revenue | 303,154 | 275,235 | 254,453 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "total_revenue",
+        "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "unit": "USD",
+        "start": "2025-09-01",
+        "end": "2026-08-30",
+        "val": 303154000000,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026",
+        "prior_val": 275235000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C006",
+    "text": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Operating Income                 | $11,685,000,000  | $10,383,000,000  | `OperatingIncomeLoss`                  | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 642, accn 0000909832-26-000093 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          642
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 642,
+            "text": "Operating income | 11,685 | 10,383 | 9,285 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "operating_income",
+        "tag": "OperatingIncomeLoss",
+        "unit": "USD",
+        "start": "2025-09-01",
+        "end": "2026-08-30",
+        "val": 11685000000,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026",
+        "prior_val": 10383000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C007",
+    "text": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Net Income                       | $9,226,000,000   | $8,099,000,000   | `NetIncomeLoss`                        | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 648, accn 0000909832-26-000093 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          648
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 648,
+            "text": "NET INCOME | $ | 9,226 | $ | 8,099 | $ | 7,367 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "net_income",
+        "tag": "NetIncomeLoss",
+        "unit": "USD",
+        "start": "2025-09-01",
+        "end": "2026-08-30",
+        "val": 9226000000,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026",
+        "prior_val": 8099000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C008",
+    "text": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Diluted EPS                      | $20.76           | $18.21           | `EarningsPerShareDiluted`              | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 652, accn 0000909832-26-000093 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          652
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 652,
+            "text": "Diluted | $ | 20.76 | $ | 18.21 | $ | 16.56 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "diluted_eps",
+        "tag": "EarningsPerShareDiluted",
+        "unit": "USD/shares",
+        "start": "2025-09-01",
+        "end": "2026-08-30",
+        "val": 20.76,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026",
+        "prior_val": 18.21
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C009",
+    "text": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Stockholders' Equity             | $35,803,000,000  | $29,164,000,000  | `StockholdersEquity`                   | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 718, accn 0000909832-26-000093 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          718
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 718,
+            "text": "TOTAL EQUITY | 35,803 | 29,164 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "equity",
+        "tag": "StockholdersEquity",
+        "unit": "USD",
+        "end": "2026-08-30",
+        "val": 35803000000,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026Q3I",
+        "prior_val": 29164000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C010",
+    "text": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Current Debt                     | $2,248,000,000   | $75,000,000      | `LongTermDebtCurrent`                  | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 701, accn 0000909832-26-000093 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          701
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 701,
+            "text": "Current portion of long-term debt | 2,248 | 75 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "current_debt",
+        "tag": "LongTermDebtCurrent",
+        "unit": "USD",
+        "end": "2026-08-30",
+        "val": 2248000000,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026Q3I",
+        "prior_val": 75000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C011",
+    "text": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Noncurrent Debt                  | $3,914,000,000   | $5,713,000,000   | `LongTermDebtNoncurrent`               | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 705, accn 0000909832-26-000093 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          705
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 705,
+            "text": "Long-term debt, excluding current portion | 3,914 | 5,713 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "long_term_debt",
+        "tag": "LongTermDebtNoncurrent",
+        "unit": "USD",
+        "end": "2026-08-30",
+        "val": 3914000000,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026Q3I",
+        "prior_val": 5713000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C012",
+    "text": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Operating Cash Flow              | $15,817,000,000  | $13,335,000,000  | `NetCashProvidedByUsedInOperatingActivities` | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 505, accn 0000909832-26-000093 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          505
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 505,
+            "text": "Net cash provided by operating activities | $ | 15,817 | $ | 13,335 | $ | 11,339 |"
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "cash_from_operations",
+        "tag": "NetCashProvidedByUsedInOperatingActivities",
+        "unit": "USD",
+        "start": "2025-09-01",
+        "end": "2026-08-30",
+        "val": 15817000000,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026",
+        "prior_val": 13335000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C013",
+    "text": "| Financial fact                     | FY2026           | FY2025           | Tag                                    | 10-K evidence                                                                 |\n| Capex                            | $6,435,000,000   | $5,498,000,000   | `PaymentsToAcquirePropertyPlantAndEquipment` | [10-K_2026-10-07.txt](file:///10-K_2026-10-07.txt), line 515, accn 0000909832-26-000093 |",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          515
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 515,
+            "text": "Our cash flow provided by operations is primarily from net sales and membership fees. Cash flow used in operations generally consists of payments to merchandise suppliers, warehouse operating costs, including wages and employee benefits, utilities, credit and debit card processing fees, and operating leases. Cash used in operations also includes payments for income taxes. Changes in our net investment in merchandise inventories (the difference between merchandise inventories and accounts payable) is impacted by several factors, including inventory levels and turnover, payment terms with suppliers, and early payments to obtain discounts. Net cash provided by operating activities totaled $15,817 in 2026, compared to $13,335 in 2025. The increase was primarily due to higher operating income, as well as reduced net investment in merchandise inventories. The latter was a result of faster inventory turns and improved payment terms with suppliers."
+          }
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "file": "facts.json",
+        "concept": "capex",
+        "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "unit": "USD",
+        "start": "2025-09-01",
+        "end": "2026-08-30",
+        "val": 6435000000,
+        "accn": "0000909832-26-000093",
+        "fy": 2026,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-10-07",
+        "frame": "CY2026",
+        "prior_val": 5498000000
+      }
+    ],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C014",
+    "text": "- **Revenue growth**:  \n  $$\n  \\frac{303154000000.0 - 275235000000.0}{275235000000.0} = \\textbf{10.1437\\%}\n  $$  \n  Source: [STEP 5](file:///step_5_calculator_output.txt)",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Ratio definition is missing: prior."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Could not safely recalculate the expression: invalid syntax (<unknown>, line 1)",
+    "ratio_definition_check": "Ratio definition is missing: prior."
+  },
+  {
+    "id": "C015",
+    "text": "- **Operating margin**:  \n  $$\n  \\frac{11685000000.0}{303154000000.0} = \\textbf{3.8545\\%}\n  $$  \n  Source: [STEP 5](file:///step_5_calculator_output.txt)",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Ratio definition is missing: operating income, revenue."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Could not safely recalculate the expression: invalid syntax (<unknown>, line 1)",
+    "ratio_definition_check": "Ratio definition is missing: operating income, revenue."
+  },
+  {
+    "id": "C016",
+    "text": "- **Return on average equity**:  \n  $$\n  \\frac{9226000000.0}{\\left(\\frac{35803000000.0 + 29164000000.0}{2}\\right)} = \\textbf{28.4021\\%}\n  $$  \n  Source: [STEP 5](file:///step_5_calculator_output.txt)",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Ratio definition is missing: net income."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Could not safely recalculate the expression: invalid syntax (<unknown>, line 1)",
+    "ratio_definition_check": "Ratio definition is missing: net income."
+  },
+  {
+    "id": "C017",
+    "text": "- **Debt to equity (current + noncurrent long-term debt)**:  \n  $$\n  \\frac{6162000000}{35803000000.0} = \\textbf{17.2108\\%}\n  $$  \n  Source: [STEP 5](file:///step_5_calculator_output.txt)",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Ratio definition states its inputs and arithmetic."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Could not safely recalculate the expression: invalid syntax (<unknown>, line 1)",
+    "ratio_definition_check": "Ratio definition states its inputs and arithmetic."
+  },
+  {
+    "id": "C018",
+    "text": "- **Free cash flow**:  \n  $$\n  15817000000.0 - 6435000000.0 = \\textbf{\\$9,382,000,000}\n  $$  \n  Source: [STEP 5](file:///step_5_calculator_output.txt)",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Ratio definition is missing: cash from operations, property and equipment."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Could not safely recalculate the expression: invalid syntax (<unknown>, line 1)",
+    "ratio_definition_check": "Ratio definition is missing: cash from operations, property and equipment."
+  },
+  {
+    "id": "C019",
+    "text": "- **P/E ratio**:  \n  $$\n  \\frac{992.13}{20.76} = \\textbf{47.7905}\n  $$  \n  Source: [STEP 5](file:///step_5_calculator_output.txt)",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Ratio definition is missing: price, diluted eps."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Could not safely recalculate the expression: invalid syntax (<unknown>, line 1)",
+    "ratio_definition_check": "Ratio definition is missing: price, diluted eps."
+  },
+  {
+    "id": "C020",
+    "text": "Costco reported fourth-quarter net sales of $93.9 billion, up 11.2% year-over-year, with GAAP diluted EPS of $6.75 per share, compared to $5.87 in the prior year. The fiscal year's total revenue was $297.2 billion, a 10.1% increase from $269.9 billion.",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C021",
+    "text": "| Walmart Inc. (WMT) | 713,163,000,000     | 29,825,000,000         | 4.1821%          |",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C022",
+    "text": "| Target Corp. (TGT) | 104,780,000,000     | 5,117,000,000          | 4.8836%          |",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C023",
+    "text": "| BJ's Wholesale Club Holdings, Inc. (BJ) | 21,457,274,000      | 816,604,000            | 3.8057%          |",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C024",
+    "text": "Costco’s operating margin of **3.8545%** is below the peer group average.",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Ratio definition is missing: operating income, revenue."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "Ratio definition is missing: operating income, revenue."
+  },
+  {
+    "id": "C025",
+    "text": "$$",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C026",
+    "text": "\\frac{\\text{Share Price } \\$992.13}{\\text{Diluted EPS } \\$20.76} = \\textbf{47.7905}",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "Could not safely recalculate the expression: unexpected character after line continuation character (<unknown>, line 1)",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C027",
+    "text": "$$",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C028",
+    "text": "Insight: Costco's SG&A expenses as a percentage of net sales decreased 10 basis points in 2026 compared with 2025, but increased one basis point after excluding gasoline price inflation (10-K, line 482).",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          482
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 482,
+            "text": "SG&A expenses as a percentage of net sales decreased 10 basis points compared to 2025. SG&A expenses as a percentage of net sales excluding the impact of gasoline price inflation was 9.26%, an increase of one basis point. Changes in foreign currencies relative to the U.S. dollar increased SG&A expenses by $126, attributable to our Other International and Canadian operations. SG&A expenses as a percentage of net sales increased in our Canadian and Other International segments and were flat in our U.S. segment compared to 2025."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C029",
+    "text": "Costco plans to open up to 33 new warehouses in 2027, including five relocations, with capital expenditures expected to total approximately $7,500 during fiscal 2027 (Item 7, lines 518–519). The company's primary requirements for capital include acquiring land, buildings, and equipment for new and remodeled warehouses, information systems, and manufacturing and distribution facilities (Item 7, line 518).",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt.",
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          518,
+          519
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 518,
+            "text": "Capital Expenditure Plans"
+          },
+          {
+            "line": 519,
+            "text": "Our primary requirements for capital are acquiring land, buildings, and equipment for new and remodeled warehouses, information systems, and manufacturing and distribution facilities. In 2026, we spent $6,435 on capital expenditures, and it is our current intention to spend approximately $7,500 du ring fiscal 2027 . These expenditures are expected to be financed with cash from operations, cash and cash equivalents, and short-term investments. We opened 28 new warehous es, including three relocations, in 2026, and plan to open up to 33 new warehouses, including five relocations, in 2027. There can be no assurance that current expectations will be realized, and plans are subject to change upon further review of our capital expenditure needs and the economic environment."
+          }
+        ]
+      },
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          518
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 518,
+            "text": "Capital Expenditure Plans"
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C030",
+    "text": "The company's cash flows from operations are primarily driven by net sales and membership fees. In 2026, net cash provided by operating activities totaled $15,817 million, compared to $13,335 million in 2025 (Item 7, line 505). Cash and cash equivalents were $21,301 million at the end of 2026, compared to $15,284 million at the end of 2025 (Item 7, line 508).",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt.",
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          505
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 505,
+            "text": "Net cash provided by operating activities | $ | 15,817 | $ | 13,335 | $ | 11,339 |"
+          }
+        ]
+      },
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          508
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 508,
+            "text": "Our primary sources of liquidity are cash flows from operations, cash and cash equivalents, and short-term investments. Cash and cash equivalents and short-term investments were $21,301 and $15,284 at August 30, 2026, and August 31, 2025. Of these balances, unsettled credit and debit card receivables represented $2,842 and $2,670. These receivables generally settle within four days."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C031",
+    "text": "Costco's membership fee revenue increased 11% in 2026, driven by new member sign-ups, fee increases, and upgrades to Executive memberships. At the end of 2026, member renewal rates were 92.3% in the U.S. and Canada and 89.8% worldwide (Item 7, line 465). The company also reported a 13% increase in quarterly cash dividend in April 2026 (Item 7, line 426).",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt.",
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          465
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 465,
+            "text": "Membership fee revenue increased 11% in 2026, driven by new member sign-ups, membership fee increases, and upgrades to Executive memberships. At the end of 2026, member renewal rates were 92.3% in the U.S. and Canada and 89.8% worldwide."
+          }
+        ]
+      },
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          426
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 426,
+            "text": "• In April, the Board of Directors approved a 13% increase in the quarterly cash dividend."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C032",
+    "text": "The gross margin percentage decreased three basis points in 2026, but increased 10 basis points excluding the impact of gasoline price inflation (Item 7, line 475). SG&A expenses as a percentage of net sales decreased 10 basis points, though it increased one basis point excluding the impact of gasoline price inflation (Item 7, line 482).",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt.",
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          475
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 475,
+            "text": "Gross margin percentage decreased three basis points. Excluding the impact of gasoline price inflation on net sales, gross margin percentage was 11.22%, an increase of 10 basis points. This increase was positively impacted by 19 basis points in warehouse ancillary and other businesses, primarily gasoline and pharmacy, offset by an 11 basis point decrease in core merchandise categories. The majority of the increase in warehouse ancillary and other businesses and the decrease in core merchandise categories was due to the change in sales mix as warehouse ancillary and other businesses sales grew at a faster rate than core merchandise categories. Core merchandise categories were also negatively impacted by our co-branded credit card program as a result of reward costs associated with higher gasoline sales. IEEPA tariff refunds, net of investment in price reductions for members, positively impacted gross margin by three basis points."
+          }
+        ]
+      },
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          482
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 482,
+            "text": "SG&A expenses as a percentage of net sales decreased 10 basis points compared to 2025. SG&A expenses as a percentage of net sales excluding the impact of gasoline price inflation was 9.26%, an increase of one basis point. Changes in foreign currencies relative to the U.S. dollar increased SG&A expenses by $126, attributable to our Other International and Canadian operations. SG&A expenses as a percentage of net sales increased in our Canadian and Other International segments and were flat in our U.S. segment compared to 2025."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C033",
+    "text": "Insight: Costco's gross margin percentage decreased three basis points in 2026, but increased 10 basis points to 11.22% after excluding gasoline price inflation (10-K, line 475).",
+    "code_mark": null,
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-10-07.txt."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-10-07.txt",
+        "lines": [
+          475
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 475,
+            "text": "Gross margin percentage decreased three basis points. Excluding the impact of gasoline price inflation on net sales, gross margin percentage was 11.22%, an increase of 10 basis points. This increase was positively impacted by 19 basis points in warehouse ancillary and other businesses, primarily gasoline and pharmacy, offset by an 11 basis point decrease in core merchandise categories. The majority of the increase in warehouse ancillary and other businesses and the decrease in core merchandise categories was due to the change in sales mix as warehouse ancillary and other businesses sales grew at a faster rate than core merchandise categories. Core merchandise categories were also negatively impacted by our co-branded credit card program as a result of reward costs associated with higher gasoline sales. IEEPA tariff refunds, net of investment in price reductions for members, positively impacted gross margin by three basis points."
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  }
+]

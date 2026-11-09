@@ -1,0 +1,13 @@
+{
+  "queue": [
+    {
+      "role": "Financial Analyst",
+      "requests": [
+        {
+          "part": "Valuation Insights",
+          "problem": "The `Insight:` line must cite the filing line that supports its claim."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": "C031",
+      "mark": "OK",
+      "reason": "The statement accurately reflects the information provided in the 10-K filing, citing specific lines (465 and 426) that support the claims about membership fee revenue increase, renewal rates, and dividend increase.",
+      "correction": null
+    },
+    {
+      "id": "C032",
+      "mark": "OK",
+      "reason": "The statement correctly summarizes the gross margin and SG&A expense information from the 10-K filing, referencing lines 475 and 482 to support the claims about margin changes and expense percentages.",
+      "correction": null
+    },
+    {
+      "id": "C033",
+      "mark": "OK",
+      "reason": "The statement correctly identifies that Costco's gross margin percentage decreased three basis points in 2026 but increased 10 basis points when excluding gasoline price inflation, as stated in line 475 of the 10-K filing.",
+      "correction": null
+    }
+  ]
+}

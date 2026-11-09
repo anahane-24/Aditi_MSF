@@ -30,6 +30,11 @@ ROLE_FILES = {
     "Verifier": "verifier.md",
 }
 ANALYST_ROLES = ("Research Analyst", "Financial Analyst", "Investment Advisor")
+INSIGHT_PARTS = {
+    "Research Analyst": "Market Positioning and Growth Outlook",
+    "Financial Analyst": "Valuation Insights",
+    "Investment Advisor": "Investment Recommendation",
+}
 REQUIRED_PARTS = desk_app.REQUIRED_PARTS
 GLOBAL_MODEL: LLM | None = None
 
@@ -115,6 +120,95 @@ def message_text(message: Any) -> str:
     return str(content).strip()
 
 
+def normalize_insight_prefixes(text: str) -> str:
+    """Normalize Markdown Insight headings to the required literal prefix."""
+    lines = text.splitlines()
+    normalized: list[str] = []
+    index = 0
+    pattern = re.compile(r"^\s*(?:(?:[-*]\s+)|(?:#{1,6}\s*))?(?:\*\*)?Insight(?:\*\*)?:\s*(.*)$", re.I)
+    while index < len(lines):
+        match = pattern.match(lines[index])
+        if not match:
+            normalized.append(lines[index])
+            index += 1
+            continue
+        content = match.group(1).strip()
+        index += 1
+        if not content:
+            continuation: list[str] = []
+            while index < len(lines) and lines[index].strip():
+                continuation.append(lines[index].strip())
+                index += 1
+            content = " ".join(continuation)
+        normalized.append(f"Insight: {content}".rstrip())
+    result = "\n".join(normalized)
+    result = re.sub(r"([A-Za-z0-9_.-]+\.txt)\s*[:#]\s*(\d+)\b", r"\1, line \2", result, flags=re.I)
+    return result
+
+
+def distinct_advisor_insight(
+    output: str, role_outputs: dict[str, str], first_paragraph: str
+) -> str:
+    """Keep the Advisor's final Insight distinct and sourced after its one retry."""
+    output = normalize_insight_prefixes(output).rstrip()
+    existing_lines = [
+        line.strip()
+        for role in ("Research Analyst", "Financial Analyst")
+        for line in role_outputs.get(role, "").splitlines()
+        if line.strip().startswith("Insight:")
+    ]
+    own_lines = [line.strip() for line in output.splitlines() if line.strip().startswith("Insight:")]
+    normalized_existing = {re.sub(r"\W+", " ", line.lower()).strip() for line in existing_lines}
+    cited_line_sets = [
+        set(re.findall(r"\bline\s+(\d+)\b", line, re.I))
+        for line in existing_lines
+    ]
+    own_cited_lines = set(re.findall(r"\bline\s+(\d+)\b", " ".join(own_lines), re.I))
+    same_evidence_line = bool(own_cited_lines) and any(own_cited_lines & lines for lines in cited_line_sets)
+    own_is_distinct = (
+        len(own_lines) == 1
+        and re.sub(r"\W+", " ", own_lines[0].lower()).strip() not in normalized_existing
+        and not same_evidence_line
+    )
+    if own_is_distinct:
+        return output
+
+    headline_numbers = set(re.findall(r"\d+(?:\.\d+)?", first_paragraph))
+    research_text = role_outputs.get("Research Analyst", "")
+    candidates: list[str] = []
+    for paragraph in re.split(r"\n\s*\n", research_text):
+        if paragraph.strip().startswith("Insight:"):
+            continue
+        for sentence in re.split(r"(?<=[.!?])\s+", paragraph.strip()):
+            if not re.search(r"\bline\s+\d+\b", sentence, re.I):
+                continue
+            claim_text = re.sub(r"\[[^\]]*\]|\([^)]*(?:line|accession|10-K|10-Q|8-K)[^)]*\)", "", sentence, flags=re.I)
+            claim_text = re.sub(r"\b20\d{2}\b", "", claim_text)
+            if set(re.findall(r"\d+(?:\.\d+)?", claim_text)) & headline_numbers:
+                continue
+            if re.search(r"\b(?:accession|10-K|10-Q|8-K)\b", sentence, re.I):
+                candidate = "Insight: " + sentence.lstrip("- *")
+                if re.sub(r"\W+", " ", candidate.lower()).strip() not in normalized_existing:
+                    candidates.append(candidate)
+    if candidates:
+        priority_terms = (
+            "operating costs",
+            "decrease operating margins",
+            "attract and retain",
+            "foreign exchange",
+            "supply chain",
+            "partnership",
+        )
+        candidates.sort(
+            key=lambda candidate: next(
+                (index for index, term in enumerate(priority_terms) if term in candidate.lower()),
+                len(priority_terms),
+            )
+        )
+        return output.rsplit("Insight:", 1)[0].rstrip() + "\n\n" + candidates[0]
+    return output
+
+
 def call_model(role: str, payload: dict[str, Any], *, final_compile: bool = False) -> str:
     if GLOBAL_MODEL is None:
         raise RuntimeError("Model client is not configured")
@@ -129,6 +223,8 @@ def call_model(role: str, payload: dict[str, Any], *, final_compile: bool = Fals
         ]
     )
     text = message_text(response)
+    if role in ANALYST_ROLES:
+        text = normalize_insight_prefixes(text)
     if not text:
         raise RuntimeError(f"{role} returned an empty response")
     return text
@@ -236,12 +332,12 @@ def make_role_payloads(state: TeamState) -> dict[str, dict[str, Any]]:
     research = desk_app.role_payload(
         "Write evidence-based research for the five-part report. Address the business model, competitive position, catalysts, and recent developments.",
         research_context,
-        "Concise Markdown. Quote every factual claim. Cite the exact filename, line, and accession.",
+        "Concise Markdown. Quote every factual claim. Cite the exact filename, line, and accession. End with exactly one standalone line that begins `Insight:`. Use a qualitative operating dependency or risk from Item 1 or Item 7. Prefer a claim that has no number. Cite the filing filename, accession, and line on that line. The claim must not repeat a figure or claim from the earnings release's first paragraph.",
     )
     financial = desk_app.role_payload(
         "Write the financial analysis from the supplied seven-step desk output.",
         financial_context,
-        "Concise Markdown. Include each source, period, unit, definition, and supplied arithmetic.",
+        "Concise Markdown. Include each source, period, unit, definition, and supplied arithmetic. End with exactly one standalone line that begins `Insight:`. Use one distinct annual financial fact or comparison from the 10-K. State its fiscal period, cite the filing filename, accession, and statement line, and give the arithmetic if it is a ratio. Do not repeat the Research Analyst's Insight or a figure from the earnings release's first paragraph.",
     )
     return {"Research Analyst": research, "Financial Analyst": financial}
 
@@ -277,7 +373,7 @@ def run_investment_advisor_node(state: TeamState) -> dict[str, Any]:
             "Research Analyst": outputs["Research Analyst"],
             "Financial Analyst": outputs["Financial Analyst"],
         },
-        "Concise Markdown. Give one of Buy, Hold, or Sell. Name one deciding number from the Financial Analyst output.",
+        "Concise Markdown. Give one of Buy, Hold, or Sell. Name one deciding number from the Financial Analyst output. End with exactly one standalone line that begins `Insight:`. Choose one filing-supported risk, catalyst, or implication from the Research Analyst or Financial Analyst output. Cite its filing filename, accession, and line. Do not repeat either analyst's Insight line or a figure from the earnings release's first paragraph.",
     )
     payloads = dict(state.get("role_payloads", {}))
     payloads[role] = payload
@@ -305,12 +401,109 @@ def manager_payload(state: TeamState, *, final: bool = False) -> dict[str, Any]:
         "role_outputs": state["role_outputs"],
         "previous_checks": state.get("manager_checks", []),
         "revisions_used": state.get("retry_used", {}),
+        "earnings_release_first_paragraph": earnings_release_first_paragraph(state),
     }
     return desk_app.role_payload(
         task,
         context,
         "One JSON object with checks and report_markdown, using the Strategy Manager schema.",
     )
+
+
+def earnings_release_first_paragraph(state: TeamState) -> str:
+    """Return the first body paragraph from the saved Exhibit 99.1 text."""
+    filings = state.get("filings", {})
+    release = filings.get("earnings_8k", {})
+    path = Path(state["run_dir"]) / f"8-K_Ex99.1_{release.get('date')}.txt"
+    if not path.is_file():
+        return ""
+    lines = [line.strip() for line in path.read_text(encoding="utf-8", errors="replace").splitlines()]
+    skip = {"EX-99.1", "Document", "Press Release", "Exhibit 99.1"}
+    body = [line for line in lines if line and line not in skip and not line.isdigit() and not line.endswith(".htm")]
+    for line in body:
+        if re.search(r"\b(?:announced|reports?|reported)\b", line, re.I) and len(line) > 50:
+            return line[:1200]
+    return " ".join(body[:2])[:1200]
+
+
+def enforce_insight_checks(
+    checks: list[dict[str, str]], report: str, outputs: dict[str, str]
+) -> list[dict[str, str]]:
+    """Make each analyst Insight a required, sourced part of the Manager review."""
+    result = [dict(item) for item in checks]
+    report_lines = [line.strip() for line in report.splitlines() if line.strip().startswith("Insight:")]
+    seen_insights: set[str] = set()
+    for role, part in INSIGHT_PARTS.items():
+        role_text = outputs.get(role, "")
+        insight_lines = [line.strip() for line in role_text.splitlines() if line.strip().startswith("Insight:")]
+        problem = ""
+        if len(insight_lines) != 1:
+            problem = "The role output must contain exactly one final standalone line that begins `Insight:`."
+        elif role_text.strip().splitlines()[-1].strip() != insight_lines[0]:
+            problem = "The `Insight:` line must be the final line of the role output."
+        elif not re.search(r"\bline\s+\d+\b", insight_lines[0], re.I):
+            problem = "The `Insight:` line must cite the filing line that supports its claim."
+        elif insight_lines[0] in seen_insights:
+            problem = "This `Insight:` repeats another analyst role's Insight. State a distinct claim."
+        elif report_lines.count(insight_lines[0]) != 1:
+            problem = "The compiled report must include this role's `Insight:` line exactly once as a standalone line."
+        if insight_lines:
+            seen_insights.add(insight_lines[0])
+        existing = next((item for item in result if item.get("part") == part), None)
+        if existing is None:
+            existing = {"part": part, "status": "pass", "responsible_role": role, "problem": ""}
+            result.append(existing)
+        if problem:
+            existing["status"] = "fail"
+            existing["responsible_role"] = role
+            existing["problem"] = (existing.get("problem", "") + " " + problem).strip()
+        elif existing.get("status") not in ("pass", "passed", "ok"):
+            prior_problem = existing.get("problem", "").lower()
+            resolved_output_problem = (
+                "compiled report must include" in prior_problem
+                or "exactly one final standalone line" in prior_problem
+                or "insight line must be the final line" in prior_problem
+                or "repeats another analyst role's insight" in prior_problem
+                or "must cite the filing line that supports its claim" in prior_problem
+            )
+            if resolved_output_problem:
+                existing["status"] = "pass"
+                existing["problem"] = ""
+    return result
+
+
+def ensure_report_insight_lines(report: str, outputs: dict[str, str]) -> str:
+    """Copy each role's exact Insight line into its report part after final compile."""
+    cleaned: list[str] = []
+    skipping_insight = False
+    for line in normalize_insight_prefixes(report).splitlines():
+        if line.strip().startswith("Insight:"):
+            skipping_insight = True
+            continue
+        if skipping_insight and line.strip():
+            if line.startswith("## "):
+                skipping_insight = False
+            else:
+                continue
+        if not line.strip():
+            skipping_insight = False
+        cleaned.append(line)
+    result = "\n".join(cleaned).rstrip()
+    for role, part in INSIGHT_PARTS.items():
+        insight_lines = [
+            line.strip()
+            for line in outputs.get(role, "").splitlines()
+            if line.strip().startswith("Insight:")
+        ]
+        if len(insight_lines) != 1:
+            continue
+        heading = re.search(rf"^##\s+{re.escape(part)}\s*$", result, re.M)
+        if not heading:
+            continue
+        next_heading = re.search(r"^##\s+", result[heading.end() :], re.M)
+        insert_at = heading.end() + next_heading.start() if next_heading else len(result)
+        result = result[:insert_at].rstrip() + "\n\n" + insight_lines[0] + "\n\n" + result[insert_at:].lstrip()
+    return result
 
 
 def retry_queue_from_checks(checks: list[dict[str, str]]) -> list[dict[str, Any]]:
@@ -339,7 +532,9 @@ def strategy_manager_node(state: TeamState) -> dict[str, Any]:
         report = str(parsed.get("report_markdown", "")).strip()
         if not report:
             raise ValueError("Strategy Manager did not return report_markdown")
-        checks = desk_app.status_checks(parsed, report)
+        checks = enforce_insight_checks(
+            desk_app.status_checks(parsed, report), report, state["role_outputs"]
+        )
         queue = retry_queue_from_checks(checks)
         used = dict(state.get("retry_used", {}))
         queue = [item for item in queue if not used.get(item["role"], False)]
@@ -396,7 +591,7 @@ def retry_role_node(role: str):
         requested = state.get("current_retry", {})
         original = state["role_payloads"][role]
         payload = desk_app.role_payload(
-            "Revise only the named failing part or parts. This is the one permitted revision for this role.",
+            "Revise only the named failing part or parts. This is the one permitted revision for this role. Preserve the required final `Insight:` line. If the review failed because the compiled report omitted the line, repeat the same supported line at the end of your revised output. Return no text after the `Insight:` line.",
             {
                 "original_context": original["context"],
                 "previous_output": state["role_outputs"].get(role, ""),
@@ -411,6 +606,21 @@ def retry_role_node(role: str):
         except Exception as exc:
             save_node_event(run_dir, node_name, attempt, payload, {"error": repr(exc)})
             raise
+        revised_insights = [
+            line.strip() for line in output.splitlines() if line.strip().startswith("Insight:")
+        ]
+        previous_output = state["role_outputs"].get(role, "")
+        previous_insights = [
+            line.strip() for line in previous_output.splitlines() if line.strip().startswith("Insight:")
+        ]
+        if not revised_insights and len(previous_insights) == 1:
+            output = output.rstrip() + "\n\n" + previous_insights[0]
+        if role == "Investment Advisor":
+            output = distinct_advisor_insight(
+                output,
+                state.get("role_outputs", {}),
+                earnings_release_first_paragraph(state),
+            )
         save_node_event(run_dir, node_name, attempt, payload, {"output": output})
         outputs = dict(state["role_outputs"])
         outputs[role] = output
@@ -434,7 +644,10 @@ def final_compile_node(state: TeamState) -> dict[str, Any]:
         report = str(parsed.get("report_markdown", "")).strip()
         if not report:
             raise ValueError("Final Strategy Manager call did not return report_markdown")
-        checks = desk_app.status_checks(parsed, report)
+        report = ensure_report_insight_lines(report, state["role_outputs"])
+        checks = enforce_insight_checks(
+            desk_app.status_checks(parsed, report), report, state["role_outputs"]
+        )
         result = {"checks": checks, "report_markdown": report}
     except Exception as exc:
         save_node_event(run_dir, "Strategy Manager (final compile)", attempt, payload, {"error": repr(exc)})
@@ -525,6 +738,8 @@ def report_blocks(report: str) -> list[dict[str, str]]:
                 current = []
             in_recommendation = True
         if in_recommendation:
+            if line.strip().startswith("Insight:"):
+                blocks.append(line.strip())
             continue
         if line.startswith("Filings read:") or line.startswith("Run time:"):
             continue
@@ -572,7 +787,11 @@ def report_blocks(report: str) -> list[dict[str, str]]:
         claim_scan = re.sub(r"\b(?:accession|CIK)\s+\S+", "", claim_scan, flags=re.I)
         claim_scan = re.sub(r"\b(?:FY|fiscal year)\s*20\d{2}\b", "", claim_scan, flags=re.I)
         claim_scan = re.sub(r"\b20\d{2}-\d{2}-\d{2}\b", "", claim_scan)
-        if re.search(r"(?:\$|%|\b\d[\d,]*(?:\.\d+)?\s*(?:billion|million|basis points|bps)\b)", claim_scan, re.I):
+        if re.match(r"^Insight:", block, re.I) or re.search(
+            r"(?:\$|%|\b\d[\d,]*(?:\.\d+)?\s*(?:billion|million|basis points|bps)\b)",
+            claim_scan,
+            re.I,
+        ):
             result.append({"id": f"C{len(result) + 1:03d}", "text": block})
     return result
 
@@ -931,7 +1150,7 @@ def run_verifier(state: TeamState) -> dict[str, Any]:
         for item in evidence
     ]
     payload = desk_app.role_payload(
-        "Verify every factual and numeric claim outside the Investment Recommendation section. Return exactly one result for every supplied claim ID, in the same order, with no omitted IDs. Do not assess the Investment Advisor's thesis or recommendation. Check only the compiled report, supplied filing text evidence, and supplied saved facts. Mark a claim wrong only when those sources show a different value, period, definition, or arithmetic result. If evidence is missing, mark unsupported, not wrong. Use a price stated in the report to check P/E.",
+        "Verify every supplied factual and numeric claim, including each Insight line. Do not assess the Investment Advisor's thesis or Buy, Hold, or Sell recommendation. The Investment Recommendation Insight line is included for verification. Return exactly one result for every supplied claim ID, in the same order, with no omitted IDs. Check only the compiled report, supplied filing text evidence, and supplied saved facts. Mark a claim wrong only when those sources show a different value, period, definition, or arithmetic result. If evidence is missing, mark unsupported, not wrong. Use a price stated in the report to check P/E.",
         {
             "compiled_report": report,
             "saved_filing_texts": filing_text_evidence,

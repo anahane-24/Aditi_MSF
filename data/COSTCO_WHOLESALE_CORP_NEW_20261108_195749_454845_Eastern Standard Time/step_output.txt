@@ -1,0 +1,46 @@
+
+=== COST ===
+STEP 1 � Resolve ticker to SEC CIK
+COST -> CIK 0000909832 (COSTCO WHOLESALE CORP /NEW)
+
+STEP 2 � Select latest 10-K, 10-Q, and Item 2.02 earnings 8-K
+  Checking 8-K 2026-10-16 (0000909832-26-000100) for Item 2.02
+  Checking 8-K 2026-10-14 (0000909832-26-000096) for Item 2.02
+  Checking 8-K 2026-09-24 (0000909832-26-000084) for Item 2.02
+8-K: 8-K 0000909832-26-000100 | accepted 2026-10-16 16:52:57 (SEC filing page local time) | cost-20261013.htm
+10-K: 10-K 0000909832-26-000093 | accepted 2026-10-06 21:13:15 (SEC filing page local time) | cost-20260830.htm
+10-Q: 10-Q 0000909832-26-000051 | accepted 2026-06-03 16:43:00 (SEC filing page local time) | cost-20260510.htm
+earnings_8k: 8-K 0000909832-26-000084 | accepted 2026-09-24 16:17:37 (SEC filing page local time) | cost-20260924.htm
+
+STEP 3 � Download and save filing text and metadata: C:\Users\ahnah\orca\Aditi_MSF\data\COSTCO_WHOLESALE_CORP_NEW_20261108_195749_454845_Eastern Standard Time
+
+STEP 4 � XBRL facts for the latest fiscal year (prior year beside each)
+total_revenue: 303154000000 USD | tag=RevenueFromContractWithCustomerExcludingAssessedTax | period=2025-09-01 to 2026-08-30 | filing=0000909832-26-000093 | prior=275235000000
+operating_income: 11685000000 USD | tag=OperatingIncomeLoss | period=2025-09-01 to 2026-08-30 | filing=0000909832-26-000093 | prior=10383000000
+net_income: 9226000000 USD | tag=NetIncomeLoss | period=2025-09-01 to 2026-08-30 | filing=0000909832-26-000093 | prior=8099000000
+diluted_eps: 20.76 USD/shares | tag=EarningsPerShareDiluted | period=2025-09-01 to 2026-08-30 | filing=0000909832-26-000093 | prior=18.21
+equity: 35803000000 USD | tag=StockholdersEquity | period= to 2026-08-30 | filing=0000909832-26-000093 | prior=29164000000
+long_term_debt: 3914000000 USD | tag=LongTermDebtNoncurrent | period= to 2026-08-30 | filing=0000909832-26-000093 | prior=5713000000
+current_debt: 2248000000 USD | tag=LongTermDebtCurrent | period= to 2026-08-30 | filing=0000909832-26-000093 | prior=75000000
+cash_from_operations: 15817000000 USD | tag=NetCashProvidedByUsedInOperatingActivities | period=2025-09-01 to 2026-08-30 | filing=0000909832-26-000093 | prior=13335000000
+capex: 6435000000 USD | tag=PaymentsToAcquirePropertyPlantAndEquipment | period=2025-09-01 to 2026-08-30 | filing=0000909832-26-000093 | prior=5498000000
+Long-term debt components (current + noncurrent): {'LongTermDebtCurrent': 2248000000, 'LongTermDebtNoncurrent': 3914000000}
+
+STEP 5 � Calculate ratios from the printed facts
+Revenue growth: (303154000000.0 - 275235000000.0) / 275235000000.0 = 10.1437%
+Operating margin: 11685000000.0 / 303154000000.0 = 3.8545%
+Return on average equity: 9226000000.0 / ((35803000000.0 + 29164000000.0) / 2) = 28.4021%
+Debt to equity (current + noncurrent long-term debt): 6162000000 / 35803000000.0 = 17.2108%
+Free cash flow: 15817000000.0 - 6435000000.0 = 9382000000.0
+P/E: price 992.13 / diluted EPS 20.76 = 47.7905
+
+STEP 6 � Earnings release lines: total revenue and diluted EPS
+Total revenue row: Total revenue | 95,723 | | | 86,156 | | | 303,154 | | | 275,235 | |
+Diluted EPS row: Diluted | $ | 6.75 | | | $ | 5.87 | | | $ | 20.76 | | | $ | 18.21 | |
+
+STEP 7 � Peer facts and operating margin on the same revenue definition
+WMT (Walmart Inc.) revenue: 713163000000 | operating income: 29825000000 | margin: 4.1821% | period: 2026-01-31
+TGT (TARGET CORP) revenue: 104780000000 | operating income: 5117000000 | margin: 4.8836% | period: 2026-01-31
+BJ (BJ's Wholesale Club Holdings, Inc.) revenue: 21457274000 | operating income: 816604000 | margin: 3.8057% | period: 2026-01-31
+
+Saved primary-company filings and facts to: C:\Users\ahnah\orca\Aditi_MSF\data\COSTCO_WHOLESALE_CORP_NEW_20261108_195749_454845_Eastern Standard Time

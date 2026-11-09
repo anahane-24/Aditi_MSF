@@ -1,0 +1,166 @@
+{
+  "items": [
+    {
+      "id": "C001",
+      "mark": "CORRECT",
+      "reason": "The fact correctly identifies Microsoft's revenue growth of 17.79% from the prior year, which aligns with the provided XBRL data showing total revenue of $331.84 billion compared to $281.72 billion.",
+      "correction": null
+    },
+    {
+      "id": "C002",
+      "mark": "CORRECT",
+      "reason": "The operating margin calculation of 46.78% is accurate based on the XBRL data showing operating income of $155.24 billion and total revenue of $331.84 billion.",
+      "correction": null
+    },
+    {
+      "id": "C003",
+      "mark": "CORRECT",
+      "reason": "The net income figure of $133.75 billion aligns with the XBRL data for Microsoft's 2026 fiscal year, matching the reported value in the 10-K filing.",
+      "correction": null
+    },
+    {
+      "id": "C004",
+      "mark": "CORRECT",
+      "reason": "The diluted earnings per share of $17.95 is consistent with the XBRL data from the 10-K filing for Microsoft's fiscal year 2026.",
+      "correction": null
+    },
+    {
+      "id": "C005",
+      "mark": "CORRECT",
+      "reason": "The equity value of $442.39 billion matches the XBRL data for Microsoft's stockholders' equity at the end of the fiscal year 2026.",
+      "correction": null
+    },
+    {
+      "id": "C006",
+      "mark": "CORRECT",
+      "reason": "The long-term debt value of $31.07 billion is accurate according to the XBRL data from Microsoft's 10-K filing for fiscal year 2026.",
+      "correction": null
+    },
+    {
+      "id": "C007",
+      "mark": "CORRECT",
+      "reason": "The current debt value of $9.23 billion aligns with the XBRL data from Microsoft's 10-K filing for fiscal year 2026.",
+      "correction": null
+    },
+    {
+      "id": "C008",
+      "mark": "CORRECT",
+      "reason": "The cash flow from operations of $182.94 billion matches the XBRL data for Microsoft's fiscal year 2026.",
+      "correction": null
+    },
+    {
+      "id": "C009",
+      "mark": "CORRECT",
+      "reason": "The capital expenditure figure of $115.95 billion is consistent with the XBRL data for Microsoft's fiscal year 2026.",
+      "correction": null
+    },
+    {
+      "id": "C010",
+      "mark": "CORRECT",
+      "reason": "The datacenter dependency insight correctly references the 10-K filing, identifying key operational dependencies such as land availability, energy, networking supplies, and server components.",
+      "correction": null
+    },
+    {
+      "id": "C011",
+      "mark": "CORRECT",
+      "reason": "The comparison with Apple's financials is appropriately included, showing Microsoft's revenue of $331.84 billion versus Apple's $478.83 billion for the same period.",
+      "correction": null
+    },
+    {
+      "id": "C012",
+      "mark": "CORRECT",
+      "reason": "The operating income figure of $155.24 billion aligns with the XBRL data from Microsoft's 10-K filing for fiscal year 2026.",
+      "correction": null
+    },
+    {
+      "id": "C013",
+      "mark": "CORRECT",
+      "reason": "The financial comparison between Microsoft and Apple includes relevant metrics such as revenue, operating income, net income, and EPS for the fiscal year 2026.",
+      "correction": null
+    },
+    {
+      "id": "C014",
+      "mark": "CORRECT",
+      "reason": "The insight regarding Microsoft's datacenter operations correctly identifies dependencies on permitted land, predictable energy, networking supplies, and server components as mentioned in the 10-K filing.",
+      "correction": null
+    },
+    {
+      "id": "C015",
+      "mark": "CORRECT",
+      "reason": "The financial metrics for both Microsoft and Apple are accurately extracted from their respective 10-K filings, with proper alignment to the fiscal year 2026.",
+      "correction": null
+    },
+    {
+      "id": "C016",
+      "mark": "CORRECT",
+      "reason": "The revenue growth calculation of 17.79% is mathematically accurate based on the XBRL data showing $331.84 billion versus $281.72 billion.",
+      "correction": null
+    },
+    {
+      "id": "C017",
+      "mark": "CORRECT",
+      "reason": "The operating margin of 46.78% is correctly calculated from the XBRL data showing operating income and total revenue for Microsoft's fiscal year 2026.",
+      "correction": null
+    },
+    {
+      "id": "C018",
+      "mark": "CORRECT",
+      "reason": "The financial comparison includes key metrics such as equity, long-term debt, current debt, cash flow from operations, and capital expenditures for both companies.",
+      "correction": null
+    },
+    {
+      "id": "C019",
+      "mark": "CORRECT",
+      "reason": "The insight correctly references the 10-K filing and identifies Microsoft's datacenter operational dependencies as described in the document.",
+      "correction": null
+    },
+    {
+      "id": "C020",
+      "mark": "CORRECT",
+      "reason": "The financial data for both companies is accurately extracted from their respective 10-K filings, with proper alignment to fiscal year 2026.",
+      "correction": null
+    },
+    {
+      "id": "C021",
+      "mark": "CORRECT",
+      "reason": "The operating income figure of $155.24 billion is consistent with the XBRL data from Microsoft's 10-K filing for fiscal year 2026.",
+      "correction": null
+    },
+    {
+      "id": "C022",
+      "mark": "CORRECT",
+      "reason": "The net income of $133.75 billion aligns with the XBRL data from Microsoft's 10-K filing for fiscal year 2026.",
+      "correction": null
+    },
+    {
+      "id": "C023",
+      "mark": "CORRECT",
+      "reason": "The diluted EPS of $17.95 is accurately reported in the XBRL data from Microsoft's 10-K filing for fiscal year 2026.",
+      "correction": null
+    },
+    {
+      "id": "C024",
+      "mark": "CORRECT",
+      "reason": "The equity value of $442.39 billion matches the XBRL data from Microsoft's 10-K filing for fiscal year 2026.",
+      "correction": null
+    },
+    {
+      "id": "C025",
+      "mark": "CORRECT",
+      "reason": "The long-term debt value of $31.07 billion is accurate according to the XBRL data from Microsoft's 10-K filing for fiscal year 2026.",
+      "correction": null
+    },
+    {
+      "id": "C026",
+      "mark": "CORRECT",
+      "reason": "The current debt value of $9.23 billion aligns with the XBRL data from Microsoft's 10-K filing for fiscal year 2026.",
+      "correction": null
+    },
+    {
+      "id": "C027",
+      "mark": "CORRECT",
+      "reason": "The insight correctly identifies Microsoft's datacenter dependencies on permitted land, predictable energy, networking supplies, and server components as mentioned in the 10-K filing.",
+      "correction": null
+    }
+  ]
+}

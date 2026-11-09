@@ -1,0 +1,9 @@
+{
+  "ticker": "MSFT",
+  "peers": [
+    "AAPL"
+  ],
+  "price": null,
+  "price_date": null,
+  "price_source": null
+}

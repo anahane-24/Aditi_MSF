@@ -1,0 +1,22 @@
+{
+  "queue": [
+    {
+      "role": "Financial Analyst",
+      "requests": [
+        {
+          "part": "Valuation Insights",
+          "problem": "The `Insight:` line must cite the filing line that supports its claim."
+        }
+      ]
+    },
+    {
+      "role": "Investment Advisor",
+      "requests": [
+        {
+          "part": "Investment Recommendation",
+          "problem": "This `Insight:` repeats another analyst role's Insight. State a distinct claim."
+        }
+      ]
+    }
+  ]
+}
