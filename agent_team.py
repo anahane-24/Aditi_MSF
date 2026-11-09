@@ -985,6 +985,11 @@ def save_report_node(state: TeamState) -> dict[str, Any]:
 class DeskTeamFlow(Flow[DeskTeamState]):
     """Fixed CrewAI Flow for the seven-step desk and four role team."""
 
+    # The workflow stores its evidence and state in the run folder. It does not
+    # use vector memory, whose native LanceDB dependency is blocked on some
+    # managed Windows installations.
+    _skip_auto_memory = True
+
     def state_dict(self) -> TeamState:
         return self.state.model_dump(exclude={"id"})
 
@@ -1045,6 +1050,8 @@ class DeskTeamFlow(Flow[DeskTeamState]):
 
 class VerifierOnlyFlow(Flow[DeskTeamState]):
     """Run only the mandatory verifier on a saved run."""
+
+    _skip_auto_memory = True
 
     def state_dict(self) -> TeamState:
         return self.state.model_dump(exclude={"id"})

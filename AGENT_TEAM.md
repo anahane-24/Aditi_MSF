@@ -40,3 +40,19 @@ python agent_team.py --verify-only "data\COMPANY_RUN_FOLDER"
 ```
 
 The verified report is saved as `verified_report.md` in that folder. Its first line remains the filing list, followed by the verifier table.
+
+## Run the browser page
+
+Install the project packages from the workspace root:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+Start the local page:
+
+```powershell
+python -m streamlit run desk_ui.py
+```
+
+The page opens in a browser. Enter one company ticker, optional comma-separated peers, and an optional share price. Select **Run agent team** to see node progress and the verified report. Keep the project `.env` file private.
