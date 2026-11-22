@@ -1,3 +1,4 @@
 crewai>=1.15,<1.16
 openai>=1.0,<3.0
 streamlit>=1.40,<2.0
+lseg-data>=2.0,<3.0

@@ -12,12 +12,24 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-from crewai import LLM
-from crewai.flow import Flow, listen, start
+try:
+    from crewai import LLM
+    from crewai.flow import Flow, listen, start
+except Exception:
+    LLM = None  # type: ignore
+    class Flow:  # type: ignore
+        def __class_getitem__(cls, item):
+            return cls
+    def listen(*args, **kwargs):  # type: ignore
+        return lambda f: f
+    def start(*args, **kwargs):  # type: ignore
+        return lambda f: f
 from pydantic import BaseModel, Field
 
 import desk_app
 import desk_steps
+import closes_reader
+import worksheet
 
 
 BASE = Path(__file__).resolve().parent
@@ -48,6 +60,8 @@ class DeskTeamState(BaseModel):
     price: float | None = None
     price_date: str | None = None
     price_source: str | None = None
+    filed: str | None = None
+    filed_time: str | None = None
     run_dir: str = ""
     run_time: str = ""
     step_stdout: str = ""
@@ -71,7 +85,15 @@ class DeskTeamState(BaseModel):
 
 def load_role(role: str) -> str:
     path = ROLE_DIR / ROLE_FILES[role]
-    return path.read_text(encoding="utf-8")
+    instructions = path.read_text(encoding="utf-8")
+    if role == "Investment Advisor":
+        persona_path = ROLE_DIR / "investor_persona.md"
+        instructions += (
+            "\n\nApply this team-authored investor persona as the decision policy. "
+            "The Financial Analyst output is the only allowed source for its numerical inputs.\n\n"
+            + persona_path.read_text(encoding="utf-8")
+        )
+    return instructions
 
 
 def save_json(path: Path, value: Any) -> None:
@@ -274,6 +296,47 @@ def create_data_steps(state: TeamState) -> dict[str, Any]:
     run_dir, stdout = desk_app.run_data_steps(args)
     run_time = datetime.now().astimezone().isoformat(timespec="seconds")
     filings = desk_app.read_json(run_dir / "filings.json")
+    accepted = str(filings.get("earnings_8k", {}).get("accepted", ""))
+    accepted_match = re.search(r"(\d{4}-\d{2}-\d{2})[ T](\d{2}:\d{2}:\d{2})", accepted)
+    accepted_time = f"{accepted_match.group(1)}T{accepted_match.group(2)}" if accepted_match else None
+    try:
+        filed_time = closes_reader.parse_filed(state.get("filed"), accepted_time)
+    except ValueError:
+        filed_time = None
+    env = desk_steps.read_env(BASE / ".env")
+    close = closes_reader.get_last_close(state["ticker"], filed_time, env) if filed_time else None
+    price = close.value if close else None
+    price_date = close.date if close else None
+    price_source = close.source if close else "not available"
+    filed_text = filed_time.isoformat(timespec="seconds") if filed_time else "not available"
+    market_block = f"\nFiling time used (Eastern): {filed_text}\n"
+    if close:
+        market_block += f"LSEG close: ${close.value:.4f} on {close.date} | source: {close.source}"
+        if close.ric:
+            market_block += f" | RIC: {close.ric}"
+        market_block += "\n"
+        eps_raw = desk_app.read_json(run_dir / "facts.json").get("diluted_eps", {}).get("val")
+        try:
+            eps = float(eps_raw)
+        except (TypeError, ValueError):
+            eps = 0
+        market_block += (f"P/E: price {close.value} / diluted EPS {eps} = {close.value / eps:.4f}\n"
+                         if eps else "P/E: unavailable (no diluted EPS)\n")
+    else:
+        market_block += "LSEG close: not available; the agent team continues without a market price.\n"
+    step_6 = re.search(r"\nSTEP 6\b", stdout)
+    if step_6:
+        stdout = stdout[:step_6.start()] + market_block + stdout[step_6.start():]
+    else:
+        stdout += market_block
+    save_json(run_dir / "market_data.json", {
+        "ticker": state["ticker"],
+        "filed_time_eastern": filed_text,
+        "close": close.value if close else None,
+        "close_date": close.date if close else None,
+        "source": close.source if close else "not available",
+        "ric": close.ric if close else None,
+    })
     facts = desk_app.read_json(run_dir / "facts.json")
     peers = {
         symbol: desk_app.read_json(run_dir / f"{symbol}_facts.json")
@@ -283,9 +346,11 @@ def create_data_steps(state: TeamState) -> dict[str, Any]:
     node_input = {
         "ticker": state["ticker"],
         "peers": state.get("peers", []),
-        "price": state.get("price"),
-        "price_date": state.get("price_date"),
-        "price_source": state.get("price_source"),
+        "filed_override": state.get("filed"),
+        "filed_time_eastern": filed_text,
+        "price": price,
+        "price_date": price_date,
+        "price_source": price_source,
     }
     node_output = {
         "data_run_folder": str(run_dir),
@@ -310,6 +375,10 @@ def create_data_steps(state: TeamState) -> dict[str, Any]:
         "filings": filings,
         "facts": facts,
         "peer_facts": peers,
+        "price": price,
+        "price_date": price_date,
+        "price_source": price_source,
+        "filed_time": filed_text,
         "node_counts": counts,
     }
 
@@ -329,15 +398,21 @@ def make_role_payloads(state: TeamState) -> dict[str, dict[str, Any]]:
             price_source=state.get("price_source"),
         ),
     )
+    worksheet_text, worksheet_calculations = worksheet.build_worksheet(run_dir, worksheet.DEFAULT_POLICY)
+    financial_context = {
+        "seven_step_financial_context": financial_context,
+        "deterministic_valuation_worksheet": worksheet_text,
+        "valuation_calculations": worksheet_calculations,
+    }
     research = desk_app.role_payload(
         "Write evidence-based research for the five-part report. Address the business model, competitive position, catalysts, and recent developments.",
         research_context,
         "Concise Markdown. Quote every factual claim. Cite the exact filename, line, and accession. End with exactly one standalone line that begins `Insight:`. Use a qualitative operating dependency or risk from Item 1 or Item 7. Prefer a claim that has no number. Cite the filing filename, accession, and line on that line. The claim must not repeat a figure or claim from the earnings release's first paragraph.",
     )
     financial = desk_app.role_payload(
-        "Write the financial analysis from the supplied seven-step desk output.",
+        f"Write the financial analysis for the primary company {state['ticker']} from the supplied seven-step desk output and deterministic valuation worksheet.",
         financial_context,
-        "Concise Markdown. Include each source, period, unit, definition, and supplied arithmetic. End with exactly one standalone line that begins `Insight:`. Use one distinct annual financial fact or comparison from the 10-K. State its fiscal period, cite the filing filename, accession, and statement line, and give the arithmetic if it is a ratio. Do not repeat the Research Analyst's Insight or a figure from the earnings release's first paragraph.",
+        f"Concise Markdown. Use only `primary_company_facts` for {state['ticker']}. Use `peer_facts_from_step_7` only in the peer comparison section. Never assign a peer's fact to the primary company. Transcribe fact values exactly. State each period from its saved start/end dates; do not infer fiscal years from the calendar year. Include each source, period, unit, definition, and supplied arithmetic. Include the Bear, Base, and Bull value per share, the margin of safety, the recommendation screen, and the client allocation and dollar amount exactly as the deterministic worksheet states. Do not recalculate or change these values. If a required value is missing, say `not available`; do not guess. End with exactly one standalone line that begins `Insight:`. Use one distinct annual financial fact or comparison from {state['ticker']}'s 10-K. State its period, cite the filing filename, accession, and exact statement line, and give the arithmetic if it is a ratio. Do not repeat the Research Analyst's Insight or a figure from the earnings release's first paragraph.",
     )
     return {"Research Analyst": research, "Financial Analyst": financial}
 
@@ -373,7 +448,7 @@ def run_investment_advisor_node(state: TeamState) -> dict[str, Any]:
             "Research Analyst": outputs["Research Analyst"],
             "Financial Analyst": outputs["Financial Analyst"],
         },
-        "Concise Markdown. Give one of Buy, Hold, or Sell. Name one deciding number from the Financial Analyst output. End with exactly one standalone line that begins `Insight:`. Choose one filing-supported risk, catalyst, or implication from the Research Analyst or Financial Analyst output. Cite its filing filename, accession, and line. Do not repeat either analyst's Insight line or a figure from the earnings release's first paragraph.",
+        "Concise Markdown. Apply the supplied team-authored investor persona. Give exactly one of Buy, Hold, or Sell / Avoid. Use Margin of Safety against Base Case value as the one deciding number. Apply the stated ROE, debt/equity, owner-cash-flow, and allocation gates. Use only values and the quantitative screen supplied by the Financial Analyst; do not calculate or invent. End with exactly one standalone line that begins `Insight:`. Choose one filing-supported risk, catalyst, or implication from the Research Analyst or Financial Analyst output. Cite its filing filename, accession, and line. Do not repeat either analyst's Insight line or a figure from the earnings release's first paragraph.",
     )
     payloads = dict(state.get("role_payloads", {}))
     payloads[role] = payload
@@ -1311,36 +1386,50 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Run the seven-step desk in a fixed CrewAI Flow and always verify its report.")
     parser.add_argument("ticker", nargs="?", help="Ticker symbol for a new team run")
     parser.add_argument("--peers", default="", help="Comma-separated peer tickers")
-    parser.add_argument("--price", type=float, help="Share price used for P/E")
+    parser.add_argument("--price", type=float, help=argparse.SUPPRESS)
+    parser.add_argument("--filed", help="Eastern filing time override, YYYY-MM-DDTHH:MM:SS")
     parser.add_argument("--verify-only", type=Path, help="Verify a saved run folder and do nothing else")
+    parser.add_argument("--report", type=Path, help="Report file to verify; only valid with --verify-only")
     args = parser.parse_args()
     setup_model()
     if args.verify_only:
-        if args.ticker or args.peers or args.price is not None:
-            parser.error("--verify-only does not take a ticker, peers, or price")
+        if args.ticker or args.peers or args.price is not None or args.filed:
+            parser.error("--verify-only does not take a ticker, peers, price, or filed time")
         run_dir = args.verify_only.resolve()
         if not run_dir.is_dir():
             parser.error(f"Saved run folder does not exist: {run_dir}")
-        report_path = run_dir / "report.md"
-        if not report_path.exists():
+        report_path = args.report.resolve() if args.report else run_dir / "report.md"
+        if not args.report and not report_path.exists():
             report_path = next(iter(run_dir.glob("*_equity_research_report.md")), report_path)
         if not report_path.exists():
             parser.error(f"No report.md exists in saved run folder: {run_dir}")
+        try:
+            report_path.relative_to(run_dir)
+        except ValueError:
+            parser.error("--report must be inside the --verify-only run folder")
         VerifierOnlyFlow().kickoff(inputs={
             "run_dir": str(run_dir),
             "report_path": str(report_path),
             "node_counts": {},
         })
         return
+    if args.report:
+        parser.error("--report requires --verify-only")
     if not args.ticker:
         parser.error("ticker is required unless --verify-only is used")
     peers = [peer.strip().upper() for peer in args.peers.split(",") if peer.strip()]
-    if args.price is not None and args.price <= 0:
-        parser.error("--price must be greater than zero")
+    if args.price is not None:
+        parser.error("--price is not used. The run reads the close before the EDGAR Accepted time or --filed.")
+    if args.filed:
+        try:
+            closes_reader.parse_filed(args.filed, None)
+        except ValueError as exc:
+            parser.error(str(exc))
     initial = {
         "ticker": args.ticker.upper(),
         "peers": peers,
-        "price": args.price,
+        "price": None,
+        "filed": args.filed,
         "role_payloads": {},
         "role_outputs": {},
         "retry_queue": [],

@@ -1,0 +1,41 @@
+{
+  "window_days": 90,
+  "factors": [
+    {
+      "name": "Post-distribution selling pressure window",
+      "field": "window_return",
+      "source_chapter": "Greenblatt Chapter 3",
+      "direction": "lower",
+      "threshold": 0.0,
+      "weight": 25.0,
+      "description": "Initial 90-day price dip where indexers and institutional parent holders dump shares indiscriminately."
+    },
+    {
+      "name": "Spinoff relative capitalization size",
+      "field": "relative_size_ratio",
+      "source_chapter": "Greenblatt Chapter 3",
+      "direction": "lower",
+      "threshold": 0.20,
+      "weight": 25.0,
+      "description": "Spinoff equity is under 20% of parent equity, maximizing neglect and forced institutional selling."
+    },
+    {
+      "name": "Clean spinoff balance sheet leverage",
+      "field": "debt_to_equity",
+      "source_chapter": "Klarman Chapter 10",
+      "direction": "lower",
+      "threshold": 0.50,
+      "weight": 25.0,
+      "description": "Spinoff has conservative leverage (D/E <= 0.50), ensuring parent did not dump toxic debt onto the spinoff."
+    },
+    {
+      "name": "Direct insider ownership and incentive alignment",
+      "field": "insider_ownership_pct",
+      "source_chapter": "Greenblatt Chapter 3",
+      "direction": "higher",
+      "threshold": 0.05,
+      "weight": 25.0,
+      "description": "Officers and directors own at least 5% of shares outstanding, directly aligning incentives with equity upside."
+    }
+  ]
+}

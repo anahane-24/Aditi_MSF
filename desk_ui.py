@@ -24,12 +24,14 @@ def parse_tickers(value: str, field: str) -> list[str]:
     return tickers
 
 
-def run_team(ticker: str, peers: list[str], price: float | None) -> tuple[int, str]:
-    command = [sys.executable, str(BASE / "agent_team.py"), ticker]
+def run_team(ticker: str, peers: list[str], filed: str | None, start_date: str | None) -> tuple[int, str]:
+    command = [sys.executable, str(BASE / "desk_pipeline.py"), ticker]
     if peers:
         command.extend(["--peers", ",".join(peers)])
-    if price is not None:
-        command.extend(["--price", str(price)])
+    if filed:
+        command.extend(["--filed", filed])
+    if start_date:
+        command.extend(["--start", start_date])
 
     process = subprocess.Popen(
         command,
@@ -49,7 +51,7 @@ def run_team(ticker: str, peers: list[str], price: float | None) -> tuple[int, s
         for line in process.stdout:
             output.append(line)
             stripped = line.strip()
-            if stripped.startswith(("NODE:", "ROLE:")) or stripped.startswith("STEP "):
+            if stripped.startswith(("NODE:", "ROLE:", "PART:", "PICK:")) or stripped.startswith("STEP "):
                 activity.markdown(f"**Current activity:** `{stripped}`")
             log_view.code("".join(output)[-16000:], language="text")
         return_code = process.wait()
@@ -75,18 +77,22 @@ def report_path_from_output(output: str) -> Path | None:
 st.set_page_config(page_title="SEC Equity Research Desk", page_icon="📊", layout="wide")
 st.title("SEC Equity Research Desk")
 st.write(
-    "Enter a company ticker, optional peer tickers, and an optional share price. "
-    "The page runs the fixed agent team and displays its verified report."
+    "Enter a company ticker or 'screen' and optional peer tickers. The desk reads the last close before the filing time. "
+    "It runs the agent team, worksheet, and evidence hook in a fixed order."
 )
 
 with st.form("run_desk"):
-    ticker_input = st.text_input("Company ticker", value="MSFT", help="Example: MSFT")
+    ticker_input = st.text_input("Company ticker or screen", value="MSFT", help="Enter a ticker, or 'screen' to use the spinoff screen")
     peers_input = st.text_input("Peer tickers (optional)", help="Comma-separated, for example AAPL,GOOGL")
-    include_price = st.checkbox("Include a share price for P/E")
-    price = st.number_input(
-        "Share price (USD)", min_value=0.01, value=500.0, step=0.01,
-        help="This value is used only when you select the share-price checkbox.",
-    )
+    start_date = st.text_input(
+        "Screen start date (required only for screen)",
+        placeholder="YYYY-MM-DD",
+    ).strip()
+    filed = st.text_input(
+        "Filing time override (Eastern, optional)",
+        placeholder="YYYY-MM-DDTHH:MM:SS",
+        help="Leave blank to use the Accepted time from the earnings 8-K index page.",
+    ).strip()
     submitted = st.form_submit_button("Run agent team", type="primary")
 
 if submitted:
@@ -101,7 +107,10 @@ if submitted:
     except ValueError as exc:
         st.error(str(exc))
     else:
-        return_code, output = run_team(ticker, peers, float(price) if include_price else None)
+        if ticker.lower() == "screen" and not start_date:
+            st.error("Enter a screen start date in YYYY-MM-DD format.")
+            st.stop()
+        return_code, output = run_team(ticker, peers, filed or None, start_date or None)
         if return_code:
             st.error("The agent team did not finish. Review the run log below.")
             st.code(output[-16000:], language="text")

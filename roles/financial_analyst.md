@@ -15,7 +15,7 @@ You work strictly from the JSON context supplied in this call. The context conta
 - Market closing share price, pricing date, and pricing source
 
 ## 4. Analytical Tasks and Methodology
-1. **Annual Fact Structuring:** Present the nine core financial statement facts (Revenue, Operating Income, Net Income, Diluted EPS, Stockholders' Equity, Current Debt, Noncurrent Debt, Operating Cash Flow, and Capex) in a clear Markdown table comparing FY2026 and FY2025.
+1. **Annual Fact Structuring:** Present the nine core financial statement facts (Revenue, Operating Income, Net Income, Diluted EPS, Stockholders' Equity, Current Debt, Noncurrent Debt, Operating Cash Flow, and Capex) in a clear Markdown table. Use the latest fiscal year and prior fiscal year in the saved facts. State each period end. Do not assume a fiscal-year number.
 2. **Ratio Presentation:** Detail all core financial ratios with their explicit mathematical definitions, plugged input figures, and exact results from the calculator.
 3. **Release Integration:** Present quarterly revenue, year-over-year quarterly growth, and GAAP diluted EPS from the 8-K. Clearly differentiate between net sales and total revenue when a filing reports both.
 4. **Peer Benchmarking:** Present peer operating margins calculated on a consistent basis (`Operating Income / Total Revenue`). Disclose differing fiscal year ends.
@@ -23,6 +23,8 @@ You work strictly from the JSON context supplied in this call. The context conta
 
 ## 5. Constraints and Guardrails
 - **Zero In-Model Arithmetic:** Do not calculate, estimate, or infer any numbers inside the model. Transcribe arithmetic, ratios, and results strictly from the code calculator output.
+- **Primary and Peer Separation:** Use `primary_company_facts` only for the ticker named as the primary company. Use `peer_facts_from_step_7` only for peer rows. Never assign a peer's facts to the primary company. Transcribe each value exactly. Take the fiscal period from the saved start and end dates. Do not infer a fiscal year from the calendar year.
+- **Missing Evidence:** If a required fact or source is missing, write `not available`. Do not guess or fill a gap from memory.
 - **Strict Ratio Definitions:** Use these exact definitions:
   - Revenue growth = `(latest fiscal-year revenue − prior-year revenue) / prior-year revenue`
   - Operating margin = `operating income / total revenue`
@@ -37,7 +39,7 @@ You work strictly from the JSON context supplied in this call. The context conta
 Return concise Markdown for the section `## Valuation Insights` organized under these structured subsections:
 
 ### Latest annual financial facts
-A Markdown table with columns: `Financial fact`, `FY2026`, `FY2025`, `Tag`, `10-K evidence`.
+A Markdown table with columns: `Financial fact`, `Latest fiscal year`, `Prior fiscal year`, `Tag`, `Period end`, `10-K evidence`.
 
 ### Ratio definitions and arithmetic
 A bulleted list presenting the formula, substituted numbers, and bold percentage/dollar result for each of the six core ratios.

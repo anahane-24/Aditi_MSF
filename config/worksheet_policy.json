@@ -1,0 +1,31 @@
+{
+  "source_file": "config/valuation_worksheet_inputs.md",
+  "method": "five-year owner-cash-flow DCF with Gordon-growth terminal value",
+  "owner_cash_flow_formula": "net income + depreciation - capital spending (course formula)",
+  "valuation_basis": "equity value from owner cash flow; divide by diluted shares; do not label as enterprise value",
+  "terminal_value_method": "Gordon growth; ignore the unused terminal-multiple table",
+  "deciding_number": "Margin of Safety percentage against base-case value",
+  "years": 5,
+  "cases": {
+    "bear": {"growth_rate": 0.04, "discount_rate": 0.10, "terminal_growth_rate": 0.02},
+    "base": {"growth_rate": 0.07, "discount_rate": 0.09, "terminal_growth_rate": 0.025},
+    "bull": {"growth_rate": 0.10, "discount_rate": 0.085, "terminal_growth_rate": 0.03}
+  },
+  "decision_rules": {
+    "buy_min_margin_of_safety": 0.20,
+    "buy_min_roe": 0.15,
+    "buy_max_debt_to_equity": 0.75,
+    "sell_price_to_base_value": 1.20,
+    "sell_debt_to_equity_above": 1.00,
+    "sell_owner_cash_flow_below": 0,
+    "hold_min_price_to_base_value": 0.80,
+    "hold_max_price_to_base_value": 1.20,
+    "tier_one_min_margin_of_safety": 0.30,
+    "tier_one_max_debt_to_equity": 0.50,
+    "tier_one_allocation_pct": 5.0,
+    "tier_two_allocation_pct": 2.5,
+    "no_purchase_allocation_pct": 0.0
+  },
+  "client_portfolio_value_usd": 10000000.0,
+  "client_portfolio_value_status": "configured: $10,000,000 USD client portfolio"
+}

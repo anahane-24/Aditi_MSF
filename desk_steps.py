@@ -176,6 +176,8 @@ TAG_CANDIDATES = {
     "current_debt": ["LongTermDebtCurrent"],
     "cash_from_operations": ["NetCashProvidedByUsedInOperatingActivities"],
     "capex": ["PaymentsToAcquirePropertyPlantAndEquipment"],
+    "depreciation": ["Depreciation"],
+    "diluted_shares": ["WeightedAverageNumberOfDilutedSharesOutstanding"],
 }
 
 
@@ -288,7 +290,7 @@ def main() -> None:
             out = BASE / "data" / f"{re.sub(r'[^A-Za-z0-9._-]+','_',company)}_{stamp}"
             out.mkdir(parents=True, exist_ok=True)
             (out / "facts.json").write_text(json.dumps(facts, indent=2), encoding="utf-8")
-            for label in ("total_revenue", "operating_income", "net_income", "diluted_eps", "equity", "long_term_debt", "current_debt", "cash_from_operations", "capex"):
+            for label in ("total_revenue", "operating_income", "net_income", "diluted_eps", "equity", "long_term_debt", "current_debt", "cash_from_operations", "capex", "depreciation", "diluted_shares"):
                 if label in facts:
                     print(fact_line(label, facts[label]) + (f" | prior={facts[label].get('prior_val')}" if "prior_val" in facts[label] else ""))
             if step == 5:
@@ -332,7 +334,7 @@ def main() -> None:
             raise RuntimeError("No 10-K found")
         facts = get_facts(cik, ua, kf)
         (out / "facts.json").write_text(json.dumps(facts, indent=2), encoding="utf-8")
-        for label in ("total_revenue", "operating_income", "net_income", "diluted_eps", "equity", "long_term_debt", "current_debt", "cash_from_operations", "capex"):
+        for label in ("total_revenue", "operating_income", "net_income", "diluted_eps", "equity", "long_term_debt", "current_debt", "cash_from_operations", "capex", "depreciation", "diluted_shares"):
             if label in facts:
                 print(fact_line(label, facts[label]) + (f" | prior={facts[label].get('prior_val')}" if "prior_val" in facts[label] else ""))
         if "debt_components" in facts:
@@ -360,6 +362,10 @@ def main() -> None:
                     break
         if not eps_row:
             eps_row = next((line.strip() for line in lines if re.search(r"Diluted earnings per share was\s+\$", line, re.I)), None)
+        if not eps_row:
+            eps_row = next((line.strip() for line in lines if re.match(
+                r"Diluted net income per common share\s*\|", line, re.I
+            )), None)
         if not eps_row:
             eps_row = next((sentence.strip() for sentence in re.split(r"(?<=[.!?])\s+", release.replace("\n", " ")) if re.search(r"diluted (?:earnings per share|EPS)", sentence, re.I)), None)
         print(f"Total revenue row: {total_row}" if total_row else "Total revenue row not found in release")
