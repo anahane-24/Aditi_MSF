@@ -1,0 +1,156 @@
+[
+  {
+    "id": "C001",
+    "mark": "unsupported",
+    "claim": "Insight: The 10-K says ongoing investment in cloud and AI infrastructure will increase operating costs and may decrease operating margins (10-K_2026-07-29.txt, line 1550, accession 0001193125-26-323660).",
+    "reason": "The cited line number exists in 10-K_2026-07-29.txt.; Ratio definition is missing: operating income, revenue.; The cited line from the 10-K supports the claim that ongoing investment in cloud and AI infrastructure will increase operating costs and may decrease operating margins.",
+    "correction": ""
+  },
+  {
+    "id": "C002",
+    "mark": "correct",
+    "claim": "Microsoft reports that FY2026 Microsoft Cloud revenue increased 27% to $214.4 billion. Azure and other cloud services revenue increased 41%. Commercial remaining performance obligation increased 84% to $678 billion (10-K_2026-07-29.txt, lines 1532–1538; accession 0001193125-26-323660). These are company-reported growth measures. They do not establish that the growth rate will continue.",
+    "reason": "The cited line number exists in 10-K_2026-07-29.txt.; The cited lines from the 10-K support the reported increases in Microsoft Cloud revenue, Azure revenue, and commercial remaining performance obligation.",
+    "correction": ""
+  },
+  {
+    "id": "C003",
+    "mark": "correct",
+    "claim": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Revenue | $331.839B | $281.724B | `RevenueFromContractWithCustomerExcludingAssessedTax` | 10-K lines 4064–4073 |",
+    "reason": "The cited line number exists in 10-K_2026-07-29.txt.; The XBRL fact matches the reported revenue of $331.839B for FY2026 with a prior value of $281.724B.",
+    "correction": ""
+  },
+  {
+    "id": "C004",
+    "mark": "correct",
+    "claim": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Operating income | $155.237B | $128.528B | `OperatingIncomeLoss` | 10-K lines 4294–4303 |",
+    "reason": "The cited line number exists in 10-K_2026-07-29.txt.; The XBRL fact matches the reported operating income of $155.237B for FY2026 with a prior value of $128.528B.",
+    "correction": ""
+  },
+  {
+    "id": "C005",
+    "mark": "correct",
+    "claim": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Net income | $133.749B | $101.832B | `NetIncomeLoss` | 10-K lines 4404–4415 |",
+    "reason": "The cited line number exists in 10-K_2026-07-29.txt.; The XBRL fact matches the reported net income of $133.749B for FY2026 with a prior value of $101.832B.",
+    "correction": ""
+  },
+  {
+    "id": "C006",
+    "mark": "correct",
+    "claim": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Diluted EPS | $17.95 | $13.64 | `EarningsPerShareDiluted` | 10-K lines 4475–4486 |",
+    "reason": "The cited line number exists in 10-K_2026-07-29.txt.; The XBRL fact matches the reported diluted EPS of $17.95 for FY2026 with a prior value of $13.64.",
+    "correction": ""
+  },
+  {
+    "id": "C007",
+    "mark": "correct",
+    "claim": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Stockholders’ equity | $442.387B | $343.479B | `StockholdersEquity` | 10-K lines 5386–5395 |",
+    "reason": "The cited line number exists in 10-K_2026-07-29.txt.; The XBRL fact matches the reported equity of $442.387B for FY2026 with a prior value of $343.479B.",
+    "correction": ""
+  },
+  {
+    "id": "C008",
+    "mark": "correct",
+    "claim": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Long-term debt, current portion | $9.227B | $2.999B | `LongTermDebtCurrent` | 10-K lines 5124–5133 |",
+    "reason": "The cited line number exists in 10-K_2026-07-29.txt.; The XBRL fact matches the reported current debt of $9.227B for FY2026 with a prior value of $2.999B.",
+    "correction": ""
+  },
+  {
+    "id": "C009",
+    "mark": "correct",
+    "claim": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Long-term debt, noncurrent | $31.067B | $40.152B | `LongTermDebtNoncurrent` | 10-K lines 5208–5217 |",
+    "reason": "The cited line number exists in 10-K_2026-07-29.txt.; The XBRL fact matches the reported long-term debt of $31.067B for FY2026 with a prior value of $40.152B.",
+    "correction": ""
+  },
+  {
+    "id": "C010",
+    "mark": "correct",
+    "claim": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Cash from operations | $182.935B | $136.162B | `NetCashProvidedByUsedInOperatingActivities` | 10-K lines 5796–5805 |",
+    "reason": "The cited line number exists in 10-K_2026-07-29.txt.; The XBRL fact matches the reported cash from operations of $182.935B for FY2026 with a prior value of $136.162B.",
+    "correction": ""
+  },
+  {
+    "id": "C011",
+    "mark": "correct",
+    "claim": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Additions to property and equipment | $115.948B | $64.551B | `PaymentsToAcquirePropertyPlantAndEquipment` | 10-K lines 6062–6074 |",
+    "reason": "The cited line number exists in 10-K_2026-07-29.txt.; The XBRL fact matches the reported capex of $115.948B for FY2026 with a prior value of $64.551B.",
+    "correction": ""
+  },
+  {
+    "id": "C012",
+    "mark": "unsupported",
+    "claim": "- Revenue growth = (331,839,000,000 − 281,724,000,000) / 281,724,000,000 = **17.7887%**.",
+    "reason": "No filing line or XBRL tag was found in this claim block.; Ratio definition is missing: prior.; The calculation (331,839,000,000 - 281,724,000,000) / 281,724,000,000 = 17.7887% matches the reported value.",
+    "correction": ""
+  },
+  {
+    "id": "C013",
+    "mark": "unsupported",
+    "claim": "- Operating margin = 155,237,000,000 / 331,839,000,000 = **46.7808%**.",
+    "reason": "No filing line or XBRL tag was found in this claim block.; Code recalculated 46.7808%; report prints 46.7808%.; Ratio definition is missing: operating income, revenue.; The calculation 155,237,000,000 / 331,839,000,000 = 46.7808% matches the reported value.",
+    "correction": ""
+  },
+  {
+    "id": "C014",
+    "mark": "unsupported",
+    "claim": "- Return on average equity = 133,749,000,000 / ((442,387,000,000 + 343,479,000,000) / 2) = **34.0386%**.",
+    "reason": "No filing line or XBRL tag was found in this claim block.; Code recalculated 34.0386%; report prints 34.0386%.; Ratio definition is missing: net income.; The calculation 133,749,000,000 / ((442,387,000,000 + 343,479,000,000) / 2) = 34.0386% matches the reported value.",
+    "correction": ""
+  },
+  {
+    "id": "C015",
+    "mark": "unsupported",
+    "claim": "- Debt to equity = (9,227,000,000 + 31,067,000,000) / 442,387,000,000 = **9.1083%**.",
+    "reason": "No filing line or XBRL tag was found in this claim block.; Code recalculated 9.1083%; report prints 9.1083%.; Ratio definition is missing: current.; The calculation (9,227,000,000 + 31,067,000,000) / 442,387,000,000 = 9.1083% matches the reported value.",
+    "correction": ""
+  },
+  {
+    "id": "C016",
+    "mark": "unsupported",
+    "claim": "- Free cash flow = 182,935,000,000 − 115,948,000,000 = **$66,987,000,000**.",
+    "reason": "No filing line or XBRL tag was found in this claim block.; Ratio definition is missing: cash from operations, property and equipment.; The calculation 182,935,000,000 - 115,948,000,000 = $66,987,000,000 matches the reported value.",
+    "correction": ""
+  },
+  {
+    "id": "C017",
+    "mark": "unsupported",
+    "claim": "- P/E = $531.01 share-price input / $17.95 FY2026 diluted EPS = **29.5827**. The share-price input is the October 28, 2026 close; price source: [StockAnalysis MSFT historical prices](https://stockanalysis.com/stocks/msft/history/) (the $531.01 close is listed for October 28, 2026). P/E uses GAAP diluted EPS and the supplied closing price; it is not a price target.",
+    "reason": "No filing line or XBRL tag was found in this claim block.; Ratio definition states its inputs and arithmetic.; The calculation 531.01 / 17.95 = 29.5827 matches the reported P/E ratio.",
+    "correction": ""
+  },
+  {
+    "id": "C018",
+    "mark": "unsupported",
+    "claim": "The earnings release says: “Revenue was $92.3 billion and increased 19%” (8-K_Ex99.1_2026-10-28.txt, line 9) and “Diluted earnings per share was $4.92 and increased 32% on a GAAP basis” (same file, line 12; accession 0001193125-26-436122). The release says that the quarter ended September 30, 2026 (line 8). Non-GAAP EPS is $4.89; this report uses GAAP diluted EPS for the line above.",
+    "reason": "The cited line number exists in 8-K_Ex99.1_2026-10-28.txt.; The cited line is not present in unresolved.; The cited line is not present in unresolved.; A quoted passage does not match the cited filing line after spacing and formatting normalization.; The cited lines from the 8-K support the reported revenue of $92.3 billion and diluted EPS of $4.92 for the quarter ended September 30, 2026.",
+    "correction": ""
+  },
+  {
+    "id": "C019",
+    "mark": "unsupported",
+    "claim": "GOOGL FY2025 revenue was $402,836,000,000 and operating income was $129,039,000,000. Both facts use period end 2025-12-31 and accession 0001652044-26-000018 in `GOOGL_facts.json`.",
+    "reason": "No filing line or XBRL tag was found in this claim block.; The claim correctly states the FY2025 GOOGL revenue and operating income values from the provided accession.",
+    "correction": ""
+  },
+  {
+    "id": "C020",
+    "mark": "correct",
+    "claim": "| GOOGL | $402,836,000,000 | $129,039,000,000 | (129,039,000,000 / 402,836,000,000) = 32.0326% | 2025-12-31 | `Revenues`; `OperatingIncomeLoss` | 0001652044-26-000018 |",
+    "reason": "The XBRL facts match the reported GOOGL FY2025 revenue of $402,836,000,000 and operating income of $129,039,000,000.",
+    "correction": ""
+  },
+  {
+    "id": "C021",
+    "mark": "correct",
+    "claim": "Insight: FY2026 additions to property and equipment were $115,948,000,000; cash from operations was $182,935,000,000; free cash flow under the desk definition was $182,935,000,000 - $115,948,000,000 = $66,987,000,000 (tags `PaymentsToAcquirePropertyPlantAndEquipment` and `NetCashProvidedByUsedInOperatingActivities`; 10-K_2026-07-29.txt, lines 5796-5805 and 6062-6074; accession 0001193125-26-323660).",
+    "reason": "The cited line number exists in 10-K_2026-07-29.txt.; Ratio definition states its inputs and arithmetic.; The XBRL facts support the reported additions to property and equipment, cash from operations, and free cash flow calculation.",
+    "correction": ""
+  },
+  {
+    "id": "C022",
+    "mark": "correct",
+    "claim": "Insight: Microsoft extended its long-term OpenAI partnership in October 2025 and April 2026, and says it will continue to receive revenue-sharing payments (10-K_2026-07-29.txt, line 1544, accession 0001193125-26-323660).",
+    "reason": "The cited line number exists in 10-K_2026-07-29.txt.; The cited line from the 10-K supports the claim that Microsoft extended its OpenAI partnership in October 2025 and April 2026 and will continue to receive revenue-sharing payments.",
+    "correction": ""
+  }
+]

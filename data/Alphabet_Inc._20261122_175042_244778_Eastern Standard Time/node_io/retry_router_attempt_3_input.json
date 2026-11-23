@@ -1,0 +1,13 @@
+{
+  "queue": [
+    {
+      "role": "Investment Advisor",
+      "requests": [
+        {
+          "part": "Investment Recommendation",
+          "problem": "The compiled report must include this role's `Insight:` line exactly once as a standalone line."
+        }
+      ]
+    }
+  ]
+}

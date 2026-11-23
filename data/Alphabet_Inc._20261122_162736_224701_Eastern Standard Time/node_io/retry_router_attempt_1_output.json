@@ -1,0 +1,36 @@
+{
+  "next_route": "Investment Advisor",
+  "current_retry": {
+    "role": "Investment Advisor",
+    "requests": [
+      {
+        "part": "Overview",
+        "problem": "Required Markdown heading is missing."
+      },
+      {
+        "part": "Investment Recommendation",
+        "problem": "The compiled report must include this role's `Insight:` line exactly once as a standalone line."
+      }
+    ]
+  },
+  "retry_queue": [
+    {
+      "role": "Research Analyst",
+      "requests": [
+        {
+          "part": "Market Positioning and Growth Outlook",
+          "problem": "The `Insight:` line must be the final line of the role output."
+        }
+      ]
+    },
+    {
+      "role": "Financial Analyst",
+      "requests": [
+        {
+          "part": "Valuation Insights",
+          "problem": "The `Insight:` line must be the final line of the role output."
+        }
+      ]
+    }
+  ]
+}

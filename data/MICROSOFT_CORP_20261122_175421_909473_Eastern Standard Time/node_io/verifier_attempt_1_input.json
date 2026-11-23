@@ -1,0 +1,1671 @@
+{
+  "task": "Verify every supplied factual and numeric claim, including each Insight line. Do not assess the Investment Advisor's thesis or Buy, Hold, or Sell recommendation. The Investment Recommendation Insight line is included for verification. Return exactly one result for every supplied claim ID, in the same order, with no omitted IDs. Check only the compiled report, the exact cited filing-line excerpts, and the supplied saved facts. issuer_identity contains the explicit registrant text and CIK from the saved 10-K: , CIK 0000789019. Treat facts.json as facts for that same registrant and ticker. Do not invent a parent/subsidiary relationship that the filing does not state. saved_facts is keyed by report claim ID. If a claim ID has no saved fact, check it against that claim's cited filing-line excerpts; do not use facts from another claim. A matching filing excerpt is sufficient evidence for a sourced narrative or period claim; do not require an XBRL fact for it. For quarterly claims, use the cited 8-K or 10-Q row and its supplied period-header context; annual facts do not override correct quarter figures. Do not treat unrelated annual facts as a conflict when the claim is supported by the cited quarterly release. A table row that names a peer ticker is checked against the corresponding `MSFT_facts.json` mapping supplied for that claim; this is valid peer evidence and is not missing because it is not in the primary facts.json. Do not transfer a fact from another claim, company, ticker, period, or facts file. For each mapped fact, compare the printed value, unit, tag, period, and accession. For a filing-line claim, check whether the exact cited line supports the number and period. For a ratio, recalculate from that claim's own supplied inputs and check its definition. Mark a claim wrong only when those sources show a different value, period, definition, or arithmetic result. If the cited line or mapped fact supports the claim, mark it correct. If evidence is missing, mark unsupported, not wrong. Use a price stated in the report to check P/E.",
+  "context": {
+    "issuer_identity": {
+      "primary_ticker": "MSFT",
+      "sec_registrant": "",
+      "cik": "0000789019",
+      "registrant_evidence": {}
+    },
+    "compiled_report": "Filings read: MSFT 10-K accession 0001193125-26-323660; MSFT 10-Q accession 0001193125-26-436133; MSFT 8-K Exhibit 99.1 accession 0001193125-26-436122; GOOGL peer facts accession 0001652044-26-000018\nRun time: 2026-11-22T17:54:27-05:00\nRun time: 2026-11-22T17:54:27-05:00\n\n# Microsoft (MSFT) equity research report\n\n**Corrected report.** Partner confirmation of GOOGL vs GOOG remains pending. The original agent output is preserved in `report.md`. This report corrects claims against the saved filings and facts. It remains unverified until the model verifier and code evidence hook pass. The latest 10-K is for the fiscal year ended June 30, 2026; the release is for the quarter ended September 30, 2026.\n\n## Overview\n\nMicrosoft describes itself as a technology company. It develops software, services, devices, and solutions. Its revenue model includes cloud solutions, software licensing and support, online advertising, and device sales (10-K_2026-07-29.txt, lines 621–628; lines 1529–1530; accession 0001193125-26-323660). It reports three segments: Productivity and Business Processes, Intelligent Cloud, and More Personal Computing (same 10-K, lines 657–658).\n\n## Market Positioning and Growth Outlook\n\nInsight: The 10-K says ongoing investment in cloud and AI infrastructure will increase operating costs and may decrease operating margins (10-K_2026-07-29.txt, line 1550, accession 0001193125-26-323660).\n\nMicrosoft reports that FY2026 Microsoft Cloud revenue increased 27% to $214.4 billion. Azure and other cloud services revenue increased 41%. Commercial remaining performance obligation increased 84% to $678 billion (10-K_2026-07-29.txt, lines 1532–1538; accession 0001193125-26-323660). These are company-reported growth measures. They do not establish that the growth rate will continue.\n\nThe company describes its markets as dynamic and highly competitive. It identifies cloud and software competition, and says that investment in cloud and AI infrastructure can increase costs and reduce operating margins. It also identifies datacenter power, land, networking, and server availability as operating dependencies (10-K_2026-07-29.txt, lines 1543, 1549–1550; accession 0001193125-26-323660). Microsoft says it extended its OpenAI partnership in October 2025 and April 2026 (same 10-K, line 1544). The company also identifies foreign exchange and trade-policy changes, including tariffs, as risks (same 10-K, lines 1552–1553).\n\n## Valuation Insights\n\n### Latest annual financial facts\n\nAll amounts below are in U.S. dollars. Dollar amounts are shown in billions except diluted EPS. Each FY2026 fact uses the June 30, 2026 period end and the 10-K accession 0001193125-26-323660. Tags are from `facts.json`; statement line references are from `10-K_2026-07-29.txt`.\n\n| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n|---|---:|---:|---|---|\n| Revenue | $331.839B | $281.724B | `RevenueFromContractWithCustomerExcludingAssessedTax` | 10-K lines 4064–4073 |\n| Operating income | $155.237B | $128.528B | `OperatingIncomeLoss` | 10-K lines 4294–4303 |\n| Net income | $133.749B | $101.832B | `NetIncomeLoss` | 10-K lines 4404–4415 |\n| Diluted EPS | $17.95 | $13.64 | `EarningsPerShareDiluted` | 10-K lines 4475–4486 |\n| Stockholders’ equity | $442.387B | $343.479B | `StockholdersEquity` | 10-K lines 5386–5395 |\n| Long-term debt, current portion | $9.227B | $2.999B | `LongTermDebtCurrent` | 10-K lines 5124–5133 |\n| Long-term debt, noncurrent | $31.067B | $40.152B | `LongTermDebtNoncurrent` | 10-K lines 5208–5217 |\n| Cash from operations | $182.935B | $136.162B | `NetCashProvidedByUsedInOperatingActivities` | 10-K lines 5796–5805 |\n| Additions to property and equipment | $115.948B | $64.551B | `PaymentsToAcquirePropertyPlantAndEquipment` | 10-K lines 6062–6074 |\n\n### Ratios and arithmetic\n\nThese calculations use the desk's printed FY2026 and FY2025 facts. They use the current debt portion in total debt. The capex amount is treated as a positive cash-spending amount for free cash flow.\n\n- Revenue growth (FY2026 revenue minus prior fiscal-year revenue, divided by prior fiscal-year revenue) = (331,839,000,000 - 281,724,000,000) / 281,724,000,000 = **17.7887%**. Tags: `RevenueFromContractWithCustomerExcludingAssessedTax`; period ends 2026-06-30 and 2025-06-30; accession 0001193125-26-323660.\n- Operating margin (operating income divided by total revenue) = 155,237,000,000 / 331,839,000,000 = **46.7808%**. Tags: `OperatingIncomeLoss` and `RevenueFromContractWithCustomerExcludingAssessedTax`; period end 2026-06-30; accession 0001193125-26-323660.\n- Return on average equity (net income divided by average beginning and ending stockholders' equity) = 133,749,000,000 / ((442,387,000,000 + 343,479,000,000) / 2) = **34.0386%**. Tags: `NetIncomeLoss` and `StockholdersEquity`; period ends 2026-06-30 and 2025-06-30; accession 0001193125-26-323660.\n- Debt to equity (current and noncurrent long-term debt divided by stockholders' equity) = (9,227,000,000 + 31,067,000,000) / 442,387,000,000 = **9.1083%**. Tags: `LongTermDebtCurrent`, `LongTermDebtNoncurrent`, and `StockholdersEquity`; period end 2026-06-30; accession 0001193125-26-323660.\n- Free cash flow (cash from operations minus additions to property and equipment) = 182,935,000,000 - 115,948,000,000 = **$66,987,000,000**. Tags: `NetCashProvidedByUsedInOperatingActivities` and `PaymentsToAcquirePropertyPlantAndEquipment`; period end 2026-06-30; accession 0001193125-26-323660.\n- P/E (share price divided by annual diluted EPS) = $531.01 / $17.95 = **29.5827**. Tag: `EarningsPerShareDiluted`; period end 2026-06-30; accession 0001193125-26-323660. The price is the LSEG close on October 28, 2026, recorded in `market_data.json`; it is not a price target.\n\n### Quarter reported in the release\n\nThe quarter ended September 30, 2026 (8-K_Ex99.1_2026-10-28.txt, line 8, accession 0001193125-26-436122). The release says revenue was $92.3 billion and increased 19% (8-K_Ex99.1_2026-10-28.txt, line 9, accession 0001193125-26-436122). It says GAAP diluted EPS was $4.92 and increased 32% (8-K_Ex99.1_2026-10-28.txt, line 12, accession 0001193125-26-436122). The same line separately reports non-GAAP EPS of $4.89; this report uses GAAP diluted EPS.\n\n### Peer comparison: Google / Alphabet (GOOGL)\n\n| Ticker | Revenue | Operating income | Operating margin | Period end | XBRL tags | Filing accession |\n|---|---:|---:|---:|---|---|---|\n| GOOGL | $402,836,000,000 | $129,039,000,000 | (129,039,000,000 / 402,836,000,000) = 32.0326% | 2025-12-31 | `Revenues`; `OperatingIncomeLoss` | 0001652044-26-000018 |\n\nInsight: FY2026 additions to property and equipment were $115,948,000,000; cash from operations was $182,935,000,000; free cash flow under the desk definition was $182,935,000,000 - $115,948,000,000 = $66,987,000,000 (tags `PaymentsToAcquirePropertyPlantAndEquipment` and `NetCashProvidedByUsedInOperatingActivities`; 10-K_2026-07-29.txt, lines 5796-5805 and 6062-6074; accession 0001193125-26-323660).\n## Future Developments and Strategic Recommendations\n\n\nMonitor Azure and Microsoft Cloud growth, operating margin, and spending on cloud and AI infrastructure. These measures connect the reported growth opportunity to the cost and capacity risks identified by Microsoft. Also monitor competition, power and server availability, foreign exchange, and trade-policy changes. The cited filing does not establish the future direction or size of these effects.\n\n## Investment Recommendation\n\n**Sell / Avoid (worksheet screen).** The deciding figure is margin of safety against the base case: ($133.56 - $531.01) / $133.56 = -297.57%. The close is $531.01 on 2026-10-28 from the saved LSEG `TR.PriceClose` record in `market_data.json`; the base-case owner-cash-flow value is $133.56 per diluted share in `worksheet_output.md`. The written screen records a 0.0% allocation. This is a course screening result, not financial advice.\n\nInsight: Microsoft extended its long-term OpenAI partnership in October 2025 and April 2026, and says it will continue to receive revenue-sharing payments (10-K_2026-07-29.txt, line 1544, accession 0001193125-26-323660).\n",
+    "saved_filing_texts": [
+      {
+        "id": "C001",
+        "text": "Insight: The 10-K says ongoing investment in cloud and AI infrastructure will increase operating costs and may decrease operating margins (10-K_2026-07-29.txt, line 1550, accession 0001193125-26-323660).",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-07-29.txt",
+            "lines": [
+              1550
+            ],
+            "excerpts": [
+              {
+                "line": 1550,
+                "text": "The investments we are making in cloud and AI infrastructure and devices will continue to increase our operating costs and may decrease our operating margins. We continue to identify and evaluate opportunities to expand our datacenter locations and increase our server capacity to meet the evolving needs of our customers, particularly given the growing demand for AI services. Our datacenters depend on the availability of permitted and buildable land, predictable energy, networking supplies, and servers, including graphics processing units and other components. Our devices are primarily manufactured by third-party contract manufacturers. For the majority of our products, we have the ability to use other manufacturers if a current vendor becomes unavailable or unable to meet our requirements. However, some of our products contain certain components for which there are very few qualified suppliers. Extended or unforeseen disruptions, or limited availability of components from these suppliers could impact our ability to operate our datacenters and manufacture devices on time to meet consumer demand."
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C002",
+        "text": "Microsoft reports that FY2026 Microsoft Cloud revenue increased 27% to $214.4 billion. Azure and other cloud services revenue increased 41%. Commercial remaining performance obligation increased 84% to $678 billion (10-K_2026-07-29.txt, lines 1532–1538; accession 0001193125-26-323660). These are company-reported growth measures. They do not establish that the growth rate will continue.",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-07-29.txt",
+            "lines": [
+              1532,
+              1533,
+              1534,
+              1535,
+              1536,
+              1537,
+              1538
+            ],
+            "excerpts": [
+              {
+                "line": 1532,
+                "text": "• Microsoft Cloud revenue increased 27% to $214.4 billion."
+              },
+              {
+                "line": 1533,
+                "text": "• Commercial remaining performance obligation increased 84% to $678 billion."
+              },
+              {
+                "line": 1534,
+                "text": "• Microsoft 365 Commercial cloud revenue increased 17%."
+              },
+              {
+                "line": 1535,
+                "text": "• Microsoft 365 Consumer cloud revenue increased 28%."
+              },
+              {
+                "line": 1536,
+                "text": "• LinkedIn revenue increased 11%."
+              },
+              {
+                "line": 1537,
+                "text": "• Dynamics 365 revenue increased 18%."
+              },
+              {
+                "line": 1538,
+                "text": "• Azure and other cloud services revenue increased 41%."
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C003",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Revenue | $331.839B | $281.724B | `RevenueFromContractWithCustomerExcludingAssessedTax` | 10-K lines 4064–4073 |",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-07-29.txt",
+            "lines": [
+              4064,
+              4065,
+              4066,
+              4067,
+              4068,
+              4069,
+              4070,
+              4071,
+              4072,
+              4073
+            ],
+            "excerpts": [
+              {
+                "line": 4064,
+                "text": "Total revenue"
+              },
+              {
+                "line": 4065,
+                "text": "|"
+              },
+              {
+                "line": 4066,
+                "text": "|"
+              },
+              {
+                "line": 4067,
+                "text": "|"
+              },
+              {
+                "line": 4068,
+                "text": "331,839"
+              },
+              {
+                "line": 4069,
+                "text": "|"
+              },
+              {
+                "line": 4070,
+                "text": "|"
+              },
+              {
+                "line": 4071,
+                "text": "|"
+              },
+              {
+                "line": 4072,
+                "text": "|"
+              },
+              {
+                "line": 4073,
+                "text": "281,724"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C004",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Operating income | $155.237B | $128.528B | `OperatingIncomeLoss` | 10-K lines 4294–4303 |",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-07-29.txt",
+            "lines": [
+              4294,
+              4295,
+              4296,
+              4297,
+              4298,
+              4299,
+              4300,
+              4301,
+              4302,
+              4303
+            ],
+            "excerpts": [
+              {
+                "line": 4294,
+                "text": "Operating income"
+              },
+              {
+                "line": 4295,
+                "text": "|"
+              },
+              {
+                "line": 4296,
+                "text": "|"
+              },
+              {
+                "line": 4297,
+                "text": "|"
+              },
+              {
+                "line": 4298,
+                "text": "155,237"
+              },
+              {
+                "line": 4299,
+                "text": "|"
+              },
+              {
+                "line": 4300,
+                "text": "|"
+              },
+              {
+                "line": 4301,
+                "text": "|"
+              },
+              {
+                "line": 4302,
+                "text": "|"
+              },
+              {
+                "line": 4303,
+                "text": "128,528"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C005",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Net income | $133.749B | $101.832B | `NetIncomeLoss` | 10-K lines 4404–4415 |",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-07-29.txt",
+            "lines": [
+              4404,
+              4405,
+              4406,
+              4407,
+              4408,
+              4409,
+              4410,
+              4411,
+              4412,
+              4413,
+              4414,
+              4415
+            ],
+            "excerpts": [
+              {
+                "line": 4404,
+                "text": "Net income"
+              },
+              {
+                "line": 4405,
+                "text": "|"
+              },
+              {
+                "line": 4406,
+                "text": "|"
+              },
+              {
+                "line": 4407,
+                "text": "$"
+              },
+              {
+                "line": 4408,
+                "text": "|"
+              },
+              {
+                "line": 4409,
+                "text": "133,749"
+              },
+              {
+                "line": 4410,
+                "text": "|"
+              },
+              {
+                "line": 4411,
+                "text": "|"
+              },
+              {
+                "line": 4412,
+                "text": "|"
+              },
+              {
+                "line": 4413,
+                "text": "$"
+              },
+              {
+                "line": 4414,
+                "text": "|"
+              },
+              {
+                "line": 4415,
+                "text": "101,832"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C006",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Diluted EPS | $17.95 | $13.64 | `EarningsPerShareDiluted` | 10-K lines 4475–4486 |",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-07-29.txt",
+            "lines": [
+              4475,
+              4476,
+              4477,
+              4478,
+              4479,
+              4480,
+              4481,
+              4482,
+              4483,
+              4484,
+              4485,
+              4486
+            ],
+            "excerpts": [
+              {
+                "line": 4475,
+                "text": "Diluted"
+              },
+              {
+                "line": 4476,
+                "text": "|"
+              },
+              {
+                "line": 4477,
+                "text": "|"
+              },
+              {
+                "line": 4478,
+                "text": "$"
+              },
+              {
+                "line": 4479,
+                "text": "|"
+              },
+              {
+                "line": 4480,
+                "text": "17.95"
+              },
+              {
+                "line": 4481,
+                "text": "|"
+              },
+              {
+                "line": 4482,
+                "text": "|"
+              },
+              {
+                "line": 4483,
+                "text": "|"
+              },
+              {
+                "line": 4484,
+                "text": "$"
+              },
+              {
+                "line": 4485,
+                "text": "|"
+              },
+              {
+                "line": 4486,
+                "text": "13.64"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C007",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Stockholders’ equity | $442.387B | $343.479B | `StockholdersEquity` | 10-K lines 5386–5395 |",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-07-29.txt",
+            "lines": [
+              5386,
+              5387,
+              5388,
+              5389,
+              5390,
+              5391,
+              5392,
+              5393,
+              5394,
+              5395
+            ],
+            "excerpts": [
+              {
+                "line": 5386,
+                "text": "Total stockholders’ equity"
+              },
+              {
+                "line": 5387,
+                "text": "|"
+              },
+              {
+                "line": 5388,
+                "text": "|"
+              },
+              {
+                "line": 5389,
+                "text": "|"
+              },
+              {
+                "line": 5390,
+                "text": "442,387"
+              },
+              {
+                "line": 5391,
+                "text": "|"
+              },
+              {
+                "line": 5392,
+                "text": "|"
+              },
+              {
+                "line": 5393,
+                "text": "|"
+              },
+              {
+                "line": 5394,
+                "text": "|"
+              },
+              {
+                "line": 5395,
+                "text": "343,479"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C008",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Long-term debt, current portion | $9.227B | $2.999B | `LongTermDebtCurrent` | 10-K lines 5124–5133 |",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-07-29.txt",
+            "lines": [
+              5124,
+              5125,
+              5126,
+              5127,
+              5128,
+              5129,
+              5130,
+              5131,
+              5132,
+              5133
+            ],
+            "excerpts": [
+              {
+                "line": 5124,
+                "text": "Current portion of long-term debt"
+              },
+              {
+                "line": 5125,
+                "text": "|"
+              },
+              {
+                "line": 5126,
+                "text": "|"
+              },
+              {
+                "line": 5127,
+                "text": "|"
+              },
+              {
+                "line": 5128,
+                "text": "9,227"
+              },
+              {
+                "line": 5129,
+                "text": "|"
+              },
+              {
+                "line": 5130,
+                "text": "|"
+              },
+              {
+                "line": 5131,
+                "text": "|"
+              },
+              {
+                "line": 5132,
+                "text": "|"
+              },
+              {
+                "line": 5133,
+                "text": "2,999"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C009",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Long-term debt, noncurrent | $31.067B | $40.152B | `LongTermDebtNoncurrent` | 10-K lines 5208–5217 |",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-07-29.txt",
+            "lines": [
+              5208,
+              5209,
+              5210,
+              5211,
+              5212,
+              5213,
+              5214,
+              5215,
+              5216,
+              5217
+            ],
+            "excerpts": [
+              {
+                "line": 5208,
+                "text": "Long-term debt"
+              },
+              {
+                "line": 5209,
+                "text": "|"
+              },
+              {
+                "line": 5210,
+                "text": "|"
+              },
+              {
+                "line": 5211,
+                "text": "|"
+              },
+              {
+                "line": 5212,
+                "text": "31,067"
+              },
+              {
+                "line": 5213,
+                "text": "|"
+              },
+              {
+                "line": 5214,
+                "text": "|"
+              },
+              {
+                "line": 5215,
+                "text": "|"
+              },
+              {
+                "line": 5216,
+                "text": "|"
+              },
+              {
+                "line": 5217,
+                "text": "40,152"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C010",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Cash from operations | $182.935B | $136.162B | `NetCashProvidedByUsedInOperatingActivities` | 10-K lines 5796–5805 |",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-07-29.txt",
+            "lines": [
+              5796,
+              5797,
+              5798,
+              5799,
+              5800,
+              5801,
+              5802,
+              5803,
+              5804,
+              5805
+            ],
+            "excerpts": [
+              {
+                "line": 5796,
+                "text": "Net cash from operations"
+              },
+              {
+                "line": 5797,
+                "text": "|"
+              },
+              {
+                "line": 5798,
+                "text": "|"
+              },
+              {
+                "line": 5799,
+                "text": "|"
+              },
+              {
+                "line": 5800,
+                "text": "182,935"
+              },
+              {
+                "line": 5801,
+                "text": "|"
+              },
+              {
+                "line": 5802,
+                "text": "|"
+              },
+              {
+                "line": 5803,
+                "text": "|"
+              },
+              {
+                "line": 5804,
+                "text": "|"
+              },
+              {
+                "line": 5805,
+                "text": "136,162"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C011",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Additions to property and equipment | $115.948B | $64.551B | `PaymentsToAcquirePropertyPlantAndEquipment` | 10-K lines 6062–6074 |",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-07-29.txt",
+            "lines": [
+              6062,
+              6063,
+              6064,
+              6065,
+              6066,
+              6067,
+              6068,
+              6069,
+              6070,
+              6071,
+              6072,
+              6073,
+              6074
+            ],
+            "excerpts": [
+              {
+                "line": 6062,
+                "text": "Additions to property and equipment"
+              },
+              {
+                "line": 6063,
+                "text": "|"
+              },
+              {
+                "line": 6064,
+                "text": "|"
+              },
+              {
+                "line": 6065,
+                "text": "|"
+              },
+              {
+                "line": 6066,
+                "text": "( 115,948"
+              },
+              {
+                "line": 6067,
+                "text": "|"
+              },
+              {
+                "line": 6068,
+                "text": ")"
+              },
+              {
+                "line": 6069,
+                "text": "|"
+              },
+              {
+                "line": 6070,
+                "text": "|"
+              },
+              {
+                "line": 6071,
+                "text": "|"
+              },
+              {
+                "line": 6072,
+                "text": "( 64,551"
+              },
+              {
+                "line": 6073,
+                "text": "|"
+              },
+              {
+                "line": 6074,
+                "text": ")"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C012",
+        "text": "- Revenue growth (FY2026 revenue minus prior fiscal-year revenue, divided by prior fiscal-year revenue) = (331,839,000,000 - 281,724,000,000) / 281,724,000,000 = **17.7887%**. Tags: `RevenueFromContractWithCustomerExcludingAssessedTax`; period ends 2026-06-30 and 2025-06-30; accession 0001193125-26-323660.",
+        "cited_lines": [],
+        "period_header_context": []
+      },
+      {
+        "id": "C013",
+        "text": "- Operating margin (operating income divided by total revenue) = 155,237,000,000 / 331,839,000,000 = **46.7808%**. Tags: `OperatingIncomeLoss` and `RevenueFromContractWithCustomerExcludingAssessedTax`; period end 2026-06-30; accession 0001193125-26-323660.",
+        "cited_lines": [],
+        "period_header_context": []
+      },
+      {
+        "id": "C014",
+        "text": "- Return on average equity (net income divided by average beginning and ending stockholders' equity) = 133,749,000,000 / ((442,387,000,000 + 343,479,000,000) / 2) = **34.0386%**. Tags: `NetIncomeLoss` and `StockholdersEquity`; period ends 2026-06-30 and 2025-06-30; accession 0001193125-26-323660.",
+        "cited_lines": [],
+        "period_header_context": []
+      },
+      {
+        "id": "C015",
+        "text": "- Debt to equity (current and noncurrent long-term debt divided by stockholders' equity) = (9,227,000,000 + 31,067,000,000) / 442,387,000,000 = **9.1083%**. Tags: `LongTermDebtCurrent`, `LongTermDebtNoncurrent`, and `StockholdersEquity`; period end 2026-06-30; accession 0001193125-26-323660.",
+        "cited_lines": [],
+        "period_header_context": []
+      },
+      {
+        "id": "C016",
+        "text": "- Free cash flow (cash from operations minus additions to property and equipment) = 182,935,000,000 - 115,948,000,000 = **$66,987,000,000**. Tags: `NetCashProvidedByUsedInOperatingActivities` and `PaymentsToAcquirePropertyPlantAndEquipment`; period end 2026-06-30; accession 0001193125-26-323660.",
+        "cited_lines": [],
+        "period_header_context": []
+      },
+      {
+        "id": "C017",
+        "text": "- P/E (share price divided by annual diluted EPS) = $531.01 / $17.95 = **29.5827**. Tag: `EarningsPerShareDiluted`; period end 2026-06-30; accession 0001193125-26-323660. The price is the LSEG close on October 28, 2026, recorded in `market_data.json`; it is not a price target.",
+        "cited_lines": [],
+        "period_header_context": []
+      },
+      {
+        "id": "C018",
+        "text": "The quarter ended September 30, 2026 (8-K_Ex99.1_2026-10-28.txt, line 8, accession 0001193125-26-436122). The release says revenue was $92.3 billion and increased 19% (8-K_Ex99.1_2026-10-28.txt, line 9, accession 0001193125-26-436122). It says GAAP diluted EPS was $4.92 and increased 32% (8-K_Ex99.1_2026-10-28.txt, line 12, accession 0001193125-26-436122). The same line separately reports non-GAAP EPS of $4.89; this report uses GAAP diluted EPS.",
+        "cited_lines": [
+          {
+            "filename": "8-K_Ex99.1_2026-10-28.txt",
+            "lines": [
+              8
+            ],
+            "excerpts": [
+              {
+                "line": 8,
+                "text": "REDMOND, Wash. — October 28, 2026 — Microsoft Corp. today announced the following results for the quarter ended September 30, 2026, as compared to the corresponding period of last fiscal year:"
+              }
+            ]
+          },
+          {
+            "filename": "8-K_Ex99.1_2026-10-28.txt",
+            "lines": [
+              9
+            ],
+            "excerpts": [
+              {
+                "line": 9,
+                "text": "• Revenue was $92.3 billion and increased 19%"
+              }
+            ]
+          },
+          {
+            "filename": "8-K_Ex99.1_2026-10-28.txt",
+            "lines": [
+              12
+            ],
+            "excerpts": [
+              {
+                "line": 12,
+                "text": "• Diluted earnings per share was $4.92 and increased 32% on a GAAP basis, and was $4.89 and increased 18% (up 19% in constant currency) on a non-GAAP basis"
+              }
+            ]
+          }
+        ],
+        "period_header_context": [
+          {
+            "filename": "8-K_Ex99.1_2026-10-28.txt",
+            "lines": [
+              {
+                "line": 8,
+                "text": "REDMOND, Wash. — October 28, 2026 — Microsoft Corp. today announced the following results for the quarter ended September 30, 2026, as compared to the corresponding period of last fiscal year:"
+              },
+              {
+                "line": 9,
+                "text": "• Revenue was $92.3 billion and increased 19%"
+              },
+              {
+                "line": 10,
+                "text": "• Operating income was $45.9 billion and increased 21% (up 22% in constant currency)"
+              }
+            ]
+          },
+          {
+            "filename": "8-K_Ex99.1_2026-10-28.txt",
+            "lines": [
+              {
+                "line": 8,
+                "text": "REDMOND, Wash. — October 28, 2026 — Microsoft Corp. today announced the following results for the quarter ended September 30, 2026, as compared to the corresponding period of last fiscal year:"
+              },
+              {
+                "line": 9,
+                "text": "• Revenue was $92.3 billion and increased 19%"
+              },
+              {
+                "line": 10,
+                "text": "• Operating income was $45.9 billion and increased 21% (up 22% in constant currency)"
+              }
+            ]
+          },
+          {
+            "filename": "8-K_Ex99.1_2026-10-28.txt",
+            "lines": [
+              {
+                "line": 8,
+                "text": "REDMOND, Wash. — October 28, 2026 — Microsoft Corp. today announced the following results for the quarter ended September 30, 2026, as compared to the corresponding period of last fiscal year:"
+              },
+              {
+                "line": 9,
+                "text": "• Revenue was $92.3 billion and increased 19%"
+              },
+              {
+                "line": 10,
+                "text": "• Operating income was $45.9 billion and increased 21% (up 22% in constant currency)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C019",
+        "text": "| GOOGL | $402,836,000,000 | $129,039,000,000 | (129,039,000,000 / 402,836,000,000) = 32.0326% | 2025-12-31 | `Revenues`; `OperatingIncomeLoss` | 0001652044-26-000018 |",
+        "cited_lines": [],
+        "period_header_context": []
+      },
+      {
+        "id": "C020",
+        "text": "Insight: FY2026 additions to property and equipment were $115,948,000,000; cash from operations was $182,935,000,000; free cash flow under the desk definition was $182,935,000,000 - $115,948,000,000 = $66,987,000,000 (tags `PaymentsToAcquirePropertyPlantAndEquipment` and `NetCashProvidedByUsedInOperatingActivities`; 10-K_2026-07-29.txt, lines 5796-5805 and 6062-6074; accession 0001193125-26-323660).",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-07-29.txt",
+            "lines": [
+              5796,
+              5797,
+              5798,
+              5799,
+              5800,
+              5801,
+              5802,
+              5803,
+              5804,
+              5805,
+              6062,
+              6063,
+              6064,
+              6065,
+              6066,
+              6067,
+              6068,
+              6069,
+              6070,
+              6071,
+              6072,
+              6073,
+              6074
+            ],
+            "excerpts": [
+              {
+                "line": 5796,
+                "text": "Net cash from operations"
+              },
+              {
+                "line": 5797,
+                "text": "|"
+              },
+              {
+                "line": 5798,
+                "text": "|"
+              },
+              {
+                "line": 5799,
+                "text": "|"
+              },
+              {
+                "line": 5800,
+                "text": "182,935"
+              },
+              {
+                "line": 5801,
+                "text": "|"
+              },
+              {
+                "line": 5802,
+                "text": "|"
+              },
+              {
+                "line": 5803,
+                "text": "|"
+              },
+              {
+                "line": 5804,
+                "text": "|"
+              },
+              {
+                "line": 5805,
+                "text": "136,162"
+              },
+              {
+                "line": 6062,
+                "text": "Additions to property and equipment"
+              },
+              {
+                "line": 6063,
+                "text": "|"
+              },
+              {
+                "line": 6064,
+                "text": "|"
+              },
+              {
+                "line": 6065,
+                "text": "|"
+              },
+              {
+                "line": 6066,
+                "text": "( 115,948"
+              },
+              {
+                "line": 6067,
+                "text": "|"
+              },
+              {
+                "line": 6068,
+                "text": ")"
+              },
+              {
+                "line": 6069,
+                "text": "|"
+              },
+              {
+                "line": 6070,
+                "text": "|"
+              },
+              {
+                "line": 6071,
+                "text": "|"
+              },
+              {
+                "line": 6072,
+                "text": "( 64,551"
+              },
+              {
+                "line": 6073,
+                "text": "|"
+              },
+              {
+                "line": 6074,
+                "text": ")"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C021",
+        "text": "Insight: Microsoft extended its long-term OpenAI partnership in October 2025 and April 2026, and says it will continue to receive revenue-sharing payments (10-K_2026-07-29.txt, line 1544, accession 0001193125-26-323660).",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-07-29.txt",
+            "lines": [
+              1544
+            ],
+            "excerpts": [
+              {
+                "line": 1544,
+                "text": "We have a long-term strategic partnership with OpenAI which was originally established in 2019. In October 2025 and April 2026, we extended this partnership and continue to build on our shared vision to advance artificial intelligence responsibly and make its benefits broadly accessible. Microsoft is a major investor in OpenAI and will continue to receive revenue-sharing payments. We hold rights to OpenAI’s intellectual property, including models and infrastructure, for integration into our products."
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      }
+    ],
+    "saved_facts": {
+      "C001": [],
+      "C002": [],
+      "C003": [
+        {
+          "file": "facts.json",
+          "concept": "total_revenue",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "value": 331839000000,
+          "prior_value": 281724000000,
+          "period_start": "2025-07-01",
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        }
+      ],
+      "C004": [
+        {
+          "file": "facts.json",
+          "concept": "operating_income",
+          "tag": "OperatingIncomeLoss",
+          "value": 155237000000,
+          "prior_value": 128528000000,
+          "period_start": "2025-07-01",
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        }
+      ],
+      "C005": [
+        {
+          "file": "facts.json",
+          "concept": "net_income",
+          "tag": "NetIncomeLoss",
+          "value": 133749000000,
+          "prior_value": 101832000000,
+          "period_start": "2025-07-01",
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        }
+      ],
+      "C006": [
+        {
+          "file": "facts.json",
+          "concept": "diluted_eps",
+          "tag": "EarningsPerShareDiluted",
+          "value": 17.95,
+          "prior_value": 13.64,
+          "period_start": "2025-07-01",
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        }
+      ],
+      "C007": [
+        {
+          "file": "facts.json",
+          "concept": "equity",
+          "tag": "StockholdersEquity",
+          "value": 442387000000,
+          "prior_value": 343479000000,
+          "period_start": null,
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        }
+      ],
+      "C008": [
+        {
+          "file": "facts.json",
+          "concept": "current_debt",
+          "tag": "LongTermDebtCurrent",
+          "value": 9227000000,
+          "prior_value": 2999000000,
+          "period_start": null,
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        }
+      ],
+      "C009": [
+        {
+          "file": "facts.json",
+          "concept": "long_term_debt",
+          "tag": "LongTermDebtNoncurrent",
+          "value": 31067000000,
+          "prior_value": 40152000000,
+          "period_start": null,
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        }
+      ],
+      "C010": [
+        {
+          "file": "facts.json",
+          "concept": "cash_from_operations",
+          "tag": "NetCashProvidedByUsedInOperatingActivities",
+          "value": 182935000000,
+          "prior_value": 136162000000,
+          "period_start": "2025-07-01",
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        }
+      ],
+      "C011": [
+        {
+          "file": "facts.json",
+          "concept": "capex",
+          "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "value": 115948000000,
+          "prior_value": 64551000000,
+          "period_start": "2025-07-01",
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        }
+      ],
+      "C012": [
+        {
+          "file": "facts.json",
+          "concept": "total_revenue",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "value": 331839000000,
+          "prior_value": 281724000000,
+          "period_start": "2025-07-01",
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        }
+      ],
+      "C013": [
+        {
+          "file": "facts.json",
+          "concept": "total_revenue",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "value": 331839000000,
+          "prior_value": 281724000000,
+          "period_start": "2025-07-01",
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        },
+        {
+          "file": "facts.json",
+          "concept": "operating_income",
+          "tag": "OperatingIncomeLoss",
+          "value": 155237000000,
+          "prior_value": 128528000000,
+          "period_start": "2025-07-01",
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        }
+      ],
+      "C014": [
+        {
+          "file": "facts.json",
+          "concept": "net_income",
+          "tag": "NetIncomeLoss",
+          "value": 133749000000,
+          "prior_value": 101832000000,
+          "period_start": "2025-07-01",
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        },
+        {
+          "file": "facts.json",
+          "concept": "equity",
+          "tag": "StockholdersEquity",
+          "value": 442387000000,
+          "prior_value": 343479000000,
+          "period_start": null,
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        }
+      ],
+      "C015": [
+        {
+          "file": "facts.json",
+          "concept": "equity",
+          "tag": "StockholdersEquity",
+          "value": 442387000000,
+          "prior_value": 343479000000,
+          "period_start": null,
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        },
+        {
+          "file": "facts.json",
+          "concept": "long_term_debt",
+          "tag": "LongTermDebtNoncurrent",
+          "value": 31067000000,
+          "prior_value": 40152000000,
+          "period_start": null,
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        },
+        {
+          "file": "facts.json",
+          "concept": "current_debt",
+          "tag": "LongTermDebtCurrent",
+          "value": 9227000000,
+          "prior_value": 2999000000,
+          "period_start": null,
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        }
+      ],
+      "C016": [
+        {
+          "file": "facts.json",
+          "concept": "cash_from_operations",
+          "tag": "NetCashProvidedByUsedInOperatingActivities",
+          "value": 182935000000,
+          "prior_value": 136162000000,
+          "period_start": "2025-07-01",
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        },
+        {
+          "file": "facts.json",
+          "concept": "capex",
+          "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "value": 115948000000,
+          "prior_value": 64551000000,
+          "period_start": "2025-07-01",
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        }
+      ],
+      "C017": [
+        {
+          "file": "facts.json",
+          "concept": "diluted_eps",
+          "tag": "EarningsPerShareDiluted",
+          "value": 17.95,
+          "prior_value": 13.64,
+          "period_start": "2025-07-01",
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        }
+      ],
+      "C018": [],
+      "C019": [
+        {
+          "file": "GOOGL_facts.json",
+          "concept": "total_revenue",
+          "tag": "Revenues",
+          "value": 402836000000,
+          "prior_value": 350018000000,
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        },
+        {
+          "file": "GOOGL_facts.json",
+          "concept": "operating_income",
+          "tag": "OperatingIncomeLoss",
+          "value": 129039000000,
+          "prior_value": 112390000000,
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        }
+      ],
+      "C020": [
+        {
+          "file": "facts.json",
+          "concept": "cash_from_operations",
+          "tag": "NetCashProvidedByUsedInOperatingActivities",
+          "value": 182935000000,
+          "prior_value": 136162000000,
+          "period_start": "2025-07-01",
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        },
+        {
+          "file": "facts.json",
+          "concept": "capex",
+          "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "value": 115948000000,
+          "prior_value": 64551000000,
+          "period_start": "2025-07-01",
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        }
+      ],
+      "C021": []
+    },
+    "claim_fact_evidence": [
+      {
+        "id": "C001",
+        "text": "Insight: The 10-K says ongoing investment in cloud and AI infrastructure will increase operating costs and may decrease operating margins (10-K_2026-07-29.txt, line 1550, accession 0001193125-26-323660).",
+        "facts": []
+      },
+      {
+        "id": "C002",
+        "text": "Microsoft reports that FY2026 Microsoft Cloud revenue increased 27% to $214.4 billion. Azure and other cloud services revenue increased 41%. Commercial remaining performance obligation increased 84% to $678 billion (10-K_2026-07-29.txt, lines 1532–1538; accession 0001193125-26-323660). These are company-reported growth measures. They do not establish that the growth rate will continue.",
+        "facts": []
+      },
+      {
+        "id": "C003",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Revenue | $331.839B | $281.724B | `RevenueFromContractWithCustomerExcludingAssessedTax` | 10-K lines 4064–4073 |",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "total_revenue",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "value": 331839000000,
+            "prior_value": 281724000000,
+            "period_start": "2025-07-01",
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          }
+        ]
+      },
+      {
+        "id": "C004",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Operating income | $155.237B | $128.528B | `OperatingIncomeLoss` | 10-K lines 4294–4303 |",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "operating_income",
+            "tag": "OperatingIncomeLoss",
+            "value": 155237000000,
+            "prior_value": 128528000000,
+            "period_start": "2025-07-01",
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          }
+        ]
+      },
+      {
+        "id": "C005",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Net income | $133.749B | $101.832B | `NetIncomeLoss` | 10-K lines 4404–4415 |",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "net_income",
+            "tag": "NetIncomeLoss",
+            "value": 133749000000,
+            "prior_value": 101832000000,
+            "period_start": "2025-07-01",
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          }
+        ]
+      },
+      {
+        "id": "C006",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Diluted EPS | $17.95 | $13.64 | `EarningsPerShareDiluted` | 10-K lines 4475–4486 |",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "diluted_eps",
+            "tag": "EarningsPerShareDiluted",
+            "value": 17.95,
+            "prior_value": 13.64,
+            "period_start": "2025-07-01",
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          }
+        ]
+      },
+      {
+        "id": "C007",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Stockholders’ equity | $442.387B | $343.479B | `StockholdersEquity` | 10-K lines 5386–5395 |",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "equity",
+            "tag": "StockholdersEquity",
+            "value": 442387000000,
+            "prior_value": 343479000000,
+            "period_start": null,
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          }
+        ]
+      },
+      {
+        "id": "C008",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Long-term debt, current portion | $9.227B | $2.999B | `LongTermDebtCurrent` | 10-K lines 5124–5133 |",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "current_debt",
+            "tag": "LongTermDebtCurrent",
+            "value": 9227000000,
+            "prior_value": 2999000000,
+            "period_start": null,
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          }
+        ]
+      },
+      {
+        "id": "C009",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Long-term debt, noncurrent | $31.067B | $40.152B | `LongTermDebtNoncurrent` | 10-K lines 5208–5217 |",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "long_term_debt",
+            "tag": "LongTermDebtNoncurrent",
+            "value": 31067000000,
+            "prior_value": 40152000000,
+            "period_start": null,
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          }
+        ]
+      },
+      {
+        "id": "C010",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Cash from operations | $182.935B | $136.162B | `NetCashProvidedByUsedInOperatingActivities` | 10-K lines 5796–5805 |",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "cash_from_operations",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "value": 182935000000,
+            "prior_value": 136162000000,
+            "period_start": "2025-07-01",
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          }
+        ]
+      },
+      {
+        "id": "C011",
+        "text": "| Fact | FY2026 | FY2025 | XBRL tag | Filing statement source |\n| Additions to property and equipment | $115.948B | $64.551B | `PaymentsToAcquirePropertyPlantAndEquipment` | 10-K lines 6062–6074 |",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "capex",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "value": 115948000000,
+            "prior_value": 64551000000,
+            "period_start": "2025-07-01",
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          }
+        ]
+      },
+      {
+        "id": "C012",
+        "text": "- Revenue growth (FY2026 revenue minus prior fiscal-year revenue, divided by prior fiscal-year revenue) = (331,839,000,000 - 281,724,000,000) / 281,724,000,000 = **17.7887%**. Tags: `RevenueFromContractWithCustomerExcludingAssessedTax`; period ends 2026-06-30 and 2025-06-30; accession 0001193125-26-323660.",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "total_revenue",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "value": 331839000000,
+            "prior_value": 281724000000,
+            "period_start": "2025-07-01",
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          }
+        ]
+      },
+      {
+        "id": "C013",
+        "text": "- Operating margin (operating income divided by total revenue) = 155,237,000,000 / 331,839,000,000 = **46.7808%**. Tags: `OperatingIncomeLoss` and `RevenueFromContractWithCustomerExcludingAssessedTax`; period end 2026-06-30; accession 0001193125-26-323660.",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "total_revenue",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "value": 331839000000,
+            "prior_value": 281724000000,
+            "period_start": "2025-07-01",
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          },
+          {
+            "file": "facts.json",
+            "concept": "operating_income",
+            "tag": "OperatingIncomeLoss",
+            "value": 155237000000,
+            "prior_value": 128528000000,
+            "period_start": "2025-07-01",
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          }
+        ]
+      },
+      {
+        "id": "C014",
+        "text": "- Return on average equity (net income divided by average beginning and ending stockholders' equity) = 133,749,000,000 / ((442,387,000,000 + 343,479,000,000) / 2) = **34.0386%**. Tags: `NetIncomeLoss` and `StockholdersEquity`; period ends 2026-06-30 and 2025-06-30; accession 0001193125-26-323660.",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "net_income",
+            "tag": "NetIncomeLoss",
+            "value": 133749000000,
+            "prior_value": 101832000000,
+            "period_start": "2025-07-01",
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          },
+          {
+            "file": "facts.json",
+            "concept": "equity",
+            "tag": "StockholdersEquity",
+            "value": 442387000000,
+            "prior_value": 343479000000,
+            "period_start": null,
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          }
+        ]
+      },
+      {
+        "id": "C015",
+        "text": "- Debt to equity (current and noncurrent long-term debt divided by stockholders' equity) = (9,227,000,000 + 31,067,000,000) / 442,387,000,000 = **9.1083%**. Tags: `LongTermDebtCurrent`, `LongTermDebtNoncurrent`, and `StockholdersEquity`; period end 2026-06-30; accession 0001193125-26-323660.",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "equity",
+            "tag": "StockholdersEquity",
+            "value": 442387000000,
+            "prior_value": 343479000000,
+            "period_start": null,
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          },
+          {
+            "file": "facts.json",
+            "concept": "long_term_debt",
+            "tag": "LongTermDebtNoncurrent",
+            "value": 31067000000,
+            "prior_value": 40152000000,
+            "period_start": null,
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          },
+          {
+            "file": "facts.json",
+            "concept": "current_debt",
+            "tag": "LongTermDebtCurrent",
+            "value": 9227000000,
+            "prior_value": 2999000000,
+            "period_start": null,
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          }
+        ]
+      },
+      {
+        "id": "C016",
+        "text": "- Free cash flow (cash from operations minus additions to property and equipment) = 182,935,000,000 - 115,948,000,000 = **$66,987,000,000**. Tags: `NetCashProvidedByUsedInOperatingActivities` and `PaymentsToAcquirePropertyPlantAndEquipment`; period end 2026-06-30; accession 0001193125-26-323660.",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "cash_from_operations",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "value": 182935000000,
+            "prior_value": 136162000000,
+            "period_start": "2025-07-01",
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          },
+          {
+            "file": "facts.json",
+            "concept": "capex",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "value": 115948000000,
+            "prior_value": 64551000000,
+            "period_start": "2025-07-01",
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          }
+        ]
+      },
+      {
+        "id": "C017",
+        "text": "- P/E (share price divided by annual diluted EPS) = $531.01 / $17.95 = **29.5827**. Tag: `EarningsPerShareDiluted`; period end 2026-06-30; accession 0001193125-26-323660. The price is the LSEG close on October 28, 2026, recorded in `market_data.json`; it is not a price target.",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "diluted_eps",
+            "tag": "EarningsPerShareDiluted",
+            "value": 17.95,
+            "prior_value": 13.64,
+            "period_start": "2025-07-01",
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          }
+        ]
+      },
+      {
+        "id": "C018",
+        "text": "The quarter ended September 30, 2026 (8-K_Ex99.1_2026-10-28.txt, line 8, accession 0001193125-26-436122). The release says revenue was $92.3 billion and increased 19% (8-K_Ex99.1_2026-10-28.txt, line 9, accession 0001193125-26-436122). It says GAAP diluted EPS was $4.92 and increased 32% (8-K_Ex99.1_2026-10-28.txt, line 12, accession 0001193125-26-436122). The same line separately reports non-GAAP EPS of $4.89; this report uses GAAP diluted EPS.",
+        "facts": []
+      },
+      {
+        "id": "C019",
+        "text": "| GOOGL | $402,836,000,000 | $129,039,000,000 | (129,039,000,000 / 402,836,000,000) = 32.0326% | 2025-12-31 | `Revenues`; `OperatingIncomeLoss` | 0001652044-26-000018 |",
+        "facts": [
+          {
+            "file": "GOOGL_facts.json",
+            "concept": "total_revenue",
+            "tag": "Revenues",
+            "value": 402836000000,
+            "prior_value": 350018000000,
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          },
+          {
+            "file": "GOOGL_facts.json",
+            "concept": "operating_income",
+            "tag": "OperatingIncomeLoss",
+            "value": 129039000000,
+            "prior_value": 112390000000,
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          }
+        ]
+      },
+      {
+        "id": "C020",
+        "text": "Insight: FY2026 additions to property and equipment were $115,948,000,000; cash from operations was $182,935,000,000; free cash flow under the desk definition was $182,935,000,000 - $115,948,000,000 = $66,987,000,000 (tags `PaymentsToAcquirePropertyPlantAndEquipment` and `NetCashProvidedByUsedInOperatingActivities`; 10-K_2026-07-29.txt, lines 5796-5805 and 6062-6074; accession 0001193125-26-323660).",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "cash_from_operations",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "value": 182935000000,
+            "prior_value": 136162000000,
+            "period_start": "2025-07-01",
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          },
+          {
+            "file": "facts.json",
+            "concept": "capex",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "value": 115948000000,
+            "prior_value": 64551000000,
+            "period_start": "2025-07-01",
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          }
+        ]
+      },
+      {
+        "id": "C021",
+        "text": "Insight: Microsoft extended its long-term OpenAI partnership in October 2025 and April 2026, and says it will continue to receive revenue-sharing payments (10-K_2026-07-29.txt, line 1544, accession 0001193125-26-323660).",
+        "facts": []
+      }
+    ]
+  },
+  "expected_output": "One compact JSON object with an items array. Each item has id, mark, reason, and correction. Include every supplied ID exactly once and in the supplied order."
+}

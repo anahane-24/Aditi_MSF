@@ -1,0 +1,13 @@
+{
+  "queue": [
+    {
+      "role": "Investment Advisor",
+      "requests": [
+        {
+          "part": "Investment Recommendation",
+          "problem": "This `Insight:` repeats another analyst role's Insight. State a distinct claim."
+        }
+      ]
+    }
+  ]
+}

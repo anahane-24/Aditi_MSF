@@ -1,0 +1,134 @@
+{
+  "report": "C:\\Users\\ahnah\\orca\\Aditi_MSF\\data\\Alphabet_Inc._20261122_175042_244778_Eastern Standard Time\\desk_final_report.md",
+  "run_dir": "C:\\Users\\ahnah\\orca\\Aditi_MSF\\data\\Alphabet_Inc._20261122_175042_244778_Eastern Standard Time",
+  "claim_count": 6,
+  "passed": 1,
+  "refused": 6,
+  "marks": [
+    {
+      "id": "C001",
+      "mark": "refused",
+      "claim": "The company reported strong financial performance in Q3 2026 with total revenues of $127.58 billion, representing a 24.6% increase year-over-year. Operating income stood at $41.23 billion, and net income was $132.17 billion. The company's operating margin for the quarter ended September 30, 2026 was 32.3%, derived from operating income of $41,230 million and total revenues of $127,577 million, as reported in the 8-K filing dated October 28, 2026 (accession number: 0001652044-26-000080), line 297.",
+      "sources": [
+        {
+          "filename": "8-K_Ex99.1_2026-10-28.txt",
+          "lines": [
+            297
+          ],
+          "valid": true,
+          "excerpts": [
+            {
+              "line": 297,
+              "text": "| Quarter Ended September 30, | | Less FX Effect | | Constant Currency Revenues | | As Reported | | Less Hedging Effect | | Less FX Effect | | Constant Currency Revenues |"
+            }
+          ]
+        }
+      ],
+      "facts": [],
+      "checks": [
+        "The cited line number exists in 8-K_Ex99.1_2026-10-28.txt.",
+        "Ratio definition does not state its arithmetic."
+      ]
+    },
+    {
+      "id": "C002",
+      "mark": "refused",
+      "claim": "Insight: Alphabet Inc. faces a risk related to its reliance on advertising revenue from Google Services, which may be vulnerable to economic downturns or shifts in user behavior, as highlighted in Item 1 and Item 7 of the filing.",
+      "sources": [],
+      "facts": [],
+      "checks": [
+        "No saved filing line or XBRL fact supports this claim.",
+        "No filing line or XBRL tag was found in this claim block."
+      ]
+    },
+    {
+      "id": "C003",
+      "mark": "refused",
+      "claim": "Alphabet Inc. is currently trading at a valuation that significantly exceeds its estimated intrinsic value. The base case value per share is $96.64, while the market price as of October 28, 2026, was $324.89. This results in a negative margin of safety of -236.19%, indicating that the stock is severely overpriced.",
+      "sources": [],
+      "facts": [],
+      "checks": [
+        "No saved filing line or XBRL fact supports this claim.",
+        "No filing line or XBRL tag was found in this claim block."
+      ]
+    },
+    {
+      "id": "C004",
+      "mark": "refused",
+      "claim": "The company’s financials show strong performance with high operating margins and significant revenue growth. However, these metrics do not justify the current market price. The quantitative decision rating is Sell / Avoid, and the allocation tier is None, with a 0.0% allocation percentage and $0.00 purchase size.",
+      "sources": [],
+      "facts": [],
+      "checks": [
+        "No saved filing line or XBRL fact supports this claim.",
+        "No filing line or XBRL tag was found in this claim block.",
+        "Ratio definition is missing: prior."
+      ]
+    },
+    {
+      "id": "C005",
+      "mark": "refused",
+      "claim": "Insight: Alphabet Inc.'s operating margin of 32.3% for the quarter ended September 30, 2026 was derived from operating income of $41,230 million and total revenues of $127,577 million, as reported in the 8-K filing dated October 28, 2026 (accession number: 0001652044-26-000080), line 297.",
+      "sources": [
+        {
+          "filename": "8-K_Ex99.1_2026-10-28.txt",
+          "lines": [
+            297
+          ],
+          "valid": true,
+          "excerpts": [
+            {
+              "line": 297,
+              "text": "| Quarter Ended September 30, | | Less FX Effect | | Constant Currency Revenues | | As Reported | | Less Hedging Effect | | Less FX Effect | | Constant Currency Revenues |"
+            }
+          ]
+        }
+      ],
+      "facts": [],
+      "checks": [
+        "The cited line number exists in 8-K_Ex99.1_2026-10-28.txt.",
+        "Ratio definition does not state its arithmetic."
+      ]
+    },
+    {
+      "id": "C006",
+      "mark": "passed",
+      "claim": "Insight: Alphabet Inc.'s reliance on advertising revenue from Google Services may be vulnerable to economic downturns or shifts in user behavior, as highlighted in Item 1 and Item 7 of the filing. *Source*: Line 00252, `Google Services generates revenues primarily from advertising; fees received for consumer subscription-based products such as YouTube TV, YouTube Music and Premium, and NFL Sunday Ticket, as well as Google One; the sale of apps and in-app purchases; and consumer devices.` (filename: `alphabet_earnings_2026_q3.txt`, accession: `0001879450-26-000001`)",
+      "sources": [
+        {
+          "filename": "10-K_2026-02-05.txt",
+          "lines": [
+            252
+          ],
+          "valid": true,
+          "excerpts": [
+            {
+              "line": 252,
+              "text": "Government Regulation"
+            }
+          ]
+        }
+      ],
+      "facts": [],
+      "checks": [
+        "The cited line number exists in 10-K_2026-02-05.txt."
+      ]
+    }
+  ],
+  "worksheet": {
+    "mark": "passed",
+    "checks": [
+      "Worksheet inputs, sources, and arithmetic match saved facts."
+    ]
+  },
+  "verifier_marks": {
+    "mark": "refused",
+    "checks": [
+      "C001 is marked unsupported: The company reported strong financial performance in Q3 2026 with total revenues of $127.58 billion, representing a 24.6% increase year-over-year. Operating income stood at $41.23 ",
+      "C002 is marked unsupported: Insight: Alphabet Inc. faces a risk related to its reliance on advertising revenue from Google Services, which may be vulnerable to economic downturns or shifts in user behavior, a",
+      "C003 is marked unsupported: Alphabet Inc. is currently trading at a valuation that significantly exceeds its estimated intrinsic value. The base case value per share is $96.64, while the market price as of Oc",
+      "C004 is marked unsupported: The company’s financials show strong performance with high operating margins and significant revenue growth. However, these metrics do not justify the current market price. The qua",
+      "C005 is marked unsupported: Insight: Alphabet Inc.'s operating margin of 32.3% for the quarter ended September 30, 2026 was derived from operating income of $41,230 million and total revenues of $127,577 mill",
+      "C006 is marked unsupported: Insight: Alphabet Inc.'s reliance on advertising revenue from Google Services may be vulnerable to economic downturns or shifts in user behavior, as highlighted in Item 1 and Item "
+    ]
+  }
+}

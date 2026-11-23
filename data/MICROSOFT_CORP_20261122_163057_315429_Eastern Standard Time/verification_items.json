@@ -1,0 +1,99 @@
+[
+  {
+    "id": "C001",
+    "text": "Microsoft Corporation, a leading global technology company, reported strong financial performance in the third quarter of fiscal year 2026. The company’s revenue reached $92,279 million, with operating income of $45,915 million and net income of $133,749 million for the full fiscal year ending June 30, 2026. Key financial metrics include depreciation of $34,300 million and capital spending (CapEx) of $115,948 million. The company’s diluted shares outstanding were 7,453,000,000.",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "No named ratio definition in this claim."
+  },
+  {
+    "id": "C002",
+    "text": "Insight: Microsoft's reliance on its cloud infrastructure and services exposes it to potential disruption from competitors or shifts in enterprise demand for cloud-based solutions, which could significantly impact long-term revenue growth and market share. (Item 7, line 01890)",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt.",
+      "Ratio definition is missing: prior."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          1890
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 1890,
+            "text": "|"
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "Ratio definition is missing: prior."
+  },
+  {
+    "id": "C003",
+    "text": "Microsoft’s operating margin of approximately 50% (based on Q3 2026 data) reflects strong profitability, significantly outpacing Alphabet’s FY 2025 margin of ~32.03%. This is derived from operating income of $45,915 million divided by revenue of $92,279 million in the three months ended September 30, 2026 (accession `0001193125-26-323660`, 10-K filed 2026-07-29).",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Ratio definition states its inputs and arithmetic."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "Ratio definition states its inputs and arithmetic."
+  },
+  {
+    "id": "C004",
+    "text": "Insight: Microsoft's operating margin of approximately 50% (based on Q3 2026 data) reflects strong profitability, significantly outpacing Alphabet’s FY 2025 margin of ~32.03%. This is derived from operating income of $45,915 million divided by revenue of $92,279 million in the three months ended September 30, 2026 (accession `0001193125-26-323660`, 10-K filed 2026-07-29).",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "No filing line or XBRL tag was found in this claim block.",
+      "Ratio definition states its inputs and arithmetic."
+    ],
+    "correction": "",
+    "sources": [],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "Ratio definition states its inputs and arithmetic."
+  },
+  {
+    "id": "C005",
+    "text": "Insight: Microsoft's reliance on its cloud infrastructure and services exposes it to potential disruption from competitors or shifts in enterprise demand for cloud-based solutions, which could significantly impact long-term revenue growth and market share. (Item 7, line 01890)",
+    "code_mark": "unsupported",
+    "code_checks": [
+      "The cited line number exists in 10-K_2026-07-29.txt.",
+      "Ratio definition is missing: prior."
+    ],
+    "correction": "",
+    "sources": [
+      {
+        "filename": "10-K_2026-07-29.txt",
+        "lines": [
+          1890
+        ],
+        "valid": true,
+        "excerpts": [
+          {
+            "line": 1890,
+            "text": "|"
+          }
+        ]
+      }
+    ],
+    "facts": [],
+    "arithmetic_check": "No explicit arithmetic expression.",
+    "ratio_definition_check": "Ratio definition is missing: prior."
+  }
+]

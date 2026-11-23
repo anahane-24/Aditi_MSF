@@ -1,0 +1,142 @@
+[
+  {
+    "id": "C001",
+    "mark": "unsupported",
+    "claim": "GOOGL's earnings release says the quarter ended September 30, 2026 (8-K_Ex99.1_2026-10-28.txt, line 8, accession 0001652044-26-000080). The release reports consolidated revenues of $127.6 billion and a 25% increase (8-K_Ex99.1_2026-10-28.txt, line 9, accession 0001652044-26-000080). It reports Google Cloud revenue of $30.7 billion and 103% growth (8-K_Ex99.1_2026-10-28.txt, line 11, accession 0001652044-26-000080). These are quarter figures, not annual 10-K facts.",
+    "reason": "The cited line number exists in 8-K_Ex99.1_2026-10-28.txt.; The cited line number exists in 8-K_Ex99.1_2026-10-28.txt.; The cited line number exists in 8-K_Ex99.1_2026-10-28.txt.; The claim references 'GOOGL's earnings release' and 'quarter figures', but the provided facts are from a 10-K filing for FY2025, not a quarterly report. The data does not match the context of a quarter-ended September 30, 2026.",
+    "correction": "The facts provided are from FY2025 (10-K), while the claim refers to Q3 2026 data. No correction can be made without additional quarterly data."
+  },
+  {
+    "id": "C002",
+    "mark": "unsupported",
+    "claim": "The 10-Q describes GOOGL's revenue sources, including online advertising, cloud solutions, and products and services (10-Q_2026-10-29.txt, line 418, accession 0001652044-26-000084). The earnings release reports Google Services revenue of $96.3 billion, up 11%, and Google Cloud revenue of $30.7 billion, up 103% (8-K_Ex99.1_2026-10-28.txt, lines 10-11, accession 0001652044-26-000080).",
+    "reason": "The cited line number exists in 10-Q_2026-10-29.txt.; The cited line number exists in 8-K_Ex99.1_2026-10-28.txt.; The claim references 'Google Services revenue of $96.3 billion' and 'Google Cloud revenue of $30.7 billion', which are not present in the provided facts for FY2025 or FY2026. These figures appear to be from a different source or time period.",
+    "correction": "No matching data found in the provided facts for Google Services or Google Cloud revenue as specified."
+  },
+  {
+    "id": "C003",
+    "mark": "correct",
+    "claim": "Insight: The GOOGL 10-Q says the registrant generates revenue through online advertising, cloud solutions, and products and services. Source: 10-Q_2026-10-29.txt, line 418, accession 0001652044-26-000084.",
+    "reason": "The cited line number exists in 10-Q_2026-10-29.txt.; The 10-Q fact correctly identifies that GOOGL generates revenue through online advertising, cloud solutions, and products and services. This aligns with the general business model described in the document.",
+    "correction": "No correction needed."
+  },
+  {
+    "id": "C004",
+    "mark": "correct",
+    "claim": "Revenue: FY2025 $402,836 million; prior fiscal year $350,018 million; tag `Revenues`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 689; accession 0001652044-26-000018.",
+    "reason": "The cited line number exists in 10-K_2026-02-05.txt.; The fact correctly reports FY2025 total revenue of $402,836 million with a prior year value of $350,018 million. The tag and period match the provided data.",
+    "correction": "No correction needed."
+  },
+  {
+    "id": "C005",
+    "mark": "correct",
+    "claim": "Operating income: FY2025 $129,039 million; prior fiscal year $112,390 million; tag `OperatingIncomeLoss`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 650; accession 0001652044-26-000018.",
+    "reason": "The cited line number exists in 10-K_2026-02-05.txt.; The fact correctly reports FY2025 operating income of $129,039 million with a prior year value of $112,390 million. The tag and period match the provided data.",
+    "correction": "No correction needed."
+  },
+  {
+    "id": "C006",
+    "mark": "correct",
+    "claim": "Net income: FY2025 $132,170 million; prior fiscal year $100,118 million; tag `NetIncomeLoss`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 653; accession 0001652044-26-000018.",
+    "reason": "The cited line number exists in 10-K_2026-02-05.txt.; The fact correctly reports FY2025 net income of $132,170 million with a prior year value of $100,118 million. The tag and period match the provided data.",
+    "correction": "No correction needed."
+  },
+  {
+    "id": "C007",
+    "mark": "correct",
+    "claim": "Diluted EPS: FY2025 $10.81 per share; prior fiscal year $8.04 per share; tag `EarningsPerShareDiluted`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 2122; accession 0001652044-26-000018.",
+    "reason": "The cited line number exists in 10-K_2026-02-05.txt.; The fact correctly reports FY2025 diluted EPS of $10.81 per share with a prior year value of $8.04 per share. The tag and period match the provided data.",
+    "correction": "No correction needed."
+  },
+  {
+    "id": "C008",
+    "mark": "correct",
+    "claim": "Stockholders' equity: FY2025 $415,265 million; prior fiscal year $325,084 million; tag `StockholdersEquity`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 1071; accession 0001652044-26-000018.",
+    "reason": "The cited line number exists in 10-K_2026-02-05.txt.; The fact correctly reports FY2025 stockholders' equity of $415,265 million with a prior year value of $325,084 million. The tag and period match the provided data.",
+    "correction": "No correction needed."
+  },
+  {
+    "id": "C009",
+    "mark": "correct",
+    "claim": "Current long-term debt: FY2025 $1,996 million; prior fiscal year $999 million; tag `LongTermDebtCurrent`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 1834; accession 0001652044-26-000018.",
+    "reason": "The cited line number exists in 10-K_2026-02-05.txt.; The fact correctly reports FY2025 current long-term debt of $1,996 million with a prior year value of $999 million. The tag and period match the provided data.",
+    "correction": "No correction needed."
+  },
+  {
+    "id": "C010",
+    "mark": "correct",
+    "claim": "Noncurrent long-term debt: FY2025 $46,547 million; prior fiscal year $10,883 million; tag `LongTermDebtNoncurrent`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 1058; accession 0001652044-26-000018.",
+    "reason": "The cited line number exists in 10-K_2026-02-05.txt.; The fact correctly reports FY2025 noncurrent long-term debt of $46,547 million with a prior year value of $10,883 million. The tag and period match the provided data.",
+    "correction": "No correction needed."
+  },
+  {
+    "id": "C011",
+    "mark": "correct",
+    "claim": "Cash from operations: FY2025 $164,713 million; prior fiscal year $125,299 million; tag `NetCashProvidedByUsedInOperatingActivities`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 826; accession 0001652044-26-000018.",
+    "reason": "The cited line number exists in 10-K_2026-02-05.txt.; The fact correctly reports FY2025 cash from operations of $164,713 million with a prior year value of $125,299 million. The tag and period match the provided data.",
+    "correction": "No correction needed."
+  },
+  {
+    "id": "C012",
+    "mark": "correct",
+    "claim": "Capital spending: FY2025 $91,447 million; prior fiscal year $52,535 million; tag `PaymentsToAcquirePropertyPlantAndEquipment`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 1199; accession 0001652044-26-000018.",
+    "reason": "The cited line number exists in 10-K_2026-02-05.txt.; The fact correctly reports FY2025 capital spending of $91,447 million with a prior year value of $52,535 million. The tag and period match the provided data.",
+    "correction": "No correction needed."
+  },
+  {
+    "id": "C013",
+    "mark": "correct",
+    "claim": "(402836000000 - 350018000000) / 350018000000 = 15.0901% (revenue growth; FY2025 and prior fiscal year; tag `Revenues`; period end 2025-12-31; 10-K_2026-02-05.txt, line 689; accession 0001652044-26-000018).",
+    "reason": "The cited line number exists in 10-K_2026-02-05.txt.; Code recalculated 15.0901%; report prints 15.0901%.; Ratio definition states its inputs and arithmetic.; The calculation correctly shows revenue growth of 15.0901% based on FY2025 and prior year values. The formula and data align with the provided facts.",
+    "correction": "No correction needed."
+  },
+  {
+    "id": "C014",
+    "mark": "correct",
+    "claim": "129039000000 / 402836000000 = 32.0326% (operating margin; operating income / total revenue; FY2025 ended 2025-12-31; tags `OperatingIncomeLoss` and `Revenues`; 10-K_2026-02-05.txt, lines 650 and 689; accession 0001652044-26-000018).",
+    "reason": "The cited line number exists in 10-K_2026-02-05.txt.; Code recalculated 32.0326%; report prints 32.0326%.; Ratio definition states its inputs and arithmetic.; The calculation correctly shows operating margin of 32.0326% based on FY2025 operating income and revenue. The formula and data align with the provided facts.",
+    "correction": "No correction needed."
+  },
+  {
+    "id": "C015",
+    "mark": "correct",
+    "claim": "132170000000 / ((415265000000 + 325084000000) / 2) = 35.7048% (return on average equity; net income / average beginning and ending equity; FY2025 ended 2025-12-31; tags `NetIncomeLoss` and `StockholdersEquity`; 10-K_2026-02-05.txt, lines 653 and 1071; accession 0001652044-26-000018).",
+    "reason": "The cited line number exists in 10-K_2026-02-05.txt.; Code recalculated 35.7048%; report prints 35.7048%.; Ratio definition states its inputs and arithmetic.; The calculation correctly shows return on average equity of 35.7048% based on FY2025 net income and average equity. The formula and data align with the provided facts.",
+    "correction": "No correction needed."
+  },
+  {
+    "id": "C016",
+    "mark": "correct",
+    "claim": "(1996000000 + 46547000000) / 415265000000 = 11.6896% (debt to equity; current debt + noncurrent debt / equity; FY2025 ended 2025-12-31; tags `LongTermDebtCurrent`, `LongTermDebtNoncurrent`, and `StockholdersEquity`; 10-K_2026-02-05.txt, lines 1058, 1071, and 1834; accession 0001652044-26-000018).",
+    "reason": "The cited line number exists in 10-K_2026-02-05.txt.; Code recalculated 11.6896%; report prints 11.6896%.; Ratio definition states its inputs and arithmetic.; The calculation correctly shows debt to equity ratio of 11.6896% based on FY2025 debt and equity values. The formula and data align with the provided facts.",
+    "correction": "No correction needed."
+  },
+  {
+    "id": "C017",
+    "mark": "unsupported",
+    "claim": "The Q3 2026 release reports total revenue of $127,577 million for the quarter ended 2026-09-30 (8-K_Ex99.1_2026-10-28.txt, line 56, accession 0001652044-26-000080). It reports diluted net income per common share of $2.87 for that quarter; $2.12 is the prior-year comparison (8-K_Ex99.1_2026-10-28.txt, line 40, accession 0001652044-26-000080).",
+    "reason": "The cited line number exists in 8-K_Ex99.1_2026-10-28.txt.; The cited line number exists in 8-K_Ex99.1_2026-10-28.txt.; The claim references Q3 2026 earnings, but the provided facts are from FY2025. The data does not support the claim about Q3 2026 revenue or EPS.",
+    "correction": "No correction can be made without quarterly data for Q3 2026."
+  },
+  {
+    "id": "C018",
+    "mark": "correct",
+    "claim": "| MSFT | Operating margin: 46.7808%; operating income $155,237 million divided by total revenue $331,839 million; tags `OperatingIncomeLoss` and `RevenueFromContractWithCustomerExcludingAssessedTax`; FY2026 ended 2026-06-30; accession 0001193125-26-323660. |",
+    "reason": "Ratio definition states its inputs and arithmetic.; The fact correctly reports FY2026 operating margin of 46.7808% based on MSFT's operating income and revenue. The tag and period match the provided data.",
+    "correction": "No correction needed."
+  },
+  {
+    "id": "C019",
+    "mark": "correct",
+    "claim": "Insight: GOOGL FY2025 revenue was $402,836 million, up 15.0901% from $350,018 million in the prior fiscal year. Formula: (402836000000 - 350018000000) / 350018000000 = 15.0901%. Tag `Revenues`; period end 2025-12-31; 10-K_2026-02-05.txt, line 689; accession 0001652044-26-000018.",
+    "reason": "The cited line number exists in 10-K_2026-02-05.txt.; The insight correctly states that FY2025 revenue was $402,836 million, up 15.0901% from the prior year. The calculation and data align with the provided facts.",
+    "correction": "No correction needed."
+  },
+  {
+    "id": "C020",
+    "mark": "correct",
+    "claim": "Insight: The GOOGL 10-Q states that offering proceeds will support general corporate purposes, including capital spending to scale AI infrastructure and global compute. Source: 10-Q_2026-10-29.txt, line 1248, accession 0001652044-26-000084.",
+    "reason": "The cited line number exists in 10-Q_2026-10-29.txt.; The insight correctly states that offering proceeds will support general corporate purposes, including capital spending to scale AI infrastructure. This aligns with the 10-Q document.",
+    "correction": "No correction needed."
+  }
+]

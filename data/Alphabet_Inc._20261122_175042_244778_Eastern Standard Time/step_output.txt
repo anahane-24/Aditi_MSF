@@ -1,0 +1,80 @@
+
+=== GOOGL ===
+STEP 1 � Resolve ticker to SEC CIK
+GOOGL -> CIK 0001652044 (Alphabet Inc.)
+
+STEP 2 � Select latest 10-K, 10-Q, and Item 2.02 earnings 8-K
+  Checking 8-K 2026-11-05 (0001193125-26-449835) for Item 2.02
+  Checking 8-K 2026-10-28 (0001652044-26-000080) for Item 2.02
+8-K: 8-K 0001193125-26-449835 | accepted 2026-11-05 16:10:44 (SEC filing page local time) | d174184d8k.htm
+10-Q: 10-Q 0001652044-26-000084 | accepted 2026-10-28 20:29:06 (SEC filing page local time) | goog-20260930.htm
+10-K: 10-K 0001652044-26-000018 | accepted 2026-02-04 21:56:03 (SEC filing page local time) | goog-20251231.htm
+earnings_8k: 8-K 0001652044-26-000080 | accepted 2026-10-28 16:01:33 (SEC filing page local time) | goog-20261028.htm
+
+STEP 3 � Download and save filing text and metadata: C:\Users\ahnah\orca\Aditi_MSF\data\Alphabet_Inc._20261122_175042_244778_Eastern Standard Time
+
+STEP 4 � XBRL facts for the latest fiscal year (prior year beside each)
+total_revenue: 402836000000 USD | tag=Revenues | period=2025-01-01 to 2025-12-31 | filing=0001652044-26-000018 | prior=350018000000
+operating_income: 129039000000 USD | tag=OperatingIncomeLoss | period=2025-01-01 to 2025-12-31 | filing=0001652044-26-000018 | prior=112390000000
+net_income: 132170000000 USD | tag=NetIncomeLoss | period=2025-01-01 to 2025-12-31 | filing=0001652044-26-000018 | prior=100118000000
+diluted_eps: 10.81 USD/shares | tag=EarningsPerShareDiluted | period=2025-01-01 to 2025-12-31 | filing=0001652044-26-000018 | prior=8.04
+equity: 415265000000 USD | tag=StockholdersEquity | period= to 2025-12-31 | filing=0001652044-26-000018 | prior=325084000000
+long_term_debt: 46547000000 USD | tag=LongTermDebtNoncurrent | period= to 2025-12-31 | filing=0001652044-26-000018 | prior=10883000000
+current_debt: 1996000000 USD | tag=LongTermDebtCurrent | period= to 2025-12-31 | filing=0001652044-26-000018 | prior=999000000
+cash_from_operations: 164713000000 USD | tag=NetCashProvidedByUsedInOperatingActivities | period=2025-01-01 to 2025-12-31 | filing=0001652044-26-000018 | prior=125299000000
+capex: 91447000000 USD | tag=PaymentsToAcquirePropertyPlantAndEquipment | period=2025-01-01 to 2025-12-31 | filing=0001652044-26-000018 | prior=52535000000
+depreciation: 21136000000 USD | tag=Depreciation | period=2025-01-01 to 2025-12-31 | filing=0001652044-26-000018 | prior=15311000000
+diluted_shares: 12230000000 shares | tag=WeightedAverageNumberOfDilutedSharesOutstanding | period=2025-01-01 to 2025-12-31 | filing=0001652044-26-000018 | prior=12447000000
+Long-term debt components (current + noncurrent): {'LongTermDebtCurrent': 1996000000, 'LongTermDebtNoncurrent': 46547000000}
+
+STEP 5 � Calculate ratios from the printed facts
+Revenue growth: (402836000000.0 - 350018000000.0) / 350018000000.0 = 15.0901%
+Operating margin: 129039000000.0 / 402836000000.0 = 32.0326%
+Return on average equity: 132170000000.0 / ((415265000000.0 + 325084000000.0) / 2) = 35.7048%
+Debt to equity (current + noncurrent long-term debt): 48543000000 / 415265000000.0 = 11.6896%
+Free cash flow: 164713000000.0 - 91447000000.0 = 73266000000.0
+
+Filing time used (Eastern): 2026-10-28T16:01:33-04:00
+LSEG close: $324.8900 on 2026-10-28 | source: LSEG Data Library: TR.PriceClose | RIC: GOOGL.O
+P/E: price 324.89 / diluted EPS 10.81 = 30.0546
+
+STEP 6 � Earnings release lines: total revenue and diluted EPS
+Period headers (read before mapping table values):
+MOUNTAIN VIEW, Calif. � October 28, 2026 � Alphabet Inc. (NASDAQ: GOOG, GOOGL) today announced financial results for the quarter ended September 30, 2026.
+| Quarter Ended September 30, | | |
+| 2025 | | 2026 | | | | |
+| Quarter Ended September 30, | | |
+| 2025 | | 2026 | | | | |
+| Quarter Ended September 30, |
+| 2025 | | 2026 |
+Additional Information Relating to the Quarter Ended September 30, 2026 (unaudited)
+This press release may contain forward-looking statements that involve risks and uncertainties. Actual results may differ materially from the results predicted, and reported results should not be considered as an indication of future performance. The potential risks and uncertainties that could cause actual results to differ from the results predicted include, among others, those risks and uncertainties included under the captions �Risk Factors� and �Management�s Discussion and Analysis of Financial Condition and Results of Operations� in our Annual Report on Form 10-K for the year ended December 31, 2025 and our most recent Quarterly Report on Form 10-Q for the quarter ended June 30, 2026 , which are on file with the SEC and are available on our investor relations website at http://abc.xyz/investor and on the SEC website at www.sec.gov. Additional information will also be set forth in our Quarterly Report on Form 10-Q for the quarter ended September 30, 2026, and may be set forth in other reports and filings we make with the SEC. All information provided in this release and in the attachments is as of October 28, 2026 . Undue reliance should not be placed on the forward-looking statements in this press release, which are based on information available to us on the date hereof. We undertake no duty to update this information unless required by law.
+| Quarter Ended September 30, | | Year To Date September 30, |
+| 2025 | | 2026 | | 2025 | | 2026 |
+| Quarter Ended September 30, | | Year To Date September 30, |
+| 2025 | | 2026 | | 2025 | | 2026 |
+| Quarter Ended September 30, |
+| 2025 | | 2026 |
+| Quarter Ended September 30, |
+| 2025 | | 2026 |
+| | Quarter Ended
+Comparison from the Quarter Ended September 30, 2025 to the Quarter Ended September 30, 2026
+| | | | | Quarter Ended September 30, 2026 |
+| Quarter Ended September 30, | | Less FX Effect | | Constant Currency Revenues | | As Reported | | Less Hedging Effect | | Less FX Effect | | Constant Currency Revenues |
+| 2025 | | 2026 | | | | | | |
+(1) Total constant currency revenues of $128.1 billion for the quarter ended September 30, 2026 increased $25.5 billion compared to $102.6 billion in revenues, excluding hedging effect, for the quarter ended September 30, 2025.
+Comparison from the Quarter Ended June 30, 2026 to the Quarter Ended September 30, 2026
+| | | | | Quarter Ended September 30, 2026 |
+| Quarter Ended | | Less FX Effect | | Constant Currency Revenues | | As Reported | | Less Hedging Effect | | Less FX Effect | | Constant Currency Revenues |
+(1) Total constant currency revenues of $127.8 billion for the quarter ended September 30, 2026 increased $8.1 billion compared to $119.7 billion in revenues, excluding hedging effect, for the quarter e nded June 30, 2026.
+Comparison from the Quarter Ended September 30, 2024 to the Quarter Ended September 30, 2025
+| | | | | Quarter Ended September 30, 2025 |
+| Quarter Ended September 30, | | | | | | % Change from Prior Period |
+| 2024 | | 2025 | | | | | | |
+Total revenue row: Total revenues | $ | 102,346 | | | $ | 127,577 | | | | | |
+Diluted EPS row: Diluted net income per common share | $ | 2.87 | | | $ | 2.12 | | | | | |
+
+STEP 7 � Peer facts and operating margin on the same revenue definition
+MSFT (MICROSOFT CORP) revenue: 331839000000 | operating income: 155237000000 | margin: 46.7808% | period: 2026-06-30
+
+Saved primary-company filings and facts to: C:\Users\ahnah\orca\Aditi_MSF\data\Alphabet_Inc._20261122_175042_244778_Eastern Standard Time

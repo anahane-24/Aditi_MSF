@@ -1,0 +1,21 @@
+{
+  "data_run_folder": "C:\\Users\\ahnah\\orca\\Aditi_MSF\\data\\Alphabet_Inc._20261122_174504_278128_Eastern Standard Time",
+  "saved_files": [
+    "10-K_2026-02-05.txt",
+    "10-Q_2026-10-29.txt",
+    "8-K_Ex99.1_2026-10-28.txt",
+    "MSFT_facts.json",
+    "facts.json",
+    "filings.json",
+    "market_data.json"
+  ],
+  "steps_completed": [
+    "STEP 1",
+    "STEP 2",
+    "STEP 3",
+    "STEP 4",
+    "STEP 5",
+    "STEP 6",
+    "STEP 7"
+  ]
+}

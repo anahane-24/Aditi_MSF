@@ -346,6 +346,12 @@ def main() -> None:
         print("\nSTEP 6 — Earnings release lines: total revenue and diluted EPS")
         release = texts["release"]
         lines = release.splitlines()
+        period_lines = [
+            line.strip()
+            for line in lines
+            if re.search(r"\b(?:quarter ended|year to date)\b", line, re.I)
+            or re.match(r"\|\s*20\d{2}\s*\|", line.strip())
+        ]
         total_row = next((line.strip() for line in lines if re.search(r"\bRevenue was\s+\$", line, re.I)), None)
         if not total_row:
             total_row = next((line.strip() for line in lines if re.match(r"Total (?:net )?revenue|Total net sales\s*\|", line, re.I)), None)
@@ -368,6 +374,9 @@ def main() -> None:
             )), None)
         if not eps_row:
             eps_row = next((sentence.strip() for sentence in re.split(r"(?<=[.!?])\s+", release.replace("\n", " ")) if re.search(r"diluted (?:earnings per share|EPS)", sentence, re.I)), None)
+        print("Period headers (read before mapping table values):")
+        for period_line in period_lines:
+            print(period_line)
         print(f"Total revenue row: {total_row}" if total_row else "Total revenue row not found in release")
         print(f"Diluted EPS row: {eps_row}" if eps_row else "Diluted EPS row not found in release")
         if step == 6: return

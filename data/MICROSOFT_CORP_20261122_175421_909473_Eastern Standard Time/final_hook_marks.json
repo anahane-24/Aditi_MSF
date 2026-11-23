@@ -1,0 +1,94 @@
+{
+  "report": "C:\\Users\\ahnah\\orca\\Aditi_MSF\\data\\MICROSOFT_CORP_20261122_175421_909473_Eastern Standard Time\\desk_final_report.md",
+  "run_dir": "C:\\Users\\ahnah\\orca\\Aditi_MSF\\data\\MICROSOFT_CORP_20261122_175421_909473_Eastern Standard Time",
+  "claim_count": 6,
+  "passed": 0,
+  "refused": 7,
+  "marks": [
+    {
+      "id": "C001",
+      "mark": "refused",
+      "claim": "Microsoft Corp. reported strong financial performance for the quarter ended September 30, 2026, with total revenue of $92,279 million and operating income of $45,915 million. The company demonstrated robust growth across key segments, particularly in cloud infrastructure and productivity services. Cash flow from investing activities was negative at $(41,965) million, while net changes in cash and cash equivalents were $(654) million for the period.",
+      "sources": [],
+      "facts": [],
+      "checks": [
+        "No saved filing line or XBRL fact supports this claim.",
+        "No filing line or XBRL tag was found in this claim block."
+      ]
+    },
+    {
+      "id": "C002",
+      "mark": "refused",
+      "claim": "The company’s market positioning remains strong, driven by its leadership in cloud infrastructure and productivity services. The \"Agents and Infra\" segment generated operating income of $40,558 million, reflecting continued demand for Azure and Microsoft 365 cloud offerings. Meanwhile, the \"Devices and Consumer\" segment reported operating income of $5,357 million, showing resilience despite a slight decline in revenue compared to the prior year.",
+      "sources": [],
+      "facts": [],
+      "checks": [
+        "No saved filing line or XBRL fact supports this claim.",
+        "No filing line or XBRL tag was found in this claim block."
+      ]
+    },
+    {
+      "id": "C003",
+      "mark": "refused",
+      "claim": "Insight: The company's reliance on its cloud infrastructure and productivity services exposes it to competitive pressures and market volatility, which could impact long-term growth and profitability.",
+      "sources": [],
+      "facts": [],
+      "checks": [
+        "No saved filing line or XBRL fact supports this claim.",
+        "No filing line or XBRL tag was found in this claim block."
+      ]
+    },
+    {
+      "id": "C004",
+      "mark": "refused",
+      "claim": "Microsoft’s operating margin for the quarter ended September 30, 2026 was 50.8%, calculated as operating income ($45,915 million) divided by revenue ($92,279 million), based on the 10-K filing `0001193125-26-323660` at line `01927`. The company generated owner cash flow of $52.1 billion, yet the stock trades at a severe premium to its base-case intrinsic value, resulting in a negative margin of safety of -297.57%.",
+      "sources": [],
+      "facts": [],
+      "checks": [
+        "No saved filing line or XBRL fact supports this claim.",
+        "No filing line or XBRL tag was found in this claim block.",
+        "Ratio definition states its inputs and arithmetic."
+      ]
+    },
+    {
+      "id": "C005",
+      "mark": "refused",
+      "claim": "Insight: Microsoft’s operating margin in the quarter ended September 30, 2026 was 50.8%, calculated as operating income ($45,915 million) divided by revenue ($92,279 million), based on the 10-K filing `0001193125-26-323660` at line `01927`.",
+      "sources": [],
+      "facts": [],
+      "checks": [
+        "No saved filing line or XBRL fact supports this claim.",
+        "No filing line or XBRL tag was found in this claim block.",
+        "Ratio definition states its inputs and arithmetic."
+      ]
+    },
+    {
+      "id": "C006",
+      "mark": "refused",
+      "claim": "Insight: The company's reliance on its cloud infrastructure and productivity services exposes it to competitive pressures and market volatility, which could impact long-term growth and profitability. *Item 7: Management's Discussion and Analysis of Financial Condition and Results of Operations*; *Filename:* 01307; *Accession:* 0001564590-26-012345; *Line:* 01307.",
+      "sources": [],
+      "facts": [],
+      "checks": [
+        "No saved filing line or XBRL fact supports this claim.",
+        "No filing line or XBRL tag was found in this claim block."
+      ]
+    }
+  ],
+  "worksheet": {
+    "mark": "passed",
+    "checks": [
+      "Worksheet inputs, sources, and arithmetic match saved facts."
+    ]
+  },
+  "verifier_marks": {
+    "mark": "refused",
+    "checks": [
+      "C001 is marked unsupported: Microsoft Corp. reported strong financial performance for the quarter ended September 30, 2026, with total revenue of $92,279 million and operating income of $45,915 million. The c",
+      "C002 is marked unsupported: The company’s market positioning remains strong, driven by its leadership in cloud infrastructure and productivity services. The \"Agents and Infra\" segment generated operating inco",
+      "C003 is marked unsupported: Insight: The company's reliance on its cloud infrastructure and productivity services exposes it to competitive pressures and market volatility, which could impact long-term growth",
+      "C004 is marked unsupported: Microsoft’s operating margin for the quarter ended September 30, 2026 was 50.8%, calculated as operating income ($45,915 million) divided by revenue ($92,279 million), based on the",
+      "C005 is marked unsupported: Insight: Microsoft’s operating margin in the quarter ended September 30, 2026 was 50.8%, calculated as operating income ($45,915 million) divided by revenue ($92,279 million), base",
+      "C006 is marked unsupported: Insight: The company's reliance on its cloud infrastructure and productivity services exposes it to competitive pressures and market volatility, which could impact long-term growth"
+    ]
+  }
+}

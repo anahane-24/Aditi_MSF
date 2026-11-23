@@ -1,0 +1,940 @@
+{
+  "task": "Write the financial analysis for the primary company GOOGL from the supplied seven-step desk output and deterministic valuation worksheet.",
+  "context": {
+    "seven_step_financial_context": {
+      "ticker": "GOOGL",
+      "filings": {
+        "8-K": {
+          "form": "8-K",
+          "date": "2026-11-05",
+          "report_date": "2026-11-05",
+          "accession": "0001193125-26-449835",
+          "accession_nodash": "000119312526449835",
+          "primary_document": "d174184d8k.htm",
+          "primary_description": "8-K",
+          "accepted_datetime": "2026-11-05T21:10:44.000Z",
+          "cik": "0001652044",
+          "accepted": "2026-11-05 16:10:44 (SEC filing page local time)"
+        },
+        "10-Q": {
+          "form": "10-Q",
+          "date": "2026-10-29",
+          "report_date": "2026-09-30",
+          "accession": "0001652044-26-000084",
+          "accession_nodash": "000165204426000084",
+          "primary_document": "goog-20260930.htm",
+          "primary_description": "10-Q",
+          "accepted_datetime": "2026-10-29T00:29:06.000Z",
+          "cik": "0001652044",
+          "accepted": "2026-10-28 20:29:06 (SEC filing page local time)"
+        },
+        "10-K": {
+          "form": "10-K",
+          "date": "2026-02-05",
+          "report_date": "2025-12-31",
+          "accession": "0001652044-26-000018",
+          "accession_nodash": "000165204426000018",
+          "primary_document": "goog-20251231.htm",
+          "primary_description": "10-K",
+          "accepted_datetime": "2026-02-05T02:56:03.000Z",
+          "cik": "0001652044",
+          "accepted": "2026-02-04 21:56:03 (SEC filing page local time)"
+        },
+        "earnings_8k": {
+          "form": "8-K",
+          "date": "2026-10-28",
+          "report_date": "2026-10-28",
+          "accession": "0001652044-26-000080",
+          "accession_nodash": "000165204426000080",
+          "primary_document": "goog-20261028.htm",
+          "primary_description": "8-K",
+          "accepted_datetime": "2026-10-28T20:01:33.000Z",
+          "cik": "0001652044",
+          "exhibit_99_1": "googexhibit991q32026.htm",
+          "accepted": "2026-10-28 16:01:33 (SEC filing page local time)"
+        }
+      },
+      "primary_company_facts": {
+        "total_revenue": {
+          "tag": "Revenues",
+          "unit": "USD",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "val": 402836000000,
+          "accn": "0001652044-26-000018",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-05",
+          "frame": "CY2025",
+          "prior_val": 350018000000
+        },
+        "operating_income": {
+          "tag": "OperatingIncomeLoss",
+          "unit": "USD",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "val": 129039000000,
+          "accn": "0001652044-26-000018",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-05",
+          "frame": "CY2025",
+          "prior_val": 112390000000
+        },
+        "net_income": {
+          "tag": "NetIncomeLoss",
+          "unit": "USD",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "val": 132170000000,
+          "accn": "0001652044-26-000018",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-05",
+          "prior_val": 100118000000
+        },
+        "diluted_eps": {
+          "tag": "EarningsPerShareDiluted",
+          "unit": "USD/shares",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "val": 10.81,
+          "accn": "0001652044-26-000018",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-05",
+          "frame": "CY2025",
+          "prior_val": 8.04
+        },
+        "equity": {
+          "tag": "StockholdersEquity",
+          "unit": "USD",
+          "end": "2025-12-31",
+          "val": 415265000000,
+          "accn": "0001652044-26-000018",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-05",
+          "prior_val": 325084000000
+        },
+        "long_term_debt": {
+          "tag": "LongTermDebtNoncurrent",
+          "unit": "USD",
+          "end": "2025-12-31",
+          "val": 46547000000,
+          "accn": "0001652044-26-000018",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-05",
+          "prior_val": 10883000000
+        },
+        "current_debt": {
+          "tag": "LongTermDebtCurrent",
+          "unit": "USD",
+          "end": "2025-12-31",
+          "val": 1996000000,
+          "accn": "0001652044-26-000018",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-05",
+          "prior_val": 999000000
+        },
+        "cash_from_operations": {
+          "tag": "NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "val": 164713000000,
+          "accn": "0001652044-26-000018",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-05",
+          "frame": "CY2025",
+          "prior_val": 125299000000
+        },
+        "capex": {
+          "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "unit": "USD",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "val": 91447000000,
+          "accn": "0001652044-26-000018",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-05",
+          "frame": "CY2025",
+          "prior_val": 52535000000
+        },
+        "depreciation": {
+          "tag": "Depreciation",
+          "unit": "USD",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "val": 21136000000,
+          "accn": "0001652044-26-000018",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-05",
+          "frame": "CY2025",
+          "prior_val": 15311000000
+        },
+        "diluted_shares": {
+          "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+          "unit": "shares",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "val": 12230000000,
+          "accn": "0001652044-26-000018",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-05",
+          "frame": "CY2025",
+          "prior_val": 12447000000
+        },
+        "debt_components": {
+          "LongTermDebtCurrent": 1996000000,
+          "LongTermDebtNoncurrent": 46547000000
+        },
+        "period_end": {
+          "end": "2025-12-31",
+          "prior_end": "2024-12-31"
+        }
+      },
+      "primary_10k_statement_lines": {
+        "filename": "10-K_2026-02-05.txt",
+        "accession": "0001652044-26-000018",
+        "lines": [
+          {
+            "line": 271,
+            "text": "We generated more than 70% of total revenues from online advertising in 2025. Many of our advertisers, companies that distribute our products and services, digital publishers, and content providers can terminate their contracts with us at any time. These partners may not continue to do business with us if we do not create more value (such as increased numbers of users or customers, new sales leads, increased brand awareness, or more effective monetization) than their available alternatives."
+          },
+          {
+            "line": 322,
+            "text": "Our international operations are significant to our revenues and net income, and we plan to continue growing internationally. International revenues accounted for approximately 52% of consolidated revenues in 2025. In addition to risks described elsewhere in this section, our international operations expose us to other risks, including:"
+          },
+          {
+            "line": 650,
+            "text": "Operating income | $ | 112,390 | $ | 129,039 | $ | 16,649 | 15 | % |"
+          },
+          {
+            "line": 653,
+            "text": "Net income | $ | 100,118 | $ | 132,170 | $ | 32,052 | 32 | % |"
+          },
+          {
+            "line": 654,
+            "text": "Diluted net income per share (1)"
+          },
+          {
+            "line": 656,
+            "text": "(1) For additional information on the calculation of diluted net income per share, see Note 12 of the Notes to Consolidated Financial Statements included in Item 8 of this Annual Report on Form 10-K."
+          },
+          {
+            "line": 689,
+            "text": "Total revenues | $ | 350,018 | $ | 402,836 |"
+          },
+          {
+            "line": 772,
+            "text": "The following table presents segment operating income (loss) (in millions)."
+          },
+          {
+            "line": 775,
+            "text": "Operating income (loss): |"
+          },
+          {
+            "line": 784,
+            "text": "Google Services operating income increased $18.1 billion from 2024 to 2025. The increase in operating income was primarily driven by an increase in revenues, partially offset by an increase in expenses related to legal and other matters, TAC, and content acquisition costs."
+          },
+          {
+            "line": 786,
+            "text": "Google Cloud operating income increased $7.8 billion from 2024 to 2025. The increase in operating income was primarily driven by an increase in revenues, partially offset by increases in usage costs for technical infrastructure and employee compensation expenses."
+          },
+          {
+            "line": 826,
+            "text": "Net cash provided by operating activities | $ | 125,299 | $ | 164,713 |"
+          },
+          {
+            "line": 835,
+            "text": "Net cash provided by operating activities increased from 2024 to 2025 due to an increase in cash received from customers, partially offset by an increase in cash payments for cost of revenues and operating expenses."
+          },
+          {
+            "line": 1093,
+            "text": "Net income | $ | 73,795 | $ | 100,118 | $ | 132,170 |"
+          },
+          {
+            "line": 1094,
+            "text": "Basic net income per share (Note 12)"
+          },
+          {
+            "line": 1096,
+            "text": "Diluted net income per share (Note 12)"
+          },
+          {
+            "line": 1107,
+            "text": "Net income | $ | 73,795 | $ | 100,118 | $ | 132,170 |"
+          },
+          {
+            "line": 1113,
+            "text": "Less: reclassification adjustment for net (gains) losses included in net income | 1,168 | 782 | ( 169 ) |"
+          },
+          {
+            "line": 1118,
+            "text": "Less: reclassification adjustment for net (gains) losses included in net income | ( 214 ) | ( 166 ) | 164 |"
+          },
+          {
+            "line": 1147,
+            "text": "Net income | 0 | 0 | 0 | 73,795 | 73,795 |"
+          },
+          {
+            "line": 1158,
+            "text": "Net income | 0 | 0 | 0 | 100,118 | 100,118 |"
+          },
+          {
+            "line": 1169,
+            "text": "Net income | 0 | 0 | 0 | 132,170 | 132,170 |"
+          },
+          {
+            "line": 1182,
+            "text": "Net income | $ | 73,795 | $ | 100,118 | $ | 132,170 |"
+          },
+          {
+            "line": 1197,
+            "text": "Net cash provided by operating activities | 101,746 | 125,299 | 164,713 |"
+          },
+          {
+            "line": 1387,
+            "text": "Total revenues | $ | 307,394 | $ | 350,018 | $ | 402,836 |"
+          },
+          {
+            "line": 1400,
+            "text": "Total revenues | $ | 307,394 | 100 | % | $ | 350,018 | 100 | % | $ | 402,836 | 100 | % |"
+          },
+          {
+            "line": 1838,
+            "text": "(3) Total current portion of long-term debt is included within accrued expenses and other current liabilities. See Note 7 for further details."
+          },
+          {
+            "line": 1905,
+            "text": "The effects on net income of amounts reclassified from AOCI were as follows (in millions):"
+          },
+          {
+            "line": 2026,
+            "text": "Note 12. Net Income Per Share"
+          },
+          {
+            "line": 2027,
+            "text": "We compute net income per share of Class A, Class B, and Class C stock using the two-class method. Basic net income per share is computed using the weighted-average number of shares outstanding during the period. Diluted net income per share is computed using the weighted-average number of shares and the effect of potentially dilutive securities outstanding during the period. Potentially dilutive securities consist of RSUs and other contingently issuable shares. The dilutive effect of outstanding RSUs and other contingently issuable shares is reflected in diluted earnings per share by application of the treasury stock method. The computation of the diluted net income per share of Class A stock assumes the conversion of Class B stock, while the diluted net income per share of Class B stock does not assume the conversion of those shares."
+          },
+          {
+            "line": 2029,
+            "text": "Immaterial differences in net income per share across our Class A, Class B, and Class C shares may arise due to the allocation of distributed earnings, which is based on the holders as of the record date, compared with the allocation of undistributed earnings and number of shares, which is based on the weighted average shares outstanding over the periods."
+          },
+          {
+            "line": 2033,
+            "text": "The following tables set forth the computation of basic and diluted net income per share of Class A, Class B, and Class C stock (in millions, except per share amounts):"
+          },
+          {
+            "line": 2036,
+            "text": "Basic net income per share: |"
+          },
+          {
+            "line": 2040,
+            "text": "Net income | $ | 34,601 | $ | 5,124 | $ | 34,070 | $ | 73,795 |"
+          },
+          {
+            "line": 2043,
+            "text": "Basic net income per share | $ | 5.84 | $ | 5.84 | $ | 5.84 | $ | 5.84 |"
+          },
+          {
+            "line": 2044,
+            "text": "Diluted net income per share: |"
+          },
+          {
+            "line": 2051,
+            "text": "Net income | $ | 39,438 | $ | 5,087 | $ | 34,357 | $ | 73,795 |"
+          },
+          {
+            "line": 2060,
+            "text": "Diluted net income per share | $ | 5.80 | $ | 5.80 | $ | 5.80 | $ | 5.80 |"
+          },
+          {
+            "line": 2061,
+            "text": "(1) Not applicable for consolidated net income per share."
+          },
+          {
+            "line": 2067,
+            "text": "Basic net income per share: |"
+          },
+          {
+            "line": 2071,
+            "text": "Net income | $ | 47,594 | $ | 7,039 | $ | 45,485 | $ | 100,118 |"
+          },
+          {
+            "line": 2074,
+            "text": "Basic net income per share | $ | 8.13 | $ | 8.13 | $ | 8.13 | $ | 8.13 |"
+          },
+          {
+            "line": 2075,
+            "text": "Diluted net income per share: |"
+          },
+          {
+            "line": 2082,
+            "text": "Net income | $ | 54,113 | $ | 6,972 | $ | 46,005 | $ | 100,118 |"
+          },
+          {
+            "line": 2091,
+            "text": "Diluted net income per share | $ | 8.05 | $ | 8.05 | $ | 8.03 | $ | 8.04 |"
+          },
+          {
+            "line": 2092,
+            "text": "(1) Not applicable for consolidated net income per share."
+          },
+          {
+            "line": 2098,
+            "text": "Basic net income per share: |"
+          },
+          {
+            "line": 2102,
+            "text": "Net income | $ | 63,514 | $ | 9,260 | $ | 59,396 | $ | 132,170 |"
+          },
+          {
+            "line": 2105,
+            "text": "Basic net income per share | $ | 10.91 | $ | 10.91 | $ | 10.91 | $ | 10.91 |"
+          },
+          {
+            "line": 2106,
+            "text": "Diluted net income per share: |"
+          },
+          {
+            "line": 2113,
+            "text": "Net income | $ | 72,147 | $ | 9,181 | $ | 60,023 | $ | 132,170 |"
+          },
+          {
+            "line": 2122,
+            "text": "Diluted net income per share | $ | 10.82 | $ | 10.81 | $ | 10.80 | $ | 10.81 |"
+          },
+          {
+            "line": 2123,
+            "text": "(1) Not applicable for consolidated net income per share."
+          },
+          {
+            "line": 2273,
+            "text": "Our Chief Operating Decision Maker (CODM) is our Chief Executive Officer, Sundar Pichai. Our CODM uses segment operating income (loss) to allocate resources to our segments in our annual planning process and to assess the performance of our segments, primarily by monitoring actual results versus the annual plan. Our operating segments are not evaluated using asset information."
+          },
+          {
+            "line": 2282,
+            "text": "Total revenues | $ | 307,394 | $ | 350,018 | $ | 402,836 |"
+          },
+          {
+            "line": 2283,
+            "text": "Operating income (loss): |"
+          }
+        ]
+      },
+      "calculator_output_from_step_5": "STEP 5 � Calculate ratios from the printed facts\nRevenue growth: (402836000000.0 - 350018000000.0) / 350018000000.0 = 15.0901%\nOperating margin: 129039000000.0 / 402836000000.0 = 32.0326%\nReturn on average equity: 132170000000.0 / ((415265000000.0 + 325084000000.0) / 2) = 35.7048%\nDebt to equity (current + noncurrent long-term debt): 48543000000 / 415265000000.0 = 11.6896%\nFree cash flow: 164713000000.0 - 91447000000.0 = 73266000000.0\n\nFiling time used (Eastern): 2026-10-28T16:01:33-04:00\nLSEG close: $324.8900 on 2026-10-28 | source: LSEG Data Library: TR.PriceClose | RIC: GOOGL.O\nP/E: price 324.89 / diluted EPS 10.81 = 30.0546\n",
+      "quarterly_release_output_from_step_6": "STEP 6 � Earnings release lines: total revenue and diluted EPS\nPeriod headers (read before mapping table values):\nMOUNTAIN VIEW, Calif. � October 28, 2026 � Alphabet Inc. (NASDAQ: GOOG, GOOGL) today announced financial results for the quarter ended September 30, 2026.\n| Quarter Ended September 30, | | |\n| 2025 | | 2026 | | | | |\n| Quarter Ended September 30, | | |\n| 2025 | | 2026 | | | | |\n| Quarter Ended September 30, |\n| 2025 | | 2026 |\nAdditional Information Relating to the Quarter Ended September 30, 2026 (unaudited)\nThis press release may contain forward-looking statements that involve risks and uncertainties. Actual results may differ materially from the results predicted, and reported results should not be considered as an indication of future performance. The potential risks and uncertainties that could cause actual results to differ from the results predicted include, among others, those risks and uncertainties included under the captions �Risk Factors� and �Management�s Discussion and Analysis of Financial Condition and Results of Operations� in our Annual Report on Form 10-K for the year ended December 31, 2025 and our most recent Quarterly Report on Form 10-Q for the quarter ended June 30, 2026 , which are on file with the SEC and are available on our investor relations website at http://abc.xyz/investor and on the SEC website at www.sec.gov. Additional information will also be set forth in our Quarterly Report on Form 10-Q for the quarter ended September 30, 2026, and may be set forth in other reports and filings we make with the SEC. All information provided in this release and in the attachments is as of October 28, 2026 . Undue reliance should not be placed on the forward-looking statements in this press release, which are based on information available to us on the date hereof. We undertake no duty to update this information unless required by law.\n| Quarter Ended September 30, | | Year To Date September 30, |\n| 2025 | | 2026 | | 2025 | | 2026 |\n| Quarter Ended September 30, | | Year To Date September 30, |\n| 2025 | | 2026 | | 2025 | | 2026 |\n| Quarter Ended September 30, |\n| 2025 | | 2026 |\n| Quarter Ended September 30, |\n| 2025 | | 2026 |\n| | Quarter Ended\nComparison from the Quarter Ended September 30, 2025 to the Quarter Ended September 30, 2026\n| | | | | Quarter Ended September 30, 2026 |\n| Quarter Ended September 30, | | Less FX Effect | | Constant Currency Revenues | | As Reported | | Less Hedging Effect | | Less FX Effect | | Constant Currency Revenues |\n| 2025 | | 2026 | | | | | | |\n(1) Total constant currency revenues of $128.1 billion for the quarter ended September 30, 2026 increased $25.5 billion compared to $102.6 billion in revenues, excluding hedging effect, for the quarter ended September 30, 2025.\nComparison from the Quarter Ended June 30, 2026 to the Quarter Ended September 30, 2026\n| | | | | Quarter Ended September 30, 2026 |\n| Quarter Ended | | Less FX Effect | | Constant Currency Revenues | | As Reported | | Less Hedging Effect | | Less FX Effect | | Constant Currency Revenues |\n(1) Total constant currency revenues of $127.8 billion for the quarter ended September 30, 2026 increased $8.1 billion compared to $119.7 billion in revenues, excluding hedging effect, for the quarter e nded June 30, 2026.\nComparison from the Quarter Ended September 30, 2024 to the Quarter Ended September 30, 2025\n| | | | | Quarter Ended September 30, 2025 |\n| Quarter Ended September 30, | | | | | | % Change from Prior Period |\n| 2024 | | 2025 | | | | | | |\nTotal revenue row: Total revenues | $ | 102,346 | | | $ | 127,577 | | | | | |\nDiluted EPS row: Diluted net income per common share | $ | 2.87 | | | $ | 2.12 | | | | | |\n",
+      "quarterly_release_line_numbered_source": {
+        "filename": "8-K_Ex99.1_2026-10-28.txt",
+        "accession": "0001652044-26-000080",
+        "lines": "00001: EX-99.1\n00002: 2\n00003: googexhibit991q32026.htm\n00004: EX-99.1\n00005: Document\n00006: Exhibit 99.1\n00007: Alphabet Announces Third Quarter 2026 Results\n00008: MOUNTAIN VIEW, Calif. – October 28, 2026 – Alphabet Inc. (NASDAQ: GOOG, GOOGL) today announced financial results for the quarter ended September 30, 2026.\n00009: • Consolidated Alphabet revenues increased 25% to $127.6 billion, reflecting strong performance across the business and our 13th consecutive quarter of double-digit revenue growth.\n00010: • Google Services revenues increased 11% to $96.3 billion, led by 12% growth in Google Search & other with the year-over-year Search query growth rate the highest it has been in the last five years.\n00011: • Google Cloud delivered record growth as revenues increased 103% to $30.7 billion, led by strong growth in Google Cloud Platform (GCP) across enterprise AI infrastructure and enterprise AI solutions, as well as core GCP services. TPU systems sales were also a meaningful contributor to revenue growth.\n00012: • Consolidated Alphabet operating income increased 30% and operating margin was 31.8%.\n00013: • Net income available to common stockholders was $26.2 billion and EPS was $2.12.\n00014: Sundar Pichai, CEO of Google and Alphabet, said:\n00015: “We had a strong quarter and are now on a half-trillion dollar revenue run rate. Our deep full stack approach is driving momentum across the business, with Alphabet revenues growing 25% year-over year.\n00016: Our AI investments are driving overall Search query growth, including commercial queries. In fact, our year-over-year query growth rate is the highest it’s been in the last five years.\n00017: Google Cloud revenues grew 103%, powered by huge demand for our AI infrastructure and AI solutions. We’re also seeing strong demand for our TPU systems across a wide range of customers.\n00018: Gemini 4 Argon and Carbon are now leading at the frontier. Overall, our first-party model APIs are now processing nearly 32 billion tokens per minute, more than four times what we processed a year ago.\n00019: On top of that, the Gemini app has reached one billion users—making it the fastest-growing product in Google’s history—and we surpassed 150 million YouTube Music and Premium subscribers globally, including trials.\n00020: We’re excited by the range of big opportunities ahead of us.”\n00021: Q3 2026 Financial Highlights (unaudited)\n00022: The following table summarizes our consolidated financial results for the quarters ended September 30, 2025 and 2026 (in millions, except for per share information and percentages).\n00023: | | | | | | | | | | | | | | | |\n00024: | Quarter Ended September 30, | | |\n00025: | 2025 | | 2026 | | | | |\n00026: | | | | | |\n00027: Revenues | $ | 102,346 | | | $ | 127,577 | | | | | |\n00028: Change in revenues year over year | 16 | % | | 25 | % | | | | |\n00029: Change in constant currency revenues year over year (1)\n00030: | 15 | % | | 25 | % | | | | |\n00031: | | | | | | | |\n00032: Operating income | $ | 31,228 | | | $ | 40,576 | | | | | |\n00033: Operating margin\n00034: | 31 | % | | 32 | % | | | | |\n00035: | | | | | | | |\n00036: Other income (expense), net\n00037: | $ | 12,759 | | | $ | (8,221) | | | | | |\n00038: | | | | | | | |\n00039: Net income available to common stockholders | $ | 34,979 | | | $ | 26,170 | | | | | |\n00040: Diluted net income per common share | $ | 2.87 | | | $ | 2.12 | | | | | |\n00041: (1) Non-GAAP measure. See the section captioned “Reconciliation from GAAP Revenues to Non-GAAP Constant Currency Revenues and GAAP Percentage Change in Revenues to Non-GAAP Percentage Change in Constant Currency Revenues” for more details.\n00042: Q3 2026 Supplemental Information (in millions, except for number of employees; unaudited)\n00043: Revenues, Traffic Acquisition Costs (TAC), and Number of Employees\n00044: | | | | | | | | | | | | | | | |\n00045: | Quarter Ended September 30, | | |\n00046: | 2025 | | 2026 | | | | |\n00047: Google Search & other | $ | 56,567 | | | $ | 63,350 | | | | | |\n00048: YouTube ads | 10,261 | | | 11,207 | | | | | |\n00049: Google Network | 7,354 | | | 7,455 | | | | | |\n00050: Google advertising | 74,182 | | | 82,012 | | | | | |\n00051: Google subscriptions, platforms, and devices | 12,870 | | | 14,290 | | | | | |\n00052: Google Services total | 87,052 | | | 96,302 | | | | | |\n00053: Google Cloud | 15,157 | | | 30,709 | | | | | |\n00054: Other Bets | 344 | | | 372 | | | | | |\n00055: Hedging gains (losses) | (207) | | | 194 | | | | | |\n00056: Total revenues | $ | 102,346 | | | $ | 127,577 | | | | | |\n00057: | | | | | | | |\n00058: Total TAC | $ | 14,876 | | | $ | 16,366 | | | | | |\n00059: | | | | | | | |\n00060: Number of employees | 190,167 | | 204,757 | | | | |\n00061: Segment Operating Results\n00062: | | | | | | | | | | | |\n00063: | Quarter Ended September 30, |\n00064: | 2025 | | 2026 |\n00065: | | | |\n00066: | | | |\n00067: | | | |\n00068: | | | |\n00069: | | | |\n00070: | | | |\n00071: | | | |\n00072: Operating income (loss): | | | |\n00073: Google Services | $ | 33,527 | | | $ | 39,157 | |\n00074: Google Cloud | 3,594 | | | 11,121 | |\n00075: Other Bets | (1,426) | | | (2,047) | |\n00076: Alphabet-level activities (1)\n00077: | (4,467) | | | (7,655) | |\n00078: Total income from operations | $ | 31,228 | | | $ | 40,576 | |\n00079: (1) Alphabet-level activities primarily reflect expenses related to our shared AI research and development.\n00080: Additional Information Relating to the Quarter Ended September 30, 2026 (unaudited)\n00081: At-the-Market Program\n00082: During the three months ended September 30, 2026, we issued 12 million shares of Class A stock for net proceeds of $4.3 billion and 24 million shares of Class C stock for net proceeds of $8.1 billion. As of September 30, 2026, $27.6 billion remained available for future issuance under the ATM Program.\n00083: Issuance of Senior Unsecured Notes\n00084: In the third quarter of 2026, we issued senior unsecured notes for net proceeds of $28.7 billion, to be used for general corporate purposes.\n00085: Preferred and Common Dividend Programs\n00086: In October 2026, the company's Board of Directors declared a quarterly cash dividend of $15.63 per share on each of our Series A and Series B mandatory convertible preferred stock (equivalent to approximately $0.78 per share on each of our Series A and Series B Depositary Shares) and a quarterly cash dividend of $0.22 per share on our Class A, Class B, and Class C stock. The mandatory convertible preferred stock dividend is payable on November 15, 2026 to stockholders of record for each of the company's Series A and Series B shares as of November 1, 2026, and t he common stock dividend is payable on December 14, 2026 to stockholders of record for each of the company's Class A, Class B, and Class C shares as of December 7, 2026.\n00087: 2\n00088: Webcast and Conference Call Information\n00089: A live audio webcast of our third quarter 2026 earnings release call will be available on YouTube at https://www.youtube.com/watch?v=X9mmCagxJTo. The call begins today at 1:30 PM (PT) / 4:30 PM (ET). This press release, including the reconciliations of certain non-GAAP measures to their nearest comparable GAAP measures, is also available at http://abc.xyz/investor.\n00090: We also provide announcements regarding our financial performance, including SEC filings, investor events, press and earnings releases, and blogs, on our investor relations website (http://abc.xyz/investor).\n00091: We also share Google news and product updates on Google's Keyword blog at https://www.blog.google/ and News From Google page on X at x.com/NewsFromGoogle, and our executive officers may also use certain social media channels, such as X and LinkedIn, to communicate information about earnings results and company updates, which may be of interest or material to our investors.\n00092: Forward-Looki ng Statements\n00093: This press release may contain forward-looking statements that involve risks and uncertainties. Actual results may differ materially from the results predicted, and reported results should not be considered as an indication of future performance. The potential risks and uncertainties that could cause actual results to differ from the results predicted include, among others, those risks and uncertainties included under the captions “Risk Factors” and “Management’s Discussion and Analysis of Financial Condition and Results of Operations” in our Annual Report on Form 10-K for the year ended December 31, 2025 and our most recent Quarterly Report on Form 10-Q for the quarter ended June 30, 2026 , which are on file with the SEC and are available on our investor relations website at http://abc.xyz/investor and on the SEC website at www.sec.gov. Additional information will also be set forth in our Quarterly Report on Form 10-Q for the quarter ended September 30, 2026, and may be set forth in other reports and filings we make with the SEC. All information provided in this release and in the attachments is as of October 28, 2026 . Undue reliance should not be placed on the forward-looking statements in this press release, which are based on information available to us on the date hereof. We undertake no duty to update this information unless required by law.\n00094: About Non-GAAP Financial Measures\n00095: To supplement our consolidated financial statements, which are prepared and presented in accordance with GAAP, we use the following non-GAAP financial measures: free cash flow; constant currency revenues; and percentage change in constant currency revenues. The presentation of this financial information is not intended to be considered in isolation or as a substitute for, or superior to, the financial information prepared and presented in accordance with GAAP.\n00096: We use these non-GAAP financial measures for financial and operational decision-making and as a means to evaluate period-to-period comparisons. We believe that these non-GAAP financial measures provide meaningful supplemental information regarding our performance and liquidity by excluding certain items that may not be indicative of our recurring core business operating results, such as our revenues excluding the effect of foreign exchange rate movements and hedging activities, which are recognized at the consolidated level. We believe that both management and investors benefit from referring to these non-GAAP financial measures in assessing our performance and when planning, forecasting, and analyzing future periods. These non-GAAP financial measures also facilitate management’s internal comparisons to our historical performance and liquidity as well as comparisons to our competitors’ operating results. We believe these non-GAAP financial measures are useful to investors both because (1) they allow for greater transparency with respect to key metrics used by management in its financial and operational decision-making and (2) they are used by our institutional investors and the analyst community to help them analyze the health of our business.\n00097: There are a number of limitations related to the use of non-GAAP financial measures. We compensate for these limitations by providing specific information regarding the GAAP amounts excluded from these non-GAAP financial measures and evaluating these non-GAAP financial measures together with their relevant financial measures in accordance with GAAP.\n00098: For more information on these non-GAAP financial measures, please see the sections captioned “Reconciliation from GAAP Net Cash Provided by Operating Activities to Non-GAAP Free Cash Flow” and “Reconciliation from GAAP Revenues to Non-GAAP Constant Currency Revenues and GAAP Percentage Change in Revenues to Non-GAAP Percentage Change in Constant Currency Revenues” included at the end of this release.\n00099: Contact\n00100: | | | | | |\n00101: Investor relations | Media\n00102: |\n00103: investor-relations@abc.xyz | press@abc.xyz |\n00104: 3\n00105: Alphabet Inc.\n00106: CONSOLIDATED BALANCE SHEETS\n00107: (In millions, except per share amounts)\n00108: | | | | | | | | | | | |\n00109: | |\n00110: | As of\n00111: December 31, 2025 | | As of\n00112: September 30, 2026 |\n00113: | | | (unaudited) |\n00114: Assets | | | |\n00115: Current assets: | | | |\n00116: Cash and cash equivalents | $ | 30,708 | | | $ | 56,334 | |\n00117: Marketable securities | 96,135 | | | 208,764 | |\n00118: Total cash, cash equivalents, and marketable securities | 126,843 | | | 265,098 | |\n00119: Accounts receivable, net | 62,886 | | | 72,784 | |\n00120: Inventory | 2,439 | | | 13,308 | |\n00121: Other current assets | 13,870 | | | 23,475 | |\n00122: Total current assets | 206,038 | | | 374,665 | |\n00123: Non-marketable securities | 68,687 | | | 135,230 | |\n00124: Deferred income taxes | 9,113 | | | 1,458 | |\n00125: Property and equipment, net | 246,597 | | | 372,827 | |\n00126: Operating lease assets | 15,221 | | | 20,273 | |\n00127: Goodwill | 33,380 | | | 58,117 | |\n00128: Intangible assets, net | 1,283 | | | 8,817 | |\n00129: Other non-current assets | 14,962 | | | 31,925 | |\n00130: Total assets | $ | 595,281 | | | $ | 1,003,312 | |\n00131: Liabilities and Stockholders’ Equity | | | |\n00132: Current liabilities: | | | |\n00133: Accounts payable | $ | 12,200 | | | $ | 21,975 | |\n00134: Accrued compensation and benefits | 17,546 | | | 17,729 | |\n00135: Accrued expenses and other current liabilities | 55,557 | | | 74,317 | |\n00136: Accrued revenue share | 10,864 | | | 11,051 | |\n00137: Deferred revenue | 6,578 | | | 9,429 | |\n00138: Total current liabilities | 102,745 | | | 134,501 | |\n00139: Long-term debt | 46,547 | | | 125,102 | |\n00140: Income taxes payable, non-current | 9,531 | | | 12,219 | |\n00141: Deferred income taxes | 919 | | | 27,833 | |\n00142: Operating lease liabilities | 12,744 | | | 16,815 | |\n00143: Other long-term liabilities | 7,530 | | | 9,293 | |\n00144: Total liabilities | 180,016 | | | 325,763 | |\n00145: Commitments and contingencies | | | |\n00146: Stockholders’ equity: | | | |\n00147: Series A and Series B preferred stock and additional paid-in capital, $0.001 par value per share, 100 shares authorized; 6.25% mandatory convertible preferred stock, 0 and 19 shares issued and outstanding allocated equally between each series with a liquidation preference of $1,000 per share\n00148: | 0 | | | 18,023 | |\n00149: Class A, Class B, and Class C stock and additional paid-in capital, $0.001 par value per share: 300,000 shares authorized (Class A 180,000, Class B 60,000, Class C 60,000); 12,088 (Class A 5,822, Class B 837, Class C 5,429) and 12,294 (Class A 5,888, Class B 828, Class C 5,578) shares issued and outstanding\n00150: | 93,126 | | | 147,068 | |\n00151: Accumulated other comprehensive income (loss) | (1,916) | | | (4,326) | |\n00152: Retained earnings | 324,055 | | | 516,784 | |\n00153: Total stockholders’ equity | 415,265 | | | 677,549 | |\n00154: Total liabilities and stockholders’ equity | $ | 595,281 | | | $ | 1,003,312 | |\n00155: 4\n00156: Alphabet Inc.\n00157: CONSOLIDATED STATEMENTS OF INCOME\n00158: (In millions, except per share amounts, unaudited)\n00159: | | | | | | | | | | | | | | | | | | | | | | | |\n00160: | Quarter Ended September 30, | | Year To Date September 30, |\n00161: | 2025 | | 2026 | | 2025 | | 2026 |\n00162: | | | | | |\n00163: Revenues | $ | 102,346 | | | $ | 127,577 | | | $ | 289,007 | | | $ | 357,269 | |\n00164: Costs and expenses: | | | | | | | |\n00165: Cost of revenues | 41,369 | | | 51,419 | | | 116,768 | | | 138,633 | |\n00166: Research and development | 15,151 | | | 20,640 | | | 42,515 | | | 55,891 | |\n00167: Sales and marketing | 7,205 | | | 8,804 | | | 20,478 | | | 24,813 | |\n00168: General and administrative | 7,393 | | | 6,138 | | | 16,141 | | | 16,890 | |\n00169: Total costs and expenses | 71,118 | | | 87,001 | | | 195,902 | | | 236,227 | |\n00170: Income from operations | 31,228 | | | 40,576 | | | 93,105 | | | 121,042 | |\n00171: Other income (expense), net | 12,759 | | | (8,221) | | | 26,604 | | | 127,478 | |\n00172: Income before income taxes | 43,987 | | | 32,355 | | | 119,709 | | | 248,520 | |\n00173: Provision for income taxes | 9,008 | | | 5,887 | | | 21,994 | | | 47,281 | |\n00174: Net income | 34,979 | | | 26,468 | | | 97,715 | | | 201,239 | |\n00175: Preferred stock dividends | 0 | | | 298 | | | 0 | | | 384 | |\n00176: Net income available to common stockholders | $ | 34,979 | | | $ | 26,170 | | | $ | 97,715 | | | $ | 200,855 | |\n00177: | | | | | | | |\n00178: Basic net income per common share | $ | 2.89 | | | $ | 2.14 | | | $ | 8.06 | | | $ | 16.51 | |\n00179: Diluted net income per common share | $ | 2.87 | | | $ | 2.12 | | | $ | 7.99 | | | $ | 16.33 | |\n00180: Number of shares used in basic net income per common share calculation | 12,086 | | | 12,256 | | | 12,130 | | | 12,169 | |\n00181: Number of shares used in diluted net income per common share calculation | 12,203 | | | 12,368 | | | 12,230 | | | 12,324 | |\n00182: 5\n00183: Alphabet Inc.\n00184: CONSOLIDATED STATEMENTS OF CASH FLOWS\n00185: (In millions, unaudited)\n00186: | | | | | | | | | | | | | | | | | | | | | | | |\n00187: | Quarter Ended September 30, | | Year To Date September 30, |\n00188: | 2025 | | 2026 | | 2025 | | 2026 |\n00189: | | | | | |\n00190: Operating activities | | | | | | | |\n00191: Net income | $ | 34,979 | | | $ | 26,468 | | | $ | 97,715 | | | $ | 201,239 | |\n00192: Adjustments: | | | | | | | |\n00193: Depreciation of property and equipment | 5,611 | | | 8,369 | | | 15,096 | | | 21,955 | |\n00194: Stock-based compensation expense | 6,368 | | | 8,630 | | | 17,882 | | | 23,338 | |\n00195: Deferred income taxes | 8,726 | | | 5,539 | | | 7,130 | | | 33,077 | |\n00196: Loss (gain) on debt and equity securities, net | (10,855) | | | 9,048 | | | (22,266) | | | (126,755) | |\n00197: Other | (198) | | | 1,664 | | | 843 | | | 4,825 | |\n00198: Changes in assets and liabilities, net of effects of acquisitions: | | | | | | | |\n00199: Accounts receivable, net | (2,381) | | | (3,917) | | | (3,582) | | | (10,821) | |\n00200: Inventory | (526) | | | (3,220) | | | (1,154) | | | (10,959) | |\n00201: Income taxes, net | (858) | | | (3,702) | | | (3,292) | | | 4,602 | |\n00202: Other assets | (767) | | | (7,807) | | | (2,906) | | | (17,757) | |\n00203: Accounts payable | (444) | | | (165) | | | (771) | | | 1,925 | |\n00204: Accrued expenses and other liabilities | 8,078 | | | (1,168) | | | 6,299 | | | (860) | |\n00205: Deferred revenue | 681 | | | 2,551 | | | 1,317 | | | 3,340 | |\n00206: Net cash provided by operating activities | 48,414 | | | 42,290 | | | 112,311 | | | 127,149 | |\n00207: Investing activities | | | | | | | |\n00208: Purchases of property and equipment | (23,953) | | | (51,355) | | | (63,596) | | | (131,953) | |\n00209: Purchases of marketable securities | (20,964) | | | (39,987) | | | (60,834) | | | (116,467) | |\n00210: Maturities and sales of marketable securities | 20,371 | | | 21,820 | | | 61,301 | | | 88,516 | |\n00211: Purchases of non-marketable securities | (1,000) | | | (2,109) | | | (3,312) | | | (24,160) | |\n00212: Maturities and sales of non-marketable securities | 323 | | | 208 | | | 1,196 | | | 1,875 | |\n00213: Acquisitions, net of cash acquired, and purchases of intangible assets | (1,072) | | | (406) | | | (1,425) | | | (34,103) | |\n00214: Other investing activities | (1,482) | | | 480 | | | (1,845) | | | (879) | |\n00215: Net cash used in investing activities | (27,777) | | | (71,349) | | | (68,515) | | | (217,171) | |\n00216: Financing activities | | | | | | | |\n00217: Net payments related to stock-based award activities | (3,270) | | | (5,368) | | | (9,001) | | | (17,424) | |\n00218: Repurchases of stock | (11,504) | | | 0 | | | (39,810) | | | 0 | |\n00219: Dividend payments on preferred and common stock | (2,537) | | | (2,936) | | | (7,513) | | | (8,167) | |\n00220: Proceeds from issuance of common stock, net of costs | 0 | | | 12,371 | | | 0 | | | 42,870 | |\n00221: Proceeds from issuance of mandatory convertible preferred stock, net of costs | 0 | | | 0 | | | 0 | | | 19,063 | |\n00222: Proceeds from issuance of debt, net of costs | 6,624 | | | 28,996 | | | 38,002 | | | 85,222 | |\n00223: Repayments of debt | (7,696) | | | (3,626) | | | (26,094) | | | (8,879) | |\n00224: Proceeds from sale of interest in consolidated entities, net | 0 | | | 0 | | | 400 | | | 3,758 | |\n00225: Other financing activities | 0 | | | 0 | | | (400) | | | (686) | |\n00226: Net cash provided by (used in) financing activities | (18,383) | | | 29,437 | | | (44,416) | | | 115,757 | |\n00227: Effect of exchange rate changes on cash and cash equivalents | (200) | | | 45 | | | 244 | | | (109) | |\n00228: Net increase (decrease) in cash and cash equivalents | 2,054 | | | 423 | | | (376) | | | 25,626 | |\n00229: Cash and cash equivalents at beginning of period | 21,036 | | | 55,911 | | | 23,466 | | | 30,708 | |\n00230: Cash and cash equivalents at end of period | $ | 23,090 | | | $ | 56,334 | | | $ | 23,090 | | | $ | 56,334 | |\n00231: 6\n00232: Segment Results\n00233: The following table presents our segment revenues and operating income (loss) (in millions; unaudited):\n00234: | | | | | | | | | | | |\n00235: | Quarter Ended September 30, |\n00236: | 2025 | | 2026 |\n00237: | | | |\n00238: Revenues: | | | |\n00239: Google Services | $ | 87,052 | | | $ | 96,302 | |\n00240: Google Cloud | 15,157 | | | 30,709 | |\n00241: Other Bets | 344 | | | 372 | |\n00242: Hedging gains (losses) | (207) | | | 194 | |\n00243: Total revenues | $ | 102,346 | | | $ | 127,577 | |\n00244: Operating income (loss): | | | |\n00245: Google Services | $ | 33,527 | | | $ | 39,157 | |\n00246: Google Cloud | 3,594 | | | 11,121 | |\n00247: Other Bets | (1,426) | | | (2,047) | |\n00248: Alphabet-level activities\n00249: | (4,467) | | | (7,655) | |\n00250: Total income from operations | $ | 31,228 | | | $ | 40,576 | |\n00251: We report our segment results as Google Services, Google Cloud, and Other Bets:\n00252: • Google Services includes products and services such as ads, Android, Chrome, consumer devices, Google Maps, Google Play, Search, and YouTube. Google Services generates revenues primarily from advertising; fees received for consumer subscription-based products such as YouTube TV, YouTube Music and Premium, and NFL Sunday Ticket, as well as Google One; the sale of apps and in-app purchases; and consumer devices.\n00253: • Google Cloud includes infrastructure and platform services, applications, and other products and services for enterprise customers. Google Cloud generates services revenues primarily from consumption-based fees and subscriptions received for Google Cloud Platform services, Google Workspace communication and collaboration tools, and other enterprise services. Google Cloud generates product revenues primarily from the sale of TPU systems.\n00254: • Other Bets is a combination of multiple operating segments that are not individually material. Revenues from Other Bets are generated primarily from the sale of autonomous transportation services and internet services.\n00255: Certain costs are not allocated to our segments because they represent Alphabet-level activities. These costs primarily include:\n00256: • certain AI-focused shared research and development activities, including employee compensation expenses and technical infrastructure usage costs associated with the development of our general AI models;\n00257: • corporate initiatives such as our philanthropic activities; and\n00258: • corporate shared costs such as certain finance, human resource, and legal costs, including certain fines and settlements.\n00259: Charges associated with employee severance and office space reductions are also not allocated to our segments. Additionally, hedging gains (losses) related to revenue are not allocated to our segments.\n00260: 7\n00261: Other Income (Expense), Net\n00262: The following table presents our other income (expense), net (in millions; unaudited):\n00263: | | | | | | | | | | | |\n00264: | Quarter Ended September 30, |\n00265: | 2025 | | 2026 |\n00266: Interest income | $ | 1,076 | | | $ | 1,768 | |\n00267: Interest expense | (143) | | | (967) | |\n00268: Foreign currency exchange gain (loss), net | (143) | | | 22 | |\n00269: Gain (loss) on debt securities, net | 122 | | | (383) | |\n00270: Gain (loss) on equity securities, net (1)\n00271: | 10,734 | | | (8,664) | |\n00272: Income (loss) and impairment from equity method investments, net | (30) | | | (143) | |\n00273: Other | 1,143 | | | 146 | |\n00274: Other income (expense), net | $ | 12,759 | | | $ | (8,221) | |\n00275: (1) Includes all gains and losses, unrealized and realized, on equity securities. For Q3 2026, the net effect of the loss on equity securities of $8.7 billion decreased the provision for income tax, net income, and diluted net income per common share by $1.9 billion, $6.7 billion, and $0.55, respectively. Fluctuations in the value of our investments may be affected by market dynamics and other factors and could significantly contribute to the volatility of OI&E in future periods.\n00276: Reconciliation from GAAP Net Cash Provided by Operating Activities to Non-GAAP Free Cash Flow (in millions; unaudited) :\n00277: We provide non-GAAP free cash flow for the current quarter and trailing twelve months (“TTM”) because it is a liquidity measure that provides useful information to management and investors about the amount of cash generated by the business that can be used for strategic opportunities, including investing in our business and acquisitions, and to strengthen our balance sheet.\n00278: | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |\n00279: | | Quarter Ended\n00280: | | | TTM\n00281: |\n00282: | | Q4 2025 | | Q1 2026 | | Q2 2026 | | Q3 2026 | | | Q3 2026 |\n00283: Net cash provided by operating activities | | $ | 52,402 | | | $ | 45,790 | | | $ | 39,069 | | | $ | 42,290 | | | | $ | 179,551 | |\n00284: Less: purchases of property and equipment | | (27,851) | | | (35,674) | | | (44,924) | | | (51,355) | | | | (159,804) | |\n00285: Free cash flow | | $ | 24,551 | | | $ | 10,116 | | | $ | (5,855) | | | $ | (9,065) | | | | $ | 19,747 | |\n00286: Free cash flow: We define free cash flow as net cash provided by operating activities less capital expenditures.\n00287: TTM free cash flow: We define trailing twelve months free cash flow as net cash provided by operating activities less capital expenditures for the most recent twelve consecutive months.\n00288: Reconciliation from GAAP Revenues to Non-GAAP Constant Currency Revenues and GAAP Percentage Change in Revenues to Non-GAAP Percentage Change in Constant Currency Revenues (in millions, except percentages; unaudited) :\n00289: We provide non-GAAP constant currency revenues (“constant currency revenues”) and non-GAAP percentage change in constant currency revenues (“percentage change in constant currency revenues”), because they facilitate the comparison of current results to historic performance by excluding the effect of foreign exchange rate movements (“FX Effect”) as well as hedging activities, which are recognized at the consolidated level, as they are not indicative of our core operating results.\n00290: Non-GAAP constant currency revenues is defined as revenues excluding the effect of foreign exchange rate movements and hedging activities and is calculated by translating current period revenues using prior period exchange rates and excluding any hedging effect recognized in the current period. We calculate the percentage change in constant currency revenues by comparing constant currency revenues to the prior year comparable period revenues, excluding any hedging effect recognized in the prior period.\n00291: 8\n00292: Revenues by Geography\n00293: Comparison from the Quarter Ended September 30, 2025 to the Quarter Ended September 30, 2026\n00294: | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |\n00295: | | | | | Quarter Ended September 30, 2026 |\n00296: | | | | | | | | | % Change from Prior Period |\n00297: | Quarter Ended September 30, | | Less FX Effect | | Constant Currency Revenues | | As Reported | | Less Hedging Effect | | Less FX Effect | | Constant Currency Revenues |\n00298: | 2025 | | 2026 | | | | | | |\n00299: United States | $ | 48,758 | | | $ | 67,681 | | | $ | 0 | | | $ | 67,681 | | | 39 | % | | | | 0 | % | | 39 | % |\n00300: EMEA | 29,911 | | | 32,695 | | | (336) | | | 33,031 | | | 9 | % | | | | (1) | % | | 10 | % |\n00301: APAC | 17,819 | | | 19,906 | | | (517) | | | 20,423 | | | 12 | % | | | | (3) | % | | 15 | % |\n00302: Other Americas | 6,065 | | | 7,101 | | | 151 | | | 6,950 | | | 17 | % | | | | 2 | % | | 15 | % |\n00303: Revenues, excluding hedging effect (1)\n00304: | 102,553 | | | 127,383 | | | (702) | | | 128,085 | | | 24 | % | | | | (1) | % | | 25 | % |\n00305: Hedging gains (losses) | (207) | | | 194 | | | | | | | | | | | | | |\n00306: Total revenues\n00307: | $ | 102,346 | | | $ | 127,577 | | | | | $ | 128,085 | | | 25 | % | | 1 | % | | (1) | % | | 25 | % |\n00308: (1) Total constant currency revenues of $128.1 billion for the quarter ended September 30, 2026 increased $25.5 billion compared to $102.6 billion in revenues, excluding hedging effect, for the quarter ended September 30, 2025.\n00309: Comparison from the Quarter Ended June 30, 2026 to the Quarter Ended September 30, 2026\n00310: | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |\n00311: | | | | | Quarter Ended September 30, 2026 |\n00312: | | | | | | | | | % Change from Prior Period |\n00313: | Quarter Ended | | Less FX Effect | | Constant Currency Revenues | | As Reported | | Less Hedging Effect | | Less FX Effect | | Constant Currency Revenues |\n00314: | June 30, 2026 | | September 30, 2026 | | | | | | |\n00315: United States | $ | 60,846 | | | $ | 67,681 | | | $ | 0 | | | $ | 67,681 | | | 11 | % | | | | 0 | % | | 11 | % |\n00316: EMEA | 32,501 | | | 32,695 | | | (325) | | | 33,020 | | | 1 | % | | | | (1) | % | | 2 | % |\n00317: APAC | 19,317 | | | 19,906 | | | (66) | | | 19,972 | | | 3 | % | | | | 0 | % | | 3 | % |\n00318: Other Americas | 7,026 | | | 7,101 | | | (42) | | | 7,143 | | | 1 | % | | | | (1) | % | | 2 | % |\n00319: Revenues, excluding hedging effect (1)\n00320: | 119,690 | | | 127,383 | | | (433) | | | 127,816 | | | 6 | % | | | | (1) | % | | 7 | % |\n00321: Hedging gains (losses) | 106 | | | 194 | | | | | | | | | | | | | |\n00322: Total revenues\n00323: | $ | 119,796 | | | $ | 127,577 | | | | | $ | 127,816 | | | 6 | % | | 0 | % | | (1) | % | | 7 | % |\n00324: | | | | | | | | | | | | | | | |\n00325: | | | | | | | | | | | | | | | |\n00326: | | | | | | | | | | | | | | | |\n00327: (1) Total constant currency revenues of $127.8 billion for the quarter ended September 30, 2026 increased $8.1 billion compared to $119.7 billion in revenues, excluding hedging effect, for the quarter e nded June 30, 2026.\n00328: Total Revenues — Prior Year Comparative Periods\n00329: Comparison from the Quarter Ended September 30, 2024 to the Quarter Ended September 30, 2025\n00330: | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |\n00331: | | | | | Quarter Ended September 30, 2025 |\n00332: | Quarter Ended September 30, | | | | | | % Change from Prior Period |\n00333: | | Less FX Effect | | Constant Currency Revenues | | As Reported | | Less Hedging Effect | | Less FX Effect | | Constant Currency Revenues |\n00334: | 2024 | | 2025 | | | | | | |\n00335: Revenues excluding hedging effect | $ | 88,251 | | | $ | 102,553 | | | $ | 1,339 | | | $ | 101,214 | | | 16 | % | | | | 1 | % | | 15 | % |\n00336: Hedging gains (losses) | $ | 17 | | | $ | (207) | | | | | | | | | | | | | |\n00337: Total revenues | $ | 88,268 | | | $ | 102,346 | | | | | $ | 101,214 | | | 16 | % | | 0 | % | | 1 | % | | 15 | % |\n00338: 9"
+      },
+      "quarterly_release_period_headers": {
+        "filename": "8-K_Ex99.1_2026-10-28.txt",
+        "accession": "0001652044-26-000080",
+        "lines": [
+          {
+            "line": 8,
+            "text": "MOUNTAIN VIEW, Calif. – October 28, 2026 – Alphabet Inc. (NASDAQ: GOOG, GOOGL) today announced financial results for the quarter ended September 30, 2026."
+          },
+          {
+            "line": 9,
+            "text": "• Consolidated Alphabet revenues increased 25% to $127.6 billion, reflecting strong performance across the business and our 13th consecutive quarter of double-digit revenue growth."
+          },
+          {
+            "line": 10,
+            "text": "• Google Services revenues increased 11% to $96.3 billion, led by 12% growth in Google Search & other with the year-over-year Search query growth rate the highest it has been in the last five years."
+          },
+          {
+            "line": 22,
+            "text": "The following table summarizes our consolidated financial results for the quarters ended September 30, 2025 and 2026 (in millions, except for per share information and percentages)."
+          },
+          {
+            "line": 23,
+            "text": "| | | | | | | | | | | | | | | |"
+          },
+          {
+            "line": 24,
+            "text": "| Quarter Ended September 30, | | |"
+          },
+          {
+            "line": 25,
+            "text": "| 2025 | | 2026 | | | | |"
+          },
+          {
+            "line": 26,
+            "text": "| | | | | |"
+          },
+          {
+            "line": 45,
+            "text": "| Quarter Ended September 30, | | |"
+          },
+          {
+            "line": 46,
+            "text": "| 2025 | | 2026 | | | | |"
+          },
+          {
+            "line": 47,
+            "text": "Google Search & other | $ | 56,567 | | | $ | 63,350 | | | | | |"
+          },
+          {
+            "line": 63,
+            "text": "| Quarter Ended September 30, |"
+          },
+          {
+            "line": 64,
+            "text": "| 2025 | | 2026 |"
+          },
+          {
+            "line": 65,
+            "text": "| | | |"
+          },
+          {
+            "line": 80,
+            "text": "Additional Information Relating to the Quarter Ended September 30, 2026 (unaudited)"
+          },
+          {
+            "line": 81,
+            "text": "At-the-Market Program"
+          },
+          {
+            "line": 82,
+            "text": "During the three months ended September 30, 2026, we issued 12 million shares of Class A stock for net proceeds of $4.3 billion and 24 million shares of Class C stock for net proceeds of $8.1 billion. As of September 30, 2026, $27.6 billion remained available for future issuance under the ATM Program."
+          },
+          {
+            "line": 93,
+            "text": "This press release may contain forward-looking statements that involve risks and uncertainties. Actual results may differ materially from the results predicted, and reported results should not be considered as an indication of future performance. The potential risks and uncertainties that could cause actual results to differ from the results predicted include, among others, those risks and uncertainties included under the captions “Risk Factors” and “Management’s Discussion and Analysis of Financial Condition and Results of Operations” in our Annual Report on Form 10-K for the year ended December 31, 2025 and our most recent Quarterly Report on Form 10-Q for the quarter ended June 30, 2026 , which are on file with the SEC and are available on our investor relations website at http://abc.xyz/investor and on the SEC website at www.sec.gov. Additional information will also be set forth in our Quarterly Report on Form 10-Q for the quarter ended September 30, 2026, and may be set forth in other reports and filings we make with the SEC. All information provided in this release and in the attachments is as of October 28, 2026 . Undue reliance should not be placed on the forward-looking statements in this press release, which are based on information available to us on the date hereof. We undertake no duty to update this information unless required by law."
+          },
+          {
+            "line": 94,
+            "text": "About Non-GAAP Financial Measures"
+          },
+          {
+            "line": 95,
+            "text": "To supplement our consolidated financial statements, which are prepared and presented in accordance with GAAP, we use the following non-GAAP financial measures: free cash flow; constant currency revenues; and percentage change in constant currency revenues. The presentation of this financial information is not intended to be considered in isolation or as a substitute for, or superior to, the financial information prepared and presented in accordance with GAAP."
+          },
+          {
+            "line": 160,
+            "text": "| Quarter Ended September 30, | | Year To Date September 30, |"
+          },
+          {
+            "line": 161,
+            "text": "| 2025 | | 2026 | | 2025 | | 2026 |"
+          },
+          {
+            "line": 162,
+            "text": "| | | | | |"
+          },
+          {
+            "line": 187,
+            "text": "| Quarter Ended September 30, | | Year To Date September 30, |"
+          },
+          {
+            "line": 188,
+            "text": "| 2025 | | 2026 | | 2025 | | 2026 |"
+          },
+          {
+            "line": 189,
+            "text": "| | | | | |"
+          },
+          {
+            "line": 235,
+            "text": "| Quarter Ended September 30, |"
+          },
+          {
+            "line": 236,
+            "text": "| 2025 | | 2026 |"
+          },
+          {
+            "line": 237,
+            "text": "| | | |"
+          },
+          {
+            "line": 264,
+            "text": "| Quarter Ended September 30, |"
+          },
+          {
+            "line": 265,
+            "text": "| 2025 | | 2026 |"
+          },
+          {
+            "line": 266,
+            "text": "Interest income | $ | 1,076 | | | $ | 1,768 | |"
+          },
+          {
+            "line": 279,
+            "text": "| | Quarter Ended"
+          },
+          {
+            "line": 280,
+            "text": "| | | TTM"
+          },
+          {
+            "line": 281,
+            "text": "|"
+          },
+          {
+            "line": 293,
+            "text": "Comparison from the Quarter Ended September 30, 2025 to the Quarter Ended September 30, 2026"
+          },
+          {
+            "line": 294,
+            "text": "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |"
+          },
+          {
+            "line": 295,
+            "text": "| | | | | Quarter Ended September 30, 2026 |"
+          },
+          {
+            "line": 296,
+            "text": "| | | | | | | | | % Change from Prior Period |"
+          },
+          {
+            "line": 297,
+            "text": "| Quarter Ended September 30, | | Less FX Effect | | Constant Currency Revenues | | As Reported | | Less Hedging Effect | | Less FX Effect | | Constant Currency Revenues |"
+          },
+          {
+            "line": 298,
+            "text": "| 2025 | | 2026 | | | | | | |"
+          },
+          {
+            "line": 299,
+            "text": "United States | $ | 48,758 | | | $ | 67,681 | | | $ | 0 | | | $ | 67,681 | | | 39 | % | | | | 0 | % | | 39 | % |"
+          },
+          {
+            "line": 308,
+            "text": "(1) Total constant currency revenues of $128.1 billion for the quarter ended September 30, 2026 increased $25.5 billion compared to $102.6 billion in revenues, excluding hedging effect, for the quarter ended September 30, 2025."
+          },
+          {
+            "line": 309,
+            "text": "Comparison from the Quarter Ended June 30, 2026 to the Quarter Ended September 30, 2026"
+          },
+          {
+            "line": 310,
+            "text": "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |"
+          },
+          {
+            "line": 311,
+            "text": "| | | | | Quarter Ended September 30, 2026 |"
+          },
+          {
+            "line": 312,
+            "text": "| | | | | | | | | % Change from Prior Period |"
+          },
+          {
+            "line": 313,
+            "text": "| Quarter Ended | | Less FX Effect | | Constant Currency Revenues | | As Reported | | Less Hedging Effect | | Less FX Effect | | Constant Currency Revenues |"
+          },
+          {
+            "line": 314,
+            "text": "| June 30, 2026 | | September 30, 2026 | | | | | | |"
+          },
+          {
+            "line": 315,
+            "text": "United States | $ | 60,846 | | | $ | 67,681 | | | $ | 0 | | | $ | 67,681 | | | 11 | % | | | | 0 | % | | 11 | % |"
+          },
+          {
+            "line": 327,
+            "text": "(1) Total constant currency revenues of $127.8 billion for the quarter ended September 30, 2026 increased $8.1 billion compared to $119.7 billion in revenues, excluding hedging effect, for the quarter e nded June 30, 2026."
+          },
+          {
+            "line": 328,
+            "text": "Total Revenues — Prior Year Comparative Periods"
+          },
+          {
+            "line": 329,
+            "text": "Comparison from the Quarter Ended September 30, 2024 to the Quarter Ended September 30, 2025"
+          },
+          {
+            "line": 330,
+            "text": "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |"
+          },
+          {
+            "line": 331,
+            "text": "| | | | | Quarter Ended September 30, 2025 |"
+          },
+          {
+            "line": 332,
+            "text": "| Quarter Ended September 30, | | | | | | % Change from Prior Period |"
+          },
+          {
+            "line": 333,
+            "text": "| | Less FX Effect | | Constant Currency Revenues | | As Reported | | Less Hedging Effect | | Less FX Effect | | Constant Currency Revenues |"
+          },
+          {
+            "line": 334,
+            "text": "| 2024 | | 2025 | | | | | | |"
+          }
+        ],
+        "instruction": "Use these period headers to map quarter and year-to-date table columns before you report a value."
+      },
+      "peer_facts_from_step_7": {
+        "MSFT": {
+          "total_revenue": {
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "unit": "USD",
+            "start": "2025-07-01",
+            "end": "2026-06-30",
+            "val": 331839000000,
+            "accn": "0001193125-26-323660",
+            "fy": 2026,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-07-29",
+            "frame": "CY2026",
+            "prior_val": 281724000000
+          },
+          "operating_income": {
+            "tag": "OperatingIncomeLoss",
+            "unit": "USD",
+            "start": "2025-07-01",
+            "end": "2026-06-30",
+            "val": 155237000000,
+            "accn": "0001193125-26-323660",
+            "fy": 2026,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-07-29",
+            "frame": "CY2026",
+            "prior_val": 128528000000
+          },
+          "net_income": {
+            "tag": "NetIncomeLoss",
+            "unit": "USD",
+            "start": "2025-07-01",
+            "end": "2026-06-30",
+            "val": 133749000000,
+            "accn": "0001193125-26-323660",
+            "fy": 2026,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-07-29",
+            "prior_val": 101832000000
+          },
+          "diluted_eps": {
+            "tag": "EarningsPerShareDiluted",
+            "unit": "USD/shares",
+            "start": "2025-07-01",
+            "end": "2026-06-30",
+            "val": 17.95,
+            "accn": "0001193125-26-323660",
+            "fy": 2026,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-07-29",
+            "frame": "CY2026",
+            "prior_val": 13.64
+          },
+          "equity": {
+            "tag": "StockholdersEquity",
+            "unit": "USD",
+            "end": "2026-06-30",
+            "val": 442387000000,
+            "accn": "0001193125-26-323660",
+            "fy": 2026,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-07-29",
+            "prior_val": 343479000000
+          },
+          "long_term_debt": {
+            "tag": "LongTermDebtNoncurrent",
+            "unit": "USD",
+            "end": "2026-06-30",
+            "val": 31067000000,
+            "accn": "0001193125-26-323660",
+            "fy": 2026,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-07-29",
+            "prior_val": 40152000000
+          },
+          "current_debt": {
+            "tag": "LongTermDebtCurrent",
+            "unit": "USD",
+            "end": "2026-06-30",
+            "val": 9227000000,
+            "accn": "0001193125-26-323660",
+            "fy": 2026,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-07-29",
+            "prior_val": 2999000000
+          },
+          "cash_from_operations": {
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "unit": "USD",
+            "start": "2025-07-01",
+            "end": "2026-06-30",
+            "val": 182935000000,
+            "accn": "0001193125-26-323660",
+            "fy": 2026,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-07-29",
+            "frame": "CY2026",
+            "prior_val": 136162000000
+          },
+          "capex": {
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "unit": "USD",
+            "start": "2025-07-01",
+            "end": "2026-06-30",
+            "val": 115948000000,
+            "accn": "0001193125-26-323660",
+            "fy": 2026,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-07-29",
+            "frame": "CY2026",
+            "prior_val": 64551000000
+          },
+          "depreciation": {
+            "tag": "Depreciation",
+            "unit": "USD",
+            "start": "2025-07-01",
+            "end": "2026-06-30",
+            "val": 34300000000,
+            "accn": "0001193125-26-323660",
+            "fy": 2026,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-07-29",
+            "frame": "CY2026",
+            "prior_val": 22000000000
+          },
+          "diluted_shares": {
+            "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "unit": "shares",
+            "start": "2025-07-01",
+            "end": "2026-06-30",
+            "val": 7453000000,
+            "accn": "0001193125-26-323660",
+            "fy": 2026,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-07-29",
+            "frame": "CY2026",
+            "prior_val": 7465000000
+          },
+          "debt_components": {
+            "LongTermDebtCurrent": 9227000000,
+            "LongTermDebtNoncurrent": 31067000000
+          },
+          "period_end": {
+            "end": "2026-06-30",
+            "prior_end": "2025-06-30"
+          }
+        }
+      },
+      "peer_calculator_output_from_step_7": "STEP 7 � Peer facts and operating margin on the same revenue definition\nMSFT (MICROSOFT CORP) revenue: 331839000000 | operating income: 155237000000 | margin: 46.7808% | period: 2026-06-30\n",
+      "price_input": {
+        "value": 324.89,
+        "date": "2026-10-28",
+        "source": "LSEG Data Library: TR.PriceClose"
+      },
+      "instruction": "Use only these facts. Do not calculate. The values in calculator output were calculated by code."
+    },
+    "deterministic_valuation_worksheet": "# Worksheet — Alphabet_Inc._20261122_174504_278128_Eastern Standard Time\n\nMethod: five-year owner-cash-flow DCF with Gordon-growth terminal value; 5-year projection. The rates come from the team-authored `config/valuation_worksheet_inputs.md`.\n\n## Owner cash flow\n\nNet income $132,170,000,000 + depreciation $21,136,000,000 - capital spending $91,447,000,000 = **$61,859,000,000**.\n\n- Net income source: `NetIncomeLoss`; period end 2025-12-31; accession `0001652044-26-000018`; 10-K filed 2026-02-05.\n- Depreciation source: `Depreciation`; period end 2025-12-31; accession `0001652044-26-000018`; 10-K filed 2026-02-05.\n- Capital spending source: `PaymentsToAcquirePropertyPlantAndEquipment`; period end 2025-12-31; accession `0001652044-26-000018`; 10-K filed 2026-02-05.\n\n## Value range\n\nFormula: project owner cash flow for each year; discount each cash flow; calculate terminal value as final-year cash flow × (1 + terminal growth) / (discount rate - terminal growth); discount terminal value; add the present values; divide by diluted shares.\n\n| Case | 5-year growth | Discount rate | Terminal growth | Owner-cash-flow value per diluted share |\n|---|---:|---:|---:|---:|\n| Bear | 4.0% | 10.0% | 2.0% | $70.16 |\n| Base | 7.0% | 9.0% | 2.5% | $96.64 |\n| Bull | 10.0% | 8.5% | 3.0% | $127.81 |\n\nDiluted shares: 12,230,000,000; source `WeightedAverageNumberOfDilutedSharesOutstanding`; period end 2025-12-31; accession `0001652044-26-000018`; 10-K filed 2026-02-05.\n\nThis calculator uses the course definition of owner cash flow as an equity cash-flow proxy. It divides that value by diluted shares. It does not call the result enterprise value or subtract debt again. The course formula is simplified and does not include working-capital changes. The source file also lists terminal multiples; this implementation uses its explicit Gordon-growth formula and does not use those multiples.\n\nMarket close: $324.89 on 2026-10-28 (LSEG Data Library: TR.PriceClose). Margin of safety against base case: -236.19%. ROE using average equity: 35.70%. Debt/equity, including current and noncurrent debt: 11.69%.\n\nDeciding number: Margin of Safety percentage against base-case value; measured value: -236.19%.\n\n## Quantitative decision screen\n\nRule result: **Sell / Avoid**. Reason: At least one written Sell / Avoid condition is true. Allocation tier: none; allocation: 0.0%. Dollar purchase size: $0.00.\n\n## Policy reconciliation status\n\nThe investor persona, valuation input specification, and calculator rules are fully reconciled on the course formula (net income + depreciation - capital spending), the 3-case DCF rates, the Margin of Safety deciding number, and the $10,000,000 USD client portfolio size.\n",
+    "valuation_calculations": {
+      "status": "complete",
+      "method": "five-year owner-cash-flow DCF with Gordon-growth terminal value",
+      "years": 5,
+      "owner_cash_flow": {
+        "net_income": 132170000000.0,
+        "depreciation": 21136000000.0,
+        "capex": 91447000000.0,
+        "owner_cash_flow": 61859000000.0
+      },
+      "cases": {
+        "bear": {
+          "growth_rate": 0.04,
+          "discount_rate": 0.1,
+          "terminal_growth_rate": 0.02,
+          "pv_explicit": 262216631672.11972,
+          "terminal_value": 959576881591.9105,
+          "pv_terminal": 595821746895.0272,
+          "total_value": 858038378567.147,
+          "per_share": 70.15849375037996
+        },
+        "base": {
+          "growth_rate": 0.07,
+          "discount_rate": 0.09,
+          "terminal_growth_rate": 0.025,
+          "pv_explicit": 292680420978.76697,
+          "terminal_value": 1368145518417.0093,
+          "pv_terminal": 889200713442.6351,
+          "total_value": 1181881134421.402,
+          "per_share": 96.63786871802144
+        },
+        "bull": {
+          "growth_rate": 0.1,
+          "discount_rate": 0.085,
+          "terminal_growth_rate": 0.03,
+          "pv_explicit": 322361827625.12524,
+          "terminal_value": 1865695895140.0007,
+          "pv_terminal": 1240772516310.8796,
+          "total_value": 1563134343936.005,
+          "per_share": 127.81147538315658
+        }
+      },
+      "diluted_shares": {
+        "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+        "unit": "shares",
+        "start": "2025-01-01",
+        "end": "2025-12-31",
+        "val": 12230000000,
+        "accn": "0001652044-26-000018",
+        "fy": 2025,
+        "fp": "FY",
+        "form": "10-K",
+        "filed": "2026-02-05",
+        "frame": "CY2025",
+        "prior_val": 12447000000
+      },
+      "market": {
+        "ticker": "GOOGL",
+        "filed_time_eastern": "2026-10-28T16:01:33-04:00",
+        "close": 324.89,
+        "close_date": "2026-10-28",
+        "source": "LSEG Data Library: TR.PriceClose",
+        "ric": "GOOGL.O"
+      },
+      "margin_of_safety": -2.3619325871930488,
+      "roe": 0.3570478247421149,
+      "debt_to_equity": 0.11689643962289141,
+      "quantitative_decision": {
+        "rating": "Sell / Avoid",
+        "allocation_pct": 0.0,
+        "reason": "At least one written Sell / Avoid condition is true."
+      },
+      "client_portfolio_value_usd": 10000000.0,
+      "client_purchase_size_usd": 0.0,
+      "valuation_basis": "equity value from owner cash flow; divide by diluted shares; do not label as enterprise value",
+      "deciding_number": "Margin of Safety percentage against base-case value",
+      "owner_cash_flow_definition_conflict": false,
+      "persona_policy_conflict": false,
+      "pending": []
+    }
+  },
+  "expected_output": "Concise Markdown. Use only `primary_company_facts` for GOOGL. Use `peer_facts_from_step_7` only in the peer comparison section. Never assign a peer's fact to the primary company. Transcribe fact values exactly. State each period from its saved start/end dates; do not infer fiscal years from the calendar year. For quarterly release data, read the supplied period-header lines before the statement rows. Match each amount to its exact year and period column. Distinguish quarter values from year-to-date values. Do not describe a year-to-date value as a quarter value. Include each source, period, unit, definition, and supplied arithmetic. Include the Bear, Base, and Bull value per share, the margin of safety, the recommendation screen, and the client allocation and dollar amount exactly as the deterministic worksheet states. Do not recalculate or change these values. If a required value is missing, say `not available`; do not guess. End with exactly one standalone line that begins `Insight:`. Use one distinct annual financial fact or comparison from GOOGL's 10-K. State its period, cite the filing filename, accession, and exact statement line, and give the arithmetic if it is a ratio. Do not repeat the Research Analyst's Insight or a figure from the earnings release's first paragraph."
+}

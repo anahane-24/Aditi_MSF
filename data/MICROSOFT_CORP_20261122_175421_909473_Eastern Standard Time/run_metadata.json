@@ -1,0 +1,14 @@
+{
+  "ticker": "MSFT",
+  "peers": [
+    "GOOGL"
+  ],
+  "filed_override": null,
+  "filed_time_eastern": "2026-10-28T16:04:44-04:00",
+  "price": 531.01,
+  "price_date": "2026-10-28",
+  "price_source": "LSEG Data Library: TR.PriceClose",
+  "run_time": "2026-11-22T17:54:27-05:00",
+  "step_output_file": "step_output.txt",
+  "framework": "CrewAI Flow"
+}

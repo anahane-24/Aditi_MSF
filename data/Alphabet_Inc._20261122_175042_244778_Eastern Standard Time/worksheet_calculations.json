@@ -1,0 +1,80 @@
+{
+  "status": "complete",
+  "method": "five-year owner-cash-flow DCF with Gordon-growth terminal value",
+  "years": 5,
+  "owner_cash_flow": {
+    "net_income": 132170000000.0,
+    "depreciation": 21136000000.0,
+    "capex": 91447000000.0,
+    "owner_cash_flow": 61859000000.0
+  },
+  "cases": {
+    "bear": {
+      "growth_rate": 0.04,
+      "discount_rate": 0.1,
+      "terminal_growth_rate": 0.02,
+      "pv_explicit": 262216631672.11972,
+      "terminal_value": 959576881591.9105,
+      "pv_terminal": 595821746895.0272,
+      "total_value": 858038378567.147,
+      "per_share": 70.15849375037996
+    },
+    "base": {
+      "growth_rate": 0.07,
+      "discount_rate": 0.09,
+      "terminal_growth_rate": 0.025,
+      "pv_explicit": 292680420978.76697,
+      "terminal_value": 1368145518417.0093,
+      "pv_terminal": 889200713442.6351,
+      "total_value": 1181881134421.402,
+      "per_share": 96.63786871802144
+    },
+    "bull": {
+      "growth_rate": 0.1,
+      "discount_rate": 0.085,
+      "terminal_growth_rate": 0.03,
+      "pv_explicit": 322361827625.12524,
+      "terminal_value": 1865695895140.0007,
+      "pv_terminal": 1240772516310.8796,
+      "total_value": 1563134343936.005,
+      "per_share": 127.81147538315658
+    }
+  },
+  "diluted_shares": {
+    "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+    "unit": "shares",
+    "start": "2025-01-01",
+    "end": "2025-12-31",
+    "val": 12230000000,
+    "accn": "0001652044-26-000018",
+    "fy": 2025,
+    "fp": "FY",
+    "form": "10-K",
+    "filed": "2026-02-05",
+    "frame": "CY2025",
+    "prior_val": 12447000000
+  },
+  "market": {
+    "ticker": "GOOGL",
+    "filed_time_eastern": "2026-10-28T16:01:33-04:00",
+    "close": 324.89,
+    "close_date": "2026-10-28",
+    "source": "LSEG Data Library: TR.PriceClose",
+    "ric": "GOOGL.O"
+  },
+  "margin_of_safety": -2.3619325871930488,
+  "roe": 0.3570478247421149,
+  "debt_to_equity": 0.11689643962289141,
+  "quantitative_decision": {
+    "rating": "Sell / Avoid",
+    "allocation_pct": 0.0,
+    "reason": "At least one written Sell / Avoid condition is true."
+  },
+  "client_portfolio_value_usd": 10000000.0,
+  "client_purchase_size_usd": 0.0,
+  "valuation_basis": "equity value from owner cash flow; divide by diluted shares; do not label as enterprise value",
+  "deciding_number": "Margin of Safety percentage against base-case value",
+  "owner_cash_flow_definition_conflict": false,
+  "persona_policy_conflict": false,
+  "pending": []
+}

@@ -1,0 +1,112 @@
+{
+  "items": [
+    {
+      "id": "C001",
+      "mark": "correct",
+      "reason": "The claim correctly reports total revenue, net income, and diluted EPS for the quarter ended September 30, 2026, as well as year-to-date net income. All figures align with the provided 8-K filing.",
+      "correction": null
+    },
+    {
+      "id": "C002",
+      "mark": "correct",
+      "reason": "The insight accurately reflects the potential impact of adverse rulings on commercial agreements, product integrations, and business models, which could reduce user engagement and advertising revenue, as stated in the 10-Q filing.",
+      "correction": null
+    },
+    {
+      "id": "C003",
+      "mark": "correct",
+      "reason": "The revenue figure for FY2025 ($402,836 million) and prior year ($350,018 million) is correctly cited from the 10-K filing with proper tagging and period end date.",
+      "correction": null
+    },
+    {
+      "id": "C004",
+      "mark": "correct",
+      "reason": "The operating income for FY2025 ($129,039 million) and prior year ($112,390 million) is accurately reported from the 10-K filing with correct tagging and period end date.",
+      "correction": null
+    },
+    {
+      "id": "C005",
+      "mark": "correct",
+      "reason": "The net income for FY2025 ($132,170 million) and prior year ($100,118 million) is correctly cited from the 10-K filing with proper tagging and period end date.",
+      "correction": null
+    },
+    {
+      "id": "C006",
+      "mark": "correct",
+      "reason": "The diluted EPS for FY2025 ($10.81) and prior year ($8.04) is accurately reported from the 10-K filing with correct tagging and period end date.",
+      "correction": null
+    },
+    {
+      "id": "C007",
+      "mark": "correct",
+      "reason": "The stockholders' equity for FY2025 ($415,265 million) and prior year ($325,084 million) is correctly cited from the 10-K filing with proper tagging and period end date.",
+      "correction": null
+    },
+    {
+      "id": "C008",
+      "mark": "correct",
+      "reason": "The current long-term debt for FY2025 ($1,996 million) and prior year ($999 million) is accurately reported from the 10-K filing with correct tagging and period end date.",
+      "correction": null
+    },
+    {
+      "id": "C009",
+      "mark": "correct",
+      "reason": "The noncurrent long-term debt for FY2025 ($46,547 million) and prior year ($10,883 million) is correctly cited from the 10-K filing with proper tagging and period end date.",
+      "correction": null
+    },
+    {
+      "id": "C010",
+      "mark": "correct",
+      "reason": "Cash from operations for FY2025 ($164,713 million) and prior year ($125,299 million) is accurately reported from the 10-K filing with correct tagging and period end date.",
+      "correction": null
+    },
+    {
+      "id": "C011",
+      "mark": "correct",
+      "reason": "Capital spending for FY2025 ($91,447 million) and prior year ($52,535 million) is correctly cited from the 10-K filing with proper tagging and period end date.",
+      "correction": null
+    },
+    {
+      "id": "C012",
+      "mark": "correct",
+      "reason": "The calculated revenue growth of 15.0901% matches the provided formula and data from the 10-K filing.",
+      "correction": null
+    },
+    {
+      "id": "C013",
+      "mark": "correct",
+      "reason": "The operating margin of 32.0326% is correctly calculated using the provided figures and aligns with the 10-K filing.",
+      "correction": null
+    },
+    {
+      "id": "C014",
+      "mark": "correct",
+      "reason": "The return on average equity of 35.7048% is accurately calculated using the provided net income and equity figures from the 10-K filing.",
+      "correction": null
+    },
+    {
+      "id": "C015",
+      "mark": "correct",
+      "reason": "The debt to equity ratio of 11.6896% is correctly computed using data from the 10-K filing.",
+      "correction": null
+    },
+    {
+      "id": "C016",
+      "mark": "correct",
+      "reason": "The operating margin for MSFT (46.7808%) is accurately calculated and matches the provided figures in the 10-Q filing.",
+      "correction": null
+    },
+    {
+      "id": "C017",
+      "mark": "correct",
+      "reason": "The revenue growth of 15.0901% for FY2025 is correctly derived from the provided figures and aligns with the 10-K filing.",
+      "correction": null
+    },
+    {
+      "id": "C018",
+      "mark": "correct",
+      "reason": "The insight regarding proceeds being used for AI infrastructure and global compute aligns with the statement in the 10-Q filing.",
+      "correction": null
+    }
+  ]
+}

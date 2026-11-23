@@ -1,0 +1,1250 @@
+{
+  "task": "Verify every supplied factual and numeric claim, including each Insight line. Do not assess the Investment Advisor's thesis or Buy, Hold, or Sell recommendation. The Investment Recommendation Insight line is included for verification. Return exactly one result for every supplied claim ID, in the same order, with no omitted IDs. Check only the compiled report, the exact cited filing-line excerpts, and the supplied saved facts. issuer_identity contains the explicit registrant text and CIK from the saved 10-K: Alphabet Inc., CIK 0001652044. Treat facts.json as facts for that same registrant and ticker. Do not invent a parent/subsidiary relationship that the filing does not state. saved_facts is keyed by report claim ID. If a claim ID has no saved fact, check it against that claim's cited filing-line excerpts; do not use facts from another claim. A matching filing excerpt is sufficient evidence for a sourced narrative or period claim; do not require an XBRL fact for it. For quarterly claims, use the cited 8-K or 10-Q row and its supplied period-header context; annual facts do not override correct quarter figures. Do not treat unrelated annual facts as a conflict when the claim is supported by the cited quarterly release. A table row that names a peer ticker is checked against the corresponding `GOOGL_facts.json` mapping supplied for that claim; this is valid peer evidence and is not missing because it is not in the primary facts.json. Do not transfer a fact from another claim, company, ticker, period, or facts file. For each mapped fact, compare the printed value, unit, tag, period, and accession. For a filing-line claim, check whether the exact cited line supports the number and period. For a ratio, recalculate from that claim's own supplied inputs and check its definition. Mark a claim wrong only when those sources show a different value, period, definition, or arithmetic result. If the cited line or mapped fact supports the claim, mark it correct. If evidence is missing, mark unsupported, not wrong. Use a price stated in the report to check P/E.",
+  "context": {
+    "issuer_identity": {
+      "primary_ticker": "GOOGL",
+      "sec_registrant": "Alphabet Inc.",
+      "cik": "0001652044",
+      "registrant_evidence": {
+        "filename": "10-K_2026-02-05.txt",
+        "line": 16,
+        "text": "Alphabet Inc.",
+        "registrant_label_line": 17,
+        "registrant_label": "(Exact name of registrant as specified in its charter)",
+        "accession": "0001652044-26-000018",
+        "cik": "0001652044"
+      }
+    },
+    "compiled_report": "Filings read: GOOGL 10-K accession 0001652044-26-000018; GOOGL 10-Q accession 0001652044-26-000084; GOOGL 8-K Exhibit 99.1 accession 0001652044-26-000080; MSFT latest 10-K accession 0001193125-26-323660\nRun time: 2026-11-22T17:50:45-05:00\n\n## Overview\n\nThe original agent output is preserved in `report.md`. This corrected report uses the saved filings, saved facts, and code-printed worksheet calculations.\n\nIdentity note: GOOGL is the ticker in this run. The 10-K names Alphabet Inc. as the SEC registrant (10-K_2026-02-05.txt, line 16, accession 0001652044-26-000018). The Q3 2026 release identifies quarter columns as 2025 then 2026 (8-K_Ex99.1_2026-10-28.txt, lines 22-25, accession 0001652044-26-000080).\n\nFor the quarter ended September 30, 2026, the release reports total revenue of $127,577 million (8-K_Ex99.1_2026-10-28.txt, line 56, accession 0001652044-26-000080).\n\nFor the quarter ended September 30, 2026, the release reports net income available to common stockholders of $26,170 million (8-K_Ex99.1_2026-10-28.txt, line 39, accession 0001652044-26-000080).\n\nFor the quarter ended September 30, 2026, the release reports diluted EPS of $2.12 (8-K_Ex99.1_2026-10-28.txt, line 40, accession 0001652044-26-000080).\n\nThe release separately reports $200,855 million of net income available to common stockholders for the year-to-date period ended September 30, 2026 (8-K_Ex99.1_2026-10-28.txt, lines 160-161 and 176, accession 0001652044-26-000080). This is year-to-date income, not Q3-only income.\n\n## Market Positioning and Growth Outlook\nThe 10-Q describes the registrant's revenue sources. It states: \"We generate revenues by delivering relevant, cost-effective online advertising; cloud-based solutions that provide enterprise customers of all sizes with infrastructure, platform services, and applications; and sales of products and services, such as fees received for subscription-based products, apps and in-app purchases, consumer devices, and Tensor Processing Unit (TPU) systems.\" (10-Q_2026-10-29.txt, line 418, accession 0001652044-26-000084).\n\nInsight: The GOOGL 10-Q states: \"Adverse rulings in these or related competition proceedings have resulted, and may in the future result, in court-ordered remedies that mandate substantial alterations to our commercial agreements, product integrations and functionality, and business models.\" The filing says these changes could reduce user engagement and advertising revenue (10-Q_2026-10-29.txt, line 1852, accession 0001652044-26-000084).\n\n## Valuation Insights\nThese annual facts are for the fiscal year ended 2025-12-31. Each prior-year amount is for the fiscal year ended 2024-12-31. Amounts are USD unless the unit says per share. Each claim gives its XBRL tag and SEC 10-K source.\n\nRevenue: FY2025 $402,836 million; prior fiscal year $350,018 million; tag `Revenues`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 689; accession 0001652044-26-000018.\nOperating income: FY2025 $129,039 million; prior fiscal year $112,390 million; tag `OperatingIncomeLoss`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 650; accession 0001652044-26-000018.\nNet income: FY2025 $132,170 million; prior fiscal year $100,118 million; tag `NetIncomeLoss`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 653; accession 0001652044-26-000018.\nDiluted EPS: FY2025 $10.81 per share; prior fiscal year $8.04 per share; tag `EarningsPerShareDiluted`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 2122; accession 0001652044-26-000018.\nStockholders' equity: FY2025 $415,265 million; prior fiscal year $325,084 million; tag `StockholdersEquity`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 1071; accession 0001652044-26-000018.\nCurrent long-term debt: FY2025 $1,996 million; prior fiscal year $999 million; tag `LongTermDebtCurrent`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 1834; accession 0001652044-26-000018.\nNoncurrent long-term debt: FY2025 $46,547 million; prior fiscal year $10,883 million; tag `LongTermDebtNoncurrent`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 1058; accession 0001652044-26-000018.\nCash from operations: FY2025 $164,713 million; prior fiscal year $125,299 million; tag `NetCashProvidedByUsedInOperatingActivities`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 826; accession 0001652044-26-000018.\nCapital spending: FY2025 $91,447 million; prior fiscal year $52,535 million; tag `PaymentsToAcquirePropertyPlantAndEquipment`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 1199; accession 0001652044-26-000018.\n\nRevenue growth is current-year revenue minus prior-year revenue, divided by prior-year revenue.\n(402836000000 - 350018000000) / 350018000000 = 15.0901% (revenue growth; FY2025 and prior fiscal year; tag `Revenues`; period end 2025-12-31; 10-K_2026-02-05.txt, line 689; accession 0001652044-26-000018).\nOperating margin is operating income divided by total revenue.\n129039000000 / 402836000000 = 32.0326% (operating margin; operating income / total revenue; FY2025 ended 2025-12-31; tags `OperatingIncomeLoss` and `Revenues`; 10-K_2026-02-05.txt, lines 650 and 689; accession 0001652044-26-000018).\nReturn on average equity is net income divided by the average of beginning and ending stockholders' equity.\n132170000000 / ((415265000000 + 325084000000) / 2) = 35.7048% (return on average equity; net income / average beginning and ending equity; FY2025 ended 2025-12-31; tags `NetIncomeLoss` and `StockholdersEquity`; 10-K_2026-02-05.txt, lines 653 and 1071; accession 0001652044-26-000018).\nDebt to equity is current plus noncurrent long-term debt divided by ending stockholders' equity.\n(1996000000 + 46547000000) / 415265000000 = 11.6896% (debt to equity; current debt + noncurrent debt / equity; FY2025 ended 2025-12-31; tags `LongTermDebtCurrent`, `LongTermDebtNoncurrent`, and `StockholdersEquity`; 10-K_2026-02-05.txt, lines 1058, 1071, and 1834; accession 0001652044-26-000018).\nFree cash flow is cash from operations minus additions to property and equipment.\n164713000000 - 91447000000 = 73266000000 (free cash flow; cash from operations - additions to property and equipment; FY2025 ended 2025-12-31; tags `NetCashProvidedByUsedInOperatingActivities` and `PaymentsToAcquirePropertyPlantAndEquipment`; 10-K_2026-02-05.txt, lines 826 and 1199; accession 0001652044-26-000018).\n\nMSFT is the Step 7 peer. The next row uses MSFT's saved facts. It does not attribute these values to GOOGL.\n\n| MSFT | Operating margin: 46.7808%; operating income $155,237 million divided by total revenue $331,839 million; tags `OperatingIncomeLoss` and `RevenueFromContractWithCustomerExcludingAssessedTax`; FY2026 ended 2026-06-30; accession 0001193125-26-323660. |\n\nInsight: GOOGL FY2025 revenue was $402,836 million, up 15.0901% from $350,018 million in the prior fiscal year. Formula: (402836000000 - 350018000000) / 350018000000 = 15.0901%. Tag `Revenues`; period end 2025-12-31; 10-K_2026-02-05.txt, line 689; accession 0001652044-26-000018.\n\n## Future Developments and Strategic Recommendations\nThe GOOGL 10-Q says offering proceeds will support general corporate purposes, including capital spending to scale AI infrastructure and global compute (10-Q_2026-10-29.txt, line 1248, accession 0001652044-26-000084). The Q3 release reports Google Cloud revenue growth (8-K_Ex99.1_2026-10-28.txt, line 11, accession 0001652044-26-000080).\n\n## Investment Recommendation\n\nThe deterministic worksheet screen returns **Sell / Avoid** with a 0.0% allocation. The deciding figure is the margin of safety against the base case: ($96.64 - $324.89) / $96.64 = -236.19%. The base-case value is $96.64 per diluted share. The price is the LSEG close of $324.89 on 2026-10-28, recorded in `market_data.json`; worksheet inputs and calculation are in `worksheet_calculations.json`. This is the course screen result, not financial advice.\n\nThe deterministic worksheet is saved in `worksheet_output.md`. Its inputs, formulas, and recommendation screen are saved in `worksheet_calculations.json`. The report does not repeat those values here because they are worksheet calculations, not direct filing values.\n\nInsight: The GOOGL 10-Q states: \"These proceeds will be used for general corporate purposes, including capital expenditures to scale AI infrastructure and global compute.\" Source: 10-Q_2026-10-29.txt, line 1248, accession 0001652044-26-000084.\n",
+    "saved_filing_texts": [
+      {
+        "id": "C001",
+        "text": "For the quarter ended September 30, 2026, the release reports total revenue of $127,577 million (8-K_Ex99.1_2026-10-28.txt, line 56, accession 0001652044-26-000080).",
+        "cited_lines": [
+          {
+            "filename": "8-K_Ex99.1_2026-10-28.txt",
+            "lines": [
+              56
+            ],
+            "excerpts": [
+              {
+                "line": 56,
+                "text": "Total revenues | $ | 102,346 | | | $ | 127,577 | | | | | |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": [
+          {
+            "filename": "8-K_Ex99.1_2026-10-28.txt",
+            "lines": [
+              {
+                "line": 8,
+                "text": "MOUNTAIN VIEW, Calif. – October 28, 2026 – Alphabet Inc. (NASDAQ: GOOG, GOOGL) today announced financial results for the quarter ended September 30, 2026."
+              },
+              {
+                "line": 9,
+                "text": "• Consolidated Alphabet revenues increased 25% to $127.6 billion, reflecting strong performance across the business and our 13th consecutive quarter of double-digit revenue growth."
+              },
+              {
+                "line": 10,
+                "text": "• Google Services revenues increased 11% to $96.3 billion, led by 12% growth in Google Search & other with the year-over-year Search query growth rate the highest it has been in the last five years."
+              },
+              {
+                "line": 24,
+                "text": "| Quarter Ended September 30, | | |"
+              },
+              {
+                "line": 25,
+                "text": "| 2025 | | 2026 | | | | |"
+              },
+              {
+                "line": 26,
+                "text": "| | | | | |"
+              },
+              {
+                "line": 45,
+                "text": "| Quarter Ended September 30, | | |"
+              },
+              {
+                "line": 46,
+                "text": "| 2025 | | 2026 | | | | |"
+              },
+              {
+                "line": 47,
+                "text": "Google Search & other | $ | 56,567 | | | $ | 63,350 | | | | | |"
+              },
+              {
+                "line": 63,
+                "text": "| Quarter Ended September 30, |"
+              },
+              {
+                "line": 64,
+                "text": "| 2025 | | 2026 |"
+              },
+              {
+                "line": 65,
+                "text": "| | | |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C002",
+        "text": "For the quarter ended September 30, 2026, the release reports net income available to common stockholders of $26,170 million (8-K_Ex99.1_2026-10-28.txt, line 39, accession 0001652044-26-000080).",
+        "cited_lines": [
+          {
+            "filename": "8-K_Ex99.1_2026-10-28.txt",
+            "lines": [
+              39
+            ],
+            "excerpts": [
+              {
+                "line": 39,
+                "text": "Net income available to common stockholders | $ | 34,979 | | | $ | 26,170 | | | | | |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": [
+          {
+            "filename": "8-K_Ex99.1_2026-10-28.txt",
+            "lines": [
+              {
+                "line": 8,
+                "text": "MOUNTAIN VIEW, Calif. – October 28, 2026 – Alphabet Inc. (NASDAQ: GOOG, GOOGL) today announced financial results for the quarter ended September 30, 2026."
+              },
+              {
+                "line": 9,
+                "text": "• Consolidated Alphabet revenues increased 25% to $127.6 billion, reflecting strong performance across the business and our 13th consecutive quarter of double-digit revenue growth."
+              },
+              {
+                "line": 10,
+                "text": "• Google Services revenues increased 11% to $96.3 billion, led by 12% growth in Google Search & other with the year-over-year Search query growth rate the highest it has been in the last five years."
+              },
+              {
+                "line": 24,
+                "text": "| Quarter Ended September 30, | | |"
+              },
+              {
+                "line": 25,
+                "text": "| 2025 | | 2026 | | | | |"
+              },
+              {
+                "line": 26,
+                "text": "| | | | | |"
+              },
+              {
+                "line": 45,
+                "text": "| Quarter Ended September 30, | | |"
+              },
+              {
+                "line": 46,
+                "text": "| 2025 | | 2026 | | | | |"
+              },
+              {
+                "line": 47,
+                "text": "Google Search & other | $ | 56,567 | | | $ | 63,350 | | | | | |"
+              },
+              {
+                "line": 63,
+                "text": "| Quarter Ended September 30, |"
+              },
+              {
+                "line": 64,
+                "text": "| 2025 | | 2026 |"
+              },
+              {
+                "line": 65,
+                "text": "| | | |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C003",
+        "text": "For the quarter ended September 30, 2026, the release reports diluted EPS of $2.12 (8-K_Ex99.1_2026-10-28.txt, line 40, accession 0001652044-26-000080).",
+        "cited_lines": [
+          {
+            "filename": "8-K_Ex99.1_2026-10-28.txt",
+            "lines": [
+              40
+            ],
+            "excerpts": [
+              {
+                "line": 40,
+                "text": "Diluted net income per common share | $ | 2.87 | | | $ | 2.12 | | | | | |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": [
+          {
+            "filename": "8-K_Ex99.1_2026-10-28.txt",
+            "lines": [
+              {
+                "line": 8,
+                "text": "MOUNTAIN VIEW, Calif. – October 28, 2026 – Alphabet Inc. (NASDAQ: GOOG, GOOGL) today announced financial results for the quarter ended September 30, 2026."
+              },
+              {
+                "line": 9,
+                "text": "• Consolidated Alphabet revenues increased 25% to $127.6 billion, reflecting strong performance across the business and our 13th consecutive quarter of double-digit revenue growth."
+              },
+              {
+                "line": 10,
+                "text": "• Google Services revenues increased 11% to $96.3 billion, led by 12% growth in Google Search & other with the year-over-year Search query growth rate the highest it has been in the last five years."
+              },
+              {
+                "line": 24,
+                "text": "| Quarter Ended September 30, | | |"
+              },
+              {
+                "line": 25,
+                "text": "| 2025 | | 2026 | | | | |"
+              },
+              {
+                "line": 26,
+                "text": "| | | | | |"
+              },
+              {
+                "line": 45,
+                "text": "| Quarter Ended September 30, | | |"
+              },
+              {
+                "line": 46,
+                "text": "| 2025 | | 2026 | | | | |"
+              },
+              {
+                "line": 47,
+                "text": "Google Search & other | $ | 56,567 | | | $ | 63,350 | | | | | |"
+              },
+              {
+                "line": 63,
+                "text": "| Quarter Ended September 30, |"
+              },
+              {
+                "line": 64,
+                "text": "| 2025 | | 2026 |"
+              },
+              {
+                "line": 65,
+                "text": "| | | |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C004",
+        "text": "The release separately reports $200,855 million of net income available to common stockholders for the year-to-date period ended September 30, 2026 (8-K_Ex99.1_2026-10-28.txt, lines 160-161 and 176, accession 0001652044-26-000080). This is year-to-date income, not Q3-only income.",
+        "cited_lines": [
+          {
+            "filename": "8-K_Ex99.1_2026-10-28.txt",
+            "lines": [
+              160,
+              161,
+              176
+            ],
+            "excerpts": [
+              {
+                "line": 160,
+                "text": "| Quarter Ended September 30, | | Year To Date September 30, |"
+              },
+              {
+                "line": 161,
+                "text": "| 2025 | | 2026 | | 2025 | | 2026 |"
+              },
+              {
+                "line": 176,
+                "text": "Net income available to common stockholders | $ | 34,979 | | | $ | 26,170 | | | $ | 97,715 | | | $ | 200,855 | |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": [
+          {
+            "filename": "8-K_Ex99.1_2026-10-28.txt",
+            "lines": [
+              {
+                "line": 8,
+                "text": "MOUNTAIN VIEW, Calif. – October 28, 2026 – Alphabet Inc. (NASDAQ: GOOG, GOOGL) today announced financial results for the quarter ended September 30, 2026."
+              },
+              {
+                "line": 9,
+                "text": "• Consolidated Alphabet revenues increased 25% to $127.6 billion, reflecting strong performance across the business and our 13th consecutive quarter of double-digit revenue growth."
+              },
+              {
+                "line": 10,
+                "text": "• Google Services revenues increased 11% to $96.3 billion, led by 12% growth in Google Search & other with the year-over-year Search query growth rate the highest it has been in the last five years."
+              },
+              {
+                "line": 24,
+                "text": "| Quarter Ended September 30, | | |"
+              },
+              {
+                "line": 25,
+                "text": "| 2025 | | 2026 | | | | |"
+              },
+              {
+                "line": 26,
+                "text": "| | | | | |"
+              },
+              {
+                "line": 45,
+                "text": "| Quarter Ended September 30, | | |"
+              },
+              {
+                "line": 46,
+                "text": "| 2025 | | 2026 | | | | |"
+              },
+              {
+                "line": 47,
+                "text": "Google Search & other | $ | 56,567 | | | $ | 63,350 | | | | | |"
+              },
+              {
+                "line": 63,
+                "text": "| Quarter Ended September 30, |"
+              },
+              {
+                "line": 64,
+                "text": "| 2025 | | 2026 |"
+              },
+              {
+                "line": 65,
+                "text": "| | | |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C005",
+        "text": "Insight: The GOOGL 10-Q states: \"Adverse rulings in these or related competition proceedings have resulted, and may in the future result, in court-ordered remedies that mandate substantial alterations to our commercial agreements, product integrations and functionality, and business models.\" The filing says these changes could reduce user engagement and advertising revenue (10-Q_2026-10-29.txt, line 1852, accession 0001652044-26-000084).",
+        "cited_lines": [
+          {
+            "filename": "10-Q_2026-10-29.txt",
+            "lines": [
+              1852
+            ],
+            "excerpts": [
+              {
+                "line": 1852,
+                "text": "The US Department of Justice (DOJ), various states, and other plaintiffs have filed, and may continue to file in the future, several antitrust lawsuits about aspects of our business, including our advertising technologies and practices, the operation and distribution of Google Search, and the operation and distribution of Android operating system and Play Store. Adverse rulings in these or related competition proceedings have resulted, and may in the future result, in court-ordered remedies that mandate substantial alterations to our commercial agreements, product integrations and functionality, and business models. These remedies could include prohibitions or restrictions on default distribution arrangements and revenue-sharing agreements, requirements to share or license search data and provide syndication services to rivals, changes to app store billing and distribution practices, or structural relief such as the required divestiture of certain advertising technology assets or other business units. Implementing any such operational changes, product modifications, or structural separations could significantly impair our distribution reach, reduce user engagement and advertising revenues, increase compliance and operating costs, and harm our business, reputation, financial condition, and operating results. For additional information about such lawsuits, see Legal Matters in Note 10 of the Notes to Consolidated Financial Statements included in Part I, Item 1 of this Quarterly Report on Form 10-Q."
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C006",
+        "text": "Revenue: FY2025 $402,836 million; prior fiscal year $350,018 million; tag `Revenues`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 689; accession 0001652044-26-000018.",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-02-05.txt",
+            "lines": [
+              689
+            ],
+            "excerpts": [
+              {
+                "line": 689,
+                "text": "Total revenues | $ | 350,018 | $ | 402,836 |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C007",
+        "text": "Operating income: FY2025 $129,039 million; prior fiscal year $112,390 million; tag `OperatingIncomeLoss`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 650; accession 0001652044-26-000018.",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-02-05.txt",
+            "lines": [
+              650
+            ],
+            "excerpts": [
+              {
+                "line": 650,
+                "text": "Operating income | $ | 112,390 | $ | 129,039 | $ | 16,649 | 15 | % |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C008",
+        "text": "Net income: FY2025 $132,170 million; prior fiscal year $100,118 million; tag `NetIncomeLoss`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 653; accession 0001652044-26-000018.",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-02-05.txt",
+            "lines": [
+              653
+            ],
+            "excerpts": [
+              {
+                "line": 653,
+                "text": "Net income | $ | 100,118 | $ | 132,170 | $ | 32,052 | 32 | % |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C009",
+        "text": "Diluted EPS: FY2025 $10.81 per share; prior fiscal year $8.04 per share; tag `EarningsPerShareDiluted`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 2122; accession 0001652044-26-000018.",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-02-05.txt",
+            "lines": [
+              2122
+            ],
+            "excerpts": [
+              {
+                "line": 2122,
+                "text": "Diluted net income per share | $ | 10.82 | $ | 10.81 | $ | 10.80 | $ | 10.81 |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C010",
+        "text": "Stockholders' equity: FY2025 $415,265 million; prior fiscal year $325,084 million; tag `StockholdersEquity`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 1071; accession 0001652044-26-000018.",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-02-05.txt",
+            "lines": [
+              1071
+            ],
+            "excerpts": [
+              {
+                "line": 1071,
+                "text": "Total stockholders’ equity | 325,084 | 415,265 |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C011",
+        "text": "Current long-term debt: FY2025 $1,996 million; prior fiscal year $999 million; tag `LongTermDebtCurrent`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 1834; accession 0001652044-26-000018.",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-02-05.txt",
+            "lines": [
+              1834
+            ],
+            "excerpts": [
+              {
+                "line": 1834,
+                "text": "| ( 999 ) | ( 1,996 ) |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C012",
+        "text": "Noncurrent long-term debt: FY2025 $46,547 million; prior fiscal year $10,883 million; tag `LongTermDebtNoncurrent`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 1058; accession 0001652044-26-000018.",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-02-05.txt",
+            "lines": [
+              1058
+            ],
+            "excerpts": [
+              {
+                "line": 1058,
+                "text": "Long-term debt | 10,883 | 46,547 |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C013",
+        "text": "Cash from operations: FY2025 $164,713 million; prior fiscal year $125,299 million; tag `NetCashProvidedByUsedInOperatingActivities`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 826; accession 0001652044-26-000018.",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-02-05.txt",
+            "lines": [
+              826
+            ],
+            "excerpts": [
+              {
+                "line": 826,
+                "text": "Net cash provided by operating activities | $ | 125,299 | $ | 164,713 |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C014",
+        "text": "Capital spending: FY2025 $91,447 million; prior fiscal year $52,535 million; tag `PaymentsToAcquirePropertyPlantAndEquipment`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 1199; accession 0001652044-26-000018.",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-02-05.txt",
+            "lines": [
+              1199
+            ],
+            "excerpts": [
+              {
+                "line": 1199,
+                "text": "Purchases of property and equipment | ( 32,251 ) | ( 52,535 ) | ( 91,447 ) |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C015",
+        "text": "(402836000000 - 350018000000) / 350018000000 = 15.0901% (revenue growth; FY2025 and prior fiscal year; tag `Revenues`; period end 2025-12-31; 10-K_2026-02-05.txt, line 689; accession 0001652044-26-000018).",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-02-05.txt",
+            "lines": [
+              689
+            ],
+            "excerpts": [
+              {
+                "line": 689,
+                "text": "Total revenues | $ | 350,018 | $ | 402,836 |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C016",
+        "text": "129039000000 / 402836000000 = 32.0326% (operating margin; operating income / total revenue; FY2025 ended 2025-12-31; tags `OperatingIncomeLoss` and `Revenues`; 10-K_2026-02-05.txt, lines 650 and 689; accession 0001652044-26-000018).",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-02-05.txt",
+            "lines": [
+              650,
+              689
+            ],
+            "excerpts": [
+              {
+                "line": 650,
+                "text": "Operating income | $ | 112,390 | $ | 129,039 | $ | 16,649 | 15 | % |"
+              },
+              {
+                "line": 689,
+                "text": "Total revenues | $ | 350,018 | $ | 402,836 |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C017",
+        "text": "132170000000 / ((415265000000 + 325084000000) / 2) = 35.7048% (return on average equity; net income / average beginning and ending equity; FY2025 ended 2025-12-31; tags `NetIncomeLoss` and `StockholdersEquity`; 10-K_2026-02-05.txt, lines 653 and 1071; accession 0001652044-26-000018).",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-02-05.txt",
+            "lines": [
+              653,
+              1071
+            ],
+            "excerpts": [
+              {
+                "line": 653,
+                "text": "Net income | $ | 100,118 | $ | 132,170 | $ | 32,052 | 32 | % |"
+              },
+              {
+                "line": 1071,
+                "text": "Total stockholders’ equity | 325,084 | 415,265 |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C018",
+        "text": "(1996000000 + 46547000000) / 415265000000 = 11.6896% (debt to equity; current debt + noncurrent debt / equity; FY2025 ended 2025-12-31; tags `LongTermDebtCurrent`, `LongTermDebtNoncurrent`, and `StockholdersEquity`; 10-K_2026-02-05.txt, lines 1058, 1071, and 1834; accession 0001652044-26-000018).",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-02-05.txt",
+            "lines": [
+              1058,
+              1071
+            ],
+            "excerpts": [
+              {
+                "line": 1058,
+                "text": "Long-term debt | 10,883 | 46,547 |"
+              },
+              {
+                "line": 1071,
+                "text": "Total stockholders’ equity | 325,084 | 415,265 |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C019",
+        "text": "| MSFT | Operating margin: 46.7808%; operating income $155,237 million divided by total revenue $331,839 million; tags `OperatingIncomeLoss` and `RevenueFromContractWithCustomerExcludingAssessedTax`; FY2026 ended 2026-06-30; accession 0001193125-26-323660. |",
+        "cited_lines": [],
+        "period_header_context": []
+      },
+      {
+        "id": "C020",
+        "text": "Insight: GOOGL FY2025 revenue was $402,836 million, up 15.0901% from $350,018 million in the prior fiscal year. Formula: (402836000000 - 350018000000) / 350018000000 = 15.0901%. Tag `Revenues`; period end 2025-12-31; 10-K_2026-02-05.txt, line 689; accession 0001652044-26-000018.",
+        "cited_lines": [
+          {
+            "filename": "10-K_2026-02-05.txt",
+            "lines": [
+              689
+            ],
+            "excerpts": [
+              {
+                "line": 689,
+                "text": "Total revenues | $ | 350,018 | $ | 402,836 |"
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      },
+      {
+        "id": "C021",
+        "text": "Insight: The GOOGL 10-Q states: \"These proceeds will be used for general corporate purposes, including capital expenditures to scale AI infrastructure and global compute.\" Source: 10-Q_2026-10-29.txt, line 1248, accession 0001652044-26-000084.",
+        "cited_lines": [
+          {
+            "filename": "10-Q_2026-10-29.txt",
+            "lines": [
+              1248
+            ],
+            "excerpts": [
+              {
+                "line": 1248,
+                "text": "The net proceeds received by the company were $ 20.5 billion from the public offering and $ 10.0 billion from the private placement, after deducting underwriting discounts, commissions, and direct offering expenses which were recorded as a reduction to common stock and APIC. These proceeds will be used for general corporate purposes, including capital expenditures to scale AI infrastructure and global compute."
+              }
+            ]
+          }
+        ],
+        "period_header_context": []
+      }
+    ],
+    "saved_facts": {
+      "C001": [],
+      "C002": [],
+      "C003": [],
+      "C004": [],
+      "C005": [],
+      "C006": [
+        {
+          "file": "facts.json",
+          "concept": "total_revenue",
+          "tag": "Revenues",
+          "value": 402836000000,
+          "prior_value": 350018000000,
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        }
+      ],
+      "C007": [
+        {
+          "file": "facts.json",
+          "concept": "operating_income",
+          "tag": "OperatingIncomeLoss",
+          "value": 129039000000,
+          "prior_value": 112390000000,
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        }
+      ],
+      "C008": [
+        {
+          "file": "facts.json",
+          "concept": "net_income",
+          "tag": "NetIncomeLoss",
+          "value": 132170000000,
+          "prior_value": 100118000000,
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        }
+      ],
+      "C009": [
+        {
+          "file": "facts.json",
+          "concept": "diluted_eps",
+          "tag": "EarningsPerShareDiluted",
+          "value": 10.81,
+          "prior_value": 8.04,
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        }
+      ],
+      "C010": [
+        {
+          "file": "facts.json",
+          "concept": "equity",
+          "tag": "StockholdersEquity",
+          "value": 415265000000,
+          "prior_value": 325084000000,
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        }
+      ],
+      "C011": [
+        {
+          "file": "facts.json",
+          "concept": "current_debt",
+          "tag": "LongTermDebtCurrent",
+          "value": 1996000000,
+          "prior_value": 999000000,
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        }
+      ],
+      "C012": [
+        {
+          "file": "facts.json",
+          "concept": "long_term_debt",
+          "tag": "LongTermDebtNoncurrent",
+          "value": 46547000000,
+          "prior_value": 10883000000,
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        }
+      ],
+      "C013": [
+        {
+          "file": "facts.json",
+          "concept": "cash_from_operations",
+          "tag": "NetCashProvidedByUsedInOperatingActivities",
+          "value": 164713000000,
+          "prior_value": 125299000000,
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        }
+      ],
+      "C014": [
+        {
+          "file": "facts.json",
+          "concept": "capex",
+          "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "value": 91447000000,
+          "prior_value": 52535000000,
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        }
+      ],
+      "C015": [
+        {
+          "file": "facts.json",
+          "concept": "total_revenue",
+          "tag": "Revenues",
+          "value": 402836000000,
+          "prior_value": 350018000000,
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        }
+      ],
+      "C016": [
+        {
+          "file": "facts.json",
+          "concept": "total_revenue",
+          "tag": "Revenues",
+          "value": 402836000000,
+          "prior_value": 350018000000,
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        },
+        {
+          "file": "facts.json",
+          "concept": "operating_income",
+          "tag": "OperatingIncomeLoss",
+          "value": 129039000000,
+          "prior_value": 112390000000,
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        }
+      ],
+      "C017": [
+        {
+          "file": "facts.json",
+          "concept": "net_income",
+          "tag": "NetIncomeLoss",
+          "value": 132170000000,
+          "prior_value": 100118000000,
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        },
+        {
+          "file": "facts.json",
+          "concept": "equity",
+          "tag": "StockholdersEquity",
+          "value": 415265000000,
+          "prior_value": 325084000000,
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        }
+      ],
+      "C018": [
+        {
+          "file": "facts.json",
+          "concept": "equity",
+          "tag": "StockholdersEquity",
+          "value": 415265000000,
+          "prior_value": 325084000000,
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        },
+        {
+          "file": "facts.json",
+          "concept": "long_term_debt",
+          "tag": "LongTermDebtNoncurrent",
+          "value": 46547000000,
+          "prior_value": 10883000000,
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        },
+        {
+          "file": "facts.json",
+          "concept": "current_debt",
+          "tag": "LongTermDebtCurrent",
+          "value": 1996000000,
+          "prior_value": 999000000,
+          "period_start": null,
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        }
+      ],
+      "C019": [
+        {
+          "file": "MSFT_facts.json",
+          "concept": "total_revenue",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "value": 331839000000,
+          "prior_value": 281724000000,
+          "period_start": "2025-07-01",
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        },
+        {
+          "file": "MSFT_facts.json",
+          "concept": "operating_income",
+          "tag": "OperatingIncomeLoss",
+          "value": 155237000000,
+          "prior_value": 128528000000,
+          "period_start": "2025-07-01",
+          "period_end": "2026-06-30",
+          "fiscal_year": 2026,
+          "accession": "0001193125-26-323660"
+        }
+      ],
+      "C020": [
+        {
+          "file": "facts.json",
+          "concept": "total_revenue",
+          "tag": "Revenues",
+          "value": 402836000000,
+          "prior_value": 350018000000,
+          "period_start": "2025-01-01",
+          "period_end": "2025-12-31",
+          "fiscal_year": 2025,
+          "accession": "0001652044-26-000018"
+        }
+      ],
+      "C021": []
+    },
+    "claim_fact_evidence": [
+      {
+        "id": "C001",
+        "text": "For the quarter ended September 30, 2026, the release reports total revenue of $127,577 million (8-K_Ex99.1_2026-10-28.txt, line 56, accession 0001652044-26-000080).",
+        "facts": []
+      },
+      {
+        "id": "C002",
+        "text": "For the quarter ended September 30, 2026, the release reports net income available to common stockholders of $26,170 million (8-K_Ex99.1_2026-10-28.txt, line 39, accession 0001652044-26-000080).",
+        "facts": []
+      },
+      {
+        "id": "C003",
+        "text": "For the quarter ended September 30, 2026, the release reports diluted EPS of $2.12 (8-K_Ex99.1_2026-10-28.txt, line 40, accession 0001652044-26-000080).",
+        "facts": []
+      },
+      {
+        "id": "C004",
+        "text": "The release separately reports $200,855 million of net income available to common stockholders for the year-to-date period ended September 30, 2026 (8-K_Ex99.1_2026-10-28.txt, lines 160-161 and 176, accession 0001652044-26-000080). This is year-to-date income, not Q3-only income.",
+        "facts": []
+      },
+      {
+        "id": "C005",
+        "text": "Insight: The GOOGL 10-Q states: \"Adverse rulings in these or related competition proceedings have resulted, and may in the future result, in court-ordered remedies that mandate substantial alterations to our commercial agreements, product integrations and functionality, and business models.\" The filing says these changes could reduce user engagement and advertising revenue (10-Q_2026-10-29.txt, line 1852, accession 0001652044-26-000084).",
+        "facts": []
+      },
+      {
+        "id": "C006",
+        "text": "Revenue: FY2025 $402,836 million; prior fiscal year $350,018 million; tag `Revenues`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 689; accession 0001652044-26-000018.",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "total_revenue",
+            "tag": "Revenues",
+            "value": 402836000000,
+            "prior_value": 350018000000,
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          }
+        ]
+      },
+      {
+        "id": "C007",
+        "text": "Operating income: FY2025 $129,039 million; prior fiscal year $112,390 million; tag `OperatingIncomeLoss`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 650; accession 0001652044-26-000018.",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "operating_income",
+            "tag": "OperatingIncomeLoss",
+            "value": 129039000000,
+            "prior_value": 112390000000,
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          }
+        ]
+      },
+      {
+        "id": "C008",
+        "text": "Net income: FY2025 $132,170 million; prior fiscal year $100,118 million; tag `NetIncomeLoss`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 653; accession 0001652044-26-000018.",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "net_income",
+            "tag": "NetIncomeLoss",
+            "value": 132170000000,
+            "prior_value": 100118000000,
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          }
+        ]
+      },
+      {
+        "id": "C009",
+        "text": "Diluted EPS: FY2025 $10.81 per share; prior fiscal year $8.04 per share; tag `EarningsPerShareDiluted`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 2122; accession 0001652044-26-000018.",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "diluted_eps",
+            "tag": "EarningsPerShareDiluted",
+            "value": 10.81,
+            "prior_value": 8.04,
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          }
+        ]
+      },
+      {
+        "id": "C010",
+        "text": "Stockholders' equity: FY2025 $415,265 million; prior fiscal year $325,084 million; tag `StockholdersEquity`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 1071; accession 0001652044-26-000018.",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "equity",
+            "tag": "StockholdersEquity",
+            "value": 415265000000,
+            "prior_value": 325084000000,
+            "period_start": null,
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          }
+        ]
+      },
+      {
+        "id": "C011",
+        "text": "Current long-term debt: FY2025 $1,996 million; prior fiscal year $999 million; tag `LongTermDebtCurrent`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 1834; accession 0001652044-26-000018.",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "current_debt",
+            "tag": "LongTermDebtCurrent",
+            "value": 1996000000,
+            "prior_value": 999000000,
+            "period_start": null,
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          }
+        ]
+      },
+      {
+        "id": "C012",
+        "text": "Noncurrent long-term debt: FY2025 $46,547 million; prior fiscal year $10,883 million; tag `LongTermDebtNoncurrent`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 1058; accession 0001652044-26-000018.",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "long_term_debt",
+            "tag": "LongTermDebtNoncurrent",
+            "value": 46547000000,
+            "prior_value": 10883000000,
+            "period_start": null,
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          }
+        ]
+      },
+      {
+        "id": "C013",
+        "text": "Cash from operations: FY2025 $164,713 million; prior fiscal year $125,299 million; tag `NetCashProvidedByUsedInOperatingActivities`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 826; accession 0001652044-26-000018.",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "cash_from_operations",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "value": 164713000000,
+            "prior_value": 125299000000,
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          }
+        ]
+      },
+      {
+        "id": "C014",
+        "text": "Capital spending: FY2025 $91,447 million; prior fiscal year $52,535 million; tag `PaymentsToAcquirePropertyPlantAndEquipment`; period ends 2025-12-31 and 2024-12-31; 10-K_2026-02-05.txt, line 1199; accession 0001652044-26-000018.",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "capex",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "value": 91447000000,
+            "prior_value": 52535000000,
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          }
+        ]
+      },
+      {
+        "id": "C015",
+        "text": "(402836000000 - 350018000000) / 350018000000 = 15.0901% (revenue growth; FY2025 and prior fiscal year; tag `Revenues`; period end 2025-12-31; 10-K_2026-02-05.txt, line 689; accession 0001652044-26-000018).",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "total_revenue",
+            "tag": "Revenues",
+            "value": 402836000000,
+            "prior_value": 350018000000,
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          }
+        ]
+      },
+      {
+        "id": "C016",
+        "text": "129039000000 / 402836000000 = 32.0326% (operating margin; operating income / total revenue; FY2025 ended 2025-12-31; tags `OperatingIncomeLoss` and `Revenues`; 10-K_2026-02-05.txt, lines 650 and 689; accession 0001652044-26-000018).",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "total_revenue",
+            "tag": "Revenues",
+            "value": 402836000000,
+            "prior_value": 350018000000,
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          },
+          {
+            "file": "facts.json",
+            "concept": "operating_income",
+            "tag": "OperatingIncomeLoss",
+            "value": 129039000000,
+            "prior_value": 112390000000,
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          }
+        ]
+      },
+      {
+        "id": "C017",
+        "text": "132170000000 / ((415265000000 + 325084000000) / 2) = 35.7048% (return on average equity; net income / average beginning and ending equity; FY2025 ended 2025-12-31; tags `NetIncomeLoss` and `StockholdersEquity`; 10-K_2026-02-05.txt, lines 653 and 1071; accession 0001652044-26-000018).",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "net_income",
+            "tag": "NetIncomeLoss",
+            "value": 132170000000,
+            "prior_value": 100118000000,
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          },
+          {
+            "file": "facts.json",
+            "concept": "equity",
+            "tag": "StockholdersEquity",
+            "value": 415265000000,
+            "prior_value": 325084000000,
+            "period_start": null,
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          }
+        ]
+      },
+      {
+        "id": "C018",
+        "text": "(1996000000 + 46547000000) / 415265000000 = 11.6896% (debt to equity; current debt + noncurrent debt / equity; FY2025 ended 2025-12-31; tags `LongTermDebtCurrent`, `LongTermDebtNoncurrent`, and `StockholdersEquity`; 10-K_2026-02-05.txt, lines 1058, 1071, and 1834; accession 0001652044-26-000018).",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "equity",
+            "tag": "StockholdersEquity",
+            "value": 415265000000,
+            "prior_value": 325084000000,
+            "period_start": null,
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          },
+          {
+            "file": "facts.json",
+            "concept": "long_term_debt",
+            "tag": "LongTermDebtNoncurrent",
+            "value": 46547000000,
+            "prior_value": 10883000000,
+            "period_start": null,
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          },
+          {
+            "file": "facts.json",
+            "concept": "current_debt",
+            "tag": "LongTermDebtCurrent",
+            "value": 1996000000,
+            "prior_value": 999000000,
+            "period_start": null,
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          }
+        ]
+      },
+      {
+        "id": "C019",
+        "text": "| MSFT | Operating margin: 46.7808%; operating income $155,237 million divided by total revenue $331,839 million; tags `OperatingIncomeLoss` and `RevenueFromContractWithCustomerExcludingAssessedTax`; FY2026 ended 2026-06-30; accession 0001193125-26-323660. |",
+        "facts": [
+          {
+            "file": "MSFT_facts.json",
+            "concept": "total_revenue",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "value": 331839000000,
+            "prior_value": 281724000000,
+            "period_start": "2025-07-01",
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          },
+          {
+            "file": "MSFT_facts.json",
+            "concept": "operating_income",
+            "tag": "OperatingIncomeLoss",
+            "value": 155237000000,
+            "prior_value": 128528000000,
+            "period_start": "2025-07-01",
+            "period_end": "2026-06-30",
+            "fiscal_year": 2026,
+            "accession": "0001193125-26-323660"
+          }
+        ]
+      },
+      {
+        "id": "C020",
+        "text": "Insight: GOOGL FY2025 revenue was $402,836 million, up 15.0901% from $350,018 million in the prior fiscal year. Formula: (402836000000 - 350018000000) / 350018000000 = 15.0901%. Tag `Revenues`; period end 2025-12-31; 10-K_2026-02-05.txt, line 689; accession 0001652044-26-000018.",
+        "facts": [
+          {
+            "file": "facts.json",
+            "concept": "total_revenue",
+            "tag": "Revenues",
+            "value": 402836000000,
+            "prior_value": 350018000000,
+            "period_start": "2025-01-01",
+            "period_end": "2025-12-31",
+            "fiscal_year": 2025,
+            "accession": "0001652044-26-000018"
+          }
+        ]
+      },
+      {
+        "id": "C021",
+        "text": "Insight: The GOOGL 10-Q states: \"These proceeds will be used for general corporate purposes, including capital expenditures to scale AI infrastructure and global compute.\" Source: 10-Q_2026-10-29.txt, line 1248, accession 0001652044-26-000084.",
+        "facts": []
+      }
+    ]
+  },
+  "expected_output": "One compact JSON object with an items array. Each item has id, mark, reason, and correction. Include every supplied ID exactly once and in the supplied order."
+}

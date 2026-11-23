@@ -1,0 +1,51 @@
+{
+  "8-K": {
+    "form": "8-K",
+    "date": "2026-11-05",
+    "report_date": "2026-11-04",
+    "accession": "0001193125-26-448357",
+    "accession_nodash": "000119312526448357",
+    "primary_document": "d177209d8k.htm",
+    "primary_description": "8-K",
+    "accepted_datetime": "2026-11-05T11:01:52.000Z",
+    "cik": "0000789019",
+    "accepted": "2026-11-05 06:01:52 (SEC filing page local time)"
+  },
+  "10-Q": {
+    "form": "10-Q",
+    "date": "2026-10-28",
+    "report_date": "2026-09-30",
+    "accession": "0001193125-26-436133",
+    "accession_nodash": "000119312526436133",
+    "primary_document": "msft-20260930.htm",
+    "primary_description": "10-Q",
+    "accepted_datetime": "2026-10-28T20:07:39.000Z",
+    "cik": "0000789019",
+    "accepted": "2026-10-28 16:07:39 (SEC filing page local time)"
+  },
+  "10-K": {
+    "form": "10-K",
+    "date": "2026-07-29",
+    "report_date": "2026-06-30",
+    "accession": "0001193125-26-323660",
+    "accession_nodash": "000119312526323660",
+    "primary_document": "msft-20260630.htm",
+    "primary_description": "10-K",
+    "accepted_datetime": "2026-07-29T20:08:01.000Z",
+    "cik": "0000789019",
+    "accepted": "2026-07-29 16:08:01 (SEC filing page local time)"
+  },
+  "earnings_8k": {
+    "form": "8-K",
+    "date": "2026-10-28",
+    "report_date": "2026-10-28",
+    "accession": "0001193125-26-436122",
+    "accession_nodash": "000119312526436122",
+    "primary_document": "msft-20261028.htm",
+    "primary_description": "8-K",
+    "accepted_datetime": "2026-10-28T20:04:44.000Z",
+    "cik": "0000789019",
+    "exhibit_99_1": "msft-ex99_1.htm",
+    "accepted": "2026-10-28 16:04:44 (SEC filing page local time)"
+  }
+}

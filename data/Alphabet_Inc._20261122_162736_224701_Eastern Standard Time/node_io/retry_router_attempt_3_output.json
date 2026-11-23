@@ -1,0 +1,13 @@
+{
+  "next_route": "Financial Analyst",
+  "current_retry": {
+    "role": "Financial Analyst",
+    "requests": [
+      {
+        "part": "Valuation Insights",
+        "problem": "The `Insight:` line must be the final line of the role output."
+      }
+    ]
+  },
+  "retry_queue": []
+}

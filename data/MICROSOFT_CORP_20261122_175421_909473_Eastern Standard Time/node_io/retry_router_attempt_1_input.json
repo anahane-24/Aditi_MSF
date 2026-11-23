@@ -1,0 +1,39 @@
+{
+  "queue": [
+    {
+      "role": "Investment Advisor",
+      "requests": [
+        {
+          "part": "Overview",
+          "problem": "Required Markdown heading is missing."
+        },
+        {
+          "part": "Future Developments and Strategic Recommendations",
+          "problem": "Required Markdown heading is missing."
+        },
+        {
+          "part": "Investment Recommendation",
+          "problem": "Required Markdown heading is missing. The `Insight:` line must cite the filing line that supports its claim."
+        }
+      ]
+    },
+    {
+      "role": "Research Analyst",
+      "requests": [
+        {
+          "part": "Market Positioning and Growth Outlook",
+          "problem": "Required Markdown heading is missing. The `Insight:` line must be the final line of the role output."
+        }
+      ]
+    },
+    {
+      "role": "Financial Analyst",
+      "requests": [
+        {
+          "part": "Valuation Insights",
+          "problem": "Required Markdown heading is missing. The `Insight:` line must cite the filing line that supports its claim."
+        }
+      ]
+    }
+  ]
+}

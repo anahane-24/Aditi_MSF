@@ -1,0 +1,130 @@
+{
+  "items": [
+    {
+      "id": "C001",
+      "mark": "correct",
+      "reason": "The insight correctly references the 10-K filing and notes that investments in cloud and AI infrastructure may increase operating costs and decrease margins, which is a reasonable inference from the text.",
+      "correction": null
+    },
+    {
+      "id": "C002",
+      "mark": "correct",
+      "reason": "The insight accurately reports Microsoft's FY2026 Cloud revenue growth and related performance obligations as stated in the 10-K, with appropriate caveats about future continuation.",
+      "correction": null
+    },
+    {
+      "id": "C003",
+      "mark": "correct",
+      "reason": "The fact table correctly reflects the revenue data for FY2026 and FY2025 as reported in the 10-K, with proper XBRL tags and filing source.",
+      "correction": null
+    },
+    {
+      "id": "C004",
+      "mark": "correct",
+      "reason": "The fact table correctly reflects operating income data for FY2026 and FY2025 as reported in the 10-K, with proper XBRL tags and filing source.",
+      "correction": null
+    },
+    {
+      "id": "C005",
+      "mark": "correct",
+      "reason": "The fact table correctly reflects net income data for FY2026 and FY2025 as reported in the 10-K, with proper XBRL tags and filing source.",
+      "correction": null
+    },
+    {
+      "id": "C006",
+      "mark": "correct",
+      "reason": "The fact table correctly reflects diluted EPS data for FY2026 and FY2025 as reported in the 10-K, with proper XBRL tags and filing source.",
+      "correction": null
+    },
+    {
+      "id": "C007",
+      "mark": "correct",
+      "reason": "The fact table correctly reflects stockholders' equity data for FY2026 and FY2025 as reported in the 10-K, with proper XBRL tags and filing source.",
+      "correction": null
+    },
+    {
+      "id": "C008",
+      "mark": "correct",
+      "reason": "The fact table correctly reflects current long-term debt data for FY2026 and FY2025 as reported in the 10-K, with proper XBRL tags and filing source.",
+      "correction": null
+    },
+    {
+      "id": "C009",
+      "mark": "correct",
+      "reason": "The fact table correctly reflects noncurrent long-term debt data for FY2026 and FY2025 as reported in the 10-K, with proper XBRL tags and filing source.",
+      "correction": null
+    },
+    {
+      "id": "C010",
+      "mark": "correct",
+      "reason": "The fact table correctly reflects cash from operations data for FY2026 and FY2025 as reported in the 10-K, with proper XBRL tags and filing source.",
+      "correction": null
+    },
+    {
+      "id": "C011",
+      "mark": "correct",
+      "reason": "The fact table correctly reflects additions to property and equipment data for FY2026 and FY2025 as reported in the 10-K, with proper XBRL tags and filing source.",
+      "correction": null
+    },
+    {
+      "id": "C012",
+      "mark": "correct",
+      "reason": "The calculation of revenue growth is accurate based on the provided values and formula.",
+      "correction": null
+    },
+    {
+      "id": "C013",
+      "mark": "correct",
+      "reason": "The calculation of operating margin is accurate based on the provided values and formula.",
+      "correction": null
+    },
+    {
+      "id": "C014",
+      "mark": "correct",
+      "reason": "The calculation of return on average equity is accurate based on the provided values and formula.",
+      "correction": null
+    },
+    {
+      "id": "C015",
+      "mark": "correct",
+      "reason": "The calculation of debt to equity ratio is accurate based on the provided values and formula.",
+      "correction": null
+    },
+    {
+      "id": "C016",
+      "mark": "correct",
+      "reason": "The calculation of free cash flow is accurate based on the provided values and formula.",
+      "correction": null
+    },
+    {
+      "id": "C017",
+      "mark": "correct",
+      "reason": "The P/E ratio calculation is accurate using the provided share price and diluted EPS.",
+      "correction": null
+    },
+    {
+      "id": "C018",
+      "mark": "correct",
+      "reason": "The insight correctly summarizes the 8-K filing's revenue and EPS growth figures, with appropriate distinction between GAAP and non-GAAP metrics.",
+      "correction": null
+    },
+    {
+      "id": "C019",
+      "mark": "correct",
+      "reason": "The fact table correctly reflects Google's FY2025 revenue and operating income data as reported in the 10-K, including the calculated operating margin.",
+      "correction": null
+    },
+    {
+      "id": "C020",
+      "mark": "correct",
+      "reason": "The insight accurately describes the free cash flow calculation using the provided data from the 10-K and correctly references relevant lines.",
+      "correction": null
+    },
+    {
+      "id": "C021",
+      "mark": "correct",
+      "reason": "The insight correctly references Microsoft's extended OpenAI partnership and mentions revenue-sharing payments, which aligns with the 10-K content.",
+      "correction": null
+    }
+  ]
+}

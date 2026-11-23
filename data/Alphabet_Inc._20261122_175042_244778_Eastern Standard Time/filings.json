@@ -1,0 +1,51 @@
+{
+  "8-K": {
+    "form": "8-K",
+    "date": "2026-11-05",
+    "report_date": "2026-11-05",
+    "accession": "0001193125-26-449835",
+    "accession_nodash": "000119312526449835",
+    "primary_document": "d174184d8k.htm",
+    "primary_description": "8-K",
+    "accepted_datetime": "2026-11-05T21:10:44.000Z",
+    "cik": "0001652044",
+    "accepted": "2026-11-05 16:10:44 (SEC filing page local time)"
+  },
+  "10-Q": {
+    "form": "10-Q",
+    "date": "2026-10-29",
+    "report_date": "2026-09-30",
+    "accession": "0001652044-26-000084",
+    "accession_nodash": "000165204426000084",
+    "primary_document": "goog-20260930.htm",
+    "primary_description": "10-Q",
+    "accepted_datetime": "2026-10-29T00:29:06.000Z",
+    "cik": "0001652044",
+    "accepted": "2026-10-28 20:29:06 (SEC filing page local time)"
+  },
+  "10-K": {
+    "form": "10-K",
+    "date": "2026-02-05",
+    "report_date": "2025-12-31",
+    "accession": "0001652044-26-000018",
+    "accession_nodash": "000165204426000018",
+    "primary_document": "goog-20251231.htm",
+    "primary_description": "10-K",
+    "accepted_datetime": "2026-02-05T02:56:03.000Z",
+    "cik": "0001652044",
+    "accepted": "2026-02-04 21:56:03 (SEC filing page local time)"
+  },
+  "earnings_8k": {
+    "form": "8-K",
+    "date": "2026-10-28",
+    "report_date": "2026-10-28",
+    "accession": "0001652044-26-000080",
+    "accession_nodash": "000165204426000080",
+    "primary_document": "goog-20261028.htm",
+    "primary_description": "8-K",
+    "accepted_datetime": "2026-10-28T20:01:33.000Z",
+    "cik": "0001652044",
+    "exhibit_99_1": "googexhibit991q32026.htm",
+    "accepted": "2026-10-28 16:01:33 (SEC filing page local time)"
+  }
+}

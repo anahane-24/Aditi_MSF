@@ -1,0 +1,23 @@
+{
+  "next_route": "Research Analyst",
+  "current_retry": {
+    "role": "Research Analyst",
+    "requests": [
+      {
+        "part": "Market Positioning and Growth Outlook",
+        "problem": "The `Insight:` line must be the final line of the role output."
+      }
+    ]
+  },
+  "retry_queue": [
+    {
+      "role": "Financial Analyst",
+      "requests": [
+        {
+          "part": "Valuation Insights",
+          "problem": "The `Insight:` line must be the final line of the role output."
+        }
+      ]
+    }
+  ]
+}

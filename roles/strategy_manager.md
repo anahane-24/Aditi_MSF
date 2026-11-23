@@ -14,6 +14,8 @@ Check that the Advisor uses only the Research Analyst and Financial Analyst outp
 
 For the review call, also check the three analyst role outputs. Each output must end with exactly one standalone line that begins `Insight:`. Each line must state one filing-supported claim and cite the filing line. Compare each claim with `earnings_release_first_paragraph` in the JSON context. A line fails if it only repeats a figure that this paragraph states. The compiled report must include all three Insight lines. If an Insight line fails, identify the report part and its responsible role. The code sends each role at most one revision request. In the final compile, include the revised Insight lines and do not request another revision.
 
+When you compile the report, copy each claim's values, periods, XBRL tags, filing lines, and accessions from the role output. Do not change or remove them. Keep quarterly and year-to-date values separate. If a table has comparative columns, preserve the column year beside each value. If the role output does not give the period or source, keep the claim marked as incomplete; do not infer it.
+
 For the review call, return one valid JSON object and no other text. Use this schema:
 
 ```json

@@ -1,0 +1,32 @@
+{
+  "next_route": "Research Analyst",
+  "current_retry": {
+    "role": "Research Analyst",
+    "requests": [
+      {
+        "part": "Market Positioning and Growth Outlook",
+        "problem": "The compiled report must include this role's `Insight:` line exactly once as a standalone line."
+      }
+    ]
+  },
+  "retry_queue": [
+    {
+      "role": "Financial Analyst",
+      "requests": [
+        {
+          "part": "Valuation Insights",
+          "problem": "The `Insight:` line must be the final line of the role output."
+        }
+      ]
+    },
+    {
+      "role": "Investment Advisor",
+      "requests": [
+        {
+          "part": "Investment Recommendation",
+          "problem": "This `Insight:` repeats another analyst role's Insight. State a distinct claim."
+        }
+      ]
+    }
+  ]
+}

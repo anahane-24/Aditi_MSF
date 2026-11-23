@@ -229,6 +229,15 @@ def build_financial_context(
     ]
     release_path = run_dir / f"8-K_Ex99.1_{filings['earnings_8k']['date']}.txt"
     release_lines = numbered_lines(release_path)
+    release_raw_lines = release_path.read_text(encoding="utf-8", errors="replace").splitlines()
+    period_indices: set[int] = set()
+    for index, line in enumerate(release_raw_lines):
+        if re.search(r"\b(?:quarter ended|quarters ended|year to date)\b", line, re.I):
+            period_indices.update(range(index, min(index + 3, len(release_raw_lines))))
+    period_headers = [
+        {"line": index + 1, "text": release_raw_lines[index]}
+        for index in sorted(period_indices)
+    ]
     peer_logs = extract_output_lines(stdout, ("STEP 7",), ("Saved primary-company",))
     ratio_logs = extract_output_lines(stdout, ("STEP 5",), ("STEP 6",))
     quarterly_logs = extract_output_lines(stdout, ("STEP 6",), ("STEP 7",))
@@ -247,6 +256,12 @@ def build_financial_context(
             "filename": release_path.name,
             "accession": filings["earnings_8k"]["accession"],
             "lines": release_lines,
+        },
+        "quarterly_release_period_headers": {
+            "filename": release_path.name,
+            "accession": filings["earnings_8k"]["accession"],
+            "lines": period_headers,
+            "instruction": "Use these period headers to map quarter and year-to-date table columns before you report a value.",
         },
         "peer_facts_from_step_7": peer_facts,
         "peer_calculator_output_from_step_7": peer_logs,

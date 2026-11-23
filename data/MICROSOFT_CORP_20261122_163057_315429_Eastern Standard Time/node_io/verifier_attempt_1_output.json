@@ -1,0 +1,10 @@
+{
+  "items": [
+    {
+      "id": "0000789019",
+      "mark": "correct",
+      "reason": "The XBRL facts for Microsoft (0000789019) are correctly parsed and aligned with the financial data in the 10-K filing, including revenue, operating income, net income, EPS, equity, debt, cash flow, capex, depreciation, and diluted shares. All values match expected ranges and are consistent with the provided financial context.",
+      "correction": null
+    }
+  ]
+}

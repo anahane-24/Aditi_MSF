@@ -6,6 +6,7 @@ import argparse
 import ast
 import html
 import json
+import math
 import re
 import sys
 from datetime import datetime
@@ -412,7 +413,7 @@ def make_role_payloads(state: TeamState) -> dict[str, dict[str, Any]]:
     financial = desk_app.role_payload(
         f"Write the financial analysis for the primary company {state['ticker']} from the supplied seven-step desk output and deterministic valuation worksheet.",
         financial_context,
-        f"Concise Markdown. Use only `primary_company_facts` for {state['ticker']}. Use `peer_facts_from_step_7` only in the peer comparison section. Never assign a peer's fact to the primary company. Transcribe fact values exactly. State each period from its saved start/end dates; do not infer fiscal years from the calendar year. Include each source, period, unit, definition, and supplied arithmetic. Include the Bear, Base, and Bull value per share, the margin of safety, the recommendation screen, and the client allocation and dollar amount exactly as the deterministic worksheet states. Do not recalculate or change these values. If a required value is missing, say `not available`; do not guess. End with exactly one standalone line that begins `Insight:`. Use one distinct annual financial fact or comparison from {state['ticker']}'s 10-K. State its period, cite the filing filename, accession, and exact statement line, and give the arithmetic if it is a ratio. Do not repeat the Research Analyst's Insight or a figure from the earnings release's first paragraph.",
+        f"Concise Markdown. Use only `primary_company_facts` for {state['ticker']}. Use `peer_facts_from_step_7` only in the peer comparison section. Never assign a peer's fact to the primary company. Transcribe fact values exactly. State each period from its saved start/end dates; do not infer fiscal years from the calendar year. For quarterly release data, read the supplied period-header lines before the statement rows. Match each amount to its exact year and period column. Distinguish quarter values from year-to-date values. Do not describe a year-to-date value as a quarter value. Include each source, period, unit, definition, and supplied arithmetic. Include the Bear, Base, and Bull value per share, the margin of safety, the recommendation screen, and the client allocation and dollar amount exactly as the deterministic worksheet states. Do not recalculate or change these values. If a required value is missing, say `not available`; do not guess. End with exactly one standalone line that begins `Insight:`. Use one distinct annual financial fact or comparison from {state['ticker']}'s 10-K. State its period, cite the filing filename, accession, and exact statement line, and give the arithmetic if it is a ratio. Do not repeat the Research Analyst's Insight or a figure from the earnings release's first paragraph.",
     )
     return {"Research Analyst": research, "Financial Analyst": financial}
 
@@ -603,7 +604,31 @@ def strategy_manager_node(state: TeamState) -> dict[str, Any]:
     save_node_event(run_dir, role, attempt, payload, {"status": "started"})
     try:
         raw = call_model(role, payload)
-        parsed = as_json(raw, role)
+        try:
+            parsed = as_json(raw, role)
+        except (ValueError, json.JSONDecodeError) as first_error:
+            # The provider can occasionally return truncated or malformed JSON.
+            # Keep the original response and make one bounded repair call. This
+            # stays within the Strategy Manager's two-call limit; this retry is
+            # only for transport/format failure, not for a failed report check.
+            save_node_event(run_dir, role, attempt, payload, {
+                "error": repr(first_error),
+                "raw_response": raw,
+                "status": "invalid_json",
+            })
+            retry_payload = dict(payload)
+            retry_payload["task"] = (
+                str(payload.get("task", "Review and compile the report."))
+                + " The previous response was invalid JSON. Return one complete, valid JSON object. "
+                + "Escape all quotation marks and line breaks inside report_markdown."
+            )
+            raw = call_model(role, retry_payload)
+            counts[role] = counts.get(role, attempt) + 1
+            save_node_event(run_dir, role, attempt + 1, retry_payload, {
+                "raw_response": raw,
+                "status": "format_retry_response",
+            })
+            parsed = as_json(raw, role)
         report = str(parsed.get("report_markdown", "")).strip()
         if not report:
             raise ValueError("Strategy Manager did not return report_markdown")
@@ -776,6 +801,11 @@ def arithmetic_result(block: str) -> tuple[bool | None, str]:
 
 def ratio_definition_result(block: str) -> tuple[bool | None, str]:
     text = block.lower()
+    # Mentions such as "may decrease operating margins" are narrative risks,
+    # not ratio claims. Require a calculation marker before checking a ratio
+    # definition, so sourced prose is not refused as an incomplete formula.
+    if not ("=" in block or re.search(r"\b(?:divided by|minus)\b", text)):
+        return None, "No ratio arithmetic is stated in this claim."
     requirements = (
         (r"revenue growth", ("revenue", "prior")),
         (r"operating margin", ("operating income", "revenue")),
@@ -1028,26 +1058,26 @@ def validate_claim_block(block: str, run_dir: Path, filings: dict[str, Any]) -> 
                 break
     if facts:
         values = amount_tokens(block)
-        peer_row = re.match(r"\|\s*([A-Z][A-Z0-9.-]{0,7})\s*\|", block)
-        is_peer = bool(peer_row and (run_dir / f"{peer_row.group(1)}_facts.json").exists())
         for fact in facts:
             current = fact.get("val")
             prior = fact.get("prior_val")
-            value_index = 1 if fact["concept"].lower() == "operating_income" and is_peer else 0
-            matches_current = (
-                isinstance(current, (int, float))
-                and len(values) > value_index
-                and values[value_index] == float(current)
+            # A claim block can contain several facts (for example, the two
+            # inputs to an operating-margin calculation). Match each XBRL
+            # value anywhere in the block. Fixed token positions incorrectly
+            # compare every fact with the first number and reject valid ratios.
+            matches_current = isinstance(current, (int, float)) and any(
+                math.isclose(value, float(current), rel_tol=1e-12, abs_tol=1e-9)
+                for value in values
             )
-            matches_prior = (
-                isinstance(prior, (int, float))
-                and len(values) > value_index + 1
-                and values[value_index + 1] == float(prior)
+            # A saved fact also stores a prior-year value. Require that value
+            # only when the claim prints it; an annual ratio need not include
+            # a prior-year comparator just because facts.json has one.
+            matches_prior = isinstance(prior, (int, float)) and any(
+                math.isclose(value, float(prior), rel_tol=1e-12, abs_tol=1e-9)
+                for value in values
             )
-            if not is_peer and value_index == 0 and isinstance(prior, (int, float)) and len(values) > 1:
-                values_match = matches_current and matches_prior
-            else:
-                values_match = matches_current
+            prior_is_claimed = bool(re.search(r"\b(?:prior|previous|preceding)\s+(?:fiscal\s+)?year\b", block, re.I))
+            values_match = matches_current and (not prior_is_claimed or matches_prior)
             if (isinstance(current, (int, float)) or isinstance(prior, (int, float))) and not values_match:
                 forced_mark = "wrong"
                 correction = fact_correction(fact, sources)
@@ -1110,6 +1140,37 @@ def verifier_evidence(report: str, run_dir: Path, filings: dict[str, Any]) -> li
         validation = validate_claim_block(item["text"], run_dir, filings)
         evidence.append({**item, **validation})
     return evidence
+
+
+def filing_period_context(item: dict[str, Any], run_dir: Path) -> list[dict[str, Any]]:
+    """Supply statement headings that disambiguate quarter and year-to-date columns."""
+    if not re.search(r"\b(?:quarter|quarterly|year[- ]to[- ]date|YTD)\b", item.get("text", ""), re.I):
+        return []
+    result: list[dict[str, Any]] = []
+    for source in item.get("sources", []):
+        filename = str(source.get("filename", ""))
+        if not filename.lower().startswith(("8-k", "10-q")):
+            continue
+        path = run_dir / filename
+        if not path.is_file():
+            continue
+        lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
+        selected: list[int] = []
+        for index, line in enumerate(lines):
+            if re.search(r"quarter ended|year\s*to\s*date|year-to-date", line, re.I):
+                # Include the adjacent year labels because table rows alone do
+                # not show which year or period each column represents.
+                for nearby in range(index, min(len(lines), index + 3)):
+                    if nearby not in selected:
+                        selected.append(nearby)
+            if len(selected) >= 12:
+                break
+        if selected:
+            result.append({
+                "filename": path.name,
+                "lines": [{"line": number + 1, "text": lines[number]} for number in selected[:12]],
+            })
+    return result
 
 
 def related_filing_lines(block: str, run_dir: Path) -> list[dict[str, Any]]:
@@ -1212,24 +1273,97 @@ def run_verifier(state: TeamState) -> dict[str, Any]:
     filings = desk_app.read_json(run_dir / "filings.json")
     evidence = verifier_evidence(report, run_dir, filings)
     facts = desk_app.read_json(run_dir / "facts.json")
-    saved_facts = {"facts.json": facts}
-    for facts_path in run_dir.glob("*_facts.json"):
-        saved_facts[facts_path.name] = desk_app.read_json(facts_path)
+    metadata_path = run_dir / "run_metadata.json"
+    run_metadata = desk_app.read_json(metadata_path) if metadata_path.is_file() else {}
+    primary_ticker = str(run_metadata.get("ticker", "")).upper()
+    primary_10k = run_dir / f"10-K_{filings.get('10-K', {}).get('date', '')}.txt"
+    registrant_name = ""
+    registrant_evidence: dict[str, Any] = {}
+    if primary_10k.is_file():
+        primary_lines = primary_10k.read_text(encoding="utf-8", errors="replace").splitlines()
+        for index, line in enumerate(primary_lines[:250]):
+            if "exact name of registrant" in line.lower() and index > 0:
+                registrant_name = primary_lines[index - 1].strip(" |\t")
+                registrant_evidence = {
+                    "filename": primary_10k.name,
+                    "line": index,
+                    "text": primary_lines[index - 1].strip(),
+                    "registrant_label_line": index + 1,
+                    "registrant_label": line.strip(),
+                    "accession": filings.get("10-K", {}).get("accession"),
+                    "cik": filings.get("10-K", {}).get("cik"),
+                }
+                break
+    # Give the model only facts that the code mapped to the corresponding
+    # report claim. Unrelated annual or peer facts can otherwise make it reject
+    # a quarter result that is already supported by its cited 8-K line.
+    saved_facts = {
+        item["id"]: [
+            {
+                "file": fact.get("file"),
+                "concept": fact.get("concept"),
+                "tag": fact.get("tag"),
+                "value": fact.get("val"),
+                "prior_value": fact.get("prior_val"),
+                "period_start": fact.get("start"),
+                "period_end": fact.get("end"),
+                "fiscal_year": fact.get("fy"),
+                "accession": fact.get("accn"),
+            }
+            for fact in item["facts"]
+        ]
+        for item in evidence
+    }
     filing_text_evidence = [
         {
             "id": item["id"],
             "text": item["text"],
-            "cited_lines": item["sources"],
-            "related_saved_filing_lines": related_filing_lines(item["text"], run_dir),
+            "cited_lines": [
+                {
+                    "filename": source.get("filename"),
+                    "lines": source.get("lines", []),
+                    "excerpts": source.get("excerpts", []),
+                }
+                for source in item["sources"]
+            ],
+            "period_header_context": filing_period_context(item, run_dir),
+        }
+        for item in evidence
+    ]
+    claim_fact_evidence = [
+        {
+            "id": item["id"],
+            "text": item["text"],
+            "facts": [
+                {
+                    "file": fact.get("file"),
+                    "concept": fact.get("concept"),
+                    "tag": fact.get("tag"),
+                    "value": fact.get("val"),
+                    "prior_value": fact.get("prior_val"),
+                    "period_start": fact.get("start"),
+                    "period_end": fact.get("end"),
+                    "fiscal_year": fact.get("fy"),
+                    "accession": fact.get("accn"),
+                }
+                for fact in item["facts"]
+            ],
         }
         for item in evidence
     ]
     payload = desk_app.role_payload(
-        "Verify every supplied factual and numeric claim, including each Insight line. Do not assess the Investment Advisor's thesis or Buy, Hold, or Sell recommendation. The Investment Recommendation Insight line is included for verification. Return exactly one result for every supplied claim ID, in the same order, with no omitted IDs. Check only the compiled report, supplied filing text evidence, and supplied saved facts. Mark a claim wrong only when those sources show a different value, period, definition, or arithmetic result. If evidence is missing, mark unsupported, not wrong. Use a price stated in the report to check P/E.",
+        f"Verify every supplied factual and numeric claim, including each Insight line. Do not assess the Investment Advisor's thesis or Buy, Hold, or Sell recommendation. The Investment Recommendation Insight line is included for verification. Return exactly one result for every supplied claim ID, in the same order, with no omitted IDs. Check only the compiled report, the exact cited filing-line excerpts, and the supplied saved facts. issuer_identity contains the explicit registrant text and CIK from the saved 10-K: {registrant_name}, CIK {filings.get('10-K', {}).get('cik')}. Treat facts.json as facts for that same registrant and ticker. Do not invent a parent/subsidiary relationship that the filing does not state. saved_facts is keyed by report claim ID. If a claim ID has no saved fact, check it against that claim's cited filing-line excerpts; do not use facts from another claim. A matching filing excerpt is sufficient evidence for a sourced narrative or period claim; do not require an XBRL fact for it. For quarterly claims, use the cited 8-K or 10-Q row and its supplied period-header context; annual facts do not override correct quarter figures. Do not treat unrelated annual facts as a conflict when the claim is supported by the cited quarterly release. A table row that names a peer ticker is checked against the corresponding `{primary_ticker}_facts.json` mapping supplied for that claim; this is valid peer evidence and is not missing because it is not in the primary facts.json. Do not transfer a fact from another claim, company, ticker, period, or facts file. For each mapped fact, compare the printed value, unit, tag, period, and accession. For a filing-line claim, check whether the exact cited line supports the number and period. For a ratio, recalculate from that claim's own supplied inputs and check its definition. Mark a claim wrong only when those sources show a different value, period, definition, or arithmetic result. If the cited line or mapped fact supports the claim, mark it correct. If evidence is missing, mark unsupported, not wrong. Use a price stated in the report to check P/E.",
         {
+            "issuer_identity": {
+                "primary_ticker": primary_ticker,
+                "sec_registrant": registrant_name,
+                "cik": filings.get("10-K", {}).get("cik"),
+                "registrant_evidence": registrant_evidence,
+            },
             "compiled_report": report,
             "saved_filing_texts": filing_text_evidence,
             "saved_facts": saved_facts,
+            "claim_fact_evidence": claim_fact_evidence,
         },
         "One compact JSON object with an items array. Each item has id, mark, reason, and correction. Include every supplied ID exactly once and in the supplied order.",
     )
@@ -1331,7 +1465,19 @@ class DeskTeamFlow(Flow[DeskTeamState]):
                 break
             self.apply(retry_role_node(role)(self.state_dict()))
         if had_revisions:
-            self.apply(final_compile_node(self.state_dict()))
+            manager_calls = sum(
+                value for node, value in self.state.node_counts.items()
+                if node == "Strategy Manager" or node.startswith("Strategy Manager (")
+            )
+            if manager_calls < 2:
+                self.apply(final_compile_node(self.state_dict()))
+            else:
+                run_dir = Path(self.state.run_dir)
+                save_json(run_dir / "manager_format_retry_limit.json", {
+                    "status": "refused",
+                    "reason": "The Strategy Manager used its second allowed call to repair invalid JSON; no call remained to compile after analyst revisions.",
+                    "node_counts": self.state.node_counts,
+                })
         saved = save_report_node(self.state_dict())
         self.apply(saved)
         return self.state.report_path

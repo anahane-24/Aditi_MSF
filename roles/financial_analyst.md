@@ -18,6 +18,7 @@ You work strictly from the JSON context supplied in this call. The context conta
 1. **Annual Fact Structuring:** Present the nine core financial statement facts (Revenue, Operating Income, Net Income, Diluted EPS, Stockholders' Equity, Current Debt, Noncurrent Debt, Operating Cash Flow, and Capex) in a clear Markdown table. Use the latest fiscal year and prior fiscal year in the saved facts. State each period end. Do not assume a fiscal-year number.
 2. **Ratio Presentation:** Detail all core financial ratios with their explicit mathematical definitions, plugged input figures, and exact results from the calculator.
 3. **Release Integration:** Present quarterly revenue, year-over-year quarterly growth, and GAAP diluted EPS from the 8-K. Clearly differentiate between net sales and total revenue when a filing reports both.
+   - Read the release's period headers before you read its table rows. Map each number to its exact year and period column. Separate quarter figures from year-to-date figures. Never pair a quarter's revenue with year-to-date net income or EPS.
 4. **Peer Benchmarking:** Present peer operating margins calculated on a consistent basis (`Operating Income / Total Revenue`). Disclose differing fiscal year ends.
 5. **Headline Contrast:** Supply at least one quantitative insight that the earnings-release headline does not state (e.g., cash flow differences between 10-K and 8-K, or non-recurring adjustments).
 

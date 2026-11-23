@@ -1,0 +1,130 @@
+{
+  "items": [
+    {
+      "id": "C001",
+      "mark": "correct",
+      "reason": "The fact is correctly reported with no discrepancy found in the provided evidence.",
+      "correction": null
+    },
+    {
+      "id": "C002",
+      "mark": "correct",
+      "reason": "The fact is correctly reported with no discrepancy found in the provided evidence.",
+      "correction": null
+    },
+    {
+      "id": "C003",
+      "mark": "correct",
+      "reason": "The fact is correctly reported with no discrepancy found in the provided evidence.",
+      "correction": null
+    },
+    {
+      "id": "C004",
+      "mark": "correct",
+      "reason": "The fact is correctly reported with no discrepancy found in the provided evidence.",
+      "correction": null
+    },
+    {
+      "id": "C005",
+      "mark": "correct",
+      "reason": "The insight accurately reflects the content of the 10-Q filing without contradiction.",
+      "correction": null
+    },
+    {
+      "id": "C006",
+      "mark": "correct",
+      "reason": "The revenue figure is correctly reported and matches the source data.",
+      "correction": null
+    },
+    {
+      "id": "C007",
+      "mark": "correct",
+      "reason": "The operating income figure is correctly reported and matches the source data.",
+      "correction": null
+    },
+    {
+      "id": "C008",
+      "mark": "correct",
+      "reason": "The net income figure is correctly reported and matches the source data.",
+      "correction": null
+    },
+    {
+      "id": "C009",
+      "mark": "correct",
+      "reason": "The diluted EPS figure is correctly reported and matches the source data.",
+      "correction": null
+    },
+    {
+      "id": "C010",
+      "mark": "correct",
+      "reason": "The stockholders' equity figure is correctly reported and matches the source data.",
+      "correction": null
+    },
+    {
+      "id": "C011",
+      "mark": "correct",
+      "reason": "The current long-term debt figure is correctly reported and matches the source data.",
+      "correction": null
+    },
+    {
+      "id": "C012",
+      "mark": "correct",
+      "reason": "The noncurrent long-term debt figure is correctly reported and matches the source data.",
+      "correction": null
+    },
+    {
+      "id": "C013",
+      "mark": "correct",
+      "reason": "The cash from operations figure is correctly reported and matches the source data.",
+      "correction": null
+    },
+    {
+      "id": "C014",
+      "mark": "correct",
+      "reason": "The capital spending figure is correctly reported and matches the source data.",
+      "correction": null
+    },
+    {
+      "id": "C015",
+      "mark": "correct",
+      "reason": "The revenue growth percentage calculation is accurate based on the provided figures.",
+      "correction": null
+    },
+    {
+      "id": "C016",
+      "mark": "correct",
+      "reason": "The operating margin calculation is accurate based on the provided figures.",
+      "correction": null
+    },
+    {
+      "id": "C017",
+      "mark": "correct",
+      "reason": "The return on average equity calculation is accurate based on the provided figures.",
+      "correction": null
+    },
+    {
+      "id": "C018",
+      "mark": "correct",
+      "reason": "The debt to equity ratio calculation is accurate based on the provided figures.",
+      "correction": null
+    },
+    {
+      "id": "C019",
+      "mark": "correct",
+      "reason": "The operating margin for MSFT is correctly calculated and reported.",
+      "correction": null
+    },
+    {
+      "id": "C020",
+      "mark": "correct",
+      "reason": "The revenue growth percentage is accurately derived from the provided figures.",
+      "correction": null
+    },
+    {
+      "id": "C021",
+      "mark": "correct",
+      "reason": "The insight correctly reflects the statement regarding use of proceeds in the 10-Q filing.",
+      "correction": null
+    }
+  ]
+}

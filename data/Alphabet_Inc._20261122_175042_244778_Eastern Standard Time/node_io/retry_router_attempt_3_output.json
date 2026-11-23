@@ -1,0 +1,13 @@
+{
+  "next_route": "Investment Advisor",
+  "current_retry": {
+    "role": "Investment Advisor",
+    "requests": [
+      {
+        "part": "Investment Recommendation",
+        "problem": "The compiled report must include this role's `Insight:` line exactly once as a standalone line."
+      }
+    ]
+  },
+  "retry_queue": []
+}
