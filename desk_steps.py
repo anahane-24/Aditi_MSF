@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import os
 import re
 import time
 from http.client import RemoteDisconnected
@@ -22,16 +23,24 @@ DATA = "https://data.sec.gov"
 
 def read_env(path: Path) -> dict[str, str]:
     values: dict[str, str] = {}
-    if not path.exists():
-        raise FileNotFoundError(f"Missing {path.name}; create it with SEC_USER_AGENT=Your Name your@email")
-    for line in path.read_text(encoding="utf-8-sig").splitlines():
-        line = line.strip()
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-        key, value = line.split("=", 1)
-        values[key.strip()] = value.strip().strip('"').strip("'")
+    if path.exists():
+        for line in path.read_text(encoding="utf-8-sig").splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            values[key.strip()] = value.strip().strip('"').strip("'")
+    for key in (
+        "SEC_USER_AGENT",
+        "API_KEY",
+        "MODEL",
+        "LSEG_APP_KEY",
+        "LSEG_CLOSES_FILE",
+    ):
+        if os.environ.get(key, "").strip():
+            values[key] = os.environ[key].strip()
     if not values.get("SEC_USER_AGENT"):
-        raise ValueError(".env must contain SEC_USER_AGENT with your name and email")
+        raise ValueError("Set SEC_USER_AGENT in .env or the process environment")
     return values
 
 

@@ -375,9 +375,9 @@ def main() -> None:
     api_key = env.get("API_KEY", "").strip()
     model = env.get("MODEL", "").strip()
     if not api_key:
-        raise RuntimeError(".env must contain API_KEY")
+        raise RuntimeError("Set API_KEY in .env or the process environment")
     if not model:
-        raise RuntimeError(".env must contain MODEL")
+        raise RuntimeError("Set MODEL in .env or the process environment")
 
     peers = [p.strip().upper() for p in args.peers.split(",") if p.strip()]
     run_dir, stdout = run_data_steps(args)

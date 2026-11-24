@@ -1,0 +1,2 @@
+# Install this file in a separate environment for the LSEG desktop reader.
+lseg-data>=2.0,<3.0

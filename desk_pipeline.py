@@ -15,6 +15,7 @@ from typing import Any
 
 import desk_app
 import evidence_hook
+import source_report
 import worksheet
 
 
@@ -83,6 +84,19 @@ def make_joined_report(run_dir: Path, worksheet_text: str) -> Path:
     target = run_dir / "joined_report.md"
     target.write_text(report, encoding="utf-8")
     return target
+
+
+def run_final_checks(run_dir: Path, report_path: Path) -> dict[str, Any]:
+    final_hook = evidence_hook.check_report(report_path, run_dir)
+    final_worksheet = evidence_hook.check_worksheet(run_dir)
+    final_hook["worksheet"] = final_worksheet
+    if final_worksheet["mark"] == "refused":
+        final_hook["refused"] += 1
+    final_verifier = evidence_hook.check_verifier_marks(run_dir)
+    final_hook["verifier_marks"] = final_verifier
+    if final_verifier["mark"] == "refused":
+        final_hook["refused"] += 1
+    return final_hook
 
 
 def run_replay(run_dir: Path) -> int:
@@ -166,16 +180,32 @@ def run_pipeline(ticker: str, peers: list[str], filed: str | None, screen_start:
     final_report = run_dir / "desk_final_report.md"
     shutil.copy2(final_path, final_report)
     print("PART: Final evidence hook", flush=True)
-    final_hook = evidence_hook.check_report(final_report, run_dir)
-    final_worksheet = evidence_hook.check_worksheet(run_dir)
-    final_hook["worksheet"] = final_worksheet
-    if final_worksheet["mark"] == "refused":
-        final_hook["refused"] += 1
-    final_verifier = evidence_hook.check_verifier_marks(run_dir)
-    final_hook["verifier_marks"] = final_verifier
-    if final_verifier["mark"] == "refused":
-        final_hook["refused"] += 1
+    final_hook = run_final_checks(run_dir, final_report)
     (run_dir / "final_hook_marks.json").write_text(json.dumps(final_hook, indent=2, ensure_ascii=False), encoding="utf-8")
+    if final_hook["refused"]:
+        print("PART: Source-backed correction", flush=True)
+        source_path = source_report.write_source_report(run_dir, ticker, peers)
+        source_joined = run_dir / "source_corrected_joined_report.md"
+        source_joined.write_text(
+            source_path.read_text(encoding="utf-8").rstrip()
+            + "\n\n## Worksheet view\n\n"
+            + worksheet_text.strip()
+            + "\n",
+            encoding="utf-8",
+        )
+        run_command([
+            sys.executable,
+            str(BASE / "agent_team.py"),
+            "--verify-only",
+            str(run_dir),
+            "--report",
+            str(source_joined),
+        ], "Verifier on source-backed correction")
+        shutil.copy2(run_dir / "verified_report.md", final_report)
+        final_hook = run_final_checks(run_dir, final_report)
+        (run_dir / "final_hook_marks.json").write_text(
+            json.dumps(final_hook, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
     timing["total_seconds"] = time.perf_counter() - started
     (run_dir / "part_timings.json").write_text(json.dumps(timing, indent=2), encoding="utf-8")
     print(f"Final evidence hook: {final_hook['passed']} passed; {final_hook['refused']} refused", flush=True)

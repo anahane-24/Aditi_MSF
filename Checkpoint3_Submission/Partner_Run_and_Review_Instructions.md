@@ -21,7 +21,7 @@ The original run folders and the November 22 reruns include filing texts, facts,
 
 Both corrected reports have 21 model-verifier marks of `correct`, 21 offline evidence-hook passes, and a passing worksheet hook. The raw model reports failed their hooks. Read the raw `report.md`, `final_hook_marks.json`, and `role_outputs.json` if you want to see those original failures. Do not replace or delete them.
 
-The GOOGL report separates Q3 net income of $26,170 million from year-to-date net income of $200,855 million. The MSFT report uses the GOOGL peer facts saved in its run folder. Aditi selected GOOGL for Google, but your confirmation of `GOOGL` versus `GOOG` is still needed. If you chose `GOOG`, tell Aditi. The team must run that exact ticker before it treats the partner-company report as complete.
+The GOOGL report separates Q3 net income of $26,170 million from year-to-date net income of $200,855 million. The MSFT report uses the GOOGL peer facts saved in its run folder. The confirmed Google ticker is `GOOGL`.
 
 ## Open this project in your Orca workspace
 
@@ -39,6 +39,12 @@ If you already cloned it, open that repository in Orca and update it:
 git pull origin main
 python -m pip install -r requirements.txt
 ```
+
+CrewAI 1.15 and `lseg-data` 2.x require incompatible `httpx` versions. The
+main requirements file therefore installs the agent team and page. If you use
+the LSEG desktop reader directly, install `requirements-lseg.txt` in a
+separate reader environment. The main desk can use an approved LSEG CSV export
+through `LSEG_CLOSES_FILE`; keep that export outside the project folder.
 
 The API keys are not in GitHub. If you run the model team, use only credentials that you are authorized to use. Put them in your own local `.env` file. Do not put a key in GitHub, an Issue, or a Pull Request. Do not copy Aditi's `.env` or ask her to publish it. If you do not have an authorized model key or LSEG access, tell Aditi what is missing; do not invent a key or a price.
 

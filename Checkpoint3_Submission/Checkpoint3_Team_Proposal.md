@@ -45,10 +45,10 @@ There is no eligible report in `runs/live`. The original and corrected GOOGL and
 | GOOGL | 2026-10-28 16:01:33 | 2026-11-22 17:50:45 | Refused: 6 claims; preserved as `report.md` | 21/21 verifier marks correct; evidence replay 21 passed, 0 refused; worksheet passed | No |
 | MSFT | 2026-10-28 16:04:44 | 2026-11-22 17:54:27 | Refused: 7 claims; preserved as `report.md` | 21/21 verifier marks correct; evidence replay 21 passed, 0 refused; worksheet passed | No |
 
-The partner selected Google and Microsoft. This work uses `GOOGL` for Google (Alphabet Inc., Class A); the partner must confirm that ticker choice. [Lab 09 comparison and partner hand-check sheet](Lab09_GOOGL_MSFT_Comparison.md).
+The partner selected Google and Microsoft. The confirmed Google ticker is `GOOGL` (Alphabet Inc., Class A). [Lab 09 comparison and partner hand-check sheet](Lab09_GOOGL_MSFT_Comparison.md).
 
 ## Checkpoint 3 status
 
-This Markdown page contains the team name, member names, desk diagram, joins, team-owned work, roles, and live record. The linked Lab 09 comparison is supporting evidence. The partner's manual checks remain blank. The page has not been uploaded to Brightspace. The separate corrected reports passed the model verifier and code evidence hook. The original agent output remains refused and is preserved for review. The partner hand checks, partner ticker confirmation, and partner page run remain pending.
+This Markdown page contains the team name, member names, desk diagram, joins, team-owned work, roles, and live record. The linked Lab 09 comparison is supporting evidence. The partner's manual checks remain blank. The page has not been uploaded to Brightspace. The separate corrected reports passed the model verifier and code evidence hook. The original agent output remains refused and is preserved for review. The confirmed ticker is `GOOGL`, and a later technical GOOGL page run passed. The 2 personal partner checks remain pending.
 
 Course references: [Checkpoint 3 grading entry](https://cinderzhang.github.io/FIN67110-Fall2026/grading.html) · [Lab 09 instructions](https://cinderzhang.github.io/FIN67110-Fall2026/week-05/lab-09-prove-it-together.html)
