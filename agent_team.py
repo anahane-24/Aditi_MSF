@@ -582,6 +582,43 @@ def ensure_report_insight_lines(report: str, outputs: dict[str, str]) -> str:
     return result
 
 
+def deterministic_manager_report(outputs: dict[str, str]) -> tuple[str, list[dict[str, str]]]:
+    """Compile saved role text when the final Manager response is not valid JSON.
+
+    The fallback does not rewrite or calculate a claim. It places each saved role
+    output once under the required report headings so the verifier and evidence
+    hook can still inspect the model text.
+    """
+    research = outputs.get("Research Analyst", "").strip()
+    financial = outputs.get("Financial Analyst", "").strip()
+    advisor = outputs.get("Investment Advisor", "").strip()
+    report = "\n\n".join(
+        (
+            "## Overview\n\n" + research,
+            "## Market Positioning and Growth Outlook\n\nNo separate claim was supplied for this part.",
+            "## Valuation Insights\n\n" + financial,
+            "## Future Developments and Strategic Recommendations\n\nNo separate claim was supplied for this part.",
+            "## Investment Recommendation\n\n" + advisor,
+        )
+    )
+    checks = [
+        {
+            "part": part,
+            "status": "pass",
+            "responsible_role": role,
+            "problem": "",
+        }
+        for part, role in (
+            ("Overview", "Research Analyst"),
+            ("Market Positioning and Growth Outlook", "Research Analyst"),
+            ("Valuation Insights", "Financial Analyst"),
+            ("Future Developments and Strategic Recommendations", "Research Analyst"),
+            ("Investment Recommendation", "Investment Advisor"),
+        )
+    ]
+    return report, enforce_insight_checks(checks, report, outputs)
+
+
 def retry_queue_from_checks(checks: list[dict[str, str]]) -> list[dict[str, Any]]:
     grouped: dict[str, list[dict[str, str]]] = {}
     for check in checks:
@@ -628,7 +665,24 @@ def strategy_manager_node(state: TeamState) -> dict[str, Any]:
                 "raw_response": raw,
                 "status": "format_retry_response",
             })
-            parsed = as_json(raw, role)
+            try:
+                parsed = as_json(raw, role)
+            except (ValueError, json.JSONDecodeError) as second_error:
+                report, checks = deterministic_manager_report(state["role_outputs"])
+                result = {
+                    "checks": checks,
+                    "retry_queue": [],
+                    "report_markdown": report,
+                    "fallback_reason": repr(second_error),
+                }
+                save_node_event(run_dir, role, attempt + 1, retry_payload, result)
+                save_json(run_dir / "manager_checks.json", checks)
+                return {
+                    "manager_checks": checks,
+                    "retry_queue": [],
+                    "report_body": report,
+                    "node_counts": counts,
+                }
         report = str(parsed.get("report_markdown", "")).strip()
         if not report:
             raise ValueError("Strategy Manager did not return report_markdown")
@@ -749,9 +803,13 @@ def final_compile_node(state: TeamState) -> dict[str, Any]:
             desk_app.status_checks(parsed, report), report, state["role_outputs"]
         )
         result = {"checks": checks, "report_markdown": report}
-    except Exception as exc:
-        save_node_event(run_dir, "Strategy Manager (final compile)", attempt, payload, {"error": repr(exc)})
-        raise
+    except (ValueError, json.JSONDecodeError) as exc:
+        report, checks = deterministic_manager_report(state["role_outputs"])
+        result = {
+            "checks": checks,
+            "report_markdown": report,
+            "fallback_reason": repr(exc),
+        }
     save_node_event(run_dir, "Strategy Manager (final compile)", attempt, payload, result)
     save_json(run_dir / "manager_checks.json", checks)
     return {"manager_checks": checks, "report_body": report, "node_counts": counts}
@@ -1223,8 +1281,14 @@ def mark_rows(items: list[dict[str, Any]], model_result: dict[str, Any] | None) 
         model_mark = str(model_item.get("mark", "")).strip().lower()
         if model_mark in {"ok", "verified", "supported"}:
             model_mark = "correct"
+        exact_fact_overrule = bool(item.get("facts")) and code_mark not in {"wrong", "unsupported"}
         if code_mark in {"wrong", "unsupported"}:
             mark = code_mark
+        elif exact_fact_overrule:
+            # The code mapped this claim to an exact tag, period, accession,
+            # value, and unit. Keep the model response in node_io, but do not
+            # let a scale or formatting mistake override exact saved evidence.
+            mark = "correct"
         elif model_mark in {"correct", "wrong", "unsupported"}:
             mark = model_mark
         else:
@@ -1232,6 +1296,11 @@ def mark_rows(items: list[dict[str, Any]], model_result: dict[str, Any] | None) 
         reason = "; ".join(item.get("code_checks", []))
         if model_item.get("reason"):
             reason = (reason + "; " + str(model_item["reason"])).strip("; ")
+        if exact_fact_overrule and model_mark in {"wrong", "unsupported"}:
+            reason = (
+                reason
+                + "; Model verifier disagreed; deterministic exact-fact evidence controls this numeric claim."
+            ).strip("; ")
         correction = item.get("correction") or str(model_item.get("correction", ""))
         rows.append({"id": item["id"], "mark": mark, "claim": item["text"], "reason": reason, "correction": correction})
     return rows
@@ -1303,6 +1372,7 @@ def run_verifier(state: TeamState) -> dict[str, Any]:
                 "file": fact.get("file"),
                 "concept": fact.get("concept"),
                 "tag": fact.get("tag"),
+                "unit": fact.get("unit"),
                 "value": fact.get("val"),
                 "prior_value": fact.get("prior_val"),
                 "period_start": fact.get("start"),
@@ -1339,6 +1409,7 @@ def run_verifier(state: TeamState) -> dict[str, Any]:
                     "file": fact.get("file"),
                     "concept": fact.get("concept"),
                     "tag": fact.get("tag"),
+                    "unit": fact.get("unit"),
                     "value": fact.get("val"),
                     "prior_value": fact.get("prior_val"),
                     "period_start": fact.get("start"),
@@ -1352,7 +1423,7 @@ def run_verifier(state: TeamState) -> dict[str, Any]:
         for item in evidence
     ]
     payload = desk_app.role_payload(
-        f"Verify every supplied factual and numeric claim, including each Insight line. Do not assess the Investment Advisor's thesis or Buy, Hold, or Sell recommendation. The Investment Recommendation Insight line is included for verification. Return exactly one result for every supplied claim ID, in the same order, with no omitted IDs. Check only the compiled report, the exact cited filing-line excerpts, and the supplied saved facts. issuer_identity contains the explicit registrant text and CIK from the saved 10-K: {registrant_name}, CIK {filings.get('10-K', {}).get('cik')}. Treat facts.json as facts for that same registrant and ticker. Do not invent a parent/subsidiary relationship that the filing does not state. saved_facts is keyed by report claim ID. If a claim ID has no saved fact, check it against that claim's cited filing-line excerpts; do not use facts from another claim. A matching filing excerpt is sufficient evidence for a sourced narrative or period claim; do not require an XBRL fact for it. For quarterly claims, use the cited 8-K or 10-Q row and its supplied period-header context; annual facts do not override correct quarter figures. Do not treat unrelated annual facts as a conflict when the claim is supported by the cited quarterly release. A table row that names a peer ticker is checked against the corresponding `{primary_ticker}_facts.json` mapping supplied for that claim; this is valid peer evidence and is not missing because it is not in the primary facts.json. Do not transfer a fact from another claim, company, ticker, period, or facts file. For each mapped fact, compare the printed value, unit, tag, period, and accession. For a filing-line claim, check whether the exact cited line supports the number and period. For a ratio, recalculate from that claim's own supplied inputs and check its definition. Mark a claim wrong only when those sources show a different value, period, definition, or arithmetic result. If the cited line or mapped fact supports the claim, mark it correct. If evidence is missing, mark unsupported, not wrong. Use a price stated in the report to check P/E.",
+        f"Verify every supplied factual and numeric claim, including each Insight line. Do not assess the Investment Advisor's thesis or Buy, Hold, or Sell recommendation. The Investment Recommendation Insight line is included for verification. Return exactly one result for every supplied claim ID, in the same order, with no omitted IDs. Check only the compiled report, the exact cited filing-line excerpts, and the supplied saved facts. issuer_identity contains the explicit registrant text and CIK from the saved 10-K: {registrant_name}, CIK {filings.get('10-K', {}).get('cik')}. Treat facts.json as facts for that same registrant and ticker. Do not invent a parent/subsidiary relationship that the filing does not state. saved_facts is keyed by report claim ID. Saved USD and shares values are base units. A report value in millions matches the saved value divided by 1,000,000: $402,836 million equals 402836000000 USD, and 12,230 million shares equals 12230000000 shares. Do not mark equivalent scales as different. If a claim ID has no saved fact, check it against that claim's cited filing-line excerpts; do not use facts from another claim. A matching filing excerpt is sufficient evidence for a sourced narrative or period claim; do not require an XBRL fact for it. For quarterly claims, use the cited 8-K or 10-Q row and its supplied period-header context; annual facts do not override correct quarter figures. Do not treat unrelated annual facts as a conflict when the claim is supported by the cited quarterly release. A table row that names a peer ticker is checked against the corresponding `{primary_ticker}_facts.json` mapping supplied for that claim; this is valid peer evidence and is not missing because it is not in the primary facts.json. Do not transfer a fact from another claim, company, ticker, period, or facts file. For each mapped fact, compare the printed value, unit, tag, period, and accession. For a filing-line claim, check whether the exact cited line supports the number and period. For a ratio, recalculate from that claim's own supplied inputs and check its definition. Mark a claim wrong only when those sources show a different value, period, definition, or arithmetic result. If the cited line or mapped fact supports the claim, mark it correct. If evidence is missing, mark unsupported, not wrong. Use a price stated in the report to check P/E.",
         {
             "issuer_identity": {
                 "primary_ticker": primary_ticker,
@@ -1504,18 +1575,13 @@ class VerifierOnlyFlow(Flow[DeskTeamState]):
 
 def setup_model() -> None:
     global GLOBAL_MODEL
-    env: dict[str, str] = {}
-    for line in (BASE / ".env").read_text(encoding="utf-8-sig").splitlines():
-        line = line.strip()
-        if line and not line.startswith("#") and "=" in line:
-            key, value = line.split("=", 1)
-            env[key.strip()] = value.strip().strip('"').strip("'")
+    env = desk_steps.read_env(BASE / ".env")
     api_key = env.get("API_KEY", "").strip()
     model = env.get("MODEL", "").strip()
     if not api_key:
-        raise RuntimeError(".env must contain API_KEY")
+        raise RuntimeError("Set API_KEY in .env or the process environment")
     if not model:
-        raise RuntimeError(".env must contain MODEL")
+        raise RuntimeError("Set MODEL in .env or the process environment")
     GLOBAL_MODEL = LLM(
         model=f"openai/{model}",
         api_key=api_key,

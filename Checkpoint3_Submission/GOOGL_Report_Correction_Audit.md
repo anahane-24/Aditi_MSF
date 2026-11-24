@@ -40,9 +40,9 @@ Shachi's original run folders are retained: `data/Alphabet_Inc._20261122_162736_
 
 ## Still pending
 
-1. Shachi must confirm whether the selected Google ticker is `GOOGL` or `GOOG`. Aditi chose `GOOGL`; partner confirmation remains pending.
+1. The selected Google ticker is confirmed as `GOOGL`.
 2. Shachi must independently open and check 2 filing claims and record marks and line references in `Lab09_GOOGL_MSFT_Comparison.md`.
-3. Shachi must run the local page on the partner's company and record the node order and verified report.
+3. The successful technical GOOGL page run is recorded in `Mrunalini_GOOGL_Page_Run.md`.
 4. Aditi must perform her own required exchange-close check.
 5. The remaining Week 4 work is listed in `week4_prework_status.md`.
 6. A future live report must be recorded within 24 hours of an earnings filing. The November 22 practice runs do not satisfy this timing rule.

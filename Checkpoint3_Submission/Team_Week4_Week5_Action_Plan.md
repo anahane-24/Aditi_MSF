@@ -41,7 +41,7 @@ For each practice run, inspect `verified_report.md`, `report.md`, `verification_
 
 ### A. Confirm the partner's Google ticker
 
-Ask the partner to confirm `GOOGL` or `GOOG`. The current saved Google report is for `GOOGL` (Alphabet Class A). If the partner chose `GOOG`, run and review that exact ticker before treating the partner-company work as complete.
+The confirmed Google ticker is `GOOGL` (Alphabet Class A). A successful technical page run is recorded in `Mrunalini_GOOGL_Page_Run.md`. The 2 personal SEC filing checks remain pending.
 
 ### B. Run the desk from the page on the partner's company
 
@@ -92,6 +92,12 @@ git clone https://github.com/anahane-24/Aditi_MSF.git
 cd Aditi_MSF
 python -m pip install -r requirements.txt
 ```
+
+The main requirements file installs CrewAI and Streamlit. Install
+`requirements-lseg.txt` in a separate LSEG-reader environment because its
+`httpx` requirement conflicts with CrewAI 1.15. The main desk can instead read
+an approved LSEG CSV export from `LSEG_CLOSES_FILE`; keep the export outside
+the repository.
 
 For an existing clone:
 
@@ -144,9 +150,9 @@ First update the clone from the repository's main branch. Read these files befor
 
 Then inspect the saved GOOGL and MSFT practice-run folders named in the action plan. Explain where each raw report, corrected verified report, filing text, facts file, node input/output, model-verifier marks, and evidence-hook marks are. Explain which report passed the saved checks and which original output was refused. Do not edit a source, report, fact, or mark file during this first review.
 
-Ask me to confirm whether the partner selected GOOGL or GOOG. Do not assume. If the partner selected GOOG, tell me that the current GOOGL report does not verify GOOG. Do not start a different ticker run until I confirm the ticker and credentials are ready.
+Use the confirmed partner ticker, GOOGL. Do not substitute GOOG.
 
-After I confirm the ticker, help me run the desk from its local Streamlit page. Start it with `python -m streamlit run desk_ui.py` and tell me the local URL it prints. I will enter the ticker and press Run in the page. Record the exact node names and order, the run folder path, whether all three Insight lines appear, whether the Verifier ran automatically, and whether its marks appear under the first filing line. Preserve any failed run and exact error.
+Help me review the saved successful GOOGL page run and its failed predecessors. The successful run is recorded in `Mrunalini_GOOGL_Page_Run.md`. Preserve every failed run and exact error.
 
 For the two required filing checks, show me the report's source and the matching saved filing lines. Do not mark a claim for me. Wait while I personally open each source and choose `correct` or `wrong`. If a claim is wrong, show the cited evidence and let me state the corrected value and period. Record only the marks, lines, initials, and date that I give you. Then create a separate partner_reviewed_report.md and copy the same two rows into the comparison sheet. Do not edit the raw report, filings, facts.json, model-verifier marks, or evidence-hook marks.
 

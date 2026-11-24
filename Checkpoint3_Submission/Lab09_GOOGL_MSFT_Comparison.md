@@ -1,6 +1,9 @@
 # Lab 09 — GOOGL and MSFT comparison
 
-The partner selected Google and Microsoft. Aditi chose `GOOGL` for Google (Alphabet Inc., Class A), but partner confirmation of `GOOGL` vs `GOOG` is still pending. The tables below preserve the original practice runs and their failed raw model outputs. Separate November 22 corrected reports are linked in the status section at the end.
+The partner selected Google and Microsoft. The confirmed Google ticker is
+`GOOGL` (Alphabet Inc., Class A). The tables below preserve the original
+practice runs and their failed raw model outputs. Separate November 22
+corrected reports are linked in the status section at the end.
 
 The saved runs were made on 2026-11-22. Both releases were accepted on 2026-10-28, which is within 30 days. These were not live views within 24 hours of filing.
 
@@ -84,8 +87,8 @@ The partner must choose at least 2 claims, open the cited SEC filing, and enter 
 
 ### Still pending
 
-1. Shachi's confirmation of `GOOGL` vs `GOOG`.
-2. Shachi's 2 independent filing checks and page run on the partner's company.
-3. Aditi's own exchange-price check.
-4. The remaining Week 4 work listed in `week4_prework_status.md`.
-5. The team's future live-release report within the course timing window.
+1. The partner's 2 independent filing checks. The technical GOOGL page run is
+   recorded in `Mrunalini_GOOGL_Page_Run.md`.
+2. Aditi's own exchange-price check.
+3. The remaining Week 4 work listed in `week4_prework_status.md`.
+4. The team's future live-release report within the course timing window.

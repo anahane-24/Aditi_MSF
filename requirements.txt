@@ -1,4 +1,6 @@
 crewai>=1.15,<1.16
 openai>=1.0,<3.0
 streamlit>=1.40,<2.0
-lseg-data>=2.0,<3.0
+
+# lseg-data has an httpx constraint that conflicts with CrewAI 1.15.
+# Install requirements-lseg.txt in a separate reader environment when needed.
